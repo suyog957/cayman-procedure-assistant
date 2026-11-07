@@ -33,21 +33,21 @@
   "visual_reference_checks": [
     {
       "scene": "coin_evidence",
-      "reference_ssim": 0.995434
+      "reference_ssim": 0.995344
     },
     {
       "scene": "claim_checks",
-      "reference_ssim": 0.995942
+      "reference_ssim": 0.995947
     },
     {
       "scene": "bond_limit",
-      "reference_ssim": 0.99428
+      "reference_ssim": 0.99426
     }
   ],
   "browser_playback_passed": true,
   "chapter_and_step_seeking_passed": true,
   "http_byte_ranges_passed": true,
   "client_errors": [],
-  "sha256": "68cf410c9ec02c0e54b14f70aafef976489c877ab4dba2e5e88f51249a85075e",
+  "sha256": "48bc8f2c63d31c7efd5080606f4c2b2165c873c0c31e79b9cb6b318afe0d2c0b",
   "url": "http://127.0.0.1:8502/tool-only/Watch_Tool_Demo.html"
 }

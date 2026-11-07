@@ -1,6 +1,7 @@
 """1440p silent workflow edit with high-density PNG footage and reading pauses."""
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 from hashlib import sha256
 from pathlib import Path
 import argparse
@@ -150,13 +151,21 @@ def run(arguments,path):
                        cwd=ROOT,stdout=log,stderr=log,check=True)
 
 
+def encode_scene(arguments,log_path,cache,identity,name,duration,reading):
+    run(arguments,log_path)
+    cache.write_text(identity)
+    print('ENCODED',name,round(duration,2),'seconds; reading hold',round(reading,2),flush=True)
+
+
 def stamp(t,srt=False):
     value=round(t*1000);hour,value=divmod(value,3600000);minute,value=divmod(value,60000);second,ms=divmod(value,1000)
     return f'{hour:02d}:{minute:02d}:{second:02d}'+(',' if srt else '.')+f'{ms:03d}'
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--frames-only',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--frames-only',action='store_true')
+    parser.add_argument('--workers',type=int,choices=(1,2),default=2,help='Concurrent independent scene encodes.')
+    args=parser.parse_args()
     story=json.loads((OUT/'storyboard.json').read_text(encoding='utf-8'))
     capture_path=BUILD/'capture_manifest.json';capture=json.loads(capture_path.read_text(encoding='utf-8'))
     assert capture['status']=='passed' and capture['pixel_dimensions']==[3072,1728]
@@ -169,6 +178,7 @@ def main():
     mask=Image.new('L',APP[2:],0);ImageDraw.Draw(mask).rounded_rectangle((0,0,APP[2]-1,APP[3]-1),radius=18,fill=255)
     mask_path=FRAMES/'window_mask.png';mask.save(mask_path)
     timeline=[];chapters=[];offset=0;captions=[]
+    encoder=ThreadPoolExecutor(max_workers=args.workers);jobs=[]
     for index,scene in enumerate(story['scenes'],1):
         shot=shots[scene['capture']];assert shot['passed']
         folder=FRAMES/scene['capture'];folder.mkdir(exist_ok=True)
@@ -230,7 +240,7 @@ def main():
         # Reusing it avoids recomputing masks and overlays on unchanged pixels.
         graph+=f'[picture][s]concat=n=2:v=1:a=0,fps={FPS},tpad=stop_mode=clone:stop_duration={duration},trim=duration={duration}[rgb];'
         graph+='[rgb]scale=iw:ih:out_color_matrix=bt709,format=yuv420p[v]'
-        run(['-threads','1','-f','concat','-safe','0','-i',sequence,
+        arguments=['-threads','1','-f','concat','-safe','0','-i',sequence,
              '-threads','1','-framerate',FPS,'-start_number','0','-i',folder/'camera_%03d.png',
              '-threads','1','-loop','1','-framerate',FPS,'-i',background_path,
              '-threads','1','-loop','1','-framerate',FPS,'-i',mask_path,
@@ -238,9 +248,13 @@ def main():
              '-filter_complex_threads','2','-filter_complex',graph,'-map','[v]','-an','-sn','-dn',
              '-t',duration,'-r',FPS,'-c:v','libx264','-preset','fast','-crf','15','-threads','4',
              '-pix_fmt','yuv420p','-color_primaries','bt709','-color_trc','bt709','-colorspace','bt709',
-             '-movflags','+faststart','-progress',folder/'progress.txt','-stats_period','1',target],folder/'encode.log')
-        cache.write_text(identity)
-        print('ENCODED',scene['capture'],round(duration,2),'seconds; reading hold',round(reading,2),flush=True)
+             '-movflags','+faststart','-progress',folder/'progress.txt','-stats_period','1',target]
+        jobs.append(encoder.submit(encode_scene,arguments,folder/'encode.log',cache,identity,
+                                   scene['capture'],duration,reading))
+    try:
+        for job in jobs:job.result()
+    finally:
+        encoder.shutdown(wait=True,cancel_futures=True)
     (OUT/'timeline.json').write_text(json.dumps(timeline,indent=2),encoding='utf-8')
     if args.frames_only:return
     meta=';FFMETADATA1\ntitle=Branch Assist - Readable Silent Tool Demo\ncomment=Double-density PNG app capture; bottom descriptions; normal-speed actions; idle waits may be cut; silent.\n'

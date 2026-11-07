@@ -1,124 +1,124 @@
 1
 00:00:00,000 --> 00:00:12,000
-Start with a question or one of the guided scenarios. The sidebar controls which of the 11 supplied
-procedures the assistant can search.
+Ask a banking procedure question or choose an example. Search all 11 provided documents, or select one to
+keep the conversation focused.
 
 2
 00:00:12,000 --> 00:00:41,133
-Ask about the overnight coin limit. The assistant answers $5,250 and cites PR63; use the citation to
-check the original rule.
+Ask how much coin can stay in a machine overnight. The answer gives a $5,250 limit and links to procedure
+PR63, so you can check the rule for yourself.
 
 3
 00:00:41,133 --> 00:01:01,133
-Open the citation beneath the answer. The Evidence desk selects the exact source passage, including the
-conditions around the overnight limit.
+Select the source link below the answer to read the exact rule. The original wording and nearby
+conditions appear beside the conversation, making the answer easy to check.
 
 4
 00:01:01,133 --> 00:01:19,133
-Expand Source provenance to inspect the document, passage ID and source fingerprint. A matching hash
-identifies the supplied snapshot, rather than certifying current policy.
+See which document the answer came from and whether the file matches the copy provided for this exercise.
+This confirms the source copy; it does not tell us if the policy has changed.
 
 5
 00:01:19,133 --> 00:01:38,867
-Inspect the retrieval signals for this passage. BM25, semantic similarity and reranker scores describe
-matching; they are not probabilities that the answer is correct.
+See why this passage was chosen for your question. The scores help rank useful source text. To judge the
+answer itself, read the linked passage and review the answer checks.
 
 6
 00:01:38,867 --> 00:01:56,533
-Download the original procedure when you need more context. The full supplied HTML document remains
-available alongside the short answer.
+Download the complete procedure when a short excerpt is not enough. You can read the surrounding steps,
+conditions and exceptions before deciding what to do next.
 
 7
 00:01:56,533 --> 00:02:20,533
-Open Checks to see how each statement maps to its cited evidence. Citation, numeric and support screens
-are inspectable, but can still miss errors.
+Open Checks to see whether the answer links to a source, uses supported numbers and agrees with the
+quoted text. These checks help flag problems, but a person should still review the guidance.
 
 8
 00:02:20,533 --> 00:02:42,533
-Activity shows the actions that actually ran, with their timings. Follow retrieval, evidence assembly,
-drafting and validation through the release decision.
+Follow what the tool did: find relevant passages, write a draft and check it before showing the answer.
+The activity list also shows how long each step took.
 
 9
 00:02:42,533 --> 00:03:00,533
-Open the technical record and download the selected answer's evidence. Trace identity, model, question
-resolution, token counts and checks travel with the record.
+Save a record of this answer, including your question, the source passages and the checks. This gives a
+reviewer the information needed to follow how the response was produced.
 
 10
 00:03:00,533 --> 00:03:25,533
-Ask a follow-up about monthly testing. The assistant keeps the procedure context, retrieves fresh
-evidence and answers that this task uses single control.
+Ask whether monthly coin-machine testing needs one person or two. The assistant stays on the same topic
+and finds the testing rule, which says this task uses one-person control.
 
 11
 00:03:25,533 --> 00:03:45,533
-Select the follow-up's citation to inspect the testing passage. This task has its own evidence; the
-overnight-storage passage is not reused as proof.
+Check the source for the follow-up too. The assistant links to the monthly-testing instructions, so this
+answer can be checked against the rule for that specific task.
 
 12
 00:03:45,533 --> 00:04:09,533
-Name a new topic: savings-bond redemption fees. The source changes from coin-machine procedure PR63 to
-savings-bond procedure PR1949.
+Ask a new question about savings-bond fees. The assistant moves to the savings-bond procedure, keeping
+the answer tied to the new topic.
 
 13
 00:04:09,533 --> 00:04:27,767
-Search the Procedure library for notary services. Inspect the matching document, then use it in the
-workspace to restrict retrieval to that procedure.
+Find the notary procedure by searching the library. Choose Use in workspace to focus your next questions
+on that document.
 
 14
 00:04:27,767 --> 00:04:50,600
-A coin-machine question conflicts with the selected notary scope. The assistant asks for a scope change
-and does not reuse an earlier source.
+The workspace is set to the notary procedure, but the question is about coin machines. The assistant asks
+you to change the selected document before continuing.
 
 15
 00:04:50,600 --> 00:05:20,033
-Ask whether an emailed document can be notarized. The supplied procedure prohibits it, even when the
-requester is physically present; inspect the citation.
+Ask if an emailed document can be notarized. The provided procedure says no, even if the requester is
+there in person. Open the source link to read the full rule.
 
 16
 00:05:20,033 --> 00:05:46,800
-Refine the scenario by saying the requester is present. The follow-up must retain the original emailed-
-document condition and preserve the source's prohibition.
+Now ask, "What if the person is here?" The assistant remembers that the document was emailed, so it keeps
+the same restriction and points you back to the relevant rule.
 
 17
 00:05:46,800 --> 00:06:27,700
-Ask about an account open less than 12 months. Read the $1,000 daily aggregate redemption limit together
-with the procedure's eligibility conditions.
+For an account open less than 12 months, the source lists a total savings-bond redemption limit of $1,000
+per day. Read the related conditions alongside the amount.
 
 18
 00:06:27,700 --> 00:06:57,500
-Ask about The Private Bank Experience exception. In this recorded run, one correction still failed
-validation, so the draft is withheld and original passages remain available.
+Ask about The Private Bank Experience exception. After one retry, the draft still fails a check, so the
+tool holds it back and shows the original source text for you to review.
 
 19
 00:06:57,500 --> 00:07:19,500
-Inspect the failed check, mark the response Needs review and export the investigation. The download
-includes the conversation, evidence, checks, activity and feedback.
+Mark the response Needs review and save the conversation. The download includes the questions, answers,
+source text, checks and your feedback for someone to follow up.
 
 20
 00:07:19,500 --> 00:07:40,400
-Start a new investigation and ask an ambiguous question. Without the earlier situation, the assistant
-requests context and shows no borrowed evidence.
+Start a new conversation, then ask, "Can they do that?" The assistant asks what situation you mean.
+Details from the previous conversation are not carried into the new one.
 
 21
 00:07:40,400 --> 00:08:00,233
-Ask about tomorrow's weather. The supplied procedures cannot support that request, so the assistant
-reports insufficient evidence and does not invent a sourced answer.
+Ask about tomorrow's weather. The tool only has the provided banking procedures to work from, so it
+explains that it cannot answer this question from those documents.
 
 22
 00:08:00,233 --> 00:08:20,067
-Ask about a procedure that is not in the collection. The assistant identifies the missing source instead
-of inventing its requirements.
+Ask about a procedure that was not provided. The assistant explains that the document is missing, so you
+know another source is needed before its rules can be checked.
 
 23
 00:08:20,067 --> 00:08:40,967
-Try an obvious direct instruction attack. The request is rejected by a narrow pattern guard; this example
-does not establish comprehensive security protection.
+Try asking the assistant to ignore its rules. This example is blocked. It demonstrates one safeguard;
+more testing is needed to assess security.
 
 24
 00:08:40,967 --> 00:09:04,967
-Open Evaluation to inspect the recorded results. Evidence retrieval, generated-answer fact coverage and
-withheld drafts are separate measures, each with stated limitations.
+Review how often the tool found useful passages and how much of the expected answer it covered. These
+tests help reveal gaps; they do not replace review by a subject expert.
 
 25
 00:09:04,967 --> 00:09:24,967
-Download the evaluation report, detailed solution overview and presentation. These materials preserve the
-design, measured results and limitations for deeper review.
+Download the results report, solution overview and presentation. They explain how the tool was built,
+what was tested and where further review or improvement is needed.

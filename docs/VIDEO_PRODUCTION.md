@@ -6,6 +6,8 @@ The readable edition freshly captures the complete workflow as lossless 3072×17
 
 A display-only fix escapes dollar signs in Streamlit Markdown so currency cannot accidentally become inline math; exported model text and evidence are unchanged. Fresh browser assertions verify the displayed amount and absence of a math element. Review feedback is recorded as **Needs review** for the withheld response.
 
+All 25 descriptions, step titles, tags and chapter names use plain language for viewers without an AI background. Each description explains the action and its practical meaning; necessary caveats about source currency, answer checks, test results and security are retained in everyday wording. This editorial revision reuses the verified lossless footage without changing application outputs or interaction timing.
+
 The silent build uses `capture_tool_demo_hd.py`, `render_tool_demo.py` (the entry point for `tool_demo_compositor.py`) and `verify_tool_demo.py`. Its README provides exact commands. Verification checks lossless source dimensions, reading holds, description size and location, full decoding, absence of audio, continuous timing, real Chrome playback, external controls, speed selection and chapter/step seeking. Representative decoded frames are compared with the lossless composition reference using SSIM; this measures media fidelity, not correctness of the guidance. Capture outcomes, provenance, the media hash, a contact sheet and the QA report accompany the cut. No TTS dependency is needed to build it.
 
 ## Earlier narrated recording

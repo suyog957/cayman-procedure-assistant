@@ -11,11 +11,11 @@
   "chapters": [
     {
       "start": 0,
-      "title": "Start an investigation"
+      "title": "Ask your first question"
     },
     {
       "start": 41.13333,
-      "title": "Inspect the evidence"
+      "title": "Check the answers and sources"
     },
     {
       "start": 180.53333,
@@ -23,19 +23,19 @@
     },
     {
       "start": 249.53333,
-      "title": "Search and scope procedures"
+      "title": "Find and choose procedures"
     },
     {
       "start": 290.6,
-      "title": "Work through procedural scenarios"
+      "title": "Try everyday branch questions"
     },
     {
       "start": 417.5,
-      "title": "Review, export and reset"
+      "title": "Save your work and start fresh"
     },
     {
       "start": 520.96667,
-      "title": "Review evaluation and materials"
+      "title": "Review results and takeaways"
     }
   ],
   "audio_streams": 0,
@@ -76,6 +76,6 @@
   "interface_sha256": "158ca9752e768adf8bb83a1dbfdc2e8332390dfba600bfed1b6ad4aacea0fa57",
   "capture_manifest_sha256": "300f7b4316ee066d748dd22311ba75721e5223f43fb70220e3d5f155347a3e12",
   "source_code_shown": false,
-  "bytes": 54001340,
-  "sha256": "68cf410c9ec02c0e54b14f70aafef976489c877ab4dba2e5e88f51249a85075e"
+  "bytes": 54165376,
+  "sha256": "48bc8f2c63d31c7efd5080606f4c2b2165c873c0c31e79b9cb6b318afe0d2c0b"
 }

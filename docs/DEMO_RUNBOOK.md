@@ -2,7 +2,7 @@
 
 The assignment allows 20 minutes for the presentation and 15 minutes for the technical walkthrough and demonstration. Use the six-slide deck and the local application. Do not show or submit implementation source code. This guide is preparation material; use the source-free PDF copy in `submission/` if sharing it.
 
-The separately delivered narrated recording, `demo/Branch_Assist_Full_Demo.mp4`, covers the end-to-end technical workflow within the walkthrough slot. Open `demo/Watch_Demo.html` to jump to chapters or individual scenes. It includes synthetic narration, captions, actual UI interactions and explicitly labelled saved regression cases. Present it as a recorded walkthrough. Keep the live application ready for questions and leave room for discussion; the separate 20-minute slide presentation and candidate Q&A still apply. See `demo/FEATURE_COVERAGE.md` and `docs/VIDEO_PRODUCTION.md` for timing and provenance. The video is delivered alongside the presentation ZIP, rather than inside it.
+The primary tool recording is `demo/tool-only/Branch_Assist_Tool_Demo.mp4`: a 4:41 silent, UI-only walkthrough with short tags and focused highlights. Open `demo/tool-only/Watch_Tool_Demo.html` for chapter and step navigation. It contains no audio track or presentation-slide segments. The earlier 13½-minute narrated recording remains separately available at `demo/Branch_Assist_Full_Demo.mp4`. Present either as a recording, keep the live application ready for questions, and follow the separate 20-minute slide presentation and 15-minute technical walkthrough allocation. Videos are delivered alongside the source-free presentation ZIP. See `docs/VIDEO_PRODUCTION.md` for provenance.
 
 ## Version 2 workspace controls
 

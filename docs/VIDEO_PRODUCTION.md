@@ -1,4 +1,12 @@
-# Narrated demonstration: production and provenance
+# Demo recordings: production and provenance
+
+The primary format is the **silent, tool-only cut** at `demo/tool-only/Branch_Assist_Tool_Demo.mp4`: 4:41, 1080p, 25 scenes of the actual application, with a compact heading, one-line context, a feature tag and focused corner highlights. It contains no audio stream, narration, music, narrator captions, architecture slide or presentation graphic. Open `demo/tool-only/Watch_Tool_Demo.html` for chapter/step navigation. The earlier narrated recording is preserved separately.
+
+The silent cut is rebuilt from raw browser recordings rather than muting the narrated video. Initial/final motion is preserved where possible, processing waits can be shortened, and genuine final screenshots are held for reading. It includes fresh savings-bond, feedback and report-download footage. A display-only fix escapes dollar signs in Streamlit Markdown so currency cannot accidentally become inline math; exported model text and evidence are unchanged. A real-browser assertion verifies the displayed amount and absence of a math element. Review feedback is recorded as **Needs review** for the withheld response.
+
+The silent build uses `capture_tool_demo_details.py`, `render_tool_demo.py` and `verify_tool_demo.py`. Its README provides exact commands. Verification checks that every scene maps to actual capture, no audio or narrated subtitle stream exists, scene timing is continuous, the whole video decodes, and Chrome can play and seek chapters/steps without relying on mute. Capture outcomes, provenance, the media hash, a contact sheet and the QA report accompany the cut. No TTS dependency is needed to build it.
+
+## Earlier narrated recording
 
 The finished recording is `demo/Branch_Assist_Full_Demo.mp4`. Open `demo/Watch_Demo.html` for a local chapter navigation page, or play the MP4 directly. The video includes voice-over, burned-in captions, an embedded English subtitle track, chapter metadata, a right-hand annotation rail, and explanatory graphics. Separate SRT/VTT captions, a transcript, a cover image, scene timing, feature coverage and media verification accompany it.
 

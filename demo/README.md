@@ -1,4 +1,8 @@
-# Branch Assist — complete narrated demonstration
+# Branch Assist — demo videos
+
+The primary recording is the **[silent, tool-only demo](tool-only/Watch_Tool_Demo.html)**: 4 minutes 41 seconds, 1080p, 25 genuine application scenes with concise tags and focused highlights. The MP4 has no audio stream, narration, music or slide segments. Open [the silent MP4](tool-only/Branch_Assist_Tool_Demo.mp4) directly or use **http://127.0.0.1:8502/tool-only/Watch_Tool_Demo.html** with the local player server. Its [README](tool-only/README.md), [scene guide](tool-only/SCENE_GUIDE.md) and QA report describe the workflow and checks.
+
+## Earlier narrated demonstration
 
 Open **`Watch_Demo.html`** for chapter/scene navigation, or play **`Branch_Assist_Full_Demo.mp4`** directly in a browser or media player. The MP4 contains synthetic narration and burned-in captions, so it works as a standalone file. It also contains chapter metadata and an optional English subtitle track. Captions are already visible; enabling a second subtitle track may duplicate them.
 

@@ -1,0 +1,52 @@
+{
+  "title": "Branch Assist | Silent tool walkthrough",
+  "duration_seconds": 281,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "scene_count": 25,
+  "chapters": [
+    {
+      "start": 0,
+      "title": "Start an investigation"
+    },
+    {
+      "start": 22,
+      "title": "Inspect the evidence"
+    },
+    {
+      "start": 87,
+      "title": "Follow up and change topics"
+    },
+    {
+      "start": 128,
+      "title": "Search and scope procedures"
+    },
+    {
+      "start": 149,
+      "title": "Work through procedural scenarios"
+    },
+    {
+      "start": 217,
+      "title": "Review, export and reset"
+    },
+    {
+      "start": 261,
+      "title": "Review evaluation and materials"
+    }
+  ],
+  "audio_streams": 0,
+  "narration": false,
+  "presentation_slides": false,
+  "browser_only": true,
+  "on_screen_information": "Short action tags, one-line context, corner highlights",
+  "editing": "Initial/final motion preserved; some processing pauses shortened; real final UI frames held for reading.",
+  "currency_display_verified": true,
+  "interface_sha256": "158ca9752e768adf8bb83a1dbfdc2e8332390dfba600bfed1b6ad4aacea0fa57",
+  "capture_manifest_sha256": "189607603553cee7f392d13a373b2143dae8a665f52eadecf559e522f591fc19",
+  "source_code_shown": false,
+  "bytes": 10352149,
+  "sha256": "3cae267a6162d853f287497db49cf17bf1ba7fee925e4ffdbf09aec72af42b81"
+}

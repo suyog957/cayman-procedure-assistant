@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Branch Assist · Silent tool demo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;color:#3b3331;background:#f9f7f6;font-family:Arial,sans-serif}header{padding:24px 4%;background:#d71e28;color:white;border-bottom:4px solid #ffcd41;display:flex;justify-content:space-between;gap:20px}header strong{font-size:24px}header span{font-size:13px}main{max-width:1600px;margin:30px auto;padding:0 24px}h1{font:38px Georgia,serif;margin:0 0 12px}p{color:#746c69;line-height:1.6}video{display:block;width:100%;background:#3b3331;border-radius:10px;box-shadow:0 8px 35px #3b333118}.chapters,.links{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}button,a.download{border:1px solid #e2dbd7;background:white;border-radius:22px;padding:12px 16px;color:#3b3331;font:inherit;text-decoration:none;cursor:pointer}button:hover,button:focus-visible,a:hover{border-color:#d71e28;color:#d71e28}small{color:#746c69;padding-right:8px}summary{padding:18px 0;font-weight:bold;cursor:pointer}.scenes{display:grid;grid-template-columns:1fr 1fr;gap:10px}.scenes button{text-align:left;border-radius:8px}footer{border-top:1px solid #e2dbd7;margin-top:24px;padding:20px 0;font-size:13px;color:#746c69}@media(max-width:700px){header{flex-direction:column}h1{font-size:29px}.scenes{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><strong>Branch Assist · Silent tool demo</strong><span>Actual UI · On-screen tags and highlights</span></header>
+<main>
+<h1>The complete tool workflow.</h1>
+<p>Watch the application end to end with concise labels, focused highlights and reading pauses. This video has no audio track.</p>
+<video id="demo" controls preload="metadata" poster="Cover.png"><source src="Branch_Assist_Tool_Demo.mp4" type="video/mp4"></video>
+<nav id="chapters" class="chapters" aria-label="Video chapters"></nav>
+<div class="links"><a class="download" href="Branch_Assist_Tool_Demo.mp4" download>Download silent MP4</a><a class="download" href="SCENE_GUIDE.md">Scene guide</a><a class="download" href="../Watch_Demo.html">Earlier narrated version</a></div>
+<p style="font-size:13px">Recorded interactions over the supplied Cayman Bank snapshot. Some processing pauses are shortened; final UI frames are held for reading. Automatic checks remain fallible. Interview prototype.</p>
+<details><summary>Jump to an individual step</summary><div id="scenes" class="scenes"></div></details>
+<footer>No narration, music, presentation slides or source-code display.</footer>
+</main>
+<script>
+const chapters=__CHAPTERS__;const scenes=__SCENES__;const video=document.getElementById('demo');
+const stamp=t=>`${Math.floor(t/60).toString().padStart(2,'0')}:${Math.floor(t%60).toString().padStart(2,'0')}`;
+function button(parent,row){const b=document.createElement('button');const s=document.createElement('small');s.textContent=stamp(row.start);b.append(s,document.createTextNode(row.title));b.onclick=()=>{video.currentTime=row.start;video.play().catch(()=>{});video.scrollIntoView({behavior:'smooth',block:'center'})};parent.append(b)}
+chapters.forEach(row=>button(document.getElementById('chapters'),row));scenes.forEach(row=>button(document.getElementById('scenes'),row));
+</script>
+</body>
+</html>

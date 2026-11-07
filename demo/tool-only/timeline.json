@@ -1,0 +1,252 @@
+[
+  {
+    "id": "welcome",
+    "title": "Start with a procedure question",
+    "tag": "WORKSPACE",
+    "note": "Ask directly or choose a starter. Search all 11 procedures, or focus on one.",
+    "start": 0,
+    "end": 6,
+    "duration": 6,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "coin_question",
+    "title": "Ask about the coin-machine overnight limit",
+    "tag": "CITED ANSWER",
+    "note": "The answer cites PR63: a maximum of $5,250 in a single machine overnight.",
+    "start": 6,
+    "end": 22,
+    "duration": 16,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "coin_evidence",
+    "title": "Open the citation and read the exact passage",
+    "tag": "EVIDENCE",
+    "note": "Click [S1] to inspect the source wording and the conditions surrounding the rule.",
+    "start": 22,
+    "end": 32,
+    "duration": 10,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "source_provenance",
+    "title": "Inspect the source identity",
+    "tag": "PROVENANCE",
+    "note": "Procedure, passage, original file and SHA256 identify the supplied snapshot.",
+    "start": 32,
+    "end": 40,
+    "duration": 8,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "retrieval_signals",
+    "title": "Inspect how the passage matched",
+    "tag": "RANKING SIGNALS",
+    "note": "BM25, semantic similarity and reranking scores are matching signals, not answer confidence.",
+    "start": 40,
+    "end": 48,
+    "duration": 8,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "original_download",
+    "title": "Download the original procedure",
+    "tag": "ORIGINAL SOURCE",
+    "note": "Review the complete supplied HTML document when the surrounding context matters.",
+    "start": 48,
+    "end": 54,
+    "duration": 6,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "claim_checks",
+    "title": "Check each statement against its cited source",
+    "tag": "CLAIM CHECKS",
+    "note": "Inspect attribution, numeric checks and the statement-to-source map. Screens remain fallible.",
+    "start": 54,
+    "end": 68,
+    "duration": 14,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "runtime_activity",
+    "title": "Follow the actual execution steps",
+    "tag": "ACTIVITY",
+    "note": "Observed retrieval, drafting and validation steps show their real counts and timings.",
+    "start": 68,
+    "end": 79,
+    "duration": 11,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "technical_record",
+    "title": "Export the evidence record for one answer",
+    "tag": "TRACE EXPORT",
+    "note": "The record includes trace identity, model, resolved question, checks and evidence.",
+    "start": 79,
+    "end": 87,
+    "duration": 8,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "coin_followup",
+    "title": "Ask a follow-up about monthly testing",
+    "tag": "FOLLOW-UP",
+    "note": "A new task in the same procedure triggers fresh retrieval: monthly testing is single control.",
+    "start": 87,
+    "end": 103,
+    "duration": 16,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "followup_evidence",
+    "title": "Verify the follow-up against its own passage",
+    "tag": "FRESH EVIDENCE",
+    "note": "The testing passage supports [S2]; the overnight-storage passage is not reused as proof.",
+    "start": 103,
+    "end": 112,
+    "duration": 9,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "topic_switch",
+    "title": "Switch from coin machines to savings-bond fees",
+    "tag": "TOPIC CHANGE",
+    "note": "Naming the new topic changes the source from PR63 to PR1949.",
+    "start": 112,
+    "end": 128,
+    "duration": 16,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "procedure_library",
+    "title": "Find a procedure in the library",
+    "tag": "PROCEDURE LIBRARY",
+    "note": "Search a topic or identifier; inspect the document and choose Use in workspace.",
+    "start": 128,
+    "end": 138,
+    "duration": 10,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "procedure_scope",
+    "title": "See document scope enforced",
+    "tag": "SCOPE CHECK",
+    "note": "A coin question conflicts with the selected notary procedure. Change scope to continue.",
+    "start": 138,
+    "end": 149,
+    "duration": 11,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "notary_question",
+    "title": "Ask whether an emailed document can be notarized",
+    "tag": "NOTARY SCENARIO",
+    "note": "The cited procedure prohibits emailed documents, even when the requester is present.",
+    "start": 149,
+    "end": 165,
+    "duration": 16,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "notary_followup",
+    "title": "Refine the situation: the requester is present",
+    "tag": "CONDITION PRESERVED",
+    "note": "The follow-up retains the emailed-document condition; presence does not remove the prohibition.",
+    "start": 165,
+    "end": 181,
+    "duration": 16,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "bond_limit",
+    "title": "Ask about an account open less than 12 months",
+    "tag": "SAVINGS-BOND LIMIT",
+    "note": "Inspect the $1,000 daily aggregate limit together with the procedure's eligibility conditions.",
+    "start": 181,
+    "end": 199,
+    "duration": 18,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "bond_exception",
+    "title": "Ask about The Private Bank Experience exception",
+    "tag": "SOURCE REVIEW NEEDED",
+    "note": "One correction did not pass the checks. The draft is withheld; original evidence stays available.",
+    "start": 199,
+    "end": 217,
+    "duration": 18,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "feedback_export",
+    "title": "Review the outcome, give feedback and export",
+    "tag": "INVESTIGATION EXPORT",
+    "note": "The export preserves the conversation, evidence, checks, activity, scope and feedback.",
+    "start": 217,
+    "end": 227,
+    "duration": 10,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "reset_clarify",
+    "title": "Reset the conversation and test missing context",
+    "tag": "CLARIFICATION",
+    "note": "After New investigation, 'Can they do that?' needs a situation. Earlier evidence is not borrowed.",
+    "start": 227,
+    "end": 237,
+    "duration": 10,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "unsupported",
+    "title": "Ask a question outside the supplied documents",
+    "tag": "INSUFFICIENT EVIDENCE",
+    "note": "The procedures cannot establish tomorrow's weather. No unsupported answer is released.",
+    "start": 237,
+    "end": 245,
+    "duration": 8,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "unknown_procedure",
+    "title": "Ask about an unavailable procedure",
+    "tag": "MISSING PROCEDURE",
+    "note": "PR999999 is outside the 11-document collection; its requirements are not invented.",
+    "start": 245,
+    "end": 253,
+    "duration": 8,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "instruction_guard",
+    "title": "See an obvious instruction attack rejected",
+    "tag": "INPUT GUARD",
+    "note": "A narrow direct-instruction guard rejects this request; it is not comprehensive security validation.",
+    "start": 253,
+    "end": 261,
+    "duration": 8,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "evaluation",
+    "title": "Inspect the recorded evaluation",
+    "tag": "EVALUATION",
+    "note": "Evidence hit@5 and the answer fact proxy measure different things. Review their stated limitations.",
+    "start": 261,
+    "end": 273,
+    "duration": 12,
+    "kind": "actual_app_capture"
+  },
+  {
+    "id": "report_download",
+    "title": "Download the reports and presentation",
+    "tag": "REVIEW MATERIALS",
+    "note": "Take the evaluation report, solution overview and presentation for deeper review.",
+    "start": 273,
+    "end": 281,
+    "duration": 8,
+    "kind": "actual_app_capture"
+  }
+]

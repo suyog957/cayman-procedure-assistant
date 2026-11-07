@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "duration_seconds": 281.0,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "scene_count": 25,
+  "chapter_count": 7,
+  "audio_stream_count": 0,
+  "narration_caption_stream_count": 0,
+  "relies_on_player_mute": false,
+  "all_scenes_actual_ui": true,
+  "presentation_slides": false,
+  "full_decode_passed": true,
+  "continuous_timeline": true,
+  "currency_display_verified": true,
+  "feedback_and_export_verified": true,
+  "browser_playback_passed": true,
+  "chapter_and_step_seeking_passed": true,
+  "http_byte_ranges_passed": true,
+  "client_errors": [],
+  "sha256": "3cae267a6162d853f287497db49cf17bf1ba7fee925e4ffdbf09aec72af42b81",
+  "url": "http://127.0.0.1:8502/tool-only/Watch_Tool_Demo.html"
+}

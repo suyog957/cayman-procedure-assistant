@@ -117,7 +117,8 @@ def render_message(result: dict, index: int):
     if result["status"] == "evidence_only":
         st.markdown("I held back the draft because a required check did not pass. Review the original passages in the **Evidence desk** for the applicable conditions.")
     else:
-        st.markdown(result["answer"])
+        # Procedure amounts are currency, so dollar signs must not start math.
+        st.markdown(re.sub(r"(?<!\\)\$", r"\\$", result["answer"]))
     metrics = result.get("metrics", {})
     elapsed = metrics.get("total_seconds")
     fragments = [f'{elapsed:.1f}s' if elapsed is not None else None,

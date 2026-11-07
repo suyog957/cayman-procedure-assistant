@@ -8,7 +8,9 @@ The system helps employees ask a procedure question, inspect the supporting pass
 
 The final generator is Qwen/Qwen3-4B-GGUF:Q4_K_M. The Qwen3 model uses four-bit GGUF inference through llama.cpp on CPU. An earlier Qwen2.5 1.5B float32 baseline produced too many distracting details and withheld drafts; its complete results are retained separately. Model choice was evaluated empirically rather than inferred from published benchmarks.
 
-The solution uses structure-aware HTML parsing, a JSONL passage store, BM25 lexical search, 384-dimensional MiniLM embeddings, reciprocal rank fusion, MiniLM cross-encoder reranking, bounded evidence, actual local generation, citation/number checks and a DeBERTa NLI screening signal. The application exposes source passages, follow-up questions, topic switches, clarification, reset, transcript export and session-scoped feedback.
+The solution uses structure-aware HTML parsing, a JSONL passage store, BM25 lexical search, 384-dimensional MiniLM embeddings, reciprocal rank fusion, MiniLM cross-encoder reranking, bounded evidence, actual local generation, citation-local numeric checks and a DeBERTa NLI screening signal. The Wells Fargo–inspired version 2 workspace exposes a searchable procedure library and an Evidence desk with Evidence, Checks and Activity views. The brand asset is the unmodified official website wordmark, and the interface is explicitly labelled as an interview prototype using the supplied Cayman Bank documents.
+
+Version 2 checks original sources and cached-index fingerprints on every supported request. It binds explicit citations to individual claims and records the source passage and evidence window behind each support check. A failed draft may receive one correction using the same evidence; the revised draft must pass the same checks or be withheld. Actual stage events and deterministic decision criteria are visible; the interface does not fabricate private model reasoning or a confidence percentage. Details are in [the version 2 design](docs/EXPERIENCE_V2.md).
 
 ## Assignment alignment
 
@@ -46,8 +48,8 @@ Narrative grouping targets roughly 110 words within sections, with 20-word overl
 2. Search BM25 and normalized dense vectors. Combine the rankings with RRF and rerank the candidates jointly with the question.
 3. Abstain if evidence signals are weak. Otherwise construct a pack of up to three nonduplicate passages, targeting at most 520 words.
 4. Give the selected evidence and resolved question to the local generative model. The prompt requires a direct, concise answer with conditions, exceptions and source labels.
-5. Check citation labels, paragraph citations, new numeric literals and answer length. Screen generated claims against their cited evidence using NLI.
-6. Display a generated answer with inspectable sources when checks pass. Otherwise explicitly withhold the draft and display labelled source excerpts. Unsupported questions receive an abstention or clarification.
+5. Check citation labels, claim-local attribution, numeric values and recognized boundaries against the cited passages; screen claim support with verbatim matching or NLI.
+6. If a draft fails, allow one bounded correction with the same evidence and deterministic feedback, then apply the same checks. Display a passing answer with evidence; otherwise withhold it and show sources. Unsupported questions receive abstention or clarification. Record the actual stages and decision for inspection.
 
 Source hashes detect changed originals; the embedding manifest binds vectors to the passage-file hash. Plain JSON and NumPy files avoid loading pickled index objects. Runtime model loading uses local files; external linked documents are not retrieved. Some supplied links are placeholders and are not treated as evidence.
 
@@ -55,7 +57,7 @@ Source hashes detect changed originals; the embedding manifest binds vectors to 
 
 Browser sessions own their question history; cached models/indexes do not own user conversation memory. Prior user questions can resolve an elliptical follow-up. A follow-up naming a new task in the same procedure retains scope without repeating unrelated prior-task keywords. Named topic changes replace previous scope. Every follow-up performs fresh retrieval; previous generated claims are never authoritative evidence.
 
-The interface provides starter questions, source panels, original-procedure downloads, publication information, reset, opt-in transcript export and in-session feedback. It distinguishes generated answers, partial support, withheld drafts shown as excerpts, insufficient support and missing context. The resolver is deliberately bounded and can misinterpret ambiguous or long conversations.
+The interface provides starter scenarios, a searchable procedure library, optional document-scoped retrieval, citation selection, original-procedure downloads, publication information, reset, opt-in investigation export and feedback. The Evidence desk separates exact passages, claim-support checks and observed activity. Conflicting document scope prompts clarification, and a new unsupported response does not silently show an earlier response's sources. The resolver remains bounded and can misinterpret ambiguous or long conversations.
 
 ## Measured results
 
@@ -63,32 +65,35 @@ The suite includes 30 ordinary procedure questions, four two-turn conversations 
 
 | Retrieval method | Evidence hit@5 | MRR@5 | Local median retrieval seconds |
 |---|---:|---:|---:|
-| BM25 | 90.0% | 0.798 | 0.011 |
-| Dense | 93.3% | 0.818 | 0.010 |
-| Hybrid + reranker | 100.0% | 0.928 | 0.419 |
+| BM25 | 90.0% | 0.798 | 0.036 |
+| Dense | 93.3% | 0.818 | 0.035 |
+| Hybrid + reranker | 100.0% | 0.928 | 1.484 |
 
 Retrieval hit@5 measures whether at least one labelled relevant passage was in the first five, not whether all applicable evidence was retrieved or an answer was correct. Repeated equivalent passages are allowed by the label locators.
 
 | Answer diagnostic | Observed result |
 |---|---|
-| Ordinary questions with all required fact groups, automatic proxy | 73.3% of 30 |
-| Mean required-fact group coverage, automatic proxy | 73.3% |
-| Withheld drafts shown as source excerpts | 8 of 35 generated evaluations |
+| Ordinary questions with all required fact groups, automatic proxy | 76.7% of 30 |
+| Mean required-fact group coverage, automatic proxy | 76.7% |
+| Withheld drafts shown as source excerpts | 6 of 35 generated evaluations |
 | Expected guardrail response status | 100.0% of 6 |
-| Serial local end-to-end p50 / p95, generated evaluations | 6.70s / 12.47s |
-| Mean generated-draft word count | 25.7 |
-| Ordinary-question response outcome counts | {'answered': 22, 'evidence_only': 7, 'unsupported': 1} |
+| Serial local end-to-end p50 / p95, generated evaluations | 13.81s / 23.92s |
+| Mean generated-draft word count | 28.0 |
+| Bounded correction attempts / revised answers released | 9 / 2 |
+| Ordinary-question response outcome counts | {'answered': 23, 'evidence_only': 5, 'unsupported': 2} |
 | Follow-up final-turn fact proxies | F01.2: miss, F02.2: pass, F03.2: miss, F04.2: pass |
 
 The latency measurements exclude initial model loading and are from serial requests on the local CPU; they are not a throughput benchmark. Word count is a conciseness diagnostic, not proof of sufficient context. Term matching can pass wrong statements or miss correct paraphrases. NLI is fallible. These results must not be described as independently established accuracy.
 
-Regression cases missing at least one required fact group, including source-only outcomes: N03, B01, B02, S01, S03, C01, A03, T01, F01.2, F03.2. Review their raw responses and evidence in `artifacts/evaluation/answer_details.json`. The report does not hide fallback as generated-answer success.
+Version 2 permits one correction after a failed draft, using the same evidence and check feedback. This increases the worst-case generation work. 2 of 9 revised evaluated drafts passed release checks in this run. This is a screened-release count, not independent confirmation of the revisions' correctness.
+
+Regression cases missing at least one required fact group, including source-only outcomes: N03, B01, S03, C01, A03, T01, H02, F01.2, F03.2. Review their raw responses and evidence in `artifacts/evaluation/answer_details.json`. The report does not hide fallback as generated-answer success.
 
 ## Testing and observed engineering lessons
 
 Focused automated tests cover table row/column condition preservation, nested table duplication, UTF-8, stable IDs, source revisions, real-corpus facts, follow-up scope, topic changes, session isolation, invalid citations, invented amounts, equivalent currency formatting, missing paragraph citations, stale sources, direct instruction attacks and obvious identifiers. Separate browser checks exercise the actual local app and save screenshots.
 
-The recorded automated test run contains 19 tests with 0 failures/errors. The live browser integration check passed actual generation, an explicit single-versus-dual-control follow-up, source inspection, complete transcript export, independent browser sessions and reset. The browser reported no client errors. Results and screenshots are retained under `artifacts/`.
+The recorded automated test run contains 37 tests with 0 failures/errors. The live browser integration check passed actual generation, an explicit single-versus-dual-control follow-up, source inspection, complete transcript export, independent browser sessions and reset. The browser reported no client errors. Results and screenshots are retained under `artifacts/`.
 
 Initial failures combined rules from different situations and invented an exception rationale despite valid citations. Shorter passages, stronger reranking and a larger quantized generator reduced some weaknesses. Claim screening adds a conservative boundary but can withhold valid answers. A narrow evidence pack also trades lower distraction against missing exceptions elsewhere. These are documented tradeoffs, not solved problems.
 

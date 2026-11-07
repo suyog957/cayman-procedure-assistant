@@ -4,7 +4,7 @@ These are saved outputs from the final local evaluation, not a live session. Sou
 
 ## M01: What is the maximum overnight coin storage amount in a coin-counting machine?
 
-Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 4.898 seconds
+Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 7.893 seconds
 
 The maximum overnight coin storage amount in a coin-counting machine is $5,250 [S1].
 
@@ -18,7 +18,7 @@ The maximum amount of coin that can be stored overnight in a single coin-countin
 
 ## F01.2: And what control is required for monthly testing?
 
-Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 7.499 seconds
+Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 12.369 seconds
 
 The control required for monthly testing is the Coin-Counting Machine Testing Control Online task. This task must be completed by the assigned employee before the coin machine is used in the morning or just before balancing [S1].
 
@@ -39,7 +39,7 @@ The maximum amount of coin that can be stored overnight in a single coin-countin
 
 ## N01: Can a notary notarize an emailed document if the requester is physically present?
 
-Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 13.187 seconds
+Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 22.965 seconds
 
 No. A notary cannot notarize an emailed document even if the requester is physically present [S1].
 
@@ -59,7 +59,7 @@ Related procedure: Witness Customer Signatures and Sign Cayman Bank and Non-Caym
 
 ## F02.2: What if the requester is physically present?
 
-Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 11.275 seconds
+Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 16.309 seconds
 
 If the requester is physically present, a notary may notarize only physical documents presented in person by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present [S1].
 
@@ -79,16 +79,9 @@ Related procedure: Witness Customer Signatures and Sign Cayman Bank and Non-Caym
 
 ## S01: What is the savings bond redemption limit for an account open less than 12 months, and what is the exception?
 
-Status: evidence_only | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 12.265 seconds
+Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 29.449 seconds
 
-I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:
-
-> Active account status: Opened less than 12 months | Action: You may redeem bonds up to $1,000 per day (aggregate redemption value). If the total redemption value is more than $1,000, provide the following options: Redeem the bonds up to the allowable $1,000 total value and take back the remaining bonds. Redeem all bonds at full value using the Treasury Direct website. [S1]
-
-> Confirm the presenter is a consumer customer with an open and active Cayman Bank checking, savings, or time account (CD), for 12 months or longer.
-Note: If the account has been opened less than 12 months, you may redeem bonds up to $1,000 per day (aggregate redemption value). If the total cash redemption value is more than $1,000, the customer has the following bond redemption options:
-Redeem the bonds up to the allowable $1,000 total value and take back the remaining bonds.
-Redeem all bonds at full value using the Treasury Direct website. [S2]
+The savings bond redemption limit for an account open less than 12 months is $1,000 per day [S2]. The exception is that customers eligible for The Private Bank Experience can bypass the $1,000 limit [S3].
 
 ### [S1] PR1949 — Rate and redeem
 
@@ -116,7 +109,7 @@ If issued in a foreign country, the death certificate must be the original or a 
 
 ## F03.2: What if they are eligible for The Private Bank Experience?
 
-Status: evidence_only | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 10.428 seconds
+Status: evidence_only | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 24.024 seconds
 
 I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:
 
@@ -150,7 +143,7 @@ Request method: Customer is present | Row continuation: the customer does not wa
 
 ## F04.2: What about savings bond redemption fees?
 
-Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 9.032 seconds
+Status: answered | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 13.815 seconds
 
 The U.S. Department of the Treasury prohibits a bank from charging a fee to redeem a U.S. savings bond [S1].
 
@@ -177,7 +170,7 @@ Request method: Customer is present | Row continuation: the customer does not wa
 
 ## N03: Can a noncustomer in Arizona get a non-Cayman Bank document notarized?
 
-Status: evidence_only | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 9.979 seconds
+Status: evidence_only | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 23.881 seconds
 
 I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:
 
@@ -199,19 +192,19 @@ York, South Dakota, and Utah must notarize both Cayman Bank documents and non-Ca
 
 ## G01: What is the weather in London tomorrow?
 
-Status: unsupported | Model: generation not used | Elapsed: 0.451 seconds
+Status: unsupported | Model: generation not used | Elapsed: 1.643 seconds
 
 I could not find sufficient support in the 11 supplied procedures. Please clarify the situation or consult the current procedure and your supervisor.
 
 ## G04: Can they do that?
 
-Status: clarify | Model: generation not used | Elapsed: not applicable seconds
+Status: clarify | Model: generation not used | Elapsed: 0.0 seconds
 
 Which procedure or situation are you asking about? For example, notary services, identification, or coin-counting machines.
 
 ## G06: What interest rate does Cayman Bank pay on savings accounts today?
 
-Status: unsupported | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 9.069 seconds
+Status: unsupported | Model: Qwen/Qwen3-4B-GGUF:Q4_K_M | Elapsed: 15.193 seconds
 
 The retrieved passages do not provide the information needed to answer this question. Please consult the current approved source or your supervisor.
 

@@ -76,6 +76,8 @@ class Retriever:
         if verify:
             verify_sources(root, self.index_dir)
         self.chunks = load_chunks(self.index_dir)
+        self._integrity_files = ["corpus_manifest.json", "chunks.jsonl", "embedding_manifest.json"]
+        self._snapshot_hashes = {name: sha256((self.index_dir / name).read_bytes()).hexdigest() for name in self._integrity_files}
         self.by_position = {(c.doc_id, c.ordinal): c for c in self.chunks}
         self.bm25 = BM25([c.search_text for c in self.chunks])
         self.encoder = SentenceTransformer(str(root / "models" / "embedder"), local_files_only=True, device="cpu", trust_remote_code=False)
@@ -89,6 +91,15 @@ class Retriever:
             raise ValueError("Chunks do not match embeddings; rebuild the index")
         self.reranker = CrossEncoder(str(root / "models" / "reranker_v2"), device="cpu", max_length=512, local_files_only=True, trust_remote_code=False)
         self.mode = mode
+
+    def validate_snapshot(self) -> int:
+        """Reject stale cached objects after a source change or an index rebuild."""
+        for name, expected in self._snapshot_hashes.items():
+            path = self.index_dir / name
+            if not path.is_file() or sha256(path.read_bytes()).hexdigest() != expected:
+                raise ValueError("The indexed snapshot changed; reload the application.")
+        verify_sources(self.root, self.index_dir)
+        return len({c.doc_id for c in self.chunks})
 
     def search(self, query: str, k: int = 5, mode: str | None = None, doc_id: str | None = None) -> list[Hit]:
         mode = mode or self.mode

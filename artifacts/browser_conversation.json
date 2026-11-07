@@ -1,170 +1,417 @@
-[
-  {
-    "role": "user",
-    "content": "What is the overnight storage limit for a coin-counting machine?"
-  },
-  {
-    "role": "assistant",
-    "result": {
-      "answer": "The overnight storage limit for a coin-counting machine is $5,250 [S1].",
-      "status": "answered",
-      "question": "What is the overnight storage limit for a coin-counting machine?",
-      "retrieval_query": "What is the overnight storage limit for a coin-counting machine?",
-      "sources": [
-        {
-          "label": "S1",
-          "chunk_id": "PR63-370ffcb6a01d",
-          "doc_id": "PR63",
-          "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
-          "published": "Published October 9, 2025",
-          "section": "Understand the rules",
-          "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
-          "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
-          "anchor": "2103707321",
-          "text": "Rotate the following tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure:Weekly coin-counting machine balancing Monthly random cash counts of the coin-counting machine Monthly testing of the coin-counting machine\nNote: Refer to the Random Cash Counts Dashboard on the Bank Supervision – Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline.\nThe maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250.",
-          "table_id": null,
-          "row_id": null,
-          "expanded_from": null,
-          "retrieval": {
-            "bm25": 26.1096,
-            "cosine": 0.7068,
-            "rerank": 5.5314
-          }
-        }
-      ],
-      "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
-      "generator_used": true,
-      "metrics": {
-        "retrieval_seconds": 0.371,
-        "context_resolution": "named_topic",
-        "input_tokens": 481,
-        "output_tokens": 21,
-        "generation_seconds": 1.995,
-        "verification_seconds": 0.224,
-        "total_seconds": 2.591
-      },
-      "checks": {
-        "valid_citations": true,
-        "all_paragraphs_cited": true,
-        "novel_numbers": [],
-        "comparison_conflicts": [],
-        "word_count": 11,
-        "passed": true,
-        "claim_support": {
-          "passed": true,
-          "claims": [
-            {
-              "claim": "The overnight storage limit for a coin-counting machine is $5,250 .",
-              "labels": [
-                "S1"
-              ],
-              "verbatim_support": false,
-              "entailment": 0.9957,
-              "contradiction": 0.0008,
-              "supported": true,
-              "support_method": "nli_screen"
+{
+  "schema_version": "2.0",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the overnight storage limit for a coin-counting machine?"
+    },
+    {
+      "role": "assistant",
+      "result": {
+        "answer": "The overnight storage limit for a coin-counting machine is $5,250 [S1].",
+        "status": "answered",
+        "question": "What is the overnight storage limit for a coin-counting machine?",
+        "retrieval_query": "What is the overnight storage limit for a coin-counting machine?",
+        "sources": [
+          {
+            "label": "S1",
+            "chunk_id": "PR63-370ffcb6a01d",
+            "doc_id": "PR63",
+            "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+            "published": "Published October 9, 2025",
+            "section": "Understand the rules",
+            "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+            "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+            "anchor": "2103707321",
+            "text": "Rotate the following tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure:Weekly coin-counting machine balancing Monthly random cash counts of the coin-counting machine Monthly testing of the coin-counting machine\nNote: Refer to the Random Cash Counts Dashboard on the Bank Supervision – Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline.\nThe maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250.",
+            "table_id": null,
+            "row_id": null,
+            "expanded_from": null,
+            "retrieval": {
+              "bm25": 26.1096,
+              "cosine": 0.7068,
+              "rerank": 5.5314
             }
-          ],
-          "model": "cross-encoder/nli-deberta-v3-small",
-          "entailment_threshold": 0.55,
-          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
-        }
-      },
-      "trace_id": "d1f803c9a26a"
-    }
-  },
-  {
-    "role": "user",
-    "content": "And is monthly testing done in single or dual control?"
-  },
-  {
-    "role": "assistant",
-    "result": {
-      "answer": "Monthly testing is done in single control. [S2]",
-      "status": "answered",
-      "question": "And is monthly testing done in single or dual control?",
-      "retrieval_query": "And is monthly testing done in single or dual control?",
-      "sources": [
-        {
-          "label": "S1",
-          "chunk_id": "PR63-370ffcb6a01d",
-          "doc_id": "PR63",
-          "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
-          "published": "Published October 9, 2025",
-          "section": "Understand the rules",
-          "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
-          "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
-          "anchor": "2103707321",
-          "text": "Rotate the following tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure:Weekly coin-counting machine balancing Monthly random cash counts of the coin-counting machine Monthly testing of the coin-counting machine\nNote: Refer to the Random Cash Counts Dashboard on the Bank Supervision – Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline.\nThe maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250.",
-          "table_id": null,
-          "row_id": null,
-          "expanded_from": null,
-          "retrieval": {
-            "bm25": 22.7832,
-            "cosine": 0.3372,
-            "rerank": 5.2301
           }
+        ],
+        "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
+        "generator_used": true,
+        "metrics": {
+          "retrieval_seconds": 1.6,
+          "context_resolution": "named_topic",
+          "generation_seconds": 14.141,
+          "verification_seconds": 1.634,
+          "input_tokens": 481,
+          "output_tokens": 21,
+          "generation_attempts": 1,
+          "repair_attempted": false,
+          "total_seconds": 17.445,
+          "pipeline_version": "2.0"
         },
-        {
-          "label": "S2",
-          "chunk_id": "PR63-f87320e2edc7",
-          "doc_id": "PR63",
-          "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
-          "published": "Published October 9, 2025",
-          "section": "Monthly testing",
-          "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
-          "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
-          "anchor": "933356569",
-          "text": "The employee assigned to complete the single control Coin-Counting Machine Testing Control Online task must complete the monthly testing before the coin machine is used in the morning or just before balancing.\nObtain the following coin from either an employee cashline or the vault cashline:",
-          "table_id": null,
-          "row_id": null,
-          "expanded_from": null,
-          "retrieval": {
-            "bm25": 23.0226,
-            "cosine": 0.4085,
-            "rerank": 3.8784
-          }
-        }
-      ],
-      "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
-      "generator_used": true,
-      "metrics": {
-        "retrieval_seconds": 0.347,
-        "context_resolution": "followup",
-        "input_tokens": 553,
-        "output_tokens": 12,
-        "generation_seconds": 2.429,
-        "verification_seconds": 0.119,
-        "total_seconds": 2.896
-      },
-      "checks": {
-        "valid_citations": true,
-        "all_paragraphs_cited": true,
-        "novel_numbers": [],
-        "comparison_conflicts": [],
-        "word_count": 8,
-        "passed": true,
-        "claim_support": {
+        "checks": {
+          "valid_citations": true,
+          "all_paragraphs_cited": true,
+          "all_claims_attributed": true,
+          "unattributed_claims": [],
+          "novel_numbers": [],
+          "numeric_citation_conflicts": [],
+          "comparison_conflicts": [],
+          "word_count": 11,
           "passed": true,
-          "claims": [
+          "claim_support": {
+            "passed": true,
+            "claims": [
+              {
+                "claim": "The overnight storage limit for a coin-counting machine is $5,250.",
+                "labels": [
+                  "S1"
+                ],
+                "verbatim_support": false,
+                "entailment": 0.9963,
+                "contradiction": 0.0007,
+                "supported": true,
+                "support_method": "nli_screen",
+                "supporting_label": "S1",
+                "source_chunk_id": "PR63-370ffcb6a01d",
+                "support_quote": "Note: Refer to the Random Cash Counts Dashboard on the Bank Supervision – Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline. The maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250."
+              }
+            ],
+            "model": "cross-encoder/nli-deberta-v3-small",
+            "entailment_threshold": 0.55,
+            "limitation": "NLI and verbatim matches do not prove correctness or applicability to the user's situation."
+          },
+          "rejected_attempts": []
+        },
+        "trace_id": "cf496f1969bb",
+        "activity": [
+          {
+            "key": "resolve",
+            "label": "Understand the request",
+            "state": "complete",
+            "detail": "Resolved as named topic; searching all 11 procedures.",
+            "elapsed_seconds": 0.005,
+            "query": "What is the overnight storage limit for a coin-counting machine?",
+            "scope": "all"
+          },
+          {
+            "key": "integrity",
+            "label": "Verify the source snapshot",
+            "state": "complete",
+            "detail": "11 supplied procedure files match the indexed snapshot.",
+            "elapsed_seconds": 0.026,
+            "documents": 11
+          },
+          {
+            "key": "retrieve",
+            "label": "Find relevant procedure passages",
+            "state": "complete",
+            "detail": "Retrieved and ranked 8 candidate passages.",
+            "elapsed_seconds": 1.602,
+            "passages": 8
+          },
+          {
+            "key": "evidence",
+            "label": "Assemble the evidence",
+            "state": "complete",
+            "detail": "Selected 1 passages from 1 procedure.",
+            "elapsed_seconds": 0.002,
+            "source_labels": [
+              "S1"
+            ],
+            "expanded": 0
+          },
+          {
+            "key": "draft",
+            "label": "Draft the answer",
+            "state": "complete",
+            "detail": "The local model completed its output from the supplied evidence context.",
+            "elapsed_seconds": 14.15,
+            "output_tokens": 21
+          },
+          {
+            "key": "validate",
+            "label": "Check the answer",
+            "state": "complete",
+            "detail": "All required output checks passed.",
+            "elapsed_seconds": 1.637,
+            "passed": true
+          },
+          {
+            "key": "decision",
+            "label": "Choose the response",
+            "state": "complete",
+            "detail": "The answer was released after citation, numeric, threshold and claim-support screening.",
+            "elapsed_seconds": 0.003
+          }
+        ],
+        "grounding": {
+          "decision": "The answer was released after citation, numeric, threshold and claim-support screening.",
+          "rules": [
             {
-              "claim": "Monthly testing is done in single control.",
-              "labels": [
-                "S2"
-              ],
-              "verbatim_support": false,
-              "entailment": 0.9575,
-              "contradiction": 0.0078,
-              "supported": true,
-              "support_method": "nli_screen"
+              "key": "citations",
+              "label": "Citation labels",
+              "state": "passed",
+              "detail": "References point to supplied evidence."
+            },
+            {
+              "key": "attribution",
+              "label": "Claim attribution",
+              "state": "passed",
+              "detail": "Factual statements have an associated citation."
+            },
+            {
+              "key": "numbers",
+              "label": "Numeric values",
+              "state": "passed",
+              "detail": "Amounts and numeric literals match their cited passages."
+            },
+            {
+              "key": "boundaries",
+              "label": "Threshold wording",
+              "state": "passed",
+              "detail": "Recognized strict and inclusive boundaries are preserved."
+            },
+            {
+              "key": "support",
+              "label": "Claim support",
+              "state": "passed",
+              "detail": "Verbatim matching or NLI screening checks cited support."
             }
           ],
-          "model": "cross-encoder/nli-deberta-v3-small",
-          "entailment_threshold": 0.55,
-          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
-        }
-      },
-      "trace_id": "7ce201e7c9f9"
+          "claims_checked": 1,
+          "claims_supported": 1,
+          "source_files_verified_at_request": true,
+          "evidence_passages": 1,
+          "procedure_ids": [
+            "PR63"
+          ],
+          "context_resolution": "named_topic",
+          "limitation": "Automatic support checks are fallible; they are not calibrated confidence or independent correctness validation."
+        },
+        "followups": [
+          "And is monthly testing done in single or dual control?",
+          "What are the coin totals for monthly testing?"
+        ]
+      }
+    },
+    {
+      "role": "user",
+      "content": "And is monthly testing done in single or dual control?"
+    },
+    {
+      "role": "assistant",
+      "result": {
+        "answer": "Monthly testing is done in single control. [S2]",
+        "status": "answered",
+        "question": "And is monthly testing done in single or dual control?",
+        "retrieval_query": "And is monthly testing done in single or dual control?",
+        "sources": [
+          {
+            "label": "S1",
+            "chunk_id": "PR63-370ffcb6a01d",
+            "doc_id": "PR63",
+            "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+            "published": "Published October 9, 2025",
+            "section": "Understand the rules",
+            "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+            "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+            "anchor": "2103707321",
+            "text": "Rotate the following tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure:Weekly coin-counting machine balancing Monthly random cash counts of the coin-counting machine Monthly testing of the coin-counting machine\nNote: Refer to the Random Cash Counts Dashboard on the Bank Supervision – Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline.\nThe maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250.",
+            "table_id": null,
+            "row_id": null,
+            "expanded_from": null,
+            "retrieval": {
+              "bm25": 22.7832,
+              "cosine": 0.3372,
+              "rerank": 5.2301
+            }
+          },
+          {
+            "label": "S2",
+            "chunk_id": "PR63-f87320e2edc7",
+            "doc_id": "PR63",
+            "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+            "published": "Published October 9, 2025",
+            "section": "Monthly testing",
+            "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+            "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+            "anchor": "933356569",
+            "text": "The employee assigned to complete the single control Coin-Counting Machine Testing Control Online task must complete the monthly testing before the coin machine is used in the morning or just before balancing.\nObtain the following coin from either an employee cashline or the vault cashline:",
+            "table_id": null,
+            "row_id": null,
+            "expanded_from": null,
+            "retrieval": {
+              "bm25": 23.0226,
+              "cosine": 0.4085,
+              "rerank": 3.8784
+            }
+          }
+        ],
+        "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
+        "generator_used": true,
+        "metrics": {
+          "retrieval_seconds": 1.114,
+          "context_resolution": "followup",
+          "generation_seconds": 4.254,
+          "verification_seconds": 0.388,
+          "input_tokens": 553,
+          "output_tokens": 12,
+          "generation_attempts": 1,
+          "repair_attempted": false,
+          "total_seconds": 5.832,
+          "pipeline_version": "2.0"
+        },
+        "checks": {
+          "valid_citations": true,
+          "all_paragraphs_cited": true,
+          "all_claims_attributed": true,
+          "unattributed_claims": [],
+          "novel_numbers": [],
+          "numeric_citation_conflicts": [],
+          "comparison_conflicts": [],
+          "word_count": 8,
+          "passed": true,
+          "claim_support": {
+            "passed": true,
+            "claims": [
+              {
+                "claim": "Monthly testing is done in single control.",
+                "labels": [
+                  "S2"
+                ],
+                "verbatim_support": false,
+                "entailment": 0.9575,
+                "contradiction": 0.0078,
+                "supported": true,
+                "support_method": "nli_screen",
+                "supporting_label": "S2",
+                "source_chunk_id": "PR63-f87320e2edc7",
+                "support_quote": "The employee assigned to complete the single control Coin-Counting Machine Testing Control Online task must complete the monthly testing before the coin machine is used in the morning or just before balancing.\nObtain the following coin from either an employee cashline or the vault cashline:"
+              }
+            ],
+            "model": "cross-encoder/nli-deberta-v3-small",
+            "entailment_threshold": 0.55,
+            "limitation": "NLI and verbatim matches do not prove correctness or applicability to the user's situation."
+          },
+          "rejected_attempts": []
+        },
+        "trace_id": "691b04234837",
+        "activity": [
+          {
+            "key": "resolve",
+            "label": "Understand the request",
+            "state": "complete",
+            "detail": "Resolved as followup; searching PR63.",
+            "elapsed_seconds": 0.003,
+            "query": "And is monthly testing done in single or dual control?",
+            "scope": "PR63"
+          },
+          {
+            "key": "integrity",
+            "label": "Verify the source snapshot",
+            "state": "complete",
+            "detail": "11 supplied procedure files match the indexed snapshot.",
+            "elapsed_seconds": 0.016,
+            "documents": 11
+          },
+          {
+            "key": "retrieve",
+            "label": "Find relevant procedure passages",
+            "state": "complete",
+            "detail": "Retrieved and ranked 8 candidate passages.",
+            "elapsed_seconds": 1.117,
+            "passages": 8
+          },
+          {
+            "key": "evidence",
+            "label": "Assemble the evidence",
+            "state": "complete",
+            "detail": "Selected 2 passages from 1 procedure.",
+            "elapsed_seconds": 0.003,
+            "source_labels": [
+              "S1",
+              "S2"
+            ],
+            "expanded": 0
+          },
+          {
+            "key": "draft",
+            "label": "Draft the answer",
+            "state": "complete",
+            "detail": "The local model completed its output from the supplied evidence context.",
+            "elapsed_seconds": 4.294,
+            "output_tokens": 12
+          },
+          {
+            "key": "validate",
+            "label": "Check the answer",
+            "state": "complete",
+            "detail": "All required output checks passed.",
+            "elapsed_seconds": 0.389,
+            "passed": true
+          },
+          {
+            "key": "decision",
+            "label": "Choose the response",
+            "state": "complete",
+            "detail": "The answer was released after citation, numeric, threshold and claim-support screening.",
+            "elapsed_seconds": 0.003
+          }
+        ],
+        "grounding": {
+          "decision": "The answer was released after citation, numeric, threshold and claim-support screening.",
+          "rules": [
+            {
+              "key": "citations",
+              "label": "Citation labels",
+              "state": "passed",
+              "detail": "References point to supplied evidence."
+            },
+            {
+              "key": "attribution",
+              "label": "Claim attribution",
+              "state": "passed",
+              "detail": "Factual statements have an associated citation."
+            },
+            {
+              "key": "numbers",
+              "label": "Numeric values",
+              "state": "passed",
+              "detail": "Amounts and numeric literals match their cited passages."
+            },
+            {
+              "key": "boundaries",
+              "label": "Threshold wording",
+              "state": "passed",
+              "detail": "Recognized strict and inclusive boundaries are preserved."
+            },
+            {
+              "key": "support",
+              "label": "Claim support",
+              "state": "passed",
+              "detail": "Verbatim matching or NLI screening checks cited support."
+            }
+          ],
+          "claims_checked": 1,
+          "claims_supported": 1,
+          "source_files_verified_at_request": true,
+          "evidence_passages": 2,
+          "procedure_ids": [
+            "PR63"
+          ],
+          "context_resolution": "followup",
+          "limitation": "Automatic support checks are fallible; they are not calibrated confidence or independent correctness validation."
+        },
+        "followups": [
+          "How often must the coin machine be balanced?",
+          "What is the overnight coin storage limit?"
+        ]
+      }
     }
-  }
-]
+  ],
+  "feedback": {
+    "691b04234837": "Helpful"
+  },
+  "scope": "all",
+  "notice": "Automatic checks are not independent correctness validation."
+}

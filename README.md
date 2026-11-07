@@ -1,6 +1,10 @@
-# Cayman Bank Procedure Assistant
+# Branch Assist · Cayman Bank Procedure Assistant
 
 A working local generative chat assistant, evaluation suite, and six-slide presentation for the supplied Senior Lead Quantitative Analytics Specialist exercise. Both PDF pages were reviewed and all eleven supplied HTML procedures are indexed. Start with [the detailed solution overview](SOLUTION_OVERVIEW.md) and [the requirement traceability review](docs/ASSIGNMENT_REVIEW.md).
+
+Version 2 adds a Wells Fargo–inspired workspace with a procedure library and an evidence desk. Inspect exact source passages, statement-to-source checks and actual execution activity; a failed draft can receive one bounded correction before being withheld. Read [the version 2 design](docs/EXPERIENCE_V2.md) for the architecture and limitations. This is an interview prototype using the supplied Cayman Bank documents, not a Wells Fargo service.
+
+![Branch Assist workspace](artifacts/screenshots/welcome.png)
 
 The project is saved in the private repository [suyog957/cayman-procedure-assistant](https://github.com/suyog957/cayman-procedure-assistant). It includes the supplied documents, prepared index, evaluation evidence and presentation materials. Downloaded model weights, environments, secrets and local caches are excluded; the pinned downloader recreates the models.
 
@@ -65,7 +69,7 @@ For a terminal conversation:
 python scripts/ask.py "What is the coin-counting machine overnight limit?" "And what control is required for monthly testing?"
 ```
 
-`scripts/check_browser.py --chat` is an optional browser integration check using Playwright and installed Chrome. It is a development check, not a runtime dependency. Start the local Streamlit server first. Screenshots and browser results are stored under `artifacts/`.
+`scripts/check_browser.py --chat` is an optional browser integration check using Playwright and installed Chrome. It verifies citations, check/activity views, the procedure library, export and session behavior. It is a development check, not a runtime dependency. Start the local Streamlit server first. Screenshots and browser results are stored under `artifacts/`.
 
 After the full browser check and a test run with `--junitxml=artifacts/test_results.xml`, `python scripts/verify_deliverables.py` checks source integrity, index dimensions, slide count, notes, evaluation consistency and the source-free archive. The prepared workspace includes these verification artifacts.
 
@@ -75,7 +79,7 @@ After the full browser check and a test run with `--junitxml=artifacts/test_resu
 |---|---|
 | Original PDF and `Cayman_Bank_HTML_Files 2/` | Untouched assignment and eleven source procedures |
 | `src/cayman_assistant/` | Structural ingestion, hybrid retrieval, generation, conversation handling and output checks |
-| `app.py` | Chat UI with citations, source inspection, follow-ups, reset and transcript export |
+| `app.py`, `interface.py`, `experience.py`, `assets/` | Branded workspace, evidence desk, source library, activity records and safe rendering |
 | `evaluation/` | Source-checked regression cases, independent-review rubric and blank human-review template |
 | `tests/` | Focused tests for parsing, provenance, conversation behavior and safeguards |
 | `docs/` | Requirements, architecture, AI-use disclosure, detailed walkthrough and timed demo |

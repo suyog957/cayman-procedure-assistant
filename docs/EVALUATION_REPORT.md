@@ -6,11 +6,13 @@ Final model: Qwen/Qwen3-4B-GGUF:Q4_K_M. All figures below are calculated from th
 
 BM25 evidence hit@5: 90.0%; dense: 93.3%; hybrid plus reranking: 100.0%. Hybrid MRR@5 is 0.928. These use specific evidence locators and allow repeated equivalent relevant passages. They do not establish complete evidence retrieval or correct responses.
 
-All required fact groups occur in 73.3% of the 30 ordinary generated-answer evaluations. Mean fact-group coverage is 73.3%. A source-only fallback fails the generated-answer proxy even when its excerpts contain the answer. Keyword proxies can miss valid paraphrases and pass incorrect statements containing expected words.
+All required fact groups occur in 76.7% of the 30 ordinary generated-answer evaluations. Mean fact-group coverage is 76.7%. A source-only fallback fails the generated-answer proxy even when its excerpts contain the answer. Keyword proxies can miss valid paraphrases and pass incorrect statements containing expected words.
 
-The output-screen pass rate is 71.4%. This is a combination of mechanical and support screening, not a correctness estimate. There are 8 source-only outcomes among 35 evaluated generated calls. Guardrail expected-status agreement is 100.0% on six deliberately selected cases; six cases do not establish general security effectiveness.
+The output-screen pass rate is 74.3%. This is a combination of mechanical and support screening, not a correctness estimate. There are 6 source-only outcomes among 35 evaluated generated calls. Guardrail expected-status agreement is 100.0% on six deliberately selected cases; six cases do not establish general security effectiveness.
 
-Serial local generated-call latency is p50 6.70s and p95 12.47s. First model load is excluded. Mean draft length is 25.7 words. Neither length nor speed establishes usefulness or completeness. Concurrent users, network deployments and cold starts were not benchmarked.
+The version 2 engine attempted 9 bounded corrections and released 2 revised answers after the same checks. Each correction keeps the same evidence pack. The record retains rejected draft details, and the activity view reports a correction only when it occurred. Additional attempts can increase CPU response time; safety and coverage must be assessed together with that latency cost.
+
+Serial local generated-call latency is p50 13.81s and p95 23.92s. First model load is excluded. Mean draft length is 28.0 words. Neither length nor speed establishes usefulness or completeness. Concurrent users, network deployments and cold starts were not benchmarked.
 
 ## Every ordinary case
 
@@ -26,12 +28,12 @@ Serial local generated-call latency is p50 6.70s and p95 12.47s. First model loa
 | I02 | PR1277 | answered | pass | fact proxy passed |
 | I03 | PR1277 | answered | pass | fact proxy passed |
 | B01 | PR1779 | unsupported | miss | model abstention |
-| B02 | PR1779 | evidence_only | miss | numeric/comparator check |
+| B02 | PR1779 | answered | pass | fact proxy passed |
 | B03 | PR1779 | answered | pass | fact proxy passed |
-| S01 | PR1949 | evidence_only | miss | claim support screen |
+| S01 | PR1949 | answered | pass | fact proxy passed |
 | S02 | PR1949 | answered | pass | fact proxy passed |
 | S03 | PR1949 | evidence_only | miss | claim support screen |
-| C01 | PR2306 | evidence_only | miss | claim support screen |
+| C01 | PR2306 | evidence_only | miss | missing fact group |
 | C02 | PR2306 | answered | pass | fact proxy passed |
 | A01 | PR2321 | answered | pass | fact proxy passed |
 | A02 | PR2321 | answered | pass | fact proxy passed |
@@ -44,7 +46,7 @@ Serial local generated-call latency is p50 6.70s and p95 12.47s. First model loa
 | M02 | PR63 | answered | pass | fact proxy passed |
 | M03 | PR63 | answered | pass | fact proxy passed |
 | H01 | PR7554 | answered | pass | fact proxy passed |
-| H02 | PR7554 | answered | pass | fact proxy passed |
+| H02 | PR7554 | unsupported | miss | model abstention |
 | H03 | PR7554 | answered | pass | fact proxy passed |
 
 ## Per-procedure view
@@ -54,14 +56,14 @@ Serial local generated-call latency is p50 6.70s and p95 12.47s. First model loa
 | PR1000 | 3 | 2 | 1 |
 | PR1263 | 3 | 3 | 0 |
 | PR1277 | 3 | 3 | 0 |
-| PR1779 | 3 | 1 | 1 |
-| PR1949 | 3 | 1 | 2 |
+| PR1779 | 3 | 2 | 0 |
+| PR1949 | 3 | 2 | 1 |
 | PR2306 | 2 | 1 | 1 |
 | PR2321 | 3 | 2 | 1 |
 | PR472 | 2 | 2 | 0 |
 | PR607 | 2 | 1 | 1 |
 | PR63 | 3 | 3 | 0 |
-| PR7554 | 3 | 3 | 0 |
+| PR7554 | 3 | 2 | 0 |
 
 These small per-procedure counts are useful for finding weak areas, not statistical estimates of production accuracy. The corpus's largest document does not dominate the question count.
 
@@ -80,7 +82,9 @@ Guardrail cases cover unrelated content, a direct instruction attack, an unknown
 - An evidence pack can miss an exception even when top-five retrieval contains the general rule. Leading hits now recover the next same-section qualification or table-row continuation. Remote cross-references remain outside scope.
 - Fact completeness and relevance remain imperfect. The application may omit a requested condition, refuse a valid question or add related but unnecessary detail. These are exposed in raw traces and the table above.
 
-The retained initial 1.5B pipeline had 53.3% all-fact proxy coverage and p50 11.66s; the final pipeline has 73.3% and p50 6.70s. Model, prompts, evidence packing and screening changed between these runs, so this is an end-to-end iteration comparison, not an isolated causal model ablation.
+The retained initial 1.5B pipeline had 53.3% all-fact proxy coverage and p50 11.66s; the final pipeline has 76.7% and p50 13.81s. Model, prompts, evidence packing and screening changed between these runs, so this is an end-to-end iteration comparison, not an isolated causal model ablation.
+
+On the same 30-question regression set, the previous version had 73.3% all-fact proxy coverage and 8 source-only outcomes; the current version has 76.7% and 6. The strict sales-boundary and savings-bond exception cases were recovered through bounded correction, while some other cases remain withheld or unnecessarily refused. Local timing and pipeline changes prevent treating this as an isolated model-performance experiment.
 
 ## Interpretation and next validation
 

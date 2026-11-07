@@ -1,5 +1,7 @@
 # Architecture and engineering decisions
 
+Current pipeline: **version 2.0**. See [the version 2 experience and grounding design](EXPERIENCE_V2.md) for the evidence desk, observable execution events, citation-local checks, source-snapshot revalidation and one bounded correction. The supplied procedural corpus and local inference boundary remain the same.
+
 The assistant retrieves evidence from the supplied procedure snapshot, generates a concise answer locally, and exposes the supporting passages. The architecture separates data processing, retrieval, conversation handling, generation, checks and presentation so that each stage can be tested and replaced independently.
 
 ## Data flow
@@ -25,7 +27,9 @@ flowchart LR
   E --> L[Local Qwen generation]
   L --> M[Citations, numbers, length + claim screening]
   M -->|Pass| O[Answer + source passages]
-  M -->|Fail| X[Explicitly labeled source excerpts]
+  M -->|First failure| F[One correction with the same evidence]
+  F --> L
+  M -->|Still fails| X[Explicitly labeled source excerpts]
 ```
 
 ## Components and their responsibilities
@@ -63,7 +67,7 @@ Narrative content is grouped within a section to a target of 110 whitespace word
 
 The initial 180-word grouping diluted specific rules and encouraged unrelated context. Shorter passages were selected after observing those development failures. No claim is made that this is globally optimal. A production parser should represent table cells and branching logic as typed structures and have SME-approved extraction coverage tests.
 
-The index contains a JSONL passage store, a JSON source manifest, normalized Markdown extracts and an unpickled NumPy embedding matrix. The embedding manifest binds the matrix to the exact passage-file hash. At startup, original source hashes and the passage/embedding relationship are checked; changed input requires a rebuild. This detects stale local input, not malicious tampering with every artifact at once. Signed manifests and trusted artifact storage are production improvements.
+The index contains a JSONL passage store, a JSON source manifest, normalized Markdown extracts and an unpickled NumPy embedding matrix. The embedding manifest binds the matrix to the exact passage-file hash. At startup, original source hashes and the passage/embedding relationship are checked. Every supported request also checks the source files and cached-index fingerprints; changed input requires a rebuild. This detects stale local input, not malicious tampering with every artifact at once. Signed manifests and trusted artifact storage are production improvements.
 
 ## Retrieval sequence
 
@@ -90,11 +94,11 @@ This deterministic resolver is transparent and cheap, but it is intentionally li
 
 The local Qwen3 model receives a fixed system prompt, a clearly delimited evidence block with source labels, and the resolved question. It is instructed to answer the exact fact first, preserve conditions and exceptions, distinguish mandatory requirements from recommendations, use only supplied evidence, remain concise, and cite each factual paragraph. Qwen3 non-thinking mode is used for the bounded answer task. Greedy decoding is used for repeatability. The hard budget is 3,800 input tokens and 240 generated tokens. Greedy decoding does not remove hallucinations. An explicit insufficient-evidence marker produces an abstention instead of a fabricated answer.
 
-An initial Qwen2.5 1.5B float32 baseline and a Qwen3 comparison are retained in `artifacts/experiments/`. The final choice improves local inference speed and demonstrated follow-ups; it is still limited and has not been validated by independent SMEs. Model repository revisions and exact local file hashes are recorded; the default downloader pins those revisions.
+An initial Qwen2.5 1.5B float32 baseline and a Qwen3 comparison are retained in `artifacts/experiments/`. The initial model comparison favored the quantized generator. Version 2 adds support checks and a bounded correction that can increase end-to-end CPU latency; use the current measured results rather than treating model size as a speed guarantee. The system remains limited and has not been validated by independent SMEs. Model repository revisions and exact local file hashes are recorded; the default downloader pins those revisions.
 
 Mechanical checks reject absent or unknown source labels, uncited substantive paragraphs, invented numeric literals and excessive answer length. Numeric comparison canonicalizes equivalent decimal/currency forms such as 36 and 36.00. Claims are split into sentences and neutral attribution phrases are removed. Substantive verbatim matches to a cited passage have a direct textual-support check; paraphrases use the NLI model, including adjacent sentence windows to reduce long-premise dilution. The initial NLI threshold is entailment >=0.55 and contradiction <0.20. All claims must pass. Verbatim matching does not establish applicability to the user's situation. The classifier is trained on general NLI datasets and can both reject valid banking answers and miss unsupported claims. Neither is independent ground truth.
 
-When validation fails, the response explicitly says the generated answer could not be validated and shows retrieved source excerpts. This is reported as `evidence_only`, not as a successful generated answer. A generated answer that says information is absent is tagged `partial` when detected by simple language rules. Every factual response includes its evidence objects, model identity, checks, timings and trace ID for inspection. The app does not show a fabricated confidence percentage.
+When validation still fails after at most one correction, the response explicitly says the generated answer could not be validated and shows retrieved source excerpts. This is reported as `evidence_only`, not as a successful generated answer. A generated answer that says information is absent is tagged `partial` when detected by simple language rules. Every factual response includes its evidence objects, model identity, checks, timings and trace ID for inspection. The app does not show a fabricated confidence percentage.
 
 The mechanical checker also rejects recognizable changes between strict and inclusive boundaries for the same numeric value, such as changing “less than $2 million” into “$2 million or less.” This comparator check covers selected language patterns, not general mathematical verification.
 

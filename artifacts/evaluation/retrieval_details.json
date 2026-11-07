@@ -6,7 +6,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0334,
+    "seconds": 0.0942,
     "expected_chunk_ids": [
       "PR1000-063e7fa98b0c",
       "PR1000-a560506e8546"
@@ -26,7 +26,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0133,
+    "seconds": 0.0434,
     "expected_chunk_ids": [
       "PR1000-063e7fa98b0c",
       "PR1000-a560506e8546"
@@ -46,7 +46,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.6055,
+    "seconds": 1.7578,
     "expected_chunk_ids": [
       "PR1000-063e7fa98b0c",
       "PR1000-a560506e8546"
@@ -66,7 +66,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0135,
+    "seconds": 0.0345,
     "expected_chunk_ids": [
       "PR1000-02a06dc19594"
     ],
@@ -85,7 +85,7 @@
     "hit_at_5": false,
     "reciprocal_rank_at_5": 0,
     "document_hit_at_5": true,
-    "seconds": 0.0109,
+    "seconds": 0.0325,
     "expected_chunk_ids": [
       "PR1000-02a06dc19594"
     ],
@@ -104,7 +104,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4197,
+    "seconds": 1.65,
     "expected_chunk_ids": [
       "PR1000-02a06dc19594"
     ],
@@ -123,7 +123,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0113,
+    "seconds": 0.0485,
     "expected_chunk_ids": [
       "PR1000-23829a763c74"
     ],
@@ -142,7 +142,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0115,
+    "seconds": 0.0394,
     "expected_chunk_ids": [
       "PR1000-23829a763c74"
     ],
@@ -161,7 +161,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3976,
+    "seconds": 1.4335,
     "expected_chunk_ids": [
       "PR1000-23829a763c74"
     ],
@@ -180,7 +180,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.0117,
+    "seconds": 0.0316,
     "expected_chunk_ids": [
       "PR1263-99af3dde8179"
     ],
@@ -199,7 +199,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.0085,
+    "seconds": 0.0277,
     "expected_chunk_ids": [
       "PR1263-99af3dde8179"
     ],
@@ -218,7 +218,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.4159,
+    "seconds": 1.524,
     "expected_chunk_ids": [
       "PR1263-99af3dde8179"
     ],
@@ -237,7 +237,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0127,
+    "seconds": 0.0425,
     "expected_chunk_ids": [
       "PR1263-c35db583fd93"
     ],
@@ -256,7 +256,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.3333333333333333,
     "document_hit_at_5": true,
-    "seconds": 0.0104,
+    "seconds": 0.0404,
     "expected_chunk_ids": [
       "PR1263-c35db583fd93"
     ],
@@ -275,7 +275,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4148,
+    "seconds": 1.5033,
     "expected_chunk_ids": [
       "PR1263-c35db583fd93"
     ],
@@ -294,7 +294,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0133,
+    "seconds": 0.0344,
     "expected_chunk_ids": [
       "PR1263-0538c94be458",
       "PR1263-2f3df77919db"
@@ -314,7 +314,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0091,
+    "seconds": 0.0318,
     "expected_chunk_ids": [
       "PR1263-0538c94be458",
       "PR1263-2f3df77919db"
@@ -334,7 +334,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4421,
+    "seconds": 1.4487,
     "expected_chunk_ids": [
       "PR1263-0538c94be458",
       "PR1263-2f3df77919db"
@@ -354,7 +354,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.011,
+    "seconds": 0.04,
     "expected_chunk_ids": [
       "PR1277-c7a058dae615"
     ],
@@ -373,7 +373,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0095,
+    "seconds": 0.0356,
     "expected_chunk_ids": [
       "PR1277-c7a058dae615"
     ],
@@ -392,7 +392,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3685,
+    "seconds": 1.4152,
     "expected_chunk_ids": [
       "PR1277-c7a058dae615"
     ],
@@ -411,7 +411,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0126,
+    "seconds": 0.036,
     "expected_chunk_ids": [
       "PR1277-c7a058dae615"
     ],
@@ -430,7 +430,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0097,
+    "seconds": 0.0381,
     "expected_chunk_ids": [
       "PR1277-c7a058dae615"
     ],
@@ -449,7 +449,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3545,
+    "seconds": 1.2699,
     "expected_chunk_ids": [
       "PR1277-c7a058dae615"
     ],
@@ -468,7 +468,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0131,
+    "seconds": 0.0364,
     "expected_chunk_ids": [
       "PR1277-155ad61f519f"
     ],
@@ -487,7 +487,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0102,
+    "seconds": 0.0341,
     "expected_chunk_ids": [
       "PR1277-155ad61f519f"
     ],
@@ -506,7 +506,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3471,
+    "seconds": 1.2469,
     "expected_chunk_ids": [
       "PR1277-155ad61f519f"
     ],
@@ -525,7 +525,7 @@
     "hit_at_5": false,
     "reciprocal_rank_at_5": 0,
     "document_hit_at_5": true,
-    "seconds": 0.0103,
+    "seconds": 0.0311,
     "expected_chunk_ids": [
       "PR1779-2f1a7c6ed346",
       "PR1779-36143912f621",
@@ -547,7 +547,7 @@
     "hit_at_5": false,
     "reciprocal_rank_at_5": 0,
     "document_hit_at_5": true,
-    "seconds": 0.0097,
+    "seconds": 0.0304,
     "expected_chunk_ids": [
       "PR1779-2f1a7c6ed346",
       "PR1779-36143912f621",
@@ -569,7 +569,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.4827,
+    "seconds": 1.5126,
     "expected_chunk_ids": [
       "PR1779-2f1a7c6ed346",
       "PR1779-36143912f621",
@@ -591,7 +591,7 @@
     "hit_at_5": false,
     "reciprocal_rank_at_5": 0,
     "document_hit_at_5": true,
-    "seconds": 0.015,
+    "seconds": 0.036,
     "expected_chunk_ids": [
       "PR1779-794443c61a0c",
       "PR1779-8dfb92fe2155",
@@ -613,7 +613,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0117,
+    "seconds": 0.0349,
     "expected_chunk_ids": [
       "PR1779-794443c61a0c",
       "PR1779-8dfb92fe2155",
@@ -635,7 +635,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.5892,
+    "seconds": 1.5081,
     "expected_chunk_ids": [
       "PR1779-794443c61a0c",
       "PR1779-8dfb92fe2155",
@@ -657,7 +657,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0174,
+    "seconds": 0.0353,
     "expected_chunk_ids": [
       "PR1779-1219e416f100",
       "PR1779-43bf9a7423e9",
@@ -686,7 +686,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.016,
+    "seconds": 0.0354,
     "expected_chunk_ids": [
       "PR1779-1219e416f100",
       "PR1779-43bf9a7423e9",
@@ -715,7 +715,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.463,
+    "seconds": 1.5499,
     "expected_chunk_ids": [
       "PR1779-1219e416f100",
       "PR1779-43bf9a7423e9",
@@ -744,7 +744,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0113,
+    "seconds": 0.0416,
     "expected_chunk_ids": [
       "PR1949-6084a9a18c4f",
       "PR1949-8d8591baf3f9"
@@ -764,7 +764,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.0099,
+    "seconds": 0.0397,
     "expected_chunk_ids": [
       "PR1949-6084a9a18c4f",
       "PR1949-8d8591baf3f9"
@@ -784,7 +784,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4438,
+    "seconds": 1.4642,
     "expected_chunk_ids": [
       "PR1949-6084a9a18c4f",
       "PR1949-8d8591baf3f9"
@@ -804,7 +804,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0135,
+    "seconds": 0.0315,
     "expected_chunk_ids": [
       "PR1949-cff69e2b0e7b"
     ],
@@ -823,7 +823,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0107,
+    "seconds": 0.0327,
     "expected_chunk_ids": [
       "PR1949-cff69e2b0e7b"
     ],
@@ -842,7 +842,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3355,
+    "seconds": 1.2111,
     "expected_chunk_ids": [
       "PR1949-cff69e2b0e7b"
     ],
@@ -861,7 +861,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.25,
     "document_hit_at_5": true,
-    "seconds": 0.0116,
+    "seconds": 0.0336,
     "expected_chunk_ids": [
       "PR1949-cff69e2b0e7b"
     ],
@@ -880,7 +880,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0092,
+    "seconds": 0.031,
     "expected_chunk_ids": [
       "PR1949-cff69e2b0e7b"
     ],
@@ -899,7 +899,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.396,
+    "seconds": 1.3372,
     "expected_chunk_ids": [
       "PR1949-cff69e2b0e7b"
     ],
@@ -918,7 +918,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.0096,
+    "seconds": 0.039,
     "expected_chunk_ids": [
       "PR2306-33d65a9f533d"
     ],
@@ -937,7 +937,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.0144,
+    "seconds": 0.0336,
     "expected_chunk_ids": [
       "PR2306-33d65a9f533d"
     ],
@@ -956,7 +956,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.5377,
+    "seconds": 1.681,
     "expected_chunk_ids": [
       "PR2306-33d65a9f533d"
     ],
@@ -975,7 +975,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0115,
+    "seconds": 0.0377,
     "expected_chunk_ids": [
       "PR2306-33d65a9f533d"
     ],
@@ -994,7 +994,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.2,
     "document_hit_at_5": true,
-    "seconds": 0.0103,
+    "seconds": 0.0328,
     "expected_chunk_ids": [
       "PR2306-33d65a9f533d"
     ],
@@ -1013,7 +1013,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4911,
+    "seconds": 1.4183,
     "expected_chunk_ids": [
       "PR2306-33d65a9f533d"
     ],
@@ -1032,7 +1032,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0126,
+    "seconds": 0.0351,
     "expected_chunk_ids": [
       "PR2321-1734fb4c276e",
       "PR2321-86388eecb056"
@@ -1052,7 +1052,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0105,
+    "seconds": 0.0465,
     "expected_chunk_ids": [
       "PR2321-1734fb4c276e",
       "PR2321-86388eecb056"
@@ -1072,7 +1072,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.5786,
+    "seconds": 1.6794,
     "expected_chunk_ids": [
       "PR2321-1734fb4c276e",
       "PR2321-86388eecb056"
@@ -1092,7 +1092,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0106,
+    "seconds": 0.0437,
     "expected_chunk_ids": [
       "PR2321-1734fb4c276e",
       "PR2321-86388eecb056"
@@ -1112,7 +1112,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.01,
+    "seconds": 0.0379,
     "expected_chunk_ids": [
       "PR2321-1734fb4c276e",
       "PR2321-86388eecb056"
@@ -1132,7 +1132,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.5977,
+    "seconds": 1.7165,
     "expected_chunk_ids": [
       "PR2321-1734fb4c276e",
       "PR2321-86388eecb056"
@@ -1152,7 +1152,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0149,
+    "seconds": 0.0365,
     "expected_chunk_ids": [
       "PR2321-fff1a8faedb5"
     ],
@@ -1171,7 +1171,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0139,
+    "seconds": 0.0422,
     "expected_chunk_ids": [
       "PR2321-fff1a8faedb5"
     ],
@@ -1190,7 +1190,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.6084,
+    "seconds": 1.7393,
     "expected_chunk_ids": [
       "PR2321-fff1a8faedb5"
     ],
@@ -1209,7 +1209,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0111,
+    "seconds": 0.0366,
     "expected_chunk_ids": [
       "PR472-0053121f1ccc"
     ],
@@ -1228,7 +1228,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.0097,
+    "seconds": 0.0252,
     "expected_chunk_ids": [
       "PR472-0053121f1ccc"
     ],
@@ -1247,7 +1247,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4849,
+    "seconds": 1.286,
     "expected_chunk_ids": [
       "PR472-0053121f1ccc"
     ],
@@ -1266,7 +1266,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0109,
+    "seconds": 0.0369,
     "expected_chunk_ids": [
       "PR472-141de270b087"
     ],
@@ -1285,7 +1285,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0114,
+    "seconds": 0.0355,
     "expected_chunk_ids": [
       "PR472-141de270b087"
     ],
@@ -1304,7 +1304,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4125,
+    "seconds": 1.5327,
     "expected_chunk_ids": [
       "PR472-141de270b087"
     ],
@@ -1323,7 +1323,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0104,
+    "seconds": 0.0484,
     "expected_chunk_ids": [
       "PR607-81cf7117d72f"
     ],
@@ -1342,7 +1342,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0105,
+    "seconds": 0.0463,
     "expected_chunk_ids": [
       "PR607-81cf7117d72f"
     ],
@@ -1361,7 +1361,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4891,
+    "seconds": 1.7407,
     "expected_chunk_ids": [
       "PR607-81cf7117d72f"
     ],
@@ -1380,7 +1380,7 @@
     "hit_at_5": false,
     "reciprocal_rank_at_5": 0,
     "document_hit_at_5": true,
-    "seconds": 0.0106,
+    "seconds": 0.0346,
     "expected_chunk_ids": [
       "PR607-1efc3eb81ab0"
     ],
@@ -1399,7 +1399,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0091,
+    "seconds": 0.031,
     "expected_chunk_ids": [
       "PR607-1efc3eb81ab0"
     ],
@@ -1418,7 +1418,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.4691,
+    "seconds": 1.6591,
     "expected_chunk_ids": [
       "PR607-1efc3eb81ab0"
     ],
@@ -1437,7 +1437,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0096,
+    "seconds": 0.0316,
     "expected_chunk_ids": [
       "PR63-370ffcb6a01d"
     ],
@@ -1456,7 +1456,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0097,
+    "seconds": 0.0324,
     "expected_chunk_ids": [
       "PR63-370ffcb6a01d"
     ],
@@ -1475,7 +1475,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3451,
+    "seconds": 1.2182,
     "expected_chunk_ids": [
       "PR63-370ffcb6a01d"
     ],
@@ -1494,7 +1494,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.5,
     "document_hit_at_5": true,
-    "seconds": 0.01,
+    "seconds": 0.0312,
     "expected_chunk_ids": [
       "PR63-a1dba609ddc4"
     ],
@@ -1513,7 +1513,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0094,
+    "seconds": 0.0396,
     "expected_chunk_ids": [
       "PR63-a1dba609ddc4"
     ],
@@ -1532,7 +1532,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.3333333333333333,
     "document_hit_at_5": true,
-    "seconds": 0.4185,
+    "seconds": 1.5806,
     "expected_chunk_ids": [
       "PR63-a1dba609ddc4"
     ],
@@ -1551,7 +1551,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 0.2,
     "document_hit_at_5": true,
-    "seconds": 0.01,
+    "seconds": 0.0348,
     "expected_chunk_ids": [
       "PR63-8995da42e0b5"
     ],
@@ -1570,7 +1570,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.01,
+    "seconds": 0.0323,
     "expected_chunk_ids": [
       "PR63-8995da42e0b5"
     ],
@@ -1589,7 +1589,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.353,
+    "seconds": 1.4146,
     "expected_chunk_ids": [
       "PR63-8995da42e0b5"
     ],
@@ -1608,7 +1608,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0106,
+    "seconds": 0.0335,
     "expected_chunk_ids": [
       "PR7554-554c73c6dda9"
     ],
@@ -1627,7 +1627,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0097,
+    "seconds": 0.0305,
     "expected_chunk_ids": [
       "PR7554-554c73c6dda9"
     ],
@@ -1646,7 +1646,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3461,
+    "seconds": 1.3078,
     "expected_chunk_ids": [
       "PR7554-554c73c6dda9"
     ],
@@ -1665,7 +1665,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0108,
+    "seconds": 0.0364,
     "expected_chunk_ids": [
       "PR7554-f7c591a38e20"
     ],
@@ -1684,7 +1684,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0092,
+    "seconds": 0.0405,
     "expected_chunk_ids": [
       "PR7554-f7c591a38e20"
     ],
@@ -1703,7 +1703,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3104,
+    "seconds": 1.269,
     "expected_chunk_ids": [
       "PR7554-f7c591a38e20"
     ],
@@ -1722,7 +1722,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0099,
+    "seconds": 0.0309,
     "expected_chunk_ids": [
       "PR7554-b9dc56528dbb"
     ],
@@ -1741,7 +1741,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.0094,
+    "seconds": 0.032,
     "expected_chunk_ids": [
       "PR7554-b9dc56528dbb"
     ],
@@ -1760,7 +1760,7 @@
     "hit_at_5": true,
     "reciprocal_rank_at_5": 1.0,
     "document_hit_at_5": true,
-    "seconds": 0.3312,
+    "seconds": 1.3287,
     "expected_chunk_ids": [
       "PR7554-b9dc56528dbb"
     ],

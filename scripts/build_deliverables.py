@@ -33,6 +33,7 @@ generated_rows = [row for row in ANSWERS if row['result']['generator_used']]
 # summary even when an earlier evaluator binary produced the same raw run.
 mechanical_passes = [row for row in generated_rows if (
     row['result']['checks'].get('valid_citations') and row['result']['checks'].get('all_paragraphs_cited')
+    and row['result']['checks'].get('all_claims_attributed',True) and not row['result']['checks'].get('numeric_citation_conflicts')
     and not row['result']['checks'].get('novel_numbers') and not row['result']['checks'].get('comparison_conflicts')
     and 0 < row['result']['checks'].get('word_count',999) <= 190)]
 draft_lengths = [row['result']['checks']['word_count'] for row in generated_rows if 'word_count' in row['result']['checks']]
@@ -45,7 +46,7 @@ BY_ID = {r["id"]: r for r in ANSWERS}
 R = {r["mode"]: r for r in METRICS["retrieval"] if r["split"] == "all"}
 browser_file=ROOT / "artifacts/browser_check.json"
 browser_result=json.loads(browser_file.read_text()) if browser_file.exists() else {}
-browser_ok=all(browser_result.get(k) for k in ['welcome_loaded','followup_pass','export_includes_latest_turn','second_session_isolated','reset_pass'])
+browser_ok=browser_result.get('pipeline_version')=='2.0' and all(browser_result.get(k) for k in ['welcome_loaded','followup_pass','export_includes_latest_turn','second_session_isolated','reset_pass','claim_map_pass','activity_record_pass','library_search_and_scope_pass'])
 browser_summary=("The live browser integration check passed actual generation, an explicit single-versus-dual-control follow-up, source inspection, complete transcript export, independent browser sessions and reset. The browser reported no client errors. Results and screenshots are retained under `artifacts/`." if browser_ok else "Browser integration results are retained under `artifacts/` when the optional live browser check has completed.")
 test_file=ROOT / 'artifacts/test_results.xml'
 test_suites=list(ET.parse(test_file).getroot().iter('testsuite')) if test_file.exists() else []
@@ -53,14 +54,14 @@ test_total=sum(int(s.attrib.get('tests',0)) for s in test_suites)
 test_failures=sum(int(s.attrib.get('failures',0))+int(s.attrib.get('errors',0)) for s in test_suites)
 test_summary=f"The recorded automated test run contains {test_total} tests with {test_failures} failures/errors." if test_suites else "Run the automated tests using the README instructions."
 
-NAVY = "102B43"
-TEAL = "087F83"
-LIGHT = "F5F7FA"
-INK = "263E52"
-MUTED = "52697D"
+NAVY = "3B3331"
+TEAL = "D71E28"
+LIGHT = "F9F7F6"
+INK = "3B3331"
+MUTED = "787070"
 WHITE = "FFFFFF"
-LINE = "DCE4ED"
-GOLD = "E7B56A"
+LINE = "E2DEDE"
+GOLD = "FFCD41"
 
 
 def pct(v):
@@ -83,16 +84,20 @@ class Deck:
     def new(self, number, section, title, subtitle="", dark=False):
         self.slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])
         self.page = self.pdf.new_page(width=960, height=540)
-        fill = NAVY if dark else LIGHT
+        fill = TEAL if dark else LIGHT
         self.rect(0, 0, 960, 540, fill)
-        self.text(40, 24, 800, 20, f"CAYMAN / PROCEDURE ASSISTANT / {section.upper()}", 10, GOLD if dark else TEAL, True)
+        self.text(40, 24, 800, 20, f"BRANCH ASSIST / INTERVIEW PROTOTYPE / {section.upper()}", 10, GOLD if dark else TEAL, True)
+        if dark:
+            logo = ROOT / "assets/brand/wells-fargo-wordmark.png"
+            self.slide.shapes.add_picture(str(logo), Pt(760), Pt(24), width=Pt(160))
+            self.page.insert_image(fitz.Rect(760,24,920,41),filename=str(logo),keep_proportion=True)
         self.text(40, 65, 880, 80, title, 29, WHITE if dark else NAVY, True)
         if subtitle:
-            self.text(40, 136, 880, 35, subtitle, 13, "C4D5E3" if dark else MUTED)
-        self.rect(40, 505, 880, 1, "3A5268" if dark else LINE)
+            self.text(40, 136, 880, 35, subtitle, 13, "FCEDEE" if dark else MUTED)
+        self.rect(40, 505, 880, 1, "EF777D" if dark else LINE)
         self.rect(40, 505, 880 * number/6, 2, GOLD if dark else TEAL)
-        self.text(40, 516, 800, 15, "EXERCISE PROTOTYPE  ·  SUPPLIED DOCUMENT SNAPSHOT  ·  NOVEMBER 7, 2026", 8, "B4C8D8" if dark else MUTED)
-        self.text(887, 515, 36, 16, f"{number:02d}/06", 9, "B4C8D8" if dark else MUTED)
+        self.text(40, 516, 800, 15, "EXERCISE PROTOTYPE  ·  SUPPLIED CAYMAN BANK DOCUMENTS  ·  NOVEMBER 7, 2026", 8, "FBE5E6" if dark else MUTED)
+        self.text(887, 515, 36, 16, f"{number:02d}/06", 9, "FBE5E6" if dark else MUTED)
 
     def rect(self, x, y, w, h, fill, border=None, rounded=False):
         shape = self.slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.ROUNDED_RECTANGLE if rounded else MSO_AUTO_SHAPE_TYPE.RECTANGLE,
@@ -146,11 +151,11 @@ deck.new(1, "The business problem", "Branch guidance employees\ncan inspect and 
 deck.text(40, 174, 525, 78, "Turn a procedure search into a concise answer,\nwith the applicable conditions and visible evidence.", 21, WHITE)
 for x, value, label in [(40,"11","supplied procedures"),(245,f"{CORPUS['chunk_count']:,}","traceable passages"),(450,"Local","generative inference")]:
     deck.text(x,286,190,52,value,37,GOLD,True)
-    deck.text(x,341,190,30,label,12,"C4D5E3")
-deck.rect(674,178,246,221,"1B3D55")
+    deck.text(x,341,190,30,label,12,"FCEDEE")
+deck.rect(674,178,246,221,"B01C24")
 deck.text(694,198,205,28,"DELIVERED",11,GOLD,True)
 deck.text(694,237,205,130,"Working chat\nFollow-up questions\nSource inspection\nMeasured evaluation\nSix-slide presentation",16,WHITE)
-deck.text(40,418,858,48,"Decision support over the supplied snapshot.\nEmployees verify the cited procedure before acting; the assistant does not execute transactions.",14,"C4D5E3")
+deck.text(40,418,858,48,"Decision support over the supplied snapshot.\nEmployees verify the cited procedure before acting; the assistant does not execute transactions.",14,"FCEDEE")
 deck.notes("""
     Timing: 0:00–3:00. Start with the employee's task, not the model name.
 
@@ -174,7 +179,7 @@ for x, title, sub in [(40,"Original HTML","11 files · immutable source hashes")
     deck.text(x+14,220,250,24,title,16,NAVY,True)
     deck.text(x+14,250,250,22,sub,11,MUTED)
 deck.text(40,308,180,22,"EACH QUESTION",11,TEAL,True)
-steps=[("Question +\nsession context",NAVY),("Hybrid retrieval\n+ reranking",TEAL),("Bounded evidence\n+ local Qwen3",NAVY),("Output checks\n+ NLI screening",TEAL),("Answer +\nsource passages",NAVY)]
+steps=[("Question +\nsession context",NAVY),("Hybrid retrieval\n+ reranking",TEAL),("Bounded evidence\n+ local Qwen3",NAVY),("Claim checks +\none correction",TEAL),("Answer +\nsource passages",NAVY)]
 for i,(label,fill) in enumerate(steps):
     x=40+i*180
     deck.rect(x,341,160,70,fill)
@@ -191,7 +196,7 @@ deck.notes("""
 
     The final generator is a locally executed Qwen3 four-billion-parameter model in four-bit GGUF form through llama.cpp. Quantization makes a larger model practical on the available CPU laptop. This was an empirical choice: the initial smaller model frequently added irrelevant details or produced drafts that were withheld. A stronger approved private or hosted model should be compared before any real deployment.
 
-    The output passes citation, number, length and claim-support screening. Those checks can fail in both directions. If checks fail, the interface explicitly shows source excerpts rather than disguising the rejected draft as a successful answer. If the retrieval signal is too weak, the system asks for clarification or abstains.
+    The output passes citation, number, length and claim-support screening. Explicit claim citations bind locally, and numeric values must match the passage actually cited. A failed draft can receive one correction using the same evidence and deterministic failed-check feedback. The revised answer must pass the same checks. Otherwise the interface shows labelled source excerpts. Actual actions, durations and the release decision are exposed in the activity record, not a simulated chain of thought. Weak retrieval produces clarification or abstention.
 
     I chose RAG because the task is access to a small, revisable evidence collection. Fine-tuning does not itself give reliable citations or explicit deletion of obsolete procedures. Sending the entire corpus would be inefficient and would expose the generator to many unrelated conditions. Search alone is a valuable fallback but would not satisfy the requested generative chat experience.
 
@@ -233,7 +238,7 @@ deck.text(58,400,497,48,"Single control. Inspect the cited procedure passage.",1
 deck.text(610,187,300,35,"Useful context, bounded memory",18,NAVY,True)
 deck.text(610,235,300,98,"Prior user questions resolve context.\nNew topics replace old scope.\nPrevious generated claims are not evidence.",14,MUTED)
 deck.text(610,350,300,35,"Inspectable outcomes",18,NAVY,True)
-deck.text(610,397,300,74,"View sources, reset, export and rate.\nWeak evidence: clarify / abstain.\nFailed checks: show source excerpts.",14,MUTED)
+deck.text(610,397,300,74,"Evidence / checks / actual activity\nFailed draft: one bounded correction\nStill unsupported: source review",14,MUTED)
 deck.notes("""
     Timing: 10:00–13:00. The short dialogue summarizes source-checked facts; the demonstration will show actual generated responses and status.
 
@@ -371,10 +376,10 @@ def markdown_html(markdown: str) -> str:
 
 
 def report_pdf(markdown: str, output: Path):
-    css = """body {font-family: sans-serif; font-size:10pt; color:#263e52; line-height:1.35}
-    h1{font-size:23pt;color:#102b43} h2{font-size:15pt;color:#087f83;margin-top:18pt}
-    h3{font-size:12pt;color:#102b43} p{margin-bottom:8pt} table{border-collapse:collapse;font-size:8.5pt;width:100%;margin:9pt 0}
-    th{background:#e8eff4;color:#102b43}td,th{border:0.4pt solid #ccd8e1;padding:5pt;vertical-align:top}
+    css = """body {font-family: sans-serif; font-size:10pt; color:#3b3331; line-height:1.35}
+    h1{font-size:23pt;color:#3b3331} h2{font-size:15pt;color:#b01c24;margin-top:18pt}
+    h3{font-size:12pt;color:#3b3331} p{margin-bottom:8pt} table{border-collapse:collapse;font-size:8.5pt;width:100%;margin:9pt 0}
+    th{background:#e8eff4;color:#3b3331}td,th{border:0.4pt solid #ccd8e1;padding:5pt;vertical-align:top}
     li{margin-bottom:5pt} """
     story = fitz.Story(html=markdown_html(markdown), user_css=css)
     writer = fitz.DocumentWriter(str(output))
@@ -412,7 +417,9 @@ The system helps employees ask a procedure question, inspect the supporting pass
 
 The final generator is {A['model']}. The Qwen3 model uses four-bit GGUF inference through llama.cpp on CPU. An earlier Qwen2.5 1.5B float32 baseline produced too many distracting details and withheld drafts; its complete results are retained separately. Model choice was evaluated empirically rather than inferred from published benchmarks.
 
-The solution uses structure-aware HTML parsing, a JSONL passage store, BM25 lexical search, 384-dimensional MiniLM embeddings, reciprocal rank fusion, MiniLM cross-encoder reranking, bounded evidence, actual local generation, citation/number checks and a DeBERTa NLI screening signal. The application exposes source passages, follow-up questions, topic switches, clarification, reset, transcript export and session-scoped feedback.
+The solution uses structure-aware HTML parsing, a JSONL passage store, BM25 lexical search, 384-dimensional MiniLM embeddings, reciprocal rank fusion, MiniLM cross-encoder reranking, bounded evidence, actual local generation, citation-local numeric checks and a DeBERTa NLI screening signal. The Wells Fargo–inspired version 2 workspace exposes a searchable procedure library and an Evidence desk with Evidence, Checks and Activity views. The brand asset is the unmodified official website wordmark, and the interface is explicitly labelled as an interview prototype using the supplied Cayman Bank documents.
+
+Version 2 checks original sources and cached-index fingerprints on every supported request. It binds explicit citations to individual claims and records the source passage and evidence window behind each support check. A failed draft may receive one correction using the same evidence; the revised draft must pass the same checks or be withheld. Actual stage events and deterministic decision criteria are visible; the interface does not fabricate private model reasoning or a confidence percentage. Details are in [the version 2 design](docs/EXPERIENCE_V2.md).
 
 ## Assignment alignment
 
@@ -440,8 +447,8 @@ Narrative grouping targets roughly 110 words within sections, with 20-word overl
 2. Search BM25 and normalized dense vectors. Combine the rankings with RRF and rerank the candidates jointly with the question.
 3. Abstain if evidence signals are weak. Otherwise construct a pack of up to three nonduplicate passages, targeting at most 520 words.
 4. Give the selected evidence and resolved question to the local generative model. The prompt requires a direct, concise answer with conditions, exceptions and source labels.
-5. Check citation labels, paragraph citations, new numeric literals and answer length. Screen generated claims against their cited evidence using NLI.
-6. Display a generated answer with inspectable sources when checks pass. Otherwise explicitly withhold the draft and display labelled source excerpts. Unsupported questions receive an abstention or clarification.
+5. Check citation labels, claim-local attribution, numeric values and recognized boundaries against the cited passages; screen claim support with verbatim matching or NLI.
+6. If a draft fails, allow one bounded correction with the same evidence and deterministic feedback, then apply the same checks. Display a passing answer with evidence; otherwise withhold it and show sources. Unsupported questions receive abstention or clarification. Record the actual stages and decision for inspection.
 
 Source hashes detect changed originals; the embedding manifest binds vectors to the passage-file hash. Plain JSON and NumPy files avoid loading pickled index objects. Runtime model loading uses local files; external linked documents are not retrieved. Some supplied links are placeholders and are not treated as evidence.
 
@@ -449,7 +456,7 @@ Source hashes detect changed originals; the embedding manifest binds vectors to 
 
 Browser sessions own their question history; cached models/indexes do not own user conversation memory. Prior user questions can resolve an elliptical follow-up. A follow-up naming a new task in the same procedure retains scope without repeating unrelated prior-task keywords. Named topic changes replace previous scope. Every follow-up performs fresh retrieval; previous generated claims are never authoritative evidence.
 
-The interface provides starter questions, source panels, original-procedure downloads, publication information, reset, opt-in transcript export and in-session feedback. It distinguishes generated answers, partial support, withheld drafts shown as excerpts, insufficient support and missing context. The resolver is deliberately bounded and can misinterpret ambiguous or long conversations.
+The interface provides starter scenarios, a searchable procedure library, optional document-scoped retrieval, citation selection, original-procedure downloads, publication information, reset, opt-in investigation export and feedback. The Evidence desk separates exact passages, claim-support checks and observed activity. Conflicting document scope prompts clarification, and a new unsupported response does not silently show an earlier response's sources. The resolver remains bounded and can misinterpret ambiguous or long conversations.
 
 ## Measured results
 
@@ -471,10 +478,13 @@ Retrieval hit@5 measures whether at least one labelled relevant passage was in t
 | Expected guardrail response status | {pct(A['guardrail_expected_status_rate'])} of {A['guardrails_n']} |
 | Serial local end-to-end p50 / p95, generated evaluations | {A['p50_seconds']:.2f}s / {A['p95_seconds']:.2f}s |
 | Mean generated-draft word count | {A['mean_word_count']:.1f} |
+| Bounded correction attempts / revised answers released | {A.get('repair_attempts',0)} / {A.get('repairs_released',0)} |
 | Ordinary-question response outcome counts | {status_counts} |
 | Follow-up final-turn fact proxies | {follow} |
 
 The latency measurements exclude initial model loading and are from serial requests on the local CPU; they are not a throughput benchmark. Word count is a conciseness diagnostic, not proof of sufficient context. Term matching can pass wrong statements or miss correct paraphrases. NLI is fallible. These results must not be described as independently established accuracy.
+
+Version 2 permits one correction after a failed draft, using the same evidence and check feedback. This increases the worst-case generation work. {A.get('repairs_released',0)} of {A.get('repair_attempts',0)} revised evaluated drafts passed release checks in this run. This is a screened-release count, not independent confirmation of the revisions' correctness.
 
 Regression cases missing at least one required fact group, including source-only outcomes: {', '.join(failed) or 'none'}. Review their raw responses and evidence in `artifacts/evaluation/answer_details.json`. The report does not hide fallback as generated-answer success.
 
@@ -530,6 +540,9 @@ for doc in CORPUS["documents"]:
 baseline_path=ROOT / "artifacts/experiments/qwen2_5_complete/metrics.json"
 baseline=json.loads(baseline_path.read_text())["answers"] if baseline_path.exists() else None
 comparison=(f"The retained initial 1.5B pipeline had {pct(baseline['all_required_facts_proxy'])} all-fact proxy coverage and p50 {baseline['p50_seconds']:.2f}s; the final pipeline has {pct(A['all_required_facts_proxy'])} and p50 {A['p50_seconds']:.2f}s. Model, prompts, evidence packing and screening changed between these runs, so this is an end-to-end iteration comparison, not an isolated causal model ablation." if baseline else "No initial comparison artifact is present.")
+v1_path=ROOT / "artifacts/experiments/v1_complete_before_workspace_v2/metrics.json"
+v1=json.loads(v1_path.read_text())["answers"] if v1_path.exists() else None
+v2_comparison=(f"On the same 30-question regression set, the previous version had {pct(v1['all_required_facts_proxy'])} all-fact proxy coverage and {v1['evidence_only_fallbacks']} source-only outcomes; the current version has {pct(A['all_required_facts_proxy'])} and {A['evidence_only_fallbacks']}. The strict sales-boundary and savings-bond exception cases were recovered through bounded correction, while some other cases remain withheld or unnecessarily refused. Local timing and pipeline changes prevent treating this as an isolated model-performance experiment." if v1 else "")
 evaluation_report=f"""# Evaluation report
 
 Final model: {A['model']}. All figures below are calculated from the saved final local run. The test suite uses AI-authored, source-checked labels and is not an independently adjudicated benchmark. Review the original sources and [the scoring rubric](../evaluation/REVIEW_RUBRIC.md) before interpreting these figures.
@@ -541,6 +554,8 @@ BM25 evidence hit@5: {pct(R['bm25']['hit_at_5'])}; dense: {pct(R['dense']['hit_a
 All required fact groups occur in {pct(A['all_required_facts_proxy'])} of the 30 ordinary generated-answer evaluations. Mean fact-group coverage is {pct(A['fact_coverage_proxy'])}. A source-only fallback fails the generated-answer proxy even when its excerpts contain the answer. Keyword proxies can miss valid paraphrases and pass incorrect statements containing expected words.
 
 The output-screen pass rate is {pct(A.get('output_screen_pass_rate',A['mechanical_validation_pass_rate']))}. This is a combination of mechanical and support screening, not a correctness estimate. There are {A['evidence_only_fallbacks']} source-only outcomes among {A['generated_n']} evaluated generated calls. Guardrail expected-status agreement is {pct(A['guardrail_expected_status_rate'])} on six deliberately selected cases; six cases do not establish general security effectiveness.
+
+The version 2 engine attempted {A.get('repair_attempts',0)} bounded corrections and released {A.get('repairs_released',0)} revised answers after the same checks. Each correction keeps the same evidence pack. The record retains rejected draft details, and the activity view reports a correction only when it occurred. Additional attempts can increase CPU response time; safety and coverage must be assessed together with that latency cost.
 
 Serial local generated-call latency is p50 {A['p50_seconds']:.2f}s and p95 {A['p95_seconds']:.2f}s. First model load is excluded. Mean draft length is {A['mean_word_count']:.1f} words. Neither length nor speed establishes usefulness or completeness. Concurrent users, network deployments and cold starts were not benchmarked.
 
@@ -574,6 +589,8 @@ Guardrail cases cover unrelated content, a direct instruction attack, an unknown
 - Fact completeness and relevance remain imperfect. The application may omit a requested condition, refuse a valid question or add related but unnecessary detail. These are exposed in raw traces and the table above.
 
 {comparison}
+
+{v2_comparison}
 
 ## Interpretation and next validation
 

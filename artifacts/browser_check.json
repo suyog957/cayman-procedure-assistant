@@ -1,10 +1,18 @@
 {
+  "pipeline_version": "2.0",
   "welcome_loaded": true,
   "client_errors": [],
-  "first_answer": "The overnight storage limit for a coin-counting machine is $5,250 [S1].\n\nGenerated answer \u00b7 inspect citations\n\nView 1 source passages\n\nAnswer details\n\nNot rated\n\nHelpful\n\nNeeds review",
-  "followup_answer": "Monthly testing is done in single control. [S2]\n\nGenerated answer \u00b7 inspect citations\n\nView 2 source passages\n\nAnswer details\n\nNot rated\n\nHelpful\n\nNeeds review",
+  "first_answer": "BRANCH ASSIST\nChecks passed\n\nThe overnight storage limit for a coin-counting machine is $5,250 [S1].\n\n17.4s \u00b7 1 source passage\n\n[S1] PR63\n\nInspect answer checks",
+  "citation_selection_pass": true,
+  "followup_answer": "BRANCH ASSIST\nChecks passed\n\nMonthly testing is done in single control. [S2]\n\n5.8s \u00b7 2 source passages\n\n[S2] PR63\n\nInspect answer checks",
   "followup_pass": true,
+  "claim_map_pass": true,
+  "activity_record_pass": true,
   "export_includes_latest_turn": true,
+  "library_search_and_scope_pass": true,
+  "conflicting_scope_clarifies": true,
   "second_session_isolated": true,
-  "reset_pass": true
+  "reset_pass": true,
+  "mobile_no_horizontal_overflow": true,
+  "run_status": "passed"
 }

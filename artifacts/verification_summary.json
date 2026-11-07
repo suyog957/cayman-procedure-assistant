@@ -10,7 +10,7 @@
   "slides": 6,
   "speaker_note_words_per_slide": [
     292,
-    332,
+    361,
     328,
     337,
     315,
@@ -26,8 +26,12 @@
     "README.txt",
     "Recorded_Demo.pdf"
   ],
-  "automated_tests_passed": 19,
+  "pipeline_version": "2.0",
+  "automated_tests_passed": 37,
   "browser_integration_passed": true,
+  "claim_citation_map_tested": true,
+  "document_scope_tested": true,
+  "observable_activity_tested": true,
   "recorded_evaluation_cases": 40,
   "metrics_consistent": true,
   "limitation": "Structural and integration verification, not independent SME validation of generated answers."

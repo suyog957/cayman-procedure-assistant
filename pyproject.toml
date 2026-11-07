@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cayman-procedure-assistant"
-version = "1.0.0"
+version = "2.0.0"
 description = "Evidence-grounded conversational assistant for eleven supplied branch procedures"
 requires-python = ">=3.10"
 dependencies = [

@@ -3,12 +3,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass, asdict, field
 from pathlib import Path
-from decimal import Decimal
 import re
 import time
 import uuid
 
 from .retrieval import Retriever, Hit
+from .validation import validate_answer, failure_reasons
+from .observability import ActivityTrace, grounding_summary, PIPELINE_VERSION
 
 TOPICS = {
     "PR1000": r"notar|notary|notaries",
@@ -46,6 +47,10 @@ class Response:
     metrics: dict = field(default_factory=dict)
     checks: dict = field(default_factory=dict)
     trace_id: str = field(default_factory=lambda: uuid.uuid4().hex[:12])
+
+    activity: list[dict] = field(default_factory=list)
+    grounding: dict = field(default_factory=dict)
+    followups: list[str] = field(default_factory=list)
 
     def to_dict(self):
         return asdict(self)
@@ -96,45 +101,6 @@ def evidence_from_hits(hits: list[Hit], max_chunks: int = 3, max_words: int = 52
     return evidence
 
 
-def validate_answer(answer: str, evidence: list[dict]) -> dict:
-    valid = {e["label"] for e in evidence}
-    cited = set(re.findall(r"\[(S\d+)\]", answer))
-    paragraphs = [p for p in answer.split("\n") if p.strip() and len(p.split()) > 3]
-    missing = [p for p in paragraphs if not re.search(r"\[S\d+\]", p)]
-    # This is a narrow mechanical check, not semantic entailment verification.
-    references = " ".join(e["text"] for e in evidence)
-    def nums(t):
-        t = re.sub(r"\[S\d+\]|\bPR\d+\b|^\s*\d+[.)]\s*", "", t, flags=re.M)
-        return {format(Decimal(n.replace(",", "")).normalize(), "f")
-                for n in re.findall(r"\b\d[\d,]*(?:\.\d+)?\b", t)}
-    novel_numbers = nums(answer) - nums(references)
-    def comparisons(text):
-        number = r"\$?\s*(\d[\d,]*(?:\.\d+)?)\s*(million|billion|thousand)?"
-        prefix = {"less than":"lt", "below":"lt", "under":"lt", "more than":"gt", "greater than":"gt", "over":"gt",
-                  "at most":"le", "up to":"le", "no more than":"le", "not more than":"le",
-                  "not less than":"ge", "at least":"ge"}
-        found = {}
-        def record(raw, scale, operator):
-            multiplier = {"million": 1000000, "billion": 1000000000, "thousand": 1000}.get((scale or "").lower(), 1)
-            key = format((Decimal(raw.replace(",", "")) * multiplier).normalize(), "f")
-            found.setdefault(key, set()).add(operator)
-        phrases = "|".join(re.escape(p) for p in sorted(prefix, key=len, reverse=True))
-        for match in re.finditer(r"\b(" + phrases + r")\s+" + number, text, re.I):
-            record(match.group(2), match.group(3), prefix[match.group(1).lower()])
-        for match in re.finditer(number + r"\s+(?:calendar |business )?(?:days? |months? |years? )?or (less|more)\b", text, re.I):
-            record(match.group(1), match.group(2), "le" if match.group(3).lower() == "less" else "ge")
-        return found
-    source_comparisons, answer_comparisons = comparisons(references), comparisons(answer)
-    comparison_conflicts = [{"value": number, "answer_operators": sorted(operators),
-                             "source_operators": sorted(source_comparisons[number])}
-                            for number, operators in answer_comparisons.items()
-                            if number in source_comparisons and not operators <= source_comparisons[number]]
-    return {"valid_citations": bool(cited) and cited <= valid,
-            "all_paragraphs_cited": not missing and bool(paragraphs),
-            "novel_numbers": sorted(novel_numbers), "comparison_conflicts": comparison_conflicts, "word_count": len(answer.split()),
-            "passed": bool(cited) and cited <= valid and not missing and not novel_numbers and not comparison_conflicts and len(answer.split()) <= 190}
-
-
 class Assistant:
     def __init__(self, root: Path, load_generator: bool = True, generator_backend: str = "qwen3"):
         self.root = root
@@ -149,55 +115,133 @@ class Assistant:
             self.generator = (QuantizedGenerator if generator_backend == "qwen3" else TransformerGenerator)(root)
             self.verifier = Verifier(root)
 
-    def answer(self, question: str, history: list[Turn] | None = None) -> Response:
+    def answer(self, question: str, history: list[Turn] | None = None, *, scope_doc_id: str | None = None,
+               on_event=None, max_repairs: int = 1) -> Response:
+        if max_repairs not in {0, 1}:
+            raise ValueError("At most one grounded correction is permitted")
         started = time.perf_counter()
+        trace = ActivityTrace(on_event)
+        verified = False
+        resolution = "not_resolved"
         history = history or []
         question = question.strip()
+        trace.start("resolve", "Understand the request", "Checking scope, question context and input requirements.")
+
+        def finish(response):
+            response.trace_id = trace.request_id
+            response.metrics.update(total_seconds=round(time.perf_counter() - started, 3),
+                                    pipeline_version=PIPELINE_VERSION, context_resolution=resolution)
+            response.grounding = grounding_summary(response.status, response.checks, response.sources, verified, resolution)
+            trace.start("decision", "Choose the response", "Applying the observed evidence and validation results.")
+            trace.finish("decision", response.grounding["decision"], "complete" if response.status == "answered" else "review")
+            response.activity = trace.steps
+            response.followups = suggested_followups(response)
+            return response
+
+        def stop(answer, status, query=None):
+            trace.finish("resolve", answer, "blocked")
+            return finish(Response(answer, status, question, query or question))
+
         if not question or len(question) > 1200:
-            return Response("Please enter a procedure question of 1–1,200 characters.", "clarify", question, question)
+            return stop("Please enter a procedure question of 1–1,200 characters.", "clarify")
         if INJECTION.search(question):
-            return Response("I can help with questions grounded in the 11 supplied procedures. Please ask about a branch procedure.", "refused", question, question)
+            return stop("I can help with questions grounded in the 11 supplied procedures. Please ask about a branch procedure.", "refused")
         if re.search(r"\b\d{3}-\d{2}-\d{4}\b|\b\d{12,19}\b", question):
-            return Response("Please remove customer identifiers and ask about the procedure using a hypothetical example.", "clarify", question, question)
+            return stop("Please remove customer identifiers and ask about the procedure using a hypothetical example.", "clarify")
         query, doc_id, resolution = resolve_question(question, history)
-        if doc_id and doc_id not in TOPICS:
-            return Response("That procedure is not among the 11 supplied documents. Please select a supplied procedure or ask your supervisor for the current source.", "unsupported", question, query)
-        if not history and not any(re.search(p, question, re.I) for p in TOPICS.values()) and (len(question.split()) < 5 or re.search(r"\b(it|that|those|they|them)\b", question, re.I)):
-            return Response("Which procedure or situation are you asking about? For example, notary services, identification, or coin-counting machines.", "clarify", question, query)
+        if doc_id and doc_id not in TOPICS or scope_doc_id and scope_doc_id not in TOPICS:
+            return stop("That procedure is not among the 11 supplied documents. Please select a supplied procedure or ask your supervisor for the current source.", "unsupported", query)
+        named = [doc for doc, pattern in TOPICS.items() if re.search(pattern, question, re.I)]
+        named_doc = doc_id if resolution == "explicit_procedure" else named[0] if len(named) == 1 else None
+        if scope_doc_id and named_doc and named_doc != scope_doc_id:
+            return stop(f"This question refers to {named_doc}, while the selected search scope is {scope_doc_id}. Choose All procedures or select {named_doc} to continue.", "clarify", query)
+        if not history and not named and (len(question.split()) < 5 or re.search(r"\b(it|that|those|they|them)\b", question, re.I)):
+            return stop("Which procedure or situation are you asking about? For example, notary services, identification, or coin-counting machines.", "clarify", query)
+        doc_id = scope_doc_id or doc_id
+        trace.finish("resolve", f"Resolved as {resolution.replace('_', ' ')}; searching {doc_id or 'all 11 procedures'}.",
+                     query=query, scope=doc_id or "all")
+        trace.start("integrity", "Verify the source snapshot", "Checking source files and the cached index for changes.")
+        try:
+            count = self.retriever.validate_snapshot()
+        except (OSError, ValueError):
+            trace.finish("integrity", "The source or indexed snapshot changed.", "blocked")
+            return finish(Response("The source or index has changed. Reload the application and rebuild the index if needed before asking again.", "unsupported", question, query))
+        verified = True
+        trace.finish("integrity", f"{count} supplied procedure files match the indexed snapshot.", documents=count)
+        trace.start("retrieve", "Find relevant procedure passages", "Running keyword search, semantic search and cross-encoder reranking.")
         search_start = time.perf_counter()
         hits = self.retriever.search(query, k=8, doc_id=doc_id)
-        retrieval_seconds = time.perf_counter() - search_start
-        metrics = {"retrieval_seconds": round(retrieval_seconds, 3), "context_resolution": resolution}
-        # Reranker logits and cosine are signals, not calibrated probabilities.
-        # Initial development thresholds; report coverage and abstention separately.
+        metrics = {"retrieval_seconds": round(time.perf_counter() - search_start, 3), "context_resolution": resolution}
+        trace.finish("retrieve", f"Retrieved and ranked {len(hits)} candidate passages.", passages=len(hits))
         if not hits or hits[0].rerank < -2.0 or hits[0].cosine < .24:
-            metrics["total_seconds"] = round(time.perf_counter() - started, 3)
-            return Response("I could not find sufficient support in the 11 supplied procedures. Please clarify the situation or consult the current procedure and your supervisor.",
-                            "unsupported", question, query, metrics=metrics)
+            return finish(Response("I could not find sufficient support in the 11 supplied procedures. Please clarify the situation or consult the current procedure and your supervisor.",
+                                   "unsupported", question, query, metrics=metrics))
+        trace.start("evidence", "Assemble the evidence", "Keeping relevant source conditions and adjacent qualifications together.")
         evidence = evidence_from_hits(self.retriever.expand_qualifications(hits))
+        doc_count = len({e['doc_id'] for e in evidence})
+        trace.finish("evidence", f"Selected {len(evidence)} passages from {doc_count} procedure{'s' if doc_count != 1 else ''}.",
+                     "complete" if evidence else "blocked",
+                     source_labels=[e["label"] for e in evidence], expanded=sum(bool(e.get("expanded_from")) for e in evidence))
+        if not evidence:
+            return finish(Response("I could not find a complete supporting passage for this question. Please clarify the situation or consult the original procedure.",
+                                   "unsupported", question, query, metrics=metrics))
         if not self.generator:
-            return Response("Relevant source passages are available below. Generative answering is not loaded.", "evidence_only", question, query, evidence, metrics=metrics)
-        answer, generation_metrics = self.generator.generate(query, evidence)
-        metrics.update(generation_metrics)
-        if answer.strip().upper().startswith("INSUFFICIENT_EVIDENCE"):
-            metrics["total_seconds"] = round(time.perf_counter() - started, 3)
-            return Response("The retrieved passages do not provide the information needed to answer this question. Please consult the current approved source or your supervisor.",
-                            "unsupported", question, query, evidence, self.generator.model_id, True, metrics,
-                            {"model_abstained": True, "passed": False})
-        checks = validate_answer(answer, evidence)
-        if checks["passed"]:
+            return finish(Response("Relevant source passages are available below. Generative answering is not loaded.", "evidence_only", question, query, evidence, metrics=metrics))
+        metrics.update(generation_seconds=0., verification_seconds=0., input_tokens=0, output_tokens=0,
+                       generation_attempts=0, repair_attempted=False)
+        rejected = []
+        for attempt in range(max_repairs + 1):
+            draft_key, check_key = ("draft", "validate") if not attempt else ("repair", "revalidate")
+            trace.start(draft_key, "Draft the answer" if not attempt else "Revise the draft once",
+                        "Generating from the selected source passages." if not attempt else "Applying failed-check feedback to the same evidence; the revision must pass the same checks.")
+            draft_query = query
+            if attempt:
+                metrics["repair_attempted"] = True
+                draft_query += "\n\nValidation guidance for one correction:\n" + "\n".join(failure_reasons(checks))
+                draft_query += "\nCite each factual sentence. If the evidence is insufficient, output INSUFFICIENT_EVIDENCE."
+            answer, generated = self.generator.generate(draft_query, evidence)
+            metrics["generation_attempts"] += 1
+            for key in ["generation_seconds", "input_tokens", "output_tokens"]:
+                metrics[key] += generated.get(key, 0)
+            trace.finish(draft_key, "The local model completed its output from the supplied evidence context.", output_tokens=generated.get("output_tokens"))
+            if answer.strip().upper().startswith("INSUFFICIENT_EVIDENCE"):
+                return finish(Response("I could not produce a sufficiently supported answer from the retrieved passages. Review the available sources or consult the current approved procedure.",
+                                       "unsupported", question, query, evidence, self.generator.model_id, True, metrics,
+                                       {"model_abstained": True, "passed": False, "rejected_attempts": rejected}))
+            trace.start(check_key, "Check the answer" if not attempt else "Check the revised answer",
+                        "Checking citation attribution, numeric values, thresholds and claim support.")
             check_start = time.perf_counter()
-            checks["claim_support"] = self.verifier.check(answer, evidence)
-            metrics["verification_seconds"] = round(time.perf_counter() - check_start, 3)
-            checks["passed"] = checks["passed"] and checks["claim_support"]["passed"]
+            checks = validate_answer(answer, evidence)
+            if checks["passed"]:
+                checks["claim_support"] = self.verifier.check(answer, evidence)
+                checks["passed"] = checks["claim_support"]["passed"]
+            metrics["verification_seconds"] += round(time.perf_counter() - check_start, 3)
+            trace.finish(check_key, "All required output checks passed." if checks["passed"] else "The draft failed one or more required checks.",
+                         "complete" if checks["passed"] else "review", passed=checks["passed"])
+            if checks["passed"]:
+                break
+            rejected.append({"attempt": attempt + 1, "draft_answer": answer, "failure_reasons": failure_reasons(checks)})
+        checks["rejected_attempts"] = rejected
         status = "answered"
         if not checks["passed"]:
             checks["withheld_draft"] = answer
-            # Never disguise a quote as a successfully generated answer.
             answer = "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n" + "\n\n".join(
                 f"> {e['text']} [{e['label']}]" for e in evidence[:2])
             status = "evidence_only"
         elif re.search(r"(?:(?:information|detail|answer|rate)(?: is| was|s are)? not (?:provided|specified|mentioned|available|included)|(?:cannot|could not) (?:answer|determine|find)|(?:evidence|procedure|document)[^.]{0,40}does not (?:provide|specify|mention)|no (?:information|specific (?:information|rate|details)))", answer, re.I):
             status = "partial"
-        metrics["total_seconds"] = round(time.perf_counter() - started, 3)
-        return Response(answer, status, question, query, evidence, self.generator.model_id, True, metrics, checks)
+        return finish(Response(answer, status, question, query, evidence, self.generator.model_id, True, metrics, checks))
+
+
+def suggested_followups(response: Response) -> list[str]:
+    """Curated questions are navigation suggestions, never canned answers."""
+    if not response.sources or response.status not in {"answered", "partial", "evidence_only"}:
+        return []
+    doc = response.sources[0]["doc_id"]
+    if doc == "PR63":
+        return ["And is monthly testing done in single or dual control?", "What are the coin totals for monthly testing?"] if "overnight" in response.question.lower() else ["How often must the coin machine be balanced?", "What is the overnight coin storage limit?"]
+    if doc == "PR1000":
+        return ["What if the requester is physically present?", "What are the notary journal requirements?"] if "email" in response.retrieval_query.lower() else ["Can a notary charge a fee?", "What are the notary journal requirements?"]
+    if doc == "PR1949":
+        return ["What if they are eligible for The Private Bank Experience?", "Can the bank charge a savings bond redemption fee?"]
+    return [f"What exceptions are described in {doc}?", f"What identification requirements are described in {doc}?"]

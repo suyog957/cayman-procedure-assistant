@@ -2,6 +2,10 @@
 
 The assignment allows 20 minutes for the presentation and 15 minutes for the technical walkthrough and demonstration. Use the six-slide deck and the local application. Do not show or submit implementation source code. This guide is preparation material; use the source-free PDF copy in `submission/` if sharing it.
 
+## Version 2 workspace controls
+
+Use **New investigation** to reset. Citation buttons such as **[S1] PR63** select the exact passage in the **Evidence desk**. Its **Evidence**, **Checks** and **Activity** views expose sources, statement support and actual execution events. A failed draft may receive one bounded correction; show that step only when it appears in the actual activity record. The **Procedure library** searches source documents and sets retrieval scope. Keep **All 11 procedures** selected for the topic-switch demonstration. The **Evaluation** view shows measured results and limitations. Do not describe activity events as the model?s private reasoning.
+
 ## Before the meeting
 
 1. Check the recruiter email for the exact submission deadline, recipient, video meeting link and any additional delivery instructions. None were supplied with this workspace.

@@ -12,6 +12,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from cayman_assistant.assistant import Assistant, Turn, resolve_question
 from cayman_assistant.retrieval import Retriever
+from cayman_assistant.observability import PIPELINE_VERSION
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--generate", action="store_true")
@@ -46,7 +47,7 @@ for case in suite["cases"]:
                      "seconds": round(time.perf_counter() - start, 4),
                      "expected_chunk_ids": sorted(relevant_ids),
                      "retrieved_chunk_ids": [h.chunk.chunk_id for h in hits]})
-summary = {"label_status": suite["label_status"], "retrieval": []}
+summary = {"pipeline_version": PIPELINE_VERSION, "label_status": suite["label_status"], "retrieval": []}
 for split in ["all", "development", "challenge"]:
     for mode in ["bm25", "dense", "hybrid"]:
         selected = [r for r in rows if r["mode"] == mode and (split == "all" or r["split"] == split)]
@@ -99,6 +100,8 @@ if args.generate:
         "all_required_facts_proxy": round(float(np.mean([r["all_required_facts_proxy"] for r in ordinary])), 4),
         "fact_coverage_proxy": round(float(np.mean([r["fact_coverage_proxy"] for r in ordinary])), 4),
         "generated_n": len(generated), "output_screen_pass_rate": round(len(valid) / len(generated), 4),
+        "repair_attempts": sum(bool(r['result']['metrics'].get('repair_attempted')) for r in generated),
+        "repairs_released": sum(bool(r['result']['metrics'].get('repair_attempted')) and r['result']['status'] in {'answered','partial'} for r in generated),
         "mechanical_validation_pass_rate": round(float(np.mean([bool(r['result']['checks'].get('valid_citations') and r['result']['checks'].get('all_paragraphs_cited') and not r['result']['checks'].get('novel_numbers') and not r['result']['checks'].get('comparison_conflicts') and r['result']['checks'].get('word_count',999)>0 and r['result']['checks'].get('word_count',999)<=190) for r in generated])),4),
         "evidence_only_fallbacks": sum(r["result"]["status"] == "evidence_only" for r in generated),
         "guardrails_n": len(guardrails), "guardrail_expected_status_rate": round(float(np.mean([r["expected_status_pass"] for r in guardrails])), 4),

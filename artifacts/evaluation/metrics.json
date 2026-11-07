@@ -1,4 +1,5 @@
 {
+  "pipeline_version": "2.0",
   "label_status": "AI-authored, source-checked development/regression cases; not independently adjudicated",
   "retrieval": [
     {
@@ -7,8 +8,8 @@
       "n": 30,
       "hit_at_5": 0.9,
       "mrr_at_5": 0.7983,
-      "p50_seconds": 0.011,
-      "p95_seconds": 0.016
+      "p50_seconds": 0.036,
+      "p95_seconds": 0.048
     },
     {
       "split": "all",
@@ -16,8 +17,8 @@
       "n": 30,
       "hit_at_5": 0.9333,
       "mrr_at_5": 0.8178,
-      "p50_seconds": 0.01,
-      "p95_seconds": 0.014
+      "p50_seconds": 0.035,
+      "p95_seconds": 0.045
     },
     {
       "split": "all",
@@ -25,8 +26,8 @@
       "n": 30,
       "hit_at_5": 1.0,
       "mrr_at_5": 0.9278,
-      "p50_seconds": 0.419,
-      "p95_seconds": 0.602
+      "p50_seconds": 1.484,
+      "p95_seconds": 1.74
     },
     {
       "split": "development",
@@ -34,8 +35,8 @@
       "n": 19,
       "hit_at_5": 0.8947,
       "mrr_at_5": 0.8158,
-      "p50_seconds": 0.011,
-      "p95_seconds": 0.017
+      "p50_seconds": 0.036,
+      "p95_seconds": 0.053
     },
     {
       "split": "development",
@@ -43,8 +44,8 @@
       "n": 19,
       "hit_at_5": 0.8947,
       "mrr_at_5": 0.7544,
-      "p50_seconds": 0.01,
-      "p95_seconds": 0.013
+      "p50_seconds": 0.036,
+      "p95_seconds": 0.046
     },
     {
       "split": "development",
@@ -52,8 +53,8 @@
       "n": 19,
       "hit_at_5": 1.0,
       "mrr_at_5": 0.886,
-      "p50_seconds": 0.42,
-      "p95_seconds": 0.598
+      "p50_seconds": 1.508,
+      "p95_seconds": 1.742
     },
     {
       "split": "challenge",
@@ -61,8 +62,8 @@
       "n": 11,
       "hit_at_5": 0.9091,
       "mrr_at_5": 0.7682,
-      "p50_seconds": 0.011,
-      "p95_seconds": 0.016
+      "p50_seconds": 0.035,
+      "p95_seconds": 0.043
     },
     {
       "split": "challenge",
@@ -70,8 +71,8 @@
       "n": 11,
       "hit_at_5": 1.0,
       "mrr_at_5": 0.9273,
-      "p50_seconds": 0.01,
-      "p95_seconds": 0.015
+      "p50_seconds": 0.033,
+      "p95_seconds": 0.041
     },
     {
       "split": "challenge",
@@ -79,24 +80,26 @@
       "n": 11,
       "hit_at_5": 1.0,
       "mrr_at_5": 1.0,
-      "p50_seconds": 0.412,
-      "p95_seconds": 0.55
+      "p50_seconds": 1.433,
+      "p95_seconds": 1.699
     }
   ],
   "answers": {
     "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
     "ordinary_n": 30,
-    "all_required_facts_proxy": 0.7333,
-    "fact_coverage_proxy": 0.7333,
+    "all_required_facts_proxy": 0.7667,
+    "fact_coverage_proxy": 0.7667,
     "generated_n": 35,
-    "output_screen_pass_rate": 0.7143,
-    "mechanical_validation_pass_rate": 0.9143,
-    "evidence_only_fallbacks": 8,
+    "output_screen_pass_rate": 0.7429,
+    "repair_attempts": 9,
+    "repairs_released": 2,
+    "mechanical_validation_pass_rate": 0.8571,
+    "evidence_only_fallbacks": 6,
     "guardrails_n": 6,
     "guardrail_expected_status_rate": 1.0,
-    "p50_seconds": 6.7,
-    "p95_seconds": 12.47,
-    "mean_word_count": 25.7,
+    "p50_seconds": 13.81,
+    "p95_seconds": 23.92,
+    "mean_word_count": 28.0,
     "followup_fact_passes": {
       "F01.2": false,
       "F02.2": true,
@@ -104,6 +107,6 @@
       "F04.2": true
     },
     "limitations": "AI-authored labels; challenge set is not a blind holdout after inspection. Term matching and citation checks do not establish semantic correctness, relevance, or completeness. Human SME review remains required.",
-    "draft_word_count_n": 33
+    "draft_word_count_n": 32
   }
 }

@@ -39,17 +39,23 @@ assert not any(r['result']['checks'].get('comparison_conflicts') and r['result']
 browser=json.loads((ROOT/'artifacts/browser_check.json').read_text())
 for key in ['welcome_loaded','followup_pass','export_includes_latest_turn','second_session_isolated','reset_pass']:
     assert browser[key] is True
+assert browser['pipeline_version']=='2.0'
+assert browser['run_status']=='passed'
+for key in ['citation_selection_pass','claim_map_pass','activity_record_pass','library_search_and_scope_pass','conflicting_scope_clarifies','mobile_no_horizontal_overflow']:
+    assert browser[key] is True
 assert not browser['client_errors']
 test_doc=ET.parse(ROOT/'artifacts/test_results.xml').getroot()
 test_suites=list(test_doc.iter('testsuite'))
 tests=sum(int(s.attrib.get('tests',0)) for s in test_suites)
 assert tests>=19 and not any(int(s.attrib.get('failures',0))+int(s.attrib.get('errors',0)) for s in test_suites)
+assert tests>=35
 summary={
     'original_sources_unchanged':True,'documents':manifest['document_count'],'passages':manifest['chunk_count'],
     'embedding_shape':list(vectors.shape),'embedding_norms_valid':True,
     'slides':len(deck.slides),'speaker_note_words_per_slide':notes_counts,
     'slide_pdf_valid':True,'submission_archive_source_free':True,'archive_files':sorted(allowlist),
-    'automated_tests_passed':tests,'browser_integration_passed':True,
+    'pipeline_version':'2.0','automated_tests_passed':tests,'browser_integration_passed':True,
+    'claim_citation_map_tested':True,'document_scope_tested':True,'observable_activity_tested':True,
     'recorded_evaluation_cases':len(answers),'metrics_consistent':True,
     'limitation':'Structural and integration verification, not independent SME validation of generated answers.'}
 (ROOT/'artifacts/verification_summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')

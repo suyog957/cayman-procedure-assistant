@@ -40,3 +40,7 @@ The final pipeline remains imperfect. Passing the screening step does not establ
 No bank SME has independently adjudicated the generated labels or outputs. The challenge split was authored before results were inspected, but it is not a blinded holdout after inspection during development. No production user study, enterprise security assessment, model-risk approval, live policy-version check or real-bank-system integration has occurred. No productivity savings or enterprise-scale service levels are claimed.
 
 The candidate should review the response traces, rehearse the demo, personalize the leadership narrative, and accurately describe this as an AI-assisted implementation. Submission and any representations to the hiring team remain the candidate's responsibility.
+
+## Version 2 validation records
+
+The current workspace adds claim-local citation binding, current source/index integrity checks, statement-to-source evidence windows and one bounded correction. Runtime activity shows observed actions and deterministic check results, not fabricated agent thinking or private model reasoning. The same regression suite is rerun, with earlier results retained under `artifacts/experiments/v1_complete_before_workspace_v2`. The current evaluation records correction attempts and how many revised drafts passed the release checks. More inspectability does not itself establish factual correctness.

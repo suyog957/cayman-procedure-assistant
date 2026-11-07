@@ -1,0 +1,34 @@
+{
+  "original_sources_unchanged": true,
+  "documents": 11,
+  "passages": 1388,
+  "embedding_shape": [
+    1388,
+    384
+  ],
+  "embedding_norms_valid": true,
+  "slides": 6,
+  "speaker_note_words_per_slide": [
+    292,
+    332,
+    328,
+    337,
+    315,
+    326
+  ],
+  "slide_pdf_valid": true,
+  "submission_archive_source_free": true,
+  "archive_files": [
+    "Cayman_Procedure_Assistant.pdf",
+    "Cayman_Procedure_Assistant.pptx",
+    "Demo_Runbook.pdf",
+    "Presenter_Notes.pdf",
+    "README.txt",
+    "Recorded_Demo.pdf"
+  ],
+  "automated_tests_passed": 19,
+  "browser_integration_passed": true,
+  "recorded_evaluation_cases": 40,
+  "metrics_consistent": true,
+  "limitation": "Structural and integration verification, not independent SME validation of generated answers."
+}

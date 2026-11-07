@@ -1,0 +1,1364 @@
+[
+  {
+    "id": "N01",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> York, South Dakota, and Utah must notarize both Cayman Bank documents and non-Cayman Bank documents regardless of their customer status. If a customer requests a notarization on a non-Cayman Bank document that also lists other present individuals (non-customers) requiring a notarization on the same document, notaries may notarize all individuals\u2019 signatures regardless of their customer status. Notarize documents only at a Cayman Bank branch during business hours. Do not go offsite to complete notarizations during business work hours to conduct bank business transactions. Notarize only physical documents presented in person by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present. [S1]\n\n> by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present. Do not provide any legal advice related to notarizing a document. Do not charge a notary fee for:Notarizations completed at a Cayman Bank location. Notarizing Cayman Bank documents at a branch location or notarizing Cayman Bank documents outside Cayman Bank on your own personal time.\nThe notary must comply with state laws if asked to act as a notary and a witness on a single document.\nRelated procedure: Witness Customer Signatures and Sign Cayman Bank and Non-Cayman Bank Documents [S2]",
+      "status": "evidence_only",
+      "question": "Can a notary notarize an emailed document if the requester is physically present?",
+      "retrieval_query": "Can a notary notarize an emailed document if the requester is physically present?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1000-a560506e8546",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "1761041865",
+          "text": "York, South Dakota, and Utah must notarize both Cayman Bank documents and non-Cayman Bank documents regardless of their customer status. If a customer requests a notarization on a non-Cayman Bank document that also lists other present individuals (non-customers) requiring a notarization on the same document, notaries may notarize all individuals\u2019 signatures regardless of their customer status. Notarize documents only at a Cayman Bank branch during business hours. Do not go offsite to complete notarizations during business work hours to conduct bank business transactions. Notarize only physical documents presented in person by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 25.4783,
+            "cosine": 0.6258,
+            "rerank": 6.0497
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1000-063e7fa98b0c",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "1761041865",
+          "text": "by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present. Do not provide any legal advice related to notarizing a document. Do not charge a notary fee for:Notarizations completed at a Cayman Bank location. Notarizing Cayman Bank documents at a branch location or notarizing Cayman Bank documents outside Cayman Bank on your own personal time.\nThe notary must comply with state laws if asked to act as a notary and a witness on a single document.\nRelated procedure: Witness Customer Signatures and Sign Cayman Bank and Non-Cayman Bank Documents",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 22.7539,
+            "cosine": 0.5905,
+            "rerank": 5.9229
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.656,
+        "context_resolution": "named_topic",
+        "input_tokens": 617,
+        "output_tokens": 53,
+        "generation_seconds": 15.515,
+        "verification_seconds": 1.309,
+        "total_seconds": 17.525
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 36,
+        "passed": false,
+        "claim_support": {
+          "passed": false,
+          "claims": [
+            {
+              "claim": "No, a notary cannot notarize an emailed document if the requester is physically present.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.9894,
+              "contradiction": 0.0004,
+              "supported": true
+            },
+            {
+              "claim": "According to the evidence, notarizing documents sent by email, fax, mail, or text is prohibited, even if the requester is present.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.0032,
+              "contradiction": 0.0001,
+              "supported": false
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "740be0a6f9bb"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "N02",
+    "result": {
+      "answer": "Branch employees may limit notarizations to 50 per requester or one hour of service, whichever comes first. [S1]",
+      "status": "answered",
+      "question": "What notary service limit may a branch apply per requester?",
+      "retrieval_query": "What notary service limit may a branch apply per requester?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1000-02a06dc19594",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Notarizing at Cayman Bank locations",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "1719624179",
+          "text": "All Cayman Bank branch employee notaries are covered by the corporate insurance program for Error\u2019s and Omission\u2019s (E&O) insurance while performing work in the scope of their job, including notary services.\nLocations may limit to 50 notarizations or one hour of service per requester, whichever comes first. If a substantial request disrupts bank operations, an appointment should be scheduled for the remaining documents.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 19.6609,
+            "cosine": 0.495,
+            "rerank": 4.6679
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.475,
+        "context_resolution": "named_topic",
+        "input_tokens": 387,
+        "output_tokens": 28,
+        "generation_seconds": 8.168,
+        "verification_seconds": 0.155,
+        "total_seconds": 8.8
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 18,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "Branch employees may limit notarizations to 50 per requester or one hour of service, whichever comes first.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.865,
+              "contradiction": 0.0716,
+              "supported": true
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "b58b2ba02425"
+    },
+    "required_fact_checks": [
+      true,
+      true,
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "N03",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Notaries must adhere to the following requirements when providing notary services:Cayman Bank Customers: Notarize both Cayman Bank documents and non-Cayman Bank documents. Note: A Cayman Bank customer is an individual who has transaction authority on any Cayman Bank account relationship. Non-customers: Notarize only Cayman Bank documents unless the notary\u2019s state laws provide an exception. Exceptions: Notaries in Arizona, Iowa, New York, South Dakota, and Utah must notarize both Cayman Bank documents and non-Cayman Bank documents regardless of their customer status. [S1]\n\n> York, South Dakota, and Utah must notarize both Cayman Bank documents and non-Cayman Bank documents regardless of their customer status. If a customer requests a notarization on a non-Cayman Bank document that also lists other present individuals (non-customers) requiring a notarization on the same document, notaries may notarize all individuals\u2019 signatures regardless of their customer status. Notarize documents only at a Cayman Bank branch during business hours. Do not go offsite to complete notarizations during business work hours to conduct bank business transactions. Notarize only physical documents presented in person by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present. [S2]",
+      "status": "evidence_only",
+      "question": "Can a noncustomer in Arizona get a non-Cayman Bank document notarized?",
+      "retrieval_query": "Can a noncustomer in Arizona get a non-Cayman Bank document notarized?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1000-23829a763c74",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "1761041865",
+          "text": "Notaries must adhere to the following requirements when providing notary services:Cayman Bank Customers: Notarize both Cayman Bank documents and non-Cayman Bank documents. Note: A Cayman Bank customer is an individual who has transaction authority on any Cayman Bank account relationship. Non-customers: Notarize only Cayman Bank documents unless the notary\u2019s state laws provide an exception. Exceptions: Notaries in Arizona, Iowa, New York, South Dakota, and Utah must notarize both Cayman Bank documents and non-Cayman Bank documents regardless of their customer status.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 17.6319,
+            "cosine": 0.7287,
+            "rerank": 4.65
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1000-a560506e8546",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "1761041865",
+          "text": "York, South Dakota, and Utah must notarize both Cayman Bank documents and non-Cayman Bank documents regardless of their customer status. If a customer requests a notarization on a non-Cayman Bank document that also lists other present individuals (non-customers) requiring a notarization on the same document, notaries may notarize all individuals\u2019 signatures regardless of their customer status. Notarize documents only at a Cayman Bank branch during business hours. Do not go offsite to complete notarizations during business work hours to conduct bank business transactions. Notarize only physical documents presented in person by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 14.0548,
+            "cosine": 0.7235,
+            "rerank": 3.4438
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.383,
+        "context_resolution": "named_topic",
+        "input_tokens": 602,
+        "output_tokens": 76,
+        "generation_seconds": 19.618,
+        "verification_seconds": 0.756,
+        "total_seconds": 20.759
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 47,
+        "passed": false,
+        "claim_support": {
+          "passed": false,
+          "claims": [
+            {
+              "claim": "Yes, a noncustomer in Arizona can get a non-Cayman Bank document notarized.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.0072,
+              "contradiction": 0.9538,
+              "supported": false
+            },
+            {
+              "claim": "According to the rules, notaries in Arizona must notarize both Cayman Bank documents and non-Cayman Bank documents regardless of their customer status.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.7,
+              "contradiction": 0.2294,
+              "supported": false
+            },
+            {
+              "claim": "Therefore, a noncustomer in Arizona can have a non-Cayman Bank document notarized.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.0156,
+              "contradiction": 0.9454,
+              "supported": false
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "b568cf08650e"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "R01",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Review the items to be destroyed to ensure they do not include:Teller work and ATM batches stored 30 calendar days or less Any items other than teller work and ATM batches\nRemove any rubber bands, paper clips, or binders from the bundles.\nPlace the items and batch header tickets in a secure destruction bin. [S1]\n\n> Identify and remove teller work and ATM batches stored 31 calendar days or more.Teller work and ATM items are stored for a minimum of 30 calendar days; do not remove or destroy before that timeframe. Destroy items stored 31 calendar days or more monthly, according to the Teller/ATM Work Destruction Control Online task or more frequently, for example:Daily, as items for the current day are added to the check tray (newest in and oldest out) Weekly, on a set day [S2]",
+      "status": "evidence_only",
+      "question": "When can teller work and ATM batches be securely destroyed?",
+      "retrieval_query": "When can teller work and ATM batches be securely destroyed?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1263-24853593e26c",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "ATM items and teller work",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "1721502362",
+          "text": "Review the items to be destroyed to ensure they do not include:Teller work and ATM batches stored 30 calendar days or less Any items other than teller work and ATM batches\nRemove any rubber bands, paper clips, or binders from the bundles.\nPlace the items and batch header tickets in a secure destruction bin.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 33.523,
+            "cosine": 0.7068,
+            "rerank": 7.0034
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1263-99af3dde8179",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "ATM items and teller work",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "1721502362",
+          "text": "Identify and remove teller work and ATM batches stored 31 calendar days or more.Teller work and ATM items are stored for a minimum of 30 calendar days; do not remove or destroy before that timeframe. Destroy items stored 31 calendar days or more monthly, according to the Teller/ATM Work Destruction Control Online task or more frequently, for example:Daily, as items for the current day are added to the check tray (newest in and oldest out) Weekly, on a set day",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 24.1185,
+            "cosine": 0.6909,
+            "rerank": 6.5669
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.416,
+        "context_resolution": "standalone",
+        "input_tokens": 500,
+        "output_tokens": 29,
+        "generation_seconds": 8.581,
+        "total_seconds": 8.999
+      },
+      "checks": {
+        "valid_citations": false,
+        "all_paragraphs_cited": false,
+        "novel_numbers": [],
+        "word_count": 23,
+        "passed": false
+      },
+      "trace_id": "c9d242c5858d"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "R02",
+    "result": {
+      "answer": "No, a branch cannot accept a non-Cayman Bank metal card brought in by a customer for disposal. [S1]",
+      "status": "answered",
+      "question": "Can a branch accept a non-Cayman Bank metal card brought in by a customer for disposal?",
+      "retrieval_query": "Can a branch accept a non-Cayman Bank metal card brought in by a customer for disposal?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1263-c35db583fd93",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "Cards (plastic, metal) > Metal cards",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "391881840",
+          "text": "Situation: Customer brought their non-Cayman Bank metal card in for disposal | Action: Do not accept the card from the customer.",
+          "table_id": "PR1263-T004",
+          "row_id": 5,
+          "retrieval": {
+            "bm25": 41.504,
+            "cosine": 0.6488,
+            "rerank": 7.6185
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.434,
+        "context_resolution": "named_topic",
+        "input_tokens": 341,
+        "output_tokens": 27,
+        "generation_seconds": 8.468,
+        "verification_seconds": 0.083,
+        "total_seconds": 8.987
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 18,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "No, a branch cannot accept a non-Cayman Bank metal card brought in by a customer for disposal.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.8556,
+              "contradiction": 0.0094,
+              "supported": true
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "f44c06dc633f"
+    },
+    "required_fact_checks": [
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "R03",
+    "result": {
+      "answer": "The authority to issue or release a Record Preservation Hold Order lies with the Cayman Bank Legal Department. [S1]",
+      "status": "answered",
+      "question": "Who has authority to issue or release a Record Preservation Hold Order?",
+      "retrieval_query": "Who has authority to issue or release a Record Preservation Hold Order?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1263-2f3df77919db",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "Inactive records",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "192469891",
+          "text": "Cayman Bank Legal Department is the only department with the authority to issue or release a Record Preservation Hold Order. The original required retention period applies to records affected after the release of a Legal Hold Order.\nRefer to the Release a hold subsection of the Add, modify, or release a record hold section.\nComplete the appropriate action based on the situation:",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 36.7506,
+            "cosine": 0.7247,
+            "rerank": 9.2422
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.448,
+        "context_resolution": "standalone",
+        "input_tokens": 369,
+        "output_tokens": 25,
+        "generation_seconds": 7.837,
+        "verification_seconds": 0.191,
+        "total_seconds": 8.478
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 19,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "The authority to issue or release a Record Preservation Hold Order lies with the Cayman Bank Legal Department.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.9947,
+              "contradiction": 0.0004,
+              "supported": true
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "d10f0590ecb7"
+    },
+    "required_fact_checks": [
+      true,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.5
+  },
+  {
+    "id": "I01",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Do not accept a state-issued medical marijuana card as either primary or secondary ID.\nA digital driver\u2019s license is considered a companion document and does not replace the physical driver\u2019s license requirement.\nThe primary and secondary ID cannot both be issued by the same entity (for example, DMV) and with the same ID number. Consider both documents to be the same ID (for example, state driver's license and state ID or nondriver's license issued by the same state). Obtain a different secondary ID. [S1]",
+      "status": "evidence_only",
+      "question": "Does a digital driver's license replace the physical driver's license?",
+      "retrieval_query": "Does a digital driver's license replace the physical driver's license?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1277-c7a058dae615",
+          "doc_id": "PR1277",
+          "title": "Primary and Secondary Identification Requirements - PR1277",
+          "published": "Published January 7, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1277_Cayman_Bank.html",
+          "source_sha256": "e0d4a2a9ec6f83f543181f1cd04dbfca43fb2e6af462676d752e4bdbaf34317b",
+          "anchor": "1260491560",
+          "text": "Do not accept a state-issued medical marijuana card as either primary or secondary ID.\nA digital driver\u2019s license is considered a companion document and does not replace the physical driver\u2019s license requirement.\nThe primary and secondary ID cannot both be issued by the same entity (for example, DMV) and with the same ID number. Consider both documents to be the same ID (for example, state driver's license and state ID or nondriver's license issued by the same state). Obtain a different secondary ID.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 31.8029,
+            "cosine": 0.5784,
+            "rerank": 8.3911
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.408,
+        "context_resolution": "named_topic",
+        "input_tokens": 399,
+        "output_tokens": 47,
+        "generation_seconds": 12.118,
+        "verification_seconds": 0.416,
+        "total_seconds": 12.945
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 35,
+        "passed": false,
+        "claim_support": {
+          "passed": false,
+          "claims": [
+            {
+              "claim": "No, a digital driver's license does not replace the physical driver's license.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.9862,
+              "contradiction": 0.0026,
+              "supported": true
+            },
+            {
+              "claim": "According to the evidence, a digital driver's license is considered a companion document and does not replace the physical driver's license requirement.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.0062,
+              "contradiction": 0.0068,
+              "supported": false
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "6819d267d241"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "I02",
+    "result": {
+      "answer": "No, a state-issued medical marijuana card cannot be used as either primary or secondary identification. According to the procedure, a digital driver\u2019s license is considered a companion document and does not replace the physical driver\u2019s license requirement. The primary and secondary ID cannot both be issued by the same entity and with the same ID number. Therefore, obtaining a different secondary ID is recommended. [S1]",
+      "status": "answered",
+      "question": "Can a state-issued medical marijuana card be used as primary or secondary identification?",
+      "retrieval_query": "Can a state-issued medical marijuana card be used as primary or secondary identification?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1277-c7a058dae615",
+          "doc_id": "PR1277",
+          "title": "Primary and Secondary Identification Requirements - PR1277",
+          "published": "Published January 7, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1277_Cayman_Bank.html",
+          "source_sha256": "e0d4a2a9ec6f83f543181f1cd04dbfca43fb2e6af462676d752e4bdbaf34317b",
+          "anchor": "1260491560",
+          "text": "Do not accept a state-issued medical marijuana card as either primary or secondary ID.\nA digital driver\u2019s license is considered a companion document and does not replace the physical driver\u2019s license requirement.\nThe primary and secondary ID cannot both be issued by the same entity (for example, DMV) and with the same ID number. Consider both documents to be the same ID (for example, state driver's license and state ID or nondriver's license issued by the same state). Obtain a different secondary ID.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 39.9506,
+            "cosine": 0.7976,
+            "rerank": 9.421
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.339,
+        "context_resolution": "named_topic",
+        "input_tokens": 402,
+        "output_tokens": 80,
+        "generation_seconds": 17.136,
+        "verification_seconds": 1.051,
+        "total_seconds": 18.528
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 65,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "No, a state-issued medical marijuana card cannot be used as either primary or secondary identification.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.9395,
+              "contradiction": 0.0143,
+              "supported": true
+            },
+            {
+              "claim": "According to the procedure, a digital driver\u2019s license is considered a companion document and does not replace the physical driver\u2019s license requirement.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.7825,
+              "contradiction": 0.0419,
+              "supported": true
+            },
+            {
+              "claim": "The primary and secondary ID cannot both be issued by the same entity and with the same ID number.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.9921,
+              "contradiction": 0.0007,
+              "supported": true
+            },
+            {
+              "claim": "Therefore, obtaining a different secondary ID is recommended.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.8206,
+              "contradiction": 0.0,
+              "supported": true
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "c642cd5a987a"
+    },
+    "required_fact_checks": [
+      true,
+      true,
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "I03",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Exceptions to secondary ID requirements\nIf the individual has an unexpired U.S. military ID, you can accept an expired state-issued driver's license or ID card as secondary identification.\nThe following are acceptable as secondary ID (without a signature or photograph): Birth certificate (minors only) Credit card or Debit/ATM card. A signature is not required. If one is present, verify the signature against the customer\u2019s primary ID [S1]",
+      "status": "evidence_only",
+      "question": "When is an expired state driver's license acceptable as secondary identification?",
+      "retrieval_query": "When is an expired state driver's license acceptable as secondary identification?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1277-155ad61f519f",
+          "doc_id": "PR1277",
+          "title": "Primary and Secondary Identification Requirements - PR1277",
+          "published": "Published January 7, 2026",
+          "section": "Secondary identification requirements",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1277_Cayman_Bank.html",
+          "source_sha256": "e0d4a2a9ec6f83f543181f1cd04dbfca43fb2e6af462676d752e4bdbaf34317b",
+          "anchor": "1787514395",
+          "text": "Exceptions to secondary ID requirements\nIf the individual has an unexpired U.S. military ID, you can accept an expired state-issued driver's license or ID card as secondary identification.\nThe following are acceptable as secondary ID (without a signature or photograph): Birth certificate (minors only) Credit card or Debit/ATM card. A signature is not required. If one is present, verify the signature against the customer\u2019s primary ID",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 31.0348,
+            "cosine": 0.7275,
+            "rerank": 7.2689
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.465,
+        "context_resolution": "named_topic",
+        "input_tokens": 387,
+        "output_tokens": 36,
+        "generation_seconds": 9.686,
+        "verification_seconds": 0.23,
+        "total_seconds": 10.382
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 24,
+        "passed": false,
+        "claim_support": {
+          "passed": false,
+          "claims": [
+            {
+              "claim": "According to the evidence, an expired state-issued driver's license is acceptable as secondary identification if the individual has an unexpired US military ID.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.0037,
+              "contradiction": 0.0001,
+              "supported": false
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "802470605922"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "B01",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Situation: Two or more personal representatives appointed | Action: If the appointment documents indicate the personal representatives can act independent of each other, go to the next step. If it does not, determine the issuing state: AK, AL, AZ, CO, CT, DC, FL, GA, ID, IN, MI, MN, MT, NE, ND, NJ, NM, OR, SD, TX, UT, WA: Go to step 5. Note: State law allows the delegation of duties to the other appointed fiduciaries. A relationship may be used even though the court appointment states. All other states: Tell the customer you cannot open accounts requiring multiple signatures. Note: Do not ask the customer to have the court appointment or order reissued. This procedure is complete. [S1]\n\n> If a due diligence review is required, and the customer indicates either of the following, a Suspected Risk Referral (SRR) must be submitted, and a new account request must be denied: Refuses to provide information required to complete due diligence. Suspiciously indicates they provided the wrong responses to the compliance questions after the banker already disclosed the enhanced diligence requirements to the customer.\nMultiple signature requirements are not allowed on a deposit account.\nA fee waiver must not be placed on an account only because the customer has objected to the standard fees. [S2]",
+      "status": "evidence_only",
+      "question": "Can a business account require multiple signatures?",
+      "retrieval_query": "Can a business account require multiple signatures?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1779-157f6d569ea9",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Estate (nonindividual personal representative) and receivership (individual receiver) > Open the Account",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "-1720575795",
+          "text": "Situation: Two or more personal representatives appointed | Action: If the appointment documents indicate the personal representatives can act independent of each other, go to the next step. If it does not, determine the issuing state: AK, AL, AZ, CO, CT, DC, FL, GA, ID, IN, MI, MN, MT, NE, ND, NJ, NM, OR, SD, TX, UT, WA: Go to step 5. Note: State law allows the delegation of duties to the other appointed fiduciaries. A relationship may be used even though the court appointment states. All other states: Tell the customer you cannot open accounts requiring multiple signatures. Note: Do not ask the customer to have the court appointment or order reissued. This procedure is complete.",
+          "table_id": "PR1779-T025",
+          "row_id": 4,
+          "retrieval": {
+            "bm25": 6.9027,
+            "cosine": 0.5615,
+            "rerank": 5.2049
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1779-a89ec122be9c",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Estate (nonindividual personal representative) and receivership (individual receiver) > Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "304762915",
+          "text": "If a due diligence review is required, and the customer indicates either of the following, a Suspected Risk Referral (SRR) must be submitted, and a new account request must be denied: Refuses to provide information required to complete due diligence. Suspiciously indicates they provided the wrong responses to the compliance questions after the banker already disclosed the enhanced diligence requirements to the customer.\nMultiple signature requirements are not allowed on a deposit account.\nA fee waiver must not be placed on an account only because the customer has objected to the standard fees.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 4.792,
+            "cosine": 0.5481,
+            "rerank": 4.7648
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.41,
+        "context_resolution": "standalone",
+        "input_tokens": 617,
+        "output_tokens": 70,
+        "generation_seconds": 19.851,
+        "total_seconds": 20.263
+      },
+      "checks": {
+        "valid_citations": false,
+        "all_paragraphs_cited": false,
+        "novel_numbers": [],
+        "word_count": 57,
+        "passed": false
+      },
+      "trace_id": "6788e07ba6f0"
+    },
+    "required_fact_checks": [
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "B02",
+    "result": {
+      "answer": "The gross annual sales criterion for a business trust account that allows branch employees to open the account is less than $2 million. [S1]",
+      "status": "answered",
+      "question": "For a business trust account, what gross annual sales criterion allows branch employees to open the account?",
+      "retrieval_query": "For a business trust account, what gross annual sales criterion allows branch employees to open the account?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1779-f24107e61f45",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Business trust, business pension or profit-sharing plan trust > Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "1633624356",
+          "text": "Employees may open business deposit accounts for customers meeting the following criteria: Are nonindividual entity customers (including sole proprietorships, business trusts, business pension or profit-sharing trust, corporations, limited liability companies, limited liability partnerships, joint venture, general partnerships, social and recreational clubs, unincorporated associations, and civic groups). Have gross annual sales of less than $2 million. Do not require Treasury Management Services. Do not have complex lending needs.\nIf the business does not meet the criteria, the employee must refer the customer to the appropriate partner or affiliate.\nRelated procedure: Referrals to Partners or Affiliates",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 17.3581,
+            "cosine": 0.6235,
+            "rerank": 4.3768
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1779-794443c61a0c",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Government entities > Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "108071005",
+          "text": "Employees may open business deposit accounts for customers meeting the following criteria: Are nonindividual entity customers (including sole proprietorships, business trusts, business pension or profit-sharing trust, corporations, limited-liability companies, limited-liability partnerships, joint venture, general partnerships, social and recreational clubs, unincorporated associations and civic groups). Have gross annual sales of less than $2 million. Do not require Treasury Management Services. Do not have complex lending needs.\nIf the business does not meet the criteria, the employee must refer the customer to the appropriate partner or affiliate.\nRelated procedure: Referrals to Partners or Affiliates",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 16.7452,
+            "cosine": 0.6049,
+            "rerank": 4.2867
+          }
+        },
+        {
+          "label": "S3",
+          "chunk_id": "PR1779-fc0a624fd0d0",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Estate (nonindividual personal representative) and receivership (individual receiver) > Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "304762915",
+          "text": "Employees may open business deposit accounts for customers meeting the following criteria: Are nonindividual entity customers (including sole proprietorships, business trusts, business pension or profit-sharing trust, corporations, limited liability companies, limited liability partnerships, joint venture, general partnerships, social and recreational clubs, unincorporated associations, and civic groups). Have gross annual sales of less than $2 million. Do not require Treasury Management Services. Do not have complex lending needs.\nIf the business does not meet the criteria, the employee must refer the customer to the appropriate partner or affiliate. Related procedure: Referrals to Partners or Affiliates",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 16.2452,
+            "cosine": 0.5956,
+            "rerank": 4.2764
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.39,
+        "context_resolution": "named_topic",
+        "input_tokens": 757,
+        "output_tokens": 30,
+        "generation_seconds": 11.008,
+        "verification_seconds": 0.289,
+        "total_seconds": 11.69
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 24,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "The gross annual sales criterion for a business trust account that allows branch employees to open the account is less than $2 million.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.9911,
+              "contradiction": 0.0017,
+              "supported": true
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "10e96a78b8f4"
+    },
+    "required_fact_checks": [
+      true,
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "B03",
+    "result": {
+      "answer": "The new account must be funded within 30 calendar days if a court-appointed fiduciary indicates funds are not available to be deposited to the new account but will be deposited in the future. [S1]",
+      "status": "partial",
+      "question": "If a court-appointed fiduciary has no funds available at account opening, when must the new account be funded?",
+      "retrieval_query": "If a court-appointed fiduciary has no funds available at account opening, when must the new account be funded?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1779-ba9e2059a368",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Government entities > Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "108071005",
+          "text": "Exception: When a court- or government-appointed fiduciary indicates funds are not available to be deposited to the new account but will be deposited in the future, a minimum deposit is not required. Tell the customer the account must be funded within 30 calendar days, or it may be subject to closure.\nExamples of court- or government-appointed fiduciary account types are:\nLottery\nAttorney client trust\nBusiness trust\nEstate \u2013 Nonindividual personal representative\nReal-estate trust\nRepresentative payee\nIndividual and nonindividual guardian or conservator\nIndividual and nonindividual receiverships\nStatutory client trust\nNote: The minimum deposit amount is always required for a time deposit account.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 26.6041,
+            "cosine": 0.6553,
+            "rerank": 6.9661
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1779-63891bbda7a3",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Girl Scout councils and DBA troops > Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "480531645",
+          "text": "Exception: When a court- or government-appointed fiduciary indicates funds are not available to be deposited to the new account but will be deposited in the future, a minimum deposit is not required. Tell the customer the account must be funded within 30 calendar days, or it may be subject to closure.\nExamples of court- or government-appointed fiduciary account types are:\nLottery\nAttorney client trust\nBusiness trust\nEstate - Nonindividual personal representative\nReal-estate trust\nRepresentative payee\nIndividual and nonindividual guardian or conservator\nIndividual and nonindividual receiverships\nStatutory client trust\nNote: The minimum deposit amount is always required for a time deposit account.\nA corporation can have a single owner.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 25.7519,
+            "cosine": 0.6344,
+            "rerank": 6.7236
+          }
+        },
+        {
+          "label": "S3",
+          "chunk_id": "PR1779-f6a1651d7adb",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Business trust, business pension or profit-sharing plan trust > Discuss products and services",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "1420925723",
+          "text": "Note: If the customer cannot fund the account today with the required minimum amount, tell them you cannot open the account. Offer to schedule an appointment for the customer to return at a later date to open and fund the account. This procedure is complete. Exception: When a court- or government-appointed fiduciary indicates funds are not available to be deposited to the new account but will be deposited in the future, a minimum deposit is not required. Tell the customer the account must be funded within 30 calendar days, or it may be subject to closure.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 23.1163,
+            "cosine": 0.6079,
+            "rerank": 6.6877
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.425,
+        "context_resolution": "standalone",
+        "input_tokens": 784,
+        "output_tokens": 44,
+        "generation_seconds": 14.375,
+        "verification_seconds": 0.739,
+        "total_seconds": 15.541
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 34,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "The new account must be funded within 30 calendar days if a court-appointed fiduciary indicates funds are not available to be deposited to the new account but will be deposited in the future.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.9424,
+              "contradiction": 0.0048,
+              "supported": true
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "06ddac2e0679"
+    },
+    "required_fact_checks": [
+      true,
+      true,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.6666666666666666
+  },
+  {
+    "id": "S01",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Active account status: Opened less than 12 months | Action: You may redeem bonds up to $1,000 per day (aggregate redemption value). If the total redemption value is more than $1,000, provide the following options: Redeem the bonds up to the allowable $1,000 total value and take back the remaining bonds. Redeem all bonds at full value using the Treasury Direct website. [S1]\n\n> Confirm the presenter is a consumer customer with an open and active Cayman Bank checking, savings, or time account (CD), for 12 months or longer.\nNote: If the account has been opened less than 12 months, you may redeem bonds up to $1,000 per day (aggregate redemption value). If the total cash redemption value is more than $1,000, the customer has the following bond redemption options:\nRedeem the bonds up to the allowable $1,000 total value and take back the remaining bonds.\nRedeem all bonds at full value using the Treasury Direct website. [S2]",
+      "status": "evidence_only",
+      "question": "What is the savings bond redemption limit for an account open less than 12 months, and what is the exception?",
+      "retrieval_query": "What is the savings bond redemption limit for an account open less than 12 months, and what is the exception?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1949-6084a9a18c4f",
+          "doc_id": "PR1949",
+          "title": "Savings Bonds: Rate and Redeem - PR1949",
+          "published": "Published December 17, 2025",
+          "section": "Rate and redeem",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+          "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+          "anchor": "1944634862",
+          "text": "Active account status: Opened less than 12 months | Action: You may redeem bonds up to $1,000 per day (aggregate redemption value). If the total redemption value is more than $1,000, provide the following options: Redeem the bonds up to the allowable $1,000 total value and take back the remaining bonds. Redeem all bonds at full value using the Treasury Direct website.",
+          "table_id": "PR1949-T007",
+          "row_id": 2,
+          "retrieval": {
+            "bm25": 20.5051,
+            "cosine": 0.6419,
+            "rerank": 6.5207
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1949-8d8591baf3f9",
+          "doc_id": "PR1949",
+          "title": "Savings Bonds: Rate and Redeem - PR1949",
+          "published": "Published December 17, 2025",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+          "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+          "anchor": "1710564397",
+          "text": "Confirm the presenter is a consumer customer with an open and active Cayman Bank checking, savings, or time account (CD), for 12 months or longer.\nNote: If the account has been opened less than 12 months, you may redeem bonds up to $1,000 per day (aggregate redemption value). If the total cash redemption value is more than $1,000, the customer has the following bond redemption options:\nRedeem the bonds up to the allowable $1,000 total value and take back the remaining bonds.\nRedeem all bonds at full value using the Treasury Direct website.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 28.3126,
+            "cosine": 0.648,
+            "rerank": 5.5762
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.532,
+        "context_resolution": "named_topic",
+        "input_tokens": 555,
+        "output_tokens": 90,
+        "generation_seconds": 20.564,
+        "total_seconds": 21.098
+      },
+      "checks": {
+        "valid_citations": false,
+        "all_paragraphs_cited": false,
+        "novel_numbers": [],
+        "word_count": 64,
+        "passed": false
+      },
+      "trace_id": "dd3b72e9b56a"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "S02",
+    "result": {
+      "answer": "No, the bank may not charge a fee to redeem a U.S. savings bond as per the U.S. Department of the Treasury prohibition. [S1]",
+      "status": "answered",
+      "question": "May the bank charge a fee to redeem a U.S. savings bond?",
+      "retrieval_query": "May the bank charge a fee to redeem a U.S. savings bond?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1949-cff69e2b0e7b",
+          "doc_id": "PR1949",
+          "title": "Savings Bonds: Rate and Redeem - PR1949",
+          "published": "Published December 17, 2025",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+          "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+          "anchor": "1710564397",
+          "text": "Exception \u2013 Customer eligible for The Private Bank Experience: The $1,000 allowable redemption amount does not apply to customers who are eligible for The Private Bank Experience regardless of how long the account has been opened.\nDo not redeem bonds payable to a business or trust.\nThe U.S. Department of the Treasury prohibits a bank from charging a fee to redeem a U.S. savings bond.\nIf issued in a foreign country, the death certificate must be the original or a certified copy.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 18.3551,
+            "cosine": 0.6989,
+            "rerank": 8.2569
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.365,
+        "context_resolution": "named_topic",
+        "input_tokens": 398,
+        "output_tokens": 34,
+        "generation_seconds": 9.297,
+        "verification_seconds": 0.176,
+        "total_seconds": 9.839
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 24,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "No, the bank may not charge a fee to redeem a US savings bond as per the US Department of the Treasury prohibition.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.9968,
+              "contradiction": 0.0002,
+              "supported": true
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "2d5eebf7c6b8"
+    },
+    "required_fact_checks": [
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "S03",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Exception \u2013 Customer eligible for The Private Bank Experience: The $1,000 allowable redemption amount does not apply to customers who are eligible for The Private Bank Experience regardless of how long the account has been opened.\nDo not redeem bonds payable to a business or trust.\nThe U.S. Department of the Treasury prohibits a bank from charging a fee to redeem a U.S. savings bond.\nIf issued in a foreign country, the death certificate must be the original or a certified copy. [S1]\n\n> Open Customer Session for the customer with an open and active Cayman Bank consumer checking, savings, or time (CD) account.\nNote: Do not redeem savings bonds payable to a business or Trust. Refer the presenter to Treasury Direct. This procedure is complete.\nAccess the T521 on TellerView and complete all applicable and required fields on the Bond Detail screens.If the address field prefills, you must verify with the customer the address displayed in the T521 Redeem bond transaction is the mailing address to mail their interest reporting Form 1099 at the end of the calendar year. If not, enter the mailing address provided by the customer before proceeding. [S2]",
+      "status": "evidence_only",
+      "question": "Can savings bonds payable to a business or trust be redeemed at the branch?",
+      "retrieval_query": "Can savings bonds payable to a business or trust be redeemed at the branch?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1949-cff69e2b0e7b",
+          "doc_id": "PR1949",
+          "title": "Savings Bonds: Rate and Redeem - PR1949",
+          "published": "Published December 17, 2025",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+          "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+          "anchor": "1710564397",
+          "text": "Exception \u2013 Customer eligible for The Private Bank Experience: The $1,000 allowable redemption amount does not apply to customers who are eligible for The Private Bank Experience regardless of how long the account has been opened.\nDo not redeem bonds payable to a business or trust.\nThe U.S. Department of the Treasury prohibits a bank from charging a fee to redeem a U.S. savings bond.\nIf issued in a foreign country, the death certificate must be the original or a certified copy.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 14.6269,
+            "cosine": 0.6614,
+            "rerank": 7.4563
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1949-4d89e2dea93c",
+          "doc_id": "PR1949",
+          "title": "Savings Bonds: Rate and Redeem - PR1949",
+          "published": "Published December 17, 2025",
+          "section": "Rate and redeem",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+          "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+          "anchor": "1944634862",
+          "text": "Open Customer Session for the customer with an open and active Cayman Bank consumer checking, savings, or time (CD) account.\nNote: Do not redeem savings bonds payable to a business or Trust. Refer the presenter to Treasury Direct. This procedure is complete.\nAccess the T521 on TellerView and complete all applicable and required fields on the Bond Detail screens.If the address field prefills, you must verify with the customer the address displayed in the T521 Redeem bond transaction is the mailing address to mail their interest reporting Form 1099 at the end of the calendar year. If not, enter the mailing address provided by the customer before proceeding.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 13.4404,
+            "cosine": 0.5543,
+            "rerank": 6.8337
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.346,
+        "context_resolution": "named_topic",
+        "input_tokens": 560,
+        "output_tokens": 22,
+        "generation_seconds": 8.378,
+        "verification_seconds": 0.163,
+        "total_seconds": 8.89
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 16,
+        "passed": false,
+        "claim_support": {
+          "passed": false,
+          "claims": [
+            {
+              "claim": "No, savings bonds payable to a business or trust cannot be redeemed at the branch.",
+              "labels": [
+                "S1"
+              ],
+              "entailment": 0.0561,
+              "contradiction": 0.0132,
+              "supported": false
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "bbf9fb4b48bf"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "C01",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Do not:Fax, email, or mail statement copies directly to a third-party (individuals or entities) without transaction authority on the specified account. Note: One-time requests to fax statements are not permitted Fax the following statement or transaction information to customers:Copies of statements printed from OIB or MARS SVP Checking or Savings Account History screen prints Form 100, 120, 200, 300, 400, and 500 statements Provide copies of customer statements to Cayman Bank Home Mortgage Consultants (HMCs). Refer HMCs to their current process guides for information on obtaining general account information. [S1]\n\n> Never encourage or suggest a customer to share online banking credentials with others to access account information.\nDo not accept customer requests to email or mail account information directly to third-party individuals or entities without transaction authority on the requested account.\nRequests for account information may be verbally communicated to the customer or a printed copy may be provided. [S2]",
+      "status": "evidence_only",
+      "question": "Can I email a statement copy to a third party without transaction authority?",
+      "retrieval_query": "Can I email a statement copy to a third party without transaction authority?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR2306-5a4c0bc806b2",
+          "doc_id": "PR2306",
+          "title": "Copy Requests: Statements, Debit or Credit Items, and Account Documentation - PR2306",
+          "published": "Published January 30, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR2306_Cayman_Bank.html",
+          "source_sha256": "d72fc8737a4d480fb0b28d4521439ae83ca941ba4b115ab2c3781e7231b93003",
+          "anchor": "1751783312",
+          "text": "Do not:Fax, email, or mail statement copies directly to a third-party (individuals or entities) without transaction authority on the specified account. Note: One-time requests to fax statements are not permitted Fax the following statement or transaction information to customers:Copies of statements printed from OIB or MARS SVP Checking or Savings Account History screen prints Form 100, 120, 200, 300, 400, and 500 statements Provide copies of customer statements to Cayman Bank Home Mortgage Consultants (HMCs). Refer HMCs to their current process guides for information on obtaining general account information.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 17.9944,
+            "cosine": 0.5091,
+            "rerank": 8.2007
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR2306-33d65a9f533d",
+          "doc_id": "PR2306",
+          "title": "Copy Requests: Statements, Debit or Credit Items, and Account Documentation - PR2306",
+          "published": "Published January 30, 2026",
+          "section": "Requests for printed account information",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR2306_Cayman_Bank.html",
+          "source_sha256": "d72fc8737a4d480fb0b28d4521439ae83ca941ba4b115ab2c3781e7231b93003",
+          "anchor": "1717602238",
+          "text": "Never encourage or suggest a customer to share online banking credentials with others to access account information.\nDo not accept customer requests to email or mail account information directly to third-party individuals or entities without transaction authority on the requested account.\nRequests for account information may be verbally communicated to the customer or a printed copy may be provided.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 17.5026,
+            "cosine": 0.4987,
+            "rerank": 6.8096
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.458,
+        "context_resolution": "named_topic",
+        "input_tokens": 526,
+        "output_tokens": 42,
+        "generation_seconds": 11.857,
+        "total_seconds": 12.317
+      },
+      "checks": {
+        "valid_citations": false,
+        "all_paragraphs_cited": false,
+        "novel_numbers": [
+          "2026",
+          "30"
+        ],
+        "word_count": 25,
+        "passed": false
+      },
+      "trace_id": "c26744c5ae7f"
+    },
+    "required_fact_checks": [
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  }
+]

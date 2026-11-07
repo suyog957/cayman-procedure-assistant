@@ -1,0 +1,63 @@
+Simulation Exercise – Presentation  
+Virtual Prep/Virtual Delivery 
+Selection & Assessment 
+Data & Analytics_Advanced Analytics_Senior Lead Quantitative Analytics Specialist 
+Job Code - 100625 
+10/30/2026 
+© 2026 Wells Fargo Bank, N.A. All rights reserved.   Upload to Workday | Tracking #1839 
+Candidate instructions 
+As the next step in the selection process, you are being asked to prepare for and deliver a presentation on a job-related 
+topic. Review these instructions carefully and in full.  
+Presentation preparation: 
+• Review the Detailed task description section below. 
+• You will have 3 days to prepare for your presentation. 
+• Be sure to keep track of your own time and plan accordingly.  
+• If you require an accommodation to complete this exercise, please contact your recruiter immediately.  
+• You must complete this exercise independently.  
+• You may not plagiarize another person’s work. 
+• Your work will NOT be evaluated for its compliance with company-specific policy. 
+Presentation delivery: 
+• You will have 20 minutes to deliver your presentation followed by a 15-minute technical walkthrough and 
+demonstration. 
+• You will deliver your presentation via video.  
+• Refer to the meeting invitation and/or the body of the email you received for additional presentation delivery 
+details. 
+• Be sure to keep track of your own time and plan accordingly.  
+• You will be asked to respond to questions during and/or at the conclusion of your presentation.  
+Submission requirements: 
+• Submit a copy of your presentation materials to the Administrator by the specified deadline. If your 
+presentation materials are not received by the deadline, you will be removed from consideration. See the body 
+of the email you received for detailed submission instructions.  
+Detailed task description  
+• You are a Senior Lead Quantitative Analytics Specialist supporting the development of Artificial Intelligence 
+(AI) solutions. Your team is exploring ways to help branch employees efficiently access information contained 
+within operational procedures. 
+• Your task is to design and build a generative AI-enabled conversational chat solution grounded in the attached 
+procedural documents (11) and present your approach and solution to a senior leadership audience.  
+• Specifically, you should: 
+o Develop a functional chat solution that answers questions based on the provided procedur al 
+documents. 
+o Prepare approximately five to six PowerPoint (PPT) slides describing your solution methodology, 
+architecture, technology choices, and key design decisions.  
+o Explain how you processed and organized the procedural documents, including your content-chunking 
+and information-retrieval approach. 
+
+Simulation Exercise – Presentation  
+Virtual Prep/Virtual Delivery 
+Selection & Assessment 
+Data & Analytics_Advanced Analytics_Senior Lead Quantitative Analytics Specialist 
+Job Code - 100625 
+10/30/2026 
+© 2026 Wells Fargo Bank, N.A. All rights reserved.   Upload to Workday | Tracking #1839 
+o Describe how you would test and measure the solution’s performance, including the accuracy, 
+relevance, completeness, and conciseness of its responses. 
+o Address the user experience and how the solution handles follow -up questions. 
+o Demonstrate the chat solution by asking questions based on the provided procedure documents and 
+showing how the solution responds, including how it handles follow -up questions. 
+• Be prepared to explain your technical approach and key design decisions.   
+• You are expected to use generative AI in developing your solution. You may use the AI  models, platforms, 
+development tools, and other resources of your choice. Be prepared to explain how you used generative AI, the 
+decisions you made, and how you evaluated and validated the resulting outputs.  
+• Do not include or submit source code as part of your presentation materials or solution demonstration.  
+ 
+ 

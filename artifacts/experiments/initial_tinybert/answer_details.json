@@ -1,0 +1,781 @@
+[
+  {
+    "id": "N01",
+    "result": {
+      "answer": "No, a notary cannot notarize an emailed document if the requester is physically present. According to the evidence, notarizing documents sent by email, fax, mail, or text is prohibited, even if the requester is present. [S1]",
+      "status": "answered",
+      "question": "Can a notary notarize an emailed document if the requester is physically present?",
+      "retrieval_query": "Can a notary notarize an emailed document if the requester is physically present?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1000-161ebf27cba2",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "1761041865",
+          "text": "bank business transactions. Notarize only physical documents presented in person by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present. Do not provide any legal advice related to notarizing a document. Do not charge a notary fee for:Notarizations completed at a Cayman Bank location. Notarizing Cayman Bank documents at a branch location or notarizing Cayman Bank documents outside Cayman Bank on your own personal time.\nThe notary must comply with state laws if asked to act as a notary and a witness on a single document.\nRelated procedure: Witness Customer Signatures and Sign Cayman Bank and Non-Cayman Bank Documents\nFor Cayman Bank Bank transactions, a notarized signature on a document is acceptable if one of the following entities either commissions or authorizes the notary or a person authorized by statute to sign the document:Any U.S. state Any U.S. Embassy or Consulate within a foreign country Any U.S. Territory (for example, Puerto Rico, Guam, American Samoa, U.S. Virgin Islands, and the Northern Mariana Islands)",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 22.6033,
+            "cosine": 0.6098,
+            "rerank": 4.8017
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1000-0703359a78e7",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Perform the notarization",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "232830141",
+          "text": "Notarization type: Jurat (Oath or Affirmation) | Information or action: Place the signer under oath and perform a jurat notarization. If the document is a Cayman Bank document and an individual acting in the representative capacity states the customer (account owner) is unavailable to sign or cannot physically sign, call Gateway to Team Member Support at 1-877-932-1852 and say \u201cnotary\u201d to have the request escalated and reviewed.",
+          "table_id": "PR1000-T004",
+          "row_id": 2,
+          "retrieval": {
+            "bm25": 13.8348,
+            "cosine": 0.5177,
+            "rerank": 4.4162
+          }
+        },
+        {
+          "label": "S3",
+          "chunk_id": "PR1000-d72ba80ee641",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Review document and determine notarization type requested",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "1310338777",
+          "text": "Review the document and complete the following:Ensure there is no information unintentionally left blank. Ask the signer to fill in any blank spaces and initial them.\nIf the signer does not know what information should be added, refer them to whomever is requesting the document to be notarized and give the document back to them. This procedure is complete.\nDetermine if you can notarize the document based on your state statutes.\nIf not, tell the individual you cannot perform the notarization and give the document back to them. This procedure is complete.\nReview the document for the notarial certificate:",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 13.2214,
+            "cosine": 0.6132,
+            "rerank": 3.8531
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.092,
+        "context_resolution": "named_topic",
+        "input_tokens": 776,
+        "output_tokens": 53,
+        "generation_seconds": 17.97,
+        "total_seconds": 18.097
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 36,
+        "passed": true
+      },
+      "trace_id": "e2961620c192"
+    },
+    "required_fact_checks": [
+      true,
+      true,
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "N02",
+    "result": {
+      "answer": "I could not validate the generated answer. Review these retrieved excerpts for the applicable conditions:\n\n> Situation: Notary is away from their desk at the branch for an extended time Examples may include, but are not limited to: Lunch break Away from the branch Left the branch for the day Branch is closed Sick time Leave of absence PTO Note: If stepping away briefly, for example to use the printer or assist a teller, securing them is recommended but not required. | Requirement: If the notary does not have their stamp and journal with them, secure them using one of the following methods: Secured in a locked location at the branch Examples: A desk or cabinet inaccessible to customers or other employees. Note: Spare keys may be kept in dual control with the notary\u2019s consent, if the stamp and journal are first secured in a locked bag accessible only to the notary. Secured in a locking bag accessible only to the notary and ensure the bag is not accessible to customers or employees. [S1]",
+      "status": "evidence_only",
+      "question": "What notary service limit may a branch apply per requester?",
+      "retrieval_query": "What notary service limit may a branch apply per requester?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1000-013c254e7cad",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Security requirements for notary supplies",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "410889603",
+          "text": "Situation: Notary is away from their desk at the branch for an extended time Examples may include, but are not limited to: Lunch break Away from the branch Left the branch for the day Branch is closed Sick time Leave of absence PTO Note: If stepping away briefly, for example to use the printer or assist a teller, securing them is recommended but not required. | Requirement: If the notary does not have their stamp and journal with them, secure them using one of the following methods: Secured in a locked location at the branch Examples: A desk or cabinet inaccessible to customers or other employees. Note: Spare keys may be kept in dual control with the notary\u2019s consent, if the stamp and journal are first secured in a locked bag accessible only to the notary. Secured in a locking bag accessible only to the notary and ensure the bag is not accessible to customers or employees.",
+          "table_id": "PR1000-T005",
+          "row_id": 2,
+          "retrieval": {
+            "bm25": 9.1242,
+            "cosine": 0.4802,
+            "rerank": -1.6493
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.075,
+        "context_resolution": "named_topic",
+        "input_tokens": 439,
+        "output_tokens": 80,
+        "generation_seconds": 18.177,
+        "total_seconds": 18.255
+      },
+      "checks": {
+        "valid_citations": false,
+        "all_paragraphs_cited": false,
+        "novel_numbers": [],
+        "word_count": 70,
+        "passed": false
+      },
+      "trace_id": "10461b508662"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "N03",
+    "result": {
+      "answer": "Yes, a noncustomer in Arizona can get a non-Cayman Bank document notarized. According to the procedure, notaries in Arizona are exempt from the requirement to notarize both Cayman Bank documents and non-Cayman Bank documents. Therefore, a noncustomer in Arizona can have a non-Cayman Bank document notarized without needing to follow the full set of notarization rules. [S1]",
+      "status": "answered",
+      "question": "Can a noncustomer in Arizona get a non-Cayman Bank document notarized?",
+      "retrieval_query": "Can a noncustomer in Arizona get a non-Cayman Bank document notarized?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1000-49d5562cd004",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "1761041865",
+          "text": "Notaries must adhere to the following requirements when providing notary services:Cayman Bank Customers: Notarize both Cayman Bank documents and non-Cayman Bank documents. Note: A Cayman Bank customer is an individual who has transaction authority on any Cayman Bank account relationship. Non-customers: Notarize only Cayman Bank documents unless the notary\u2019s state laws provide an exception. Exceptions: Notaries in Arizona, Iowa, New York, South Dakota, and Utah must notarize both Cayman Bank documents and non-Cayman Bank documents regardless of their customer status. If a customer requests a notarization on a non-Cayman Bank document that also lists other present individuals (non-customers) requiring a notarization on the same document, notaries may notarize all individuals\u2019 signatures regardless of their customer status. Notarize documents only at a Cayman Bank branch during business hours. Do not go offsite to complete notarizations during business work hours to conduct bank business transactions. Notarize only physical documents presented in person by the requester. Do not notarize documents sent by email, fax, mail, or text, even if the requester is present.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 18.5134,
+            "cosine": 0.7564,
+            "rerank": 5.8108
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1000-3741ebf66144",
+          "doc_id": "PR1000",
+          "title": "Notary: Services, Supplies and Manager Responsibilities - PR1000",
+          "published": "Published January 29, 2026",
+          "section": "Identify the individual",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1000_Cayman_Bank.html",
+          "source_sha256": "44940e71dc7eace0b1a019446949b4528ee766a4400622487de4aeb1cef665cb",
+          "anchor": "704923262",
+          "text": "Situation: Non-Cayman Bank customer and the document is a non-Cayman Bank document | Action: Tell the individual you can only perform a notarization for a customer or on a Cayman Bank document. Give the document back to the individual. This procedure is complete.",
+          "table_id": "PR1000-T001",
+          "row_id": 2,
+          "retrieval": {
+            "bm25": 16.5105,
+            "cosine": 0.6675,
+            "rerank": 4.6338
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.073,
+        "context_resolution": "named_topic",
+        "input_tokens": 585,
+        "output_tokens": 88,
+        "generation_seconds": 20.075,
+        "total_seconds": 20.151
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 57,
+        "passed": true
+      },
+      "trace_id": "25559d472931"
+    },
+    "required_fact_checks": [
+      true,
+      true,
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "R01",
+    "result": {
+      "answer": "Teller work and ATM batches can be securely destroyed after 31 calendar days, following the guidelines provided in the evidence. Specifically, they should be destroyed monthly according to the Teller/ATM Work Destruction Control Online task or more frequently, such as daily when new items are added to the check tray. The destruction process involves reviewing items to ensure they do not include teller work and ATM batches stored 30 calendar days or less, removing any unnecessary accessories, and placing the items and batch header tickets in a secure destruction bin. [S1]",
+      "status": "answered",
+      "question": "When can teller work and ATM batches be securely destroyed?",
+      "retrieval_query": "When can teller work and ATM batches be securely destroyed?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1263-5c332a139f1a",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "ATM items and teller work",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "1721502362",
+          "text": "Identify and remove teller work and ATM batches stored 31 calendar days or more.Teller work and ATM items are stored for a minimum of 30 calendar days; do not remove or destroy before that timeframe. Destroy items stored 31 calendar days or more monthly, according to the Teller/ATM Work Destruction Control Online task or more frequently, for example:Daily, as items for the current day are added to the check tray (newest in and oldest out) Weekly, on a set day\nReview the items to be destroyed to ensure they do not include:Teller work and ATM batches stored 30 calendar days or less Any items other than teller work and ATM batches\nRemove any rubber bands, paper clips, or binders from the bundles.\nPlace the items and batch header tickets in a secure destruction bin.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 32.3858,
+            "cosine": 0.7168,
+            "rerank": 7.6914
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.065,
+        "context_resolution": "standalone",
+        "input_tokens": 426,
+        "output_tokens": 113,
+        "generation_seconds": 22.745,
+        "total_seconds": 22.813
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 91,
+        "passed": true
+      },
+      "trace_id": "518fe4fc42bb"
+    },
+    "required_fact_checks": [
+      true,
+      true,
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "R02",
+    "result": {
+      "answer": "No, a branch cannot accept a non-Cayman Bank metal card brought in by a customer for disposal. According to the evidence, if the card is not being returned to the customer, the branch should contact the issuing bank to inform them of the lost card. [S1]",
+      "status": "answered",
+      "question": "Can a branch accept a non-Cayman Bank metal card brought in by a customer for disposal?",
+      "retrieval_query": "Can a branch accept a non-Cayman Bank metal card brought in by a customer for disposal?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1263-e1ef9792ad61",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "Cards (plastic, metal) > Metal cards",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "391881840",
+          "text": "Situation: Customer brought their non-Cayman Bank metal card in for disposal | Action: Do not accept the card from the customer.",
+          "table_id": "PR1263-T004",
+          "row_id": 5,
+          "retrieval": {
+            "bm25": 41.1062,
+            "cosine": 0.6488,
+            "rerank": 8.5029
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1263-6f77cd62db1e",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "Cards (plastic, metal) > Metal cards",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "391881840",
+          "text": "Situation: Customer brought their Cayman Bank metal card in for disposal | Action: Go to the Mail the metal card for destruction subsection.",
+          "table_id": "PR1263-T004",
+          "row_id": 4,
+          "retrieval": {
+            "bm25": 32.4355,
+            "cosine": 0.5895,
+            "rerank": 6.555
+          }
+        },
+        {
+          "label": "S3",
+          "chunk_id": "PR1263-1097b8ad86bd",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "Cards (plastic, metal) > Metal cards",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "391881840",
+          "text": "Situation: Non-Cayman Bank metal card found on branch premises or retained by branch-serviced ATM | Action: If the card is being returned to the customer, complete the Articles Found procedure. If not, call the issuing bank at the phone number listed on the card to notify them of the lost card.",
+          "table_id": "PR1263-T004",
+          "row_id": 7,
+          "retrieval": {
+            "bm25": 23.535,
+            "cosine": 0.6858,
+            "rerank": 6.2354
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.064,
+        "context_resolution": "named_topic",
+        "input_tokens": 451,
+        "output_tokens": 58,
+        "generation_seconds": 14.452,
+        "total_seconds": 14.518
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 46,
+        "passed": true
+      },
+      "trace_id": "20fcb4ac8dc5"
+    },
+    "required_fact_checks": [
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "R03",
+    "result": {
+      "answer": "The authority to issue or release a Record Preservation Hold Order lies with the Cayman Bank Legal Department. [S1]",
+      "status": "answered",
+      "question": "Who has authority to issue or release a Record Preservation Hold Order?",
+      "retrieval_query": "Who has authority to issue or release a Record Preservation Hold Order?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1263-e50f14d2735e",
+          "doc_id": "PR1263",
+          "title": "Secure Destruction, Store Materials and Records, and Record Holds - PR1263",
+          "published": "Published October 10, 2025",
+          "section": "Inactive records",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1263_Cayman_Bank.html",
+          "source_sha256": "273816fd8a0d81e8e4a2f80468837de0dd7525d3a9b7345da9d8e78e3153a041",
+          "anchor": "192469891",
+          "text": "the Cayman Bank Legal Department releases the Record Preservation Hold.The Cayman Bank Legal Department is the only department with the authority to issue or release a Record Preservation Hold Order. The original required retention period applies to records affected after the release of a Legal Hold Order.\nRefer to the Release a hold subsection of the Add, modify, or release a record hold section.\nComplete the appropriate action based on the situation:",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 39.1097,
+            "cosine": 0.7046,
+            "rerank": 9.4212
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.063,
+        "context_resolution": "standalone",
+        "input_tokens": 334,
+        "output_tokens": 25,
+        "generation_seconds": 7.008,
+        "total_seconds": 7.073
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 19,
+        "passed": true
+      },
+      "trace_id": "9306f9731fb8"
+    },
+    "required_fact_checks": [
+      true,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.5
+  },
+  {
+    "id": "I01",
+    "result": {
+      "answer": "I could not find sufficient support in the 11 supplied procedures. Please clarify the situation or consult the current procedure and your supervisor.",
+      "status": "unsupported",
+      "question": "Does a digital driver's license replace the physical driver's license?",
+      "retrieval_query": "Does a digital driver's license replace the physical driver's license?",
+      "sources": [],
+      "model": null,
+      "generator_used": false,
+      "metrics": {
+        "retrieval_seconds": 0.064,
+        "context_resolution": "named_topic",
+        "total_seconds": 0.064
+      },
+      "checks": {},
+      "trace_id": "de5776a99a7a"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "I02",
+    "result": {
+      "answer": "No, a state-issued medical marijuana card cannot be used as either primary or secondary identification. [S1]",
+      "status": "answered",
+      "question": "Can a state-issued medical marijuana card be used as primary or secondary identification?",
+      "retrieval_query": "Can a state-issued medical marijuana card be used as primary or secondary identification?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1277-e5844d667412",
+          "doc_id": "PR1277",
+          "title": "Primary and Secondary Identification Requirements - PR1277",
+          "published": "Published January 7, 2026",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1277_Cayman_Bank.html",
+          "source_sha256": "e0d4a2a9ec6f83f543181f1cd04dbfca43fb2e6af462676d752e4bdbaf34317b",
+          "anchor": "1260491560",
+          "text": "Review the identification requirements below to qualify as either primary or secondary ID.\nThe transaction ID requirements may vary for customers and non-Cayman Bank customers and by transaction type and amount.\nRefer to the applicable procedure for specifics on the types of ID required for the transaction or service you are providing (for example, open account, account maintenance, teller transaction). Existing customers are encouraged to use these stronger forms of authentication when processing teller transactions and account maintenance: PIN validation with an inserted card or tapped card or device (phone, watch) One-time passcode (OTP) Acceptable types documented in the Identification Requirements - Teller Transactions procedure\nDo not accept a state-issued medical marijuana card as either primary or secondary ID.\nA digital driver\u2019s license is considered a companion document and does not replace the physical driver\u2019s license requirement.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 30.8475,
+            "cosine": 0.6876,
+            "rerank": 3.2863
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1277-ef0d31562140",
+          "doc_id": "PR1277",
+          "title": "Primary and Secondary Identification Requirements - PR1277",
+          "published": "Published January 7, 2026",
+          "section": "Secondary identification requirements",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1277_Cayman_Bank.html",
+          "source_sha256": "e0d4a2a9ec6f83f543181f1cd04dbfca43fb2e6af462676d752e4bdbaf34317b",
+          "anchor": "1787514395",
+          "text": "Exceptions to secondary ID requirements\nIf the individual has an unexpired U.S. military ID, you can accept an expired state-issued driver's license or ID card as secondary identification.\nThe following are acceptable as secondary ID (without a signature or photograph): Birth certificate (minors only) Credit card or Debit/ATM card. A signature is not required. If one is present, verify the signature against the customer\u2019s primary ID",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 25.5254,
+            "cosine": 0.6368,
+            "rerank": 3.1436
+          }
+        },
+        {
+          "label": "S3",
+          "chunk_id": "PR1277-af63155db5d0",
+          "doc_id": "PR1277",
+          "title": "Primary and Secondary Identification Requirements - PR1277",
+          "published": "Published January 7, 2026",
+          "section": "Primary identification requirements (U.S. and Foreign)",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1277_Cayman_Bank.html",
+          "source_sha256": "e0d4a2a9ec6f83f543181f1cd04dbfca43fb2e6af462676d752e4bdbaf34317b",
+          "anchor": "1290363738",
+          "text": "ID issued by: U.S. | Exception: You can accept: A renewal receipt for a state or U.S. territory-issued driver\u2019s license or nondriver\u2019s license only if it is presented with the original expired or invalid ID (for example, hole punched or clipped corner), and all primary ID requirements are met. An unexpired driver\u2019s license or state-issued ID card without a picture for individuals with religious beliefs prohibiting a photograph. A state-issued driver\u2019s license or nondriver\u2019s license including the label Not valid for federal identification (or similar language) if it meets the above primary ID requirements. Driving privileges cards (California: AB 60 cards): The individual may use a driving privileges card as a primary ID for maintenance or teller transactions, regardless if they have a Social Security Number (SSN) or Individual Taxpayer Identification number (ITIN). Valid ID that has an expiration date exceeding 50 years into the future (Arizona): In SVP, enter the maximum allowable date and document the expiration date in the ID Discrepancy Resolution field.",
+          "table_id": "PR1277-T002",
+          "row_id": 1,
+          "retrieval": {
+            "bm25": 22.0463,
+            "cosine": 0.5752,
+            "rerank": 1.6383
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.043,
+        "context_resolution": "named_topic",
+        "input_tokens": 783,
+        "output_tokens": 24,
+        "generation_seconds": 9.258,
+        "total_seconds": 9.304
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 16,
+        "passed": true
+      },
+      "trace_id": "3068f1ae6dce"
+    },
+    "required_fact_checks": [
+      true,
+      true,
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  },
+  {
+    "id": "I03",
+    "result": {
+      "answer": "According to the evidence, an expired state-issued driver's license or ID card is acceptable as secondary identification if it is presented with the original expired or invalid ID, and all primary ID requirements are met. [S1]",
+      "status": "answered",
+      "question": "When is an expired state driver's license acceptable as secondary identification?",
+      "retrieval_query": "When is an expired state driver's license acceptable as secondary identification?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1277-ef0d31562140",
+          "doc_id": "PR1277",
+          "title": "Primary and Secondary Identification Requirements - PR1277",
+          "published": "Published January 7, 2026",
+          "section": "Secondary identification requirements",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1277_Cayman_Bank.html",
+          "source_sha256": "e0d4a2a9ec6f83f543181f1cd04dbfca43fb2e6af462676d752e4bdbaf34317b",
+          "anchor": "1787514395",
+          "text": "Exceptions to secondary ID requirements\nIf the individual has an unexpired U.S. military ID, you can accept an expired state-issued driver's license or ID card as secondary identification.\nThe following are acceptable as secondary ID (without a signature or photograph): Birth certificate (minors only) Credit card or Debit/ATM card. A signature is not required. If one is present, verify the signature against the customer\u2019s primary ID",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 31.1055,
+            "cosine": 0.7275,
+            "rerank": 7.9835
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1277-af63155db5d0",
+          "doc_id": "PR1277",
+          "title": "Primary and Secondary Identification Requirements - PR1277",
+          "published": "Published January 7, 2026",
+          "section": "Primary identification requirements (U.S. and Foreign)",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1277_Cayman_Bank.html",
+          "source_sha256": "e0d4a2a9ec6f83f543181f1cd04dbfca43fb2e6af462676d752e4bdbaf34317b",
+          "anchor": "1290363738",
+          "text": "ID issued by: U.S. | Exception: You can accept: A renewal receipt for a state or U.S. territory-issued driver\u2019s license or nondriver\u2019s license only if it is presented with the original expired or invalid ID (for example, hole punched or clipped corner), and all primary ID requirements are met. An unexpired driver\u2019s license or state-issued ID card without a picture for individuals with religious beliefs prohibiting a photograph. A state-issued driver\u2019s license or nondriver\u2019s license including the label Not valid for federal identification (or similar language) if it meets the above primary ID requirements. Driving privileges cards (California: AB 60 cards): The individual may use a driving privileges card as a primary ID for maintenance or teller transactions, regardless if they have a Social Security Number (SSN) or Individual Taxpayer Identification number (ITIN). Valid ID that has an expiration date exceeding 50 years into the future (Arizona): In SVP, enter the maximum allowable date and document the expiration date in the ID Discrepancy Resolution field.",
+          "table_id": "PR1277-T002",
+          "row_id": 1,
+          "retrieval": {
+            "bm25": 25.5789,
+            "cosine": 0.7076,
+            "rerank": 6.4587
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.078,
+        "context_resolution": "named_topic",
+        "input_tokens": 590,
+        "output_tokens": 46,
+        "generation_seconds": 11.768,
+        "total_seconds": 11.848
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 36,
+        "passed": true
+      },
+      "trace_id": "c4f2be60ad15"
+    },
+    "required_fact_checks": [
+      false,
+      false,
+      true
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.3333333333333333
+  },
+  {
+    "id": "B01",
+    "result": {
+      "answer": "Yes, a business account may require multiple signatures, particularly when dealing with government entities. According to the evidence provided, if an interest-earning account is involved, the individual certifying the TIN on behalf of the entity must also complete, sign, and date the Request for Taxpayer Identification Number and Certification (Substitute W-9) section of the form. This indicates that multiple signatures are indeed required in such cases. [S1]",
+      "status": "answered",
+      "question": "Can a business account require multiple signatures?",
+      "retrieval_query": "Can a business account require multiple signatures?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1779-d49e272c5eec",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Government entities > Open the account",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "74714404",
+          "text": "Step 4: Print required documents and obtain signatures\nComplete this section after RBRM Operations returns the Business Account Application for key executive signatures.\nComplete the following based on whether each key executive was previously identified in-person at the branch:",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 7.1911,
+            "cosine": 0.4805,
+            "rerank": 4.2953
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1779-c5a35db7edd3",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Government entities > Open the account",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "74714404",
+          "text": "Response: Yes | Action: Securely email (using the email address provided at the time of the request) the Business Account Application and any additional documents to the key executives for review and signatures, using the email address provided at the time of the request. Obtain signatures of the individual with entity authority and control representing the federal, state, or local government entity in the Certification of Authority, Certified/Agreed To and TIN Certifications section of the Business Account Application. If an interest-earning account: Ask the individual certifying the TIN on behalf of the entity to complete, sign, and date (month, date, year) the Request for Taxpayer Identification Number and Certification (Substitute W-9) section of the form.",
+          "table_id": "PR1779-T060",
+          "row_id": 2,
+          "retrieval": {
+            "bm25": 5.9212,
+            "cosine": 0.4874,
+            "rerank": 2.5807
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.082,
+        "context_resolution": "standalone",
+        "input_tokens": 475,
+        "output_tokens": 90,
+        "generation_seconds": 21.78,
+        "total_seconds": 21.864
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 67,
+        "passed": true
+      },
+      "trace_id": "cd00a299bfaf"
+    },
+    "required_fact_checks": [
+      false
+    ],
+    "all_required_facts_proxy": false,
+    "fact_coverage_proxy": 0.0
+  },
+  {
+    "id": "B02",
+    "result": {
+      "answer": "The gross annual sales criterion for a business trust account that allows branch employees to open the account is that the entity must have gross annual sales of less than $2 million. [S3]",
+      "status": "answered",
+      "question": "For a business trust account, what gross annual sales criterion allows branch employees to open the account?",
+      "retrieval_query": "For a business trust account, what gross annual sales criterion allows branch employees to open the account?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR1779-33556fb7bcb6",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Government entities > Open the account",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "74714404",
+          "text": "Field: Annual Gross Sales | Action: For an entity with no annual gross sales, enter 0 (zero) in the Annual Gross Sales field.",
+          "table_id": "PR1779-T056",
+          "row_id": 8,
+          "retrieval": {
+            "bm25": 27.1402,
+            "cosine": 0.6124,
+            "rerank": 4.9439
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR1779-d350df137497",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Business trust, business pension or profit-sharing plan trust > Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "1633624356",
+          "text": "A completed Certification Regarding Beneficial Owners of Legal Entity Customers form must be obtained, certified, and signed by the customer at new account opening or business customer relationship maintenance to be valid and acceptable Reference: CIP and CDD Resources\nWhen opening a business deposit account, at least one owner or key executive with entity authority and control must have a Taxpayer Identification Number (TIN) (for example, SSN or ITIN). If they do not, the business account cannot be opened.\nA customer request to open a new deposit account must not be declined for the: Account may be open only a short time Customer has or will have duplicate accounts\nEmployees may open business deposit accounts for customers meeting the following criteria: Are nonindividual entity customers (including sole proprietorships, business trusts, business pension or profit-sharing trust, corporations, limited liability companies, limited liability partnerships, joint venture, general partnerships, social and recreational clubs, unincorporated associations, and civic groups). Have gross annual sales of less than $2 million. Do not require Treasury Management Services. Do not have complex lending needs.",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 15.4292,
+            "cosine": 0.594,
+            "rerank": 3.68
+          }
+        },
+        {
+          "label": "S3",
+          "chunk_id": "PR1779-0b1e042f4196",
+          "doc_id": "PR1779",
+          "title": "Business Deposit Account: Estate, Receivership, Government Entities, Business Trusts, Girl Scouts - PR1779",
+          "published": "Published December 10, 2025",
+          "section": "Government entities > Open the account",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR1779_Cayman_Bank.html",
+          "source_sha256": "a39c798997ddbdbb464718b79a7a17b0d87c9a83b09bef8f0d0a3a57074bee91",
+          "anchor": "74714404",
+          "text": "Entity: The name and address must match the entity name and physical address listed on the entity verification documentation. Correct the name if applicable.\nNote: For an entity with no annual gross sales, enter 0 (zero) in the Annual Gross Sales field.\nCall the Emerging Portfolio Customer Support Team at 1-866-902-9181 for assistance with completing the Entity Record fields.\nTribal governments located in areas where street addresses are not assigned and cannot provide a contact street address must provide a directional address (for example, 4.5 miles north of Main Street and Jones Avenue, Fort Defiance, AZ 86504).\nWhen creating a new entity customer record, complete the following fields:",
+          "table_id": null,
+          "row_id": null,
+          "retrieval": {
+            "bm25": 18.4582,
+            "cosine": 0.3264,
+            "rerank": 3.5802
+          }
+        }
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.071,
+        "context_resolution": "named_topic",
+        "input_tokens": 726,
+        "output_tokens": 39,
+        "generation_seconds": 12.023,
+        "total_seconds": 12.097
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "word_count": 33,
+        "passed": true
+      },
+      "trace_id": "ba7742ac2c8f"
+    },
+    "required_fact_checks": [
+      true,
+      true
+    ],
+    "all_required_facts_proxy": true,
+    "fact_coverage_proxy": 1.0
+  }
+]

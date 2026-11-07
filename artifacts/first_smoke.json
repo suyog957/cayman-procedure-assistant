@@ -1,0 +1,206 @@
+[
+  {
+    "answer": "The maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250. [S1]",
+    "status": "answered",
+    "question": "What is the overnight storage limit for a coin-counting machine?",
+    "retrieval_query": "What is the overnight storage limit for a coin-counting machine?",
+    "sources": [
+      {
+        "label": "S1",
+        "chunk_id": "PR63-50718732287a",
+        "doc_id": "PR63",
+        "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+        "published": "Published October 9, 2025",
+        "section": "Understand the rules",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+        "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+        "anchor": "2103707321",
+        "text": "Complete all steps to sell coin bags to the branch vault consecutively, including applicable TellerView transactions, while maintaining dual control.\nRotate the following tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure:Weekly coin-counting machine balancing Monthly random cash counts of the coin-counting machine Monthly testing of the coin-counting machine\nNote: Refer to the Random Cash Counts Dashboard on the Bank Supervision \u2013 Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline.\nThe maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250.\nAssign user IDs, keys, and combinations on Security Control.\nRelated procedure: Security Control\nRefer to your equipment procedures for processing loose coin through the coin machine. See your manager if you are unsure of these steps.",
+        "table_id": null,
+        "row_id": null,
+        "retrieval": {
+          "bm25": 25.3136,
+          "cosine": 0.7356,
+          "rerank": 2.1663
+        }
+      },
+      {
+        "label": "S2",
+        "chunk_id": "PR63-ab39b00bb48b",
+        "doc_id": "PR63",
+        "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+        "published": "Published October 9, 2025",
+        "section": "Understand the rules",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+        "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+        "anchor": "2103707321",
+        "text": "Coin-counting machines must be:Used for U.S. coin only. Located in a secure area. Maintained, accessed, and locked in dual control. Locked at all times.\nException: Branches with written approval from the Branch Manager may leave the coin-counting machine unlocked during business hours. A copy of the completed and approved Coin Counting Machine Exception Approval (596391) form must be maintained in the branch Security File.\nReference:Records Management > Retention Schedule\nComplete coin machines tasks using the appropriate level of control:Weekly balancing and random monthly cash counts: Dual control Monthly coin-counting machine testing: Single control\nAdhere to all dual control requirements in the Dual Control and Single Control procedure when completing dual control tasks associated with maintaining, accessing, and balancing the coin counting machine.\nEmployees must have appropriate authorities in Banker Profile:Vault Access authority to sign on to the vault cashline (00 or 50) Dual Control authority to be part of a dual control team\nSell full coin bags from coin-counting machines to the branch vault cashline (00 or 50).",
+        "table_id": null,
+        "row_id": null,
+        "retrieval": {
+          "bm25": 20.3141,
+          "cosine": 0.5836,
+          "rerank": -0.6209
+        }
+      },
+      {
+        "label": "S3",
+        "chunk_id": "PR63-233431168e8b",
+        "doc_id": "PR63",
+        "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+        "published": "Published October 9, 2025",
+        "section": "Monthly testing",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+        "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+        "anchor": "933356569",
+        "text": "Denomination: $0.10 | # of rolls: 3 | Total in $: $15.00 | Total number of units: 150",
+        "table_id": "PR63-T001",
+        "row_id": 3,
+        "retrieval": {
+          "bm25": 10.8474,
+          "cosine": 0.4916,
+          "rerank": -2.9366
+        }
+      },
+      {
+        "label": "S4",
+        "chunk_id": "PR63-d7e8534cd8a3",
+        "doc_id": "PR63",
+        "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+        "published": "Published October 9, 2025",
+        "section": "Monthly testing",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+        "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+        "anchor": "933356569",
+        "text": "Denomination: $0.25 | # of rolls: 1 | Total in $: $10.00 | Total number of units: 40",
+        "table_id": "PR63-T001",
+        "row_id": 4,
+        "retrieval": {
+          "bm25": 10.8474,
+          "cosine": 0.4964,
+          "rerank": -3.0333
+        }
+      }
+    ],
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "generator_used": true,
+    "metrics": {
+      "retrieval_seconds": 0.34,
+      "context_resolution": "named_topic",
+      "input_tokens": 780,
+      "output_tokens": 30,
+      "generation_seconds": 13.995,
+      "total_seconds": 14.46
+    },
+    "checks": {
+      "valid_citations": true,
+      "all_paragraphs_cited": true,
+      "novel_numbers": [],
+      "word_count": 18,
+      "passed": true
+    },
+    "trace_id": "f9e501382052"
+  },
+  {
+    "answer": "Monthly testing requires obtaining the coin from either an employee cashline or the vault cashline, completing all steps to sell coin bags to the branch vault consecutively, and rotating the tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure. [S1]",
+    "status": "answered",
+    "question": "What control is required for monthly testing?",
+    "retrieval_query": "What control is required for monthly testing?",
+    "sources": [
+      {
+        "label": "S1",
+        "chunk_id": "PR63-f85212c31542",
+        "doc_id": "PR63",
+        "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+        "published": "Published October 9, 2025",
+        "section": "Monthly testing",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+        "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+        "anchor": "933356569",
+        "text": "The employee assigned to complete the single control Coin-Counting Machine Testing Control Online task must complete the monthly testing before the coin machine is used in the morning or just before balancing.\nObtain the following coin from either an employee cashline or the vault cashline:",
+        "table_id": null,
+        "row_id": null,
+        "retrieval": {
+          "bm25": 17.6637,
+          "cosine": 0.4547,
+          "rerank": 4.9584
+        }
+      },
+      {
+        "label": "S2",
+        "chunk_id": "PR63-50718732287a",
+        "doc_id": "PR63",
+        "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+        "published": "Published October 9, 2025",
+        "section": "Understand the rules",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+        "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+        "anchor": "2103707321",
+        "text": "Complete all steps to sell coin bags to the branch vault consecutively, including applicable TellerView transactions, while maintaining dual control.\nRotate the following tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure:Weekly coin-counting machine balancing Monthly random cash counts of the coin-counting machine Monthly testing of the coin-counting machine\nNote: Refer to the Random Cash Counts Dashboard on the Bank Supervision \u2013 Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline.\nThe maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250.\nAssign user IDs, keys, and combinations on Security Control.\nRelated procedure: Security Control\nRefer to your equipment procedures for processing loose coin through the coin machine. See your manager if you are unsure of these steps.",
+        "table_id": null,
+        "row_id": null,
+        "retrieval": {
+          "bm25": 11.2946,
+          "cosine": 0.3219,
+          "rerank": 3.7595
+        }
+      },
+      {
+        "label": "S3",
+        "chunk_id": "PR63-b512790f1204",
+        "doc_id": "PR63",
+        "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+        "published": "Published October 9, 2025",
+        "section": "Random monthly cash count",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+        "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+        "anchor": "354854363",
+        "text": "Follow requirements for random monthly cash counts in the Cash Counts and Random Monthly Cash Detail > Unannounced random monthly cash count procedure.\nObtain the balancing information from the machine in dual control.\nSign on to the appropriate coin-counting machine cashline on TellerView in dual control.\nSelect T614 Balancing.\nEnter each coin denomination amount (not a lump sum).\nSelect Shared in the Counting For drop-down menu and enter the balancing information.\nSelect Random Monthly in the Reason for Count drop-down menu.\nDetermine if the cashline balances:Balances or has a difference $3 or less: Go to the next step. Does not balance: If the difference cannot be resolved:Complete the File Out of Balance screen to process the difference. In the Comments field, provide details to explain the difference, if known, using acronyms in the Balancing: Drop and Go, Teller, and Vault > Process a cash difference procedure.\nFollow the system prompts to enter dual control credentials and submit the balance.\nComplete a Perm Off when complete.",
+        "table_id": null,
+        "row_id": null,
+        "retrieval": {
+          "bm25": 9.2552,
+          "cosine": 0.3519,
+          "rerank": 3.0396
+        }
+      },
+      {
+        "label": "S4",
+        "chunk_id": "PR63-ab39b00bb48b",
+        "doc_id": "PR63",
+        "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+        "published": "Published October 9, 2025",
+        "section": "Understand the rules",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+        "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+        "anchor": "2103707321",
+        "text": "Coin-counting machines must be:Used for U.S. coin only. Located in a secure area. Maintained, accessed, and locked in dual control. Locked at all times.\nException: Branches with written approval from the Branch Manager may leave the coin-counting machine unlocked during business hours. A copy of the completed and approved Coin Counting Machine Exception Approval (596391) form must be maintained in the branch Security File.\nReference:Records Management > Retention Schedule\nComplete coin machines tasks using the appropriate level of control:Weekly balancing and random monthly cash counts: Dual control Monthly coin-counting machine testing: Single control\nAdhere to all dual control requirements in the Dual Control and Single Control procedure when completing dual control tasks associated with maintaining, accessing, and balancing the coin counting machine.\nEmployees must have appropriate authorities in Banker Profile:Vault Access authority to sign on to the vault cashline (00 or 50) Dual Control authority to be part of a dual control team\nSell full coin bags from coin-counting machines to the branch vault cashline (00 or 50).",
+        "table_id": null,
+        "row_id": null,
+        "retrieval": {
+          "bm25": 11.2814,
+          "cosine": 0.3766,
+          "rerank": 2.9837
+        }
+      }
+    ],
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "generator_used": true,
+    "metrics": {
+      "retrieval_seconds": 0.087,
+      "context_resolution": "named_topic",
+      "input_tokens": 970,
+      "output_tokens": 58,
+      "generation_seconds": 17.499,
+      "total_seconds": 17.599
+    },
+    "checks": {
+      "valid_citations": true,
+      "all_paragraphs_cited": true,
+      "novel_numbers": [],
+      "word_count": 47,
+      "passed": true
+    },
+    "trace_id": "729eebc43918"
+  }
+]

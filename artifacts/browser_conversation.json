@@ -1,0 +1,170 @@
+[
+  {
+    "role": "user",
+    "content": "What is the overnight storage limit for a coin-counting machine?"
+  },
+  {
+    "role": "assistant",
+    "result": {
+      "answer": "The overnight storage limit for a coin-counting machine is $5,250 [S1].",
+      "status": "answered",
+      "question": "What is the overnight storage limit for a coin-counting machine?",
+      "retrieval_query": "What is the overnight storage limit for a coin-counting machine?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR63-370ffcb6a01d",
+          "doc_id": "PR63",
+          "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+          "published": "Published October 9, 2025",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+          "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+          "anchor": "2103707321",
+          "text": "Rotate the following tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure:Weekly coin-counting machine balancing Monthly random cash counts of the coin-counting machine Monthly testing of the coin-counting machine\nNote: Refer to the Random Cash Counts Dashboard on the Bank Supervision – Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline.\nThe maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250.",
+          "table_id": null,
+          "row_id": null,
+          "expanded_from": null,
+          "retrieval": {
+            "bm25": 26.1096,
+            "cosine": 0.7068,
+            "rerank": 5.5314
+          }
+        }
+      ],
+      "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.371,
+        "context_resolution": "named_topic",
+        "input_tokens": 481,
+        "output_tokens": 21,
+        "generation_seconds": 1.995,
+        "verification_seconds": 0.224,
+        "total_seconds": 2.591
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "comparison_conflicts": [],
+        "word_count": 11,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "The overnight storage limit for a coin-counting machine is $5,250 .",
+              "labels": [
+                "S1"
+              ],
+              "verbatim_support": false,
+              "entailment": 0.9957,
+              "contradiction": 0.0008,
+              "supported": true,
+              "support_method": "nli_screen"
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "d1f803c9a26a"
+    }
+  },
+  {
+    "role": "user",
+    "content": "And is monthly testing done in single or dual control?"
+  },
+  {
+    "role": "assistant",
+    "result": {
+      "answer": "Monthly testing is done in single control. [S2]",
+      "status": "answered",
+      "question": "And is monthly testing done in single or dual control?",
+      "retrieval_query": "And is monthly testing done in single or dual control?",
+      "sources": [
+        {
+          "label": "S1",
+          "chunk_id": "PR63-370ffcb6a01d",
+          "doc_id": "PR63",
+          "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+          "published": "Published October 9, 2025",
+          "section": "Understand the rules",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+          "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+          "anchor": "2103707321",
+          "text": "Rotate the following tasks according to the applicable rotation frequency requirements in the Dual Control and Single Control procedure:Weekly coin-counting machine balancing Monthly random cash counts of the coin-counting machine Monthly testing of the coin-counting machine\nNote: Refer to the Random Cash Counts Dashboard on the Bank Supervision – Reporting site on Branch Portal to view previous dual control teams or TellerView T657 View All Cash Lines to see the last two dual control teams who completed random cash counts on the coin-counting machine cashline.\nThe maximum amount of coin that can be stored overnight in a single coin-counting machine is $5,250.",
+          "table_id": null,
+          "row_id": null,
+          "expanded_from": null,
+          "retrieval": {
+            "bm25": 22.7832,
+            "cosine": 0.3372,
+            "rerank": 5.2301
+          }
+        },
+        {
+          "label": "S2",
+          "chunk_id": "PR63-f87320e2edc7",
+          "doc_id": "PR63",
+          "title": "Coin-Counting Machines: Sell Full Coin Bags, Balance, Test - PR63",
+          "published": "Published October 9, 2025",
+          "section": "Monthly testing",
+          "source_file": "Cayman_Bank_HTML_Files 2/PR63_Cayman_Bank.html",
+          "source_sha256": "1d6be4925db20af76c738a4e1a99822f3c243ccba0c72590e32e89f66003e881",
+          "anchor": "933356569",
+          "text": "The employee assigned to complete the single control Coin-Counting Machine Testing Control Online task must complete the monthly testing before the coin machine is used in the morning or just before balancing.\nObtain the following coin from either an employee cashline or the vault cashline:",
+          "table_id": null,
+          "row_id": null,
+          "expanded_from": null,
+          "retrieval": {
+            "bm25": 23.0226,
+            "cosine": 0.4085,
+            "rerank": 3.8784
+          }
+        }
+      ],
+      "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
+      "generator_used": true,
+      "metrics": {
+        "retrieval_seconds": 0.347,
+        "context_resolution": "followup",
+        "input_tokens": 553,
+        "output_tokens": 12,
+        "generation_seconds": 2.429,
+        "verification_seconds": 0.119,
+        "total_seconds": 2.896
+      },
+      "checks": {
+        "valid_citations": true,
+        "all_paragraphs_cited": true,
+        "novel_numbers": [],
+        "comparison_conflicts": [],
+        "word_count": 8,
+        "passed": true,
+        "claim_support": {
+          "passed": true,
+          "claims": [
+            {
+              "claim": "Monthly testing is done in single control.",
+              "labels": [
+                "S2"
+              ],
+              "verbatim_support": false,
+              "entailment": 0.9575,
+              "contradiction": 0.0078,
+              "supported": true,
+              "support_method": "nli_screen"
+            }
+          ],
+          "model": "cross-encoder/nli-deberta-v3-small",
+          "entailment_threshold": 0.55,
+          "limitation": "NLI is an imperfect screening signal, not independent factual validation."
+        }
+      },
+      "trace_id": "7ce201e7c9f9"
+    }
+  }
+]

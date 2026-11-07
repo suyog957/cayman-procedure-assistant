@@ -1,0 +1,10 @@
+{
+  "welcome_loaded": true,
+  "client_errors": [],
+  "first_answer": "The overnight storage limit for a coin-counting machine is $5,250 [S1].\n\nGenerated answer \u00b7 inspect citations\n\nView 1 source passages\n\nAnswer details\n\nNot rated\n\nHelpful\n\nNeeds review",
+  "followup_answer": "Monthly testing is done in single control. [S2]\n\nGenerated answer \u00b7 inspect citations\n\nView 2 source passages\n\nAnswer details\n\nNot rated\n\nHelpful\n\nNeeds review",
+  "followup_pass": true,
+  "export_includes_latest_turn": true,
+  "second_session_isolated": true,
+  "reset_pass": true
+}

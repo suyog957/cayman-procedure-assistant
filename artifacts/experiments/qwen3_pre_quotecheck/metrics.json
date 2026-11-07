@@ -1,0 +1,107 @@
+{
+  "label_status": "AI-authored, source-checked development/regression cases; not independently adjudicated",
+  "retrieval": [
+    {
+      "split": "all",
+      "mode": "bm25",
+      "n": 30,
+      "hit_at_5": 0.9,
+      "mrr_at_5": 0.7983,
+      "p50_seconds": 0.014,
+      "p95_seconds": 0.019
+    },
+    {
+      "split": "all",
+      "mode": "dense",
+      "n": 30,
+      "hit_at_5": 0.9333,
+      "mrr_at_5": 0.8178,
+      "p50_seconds": 0.012,
+      "p95_seconds": 0.016
+    },
+    {
+      "split": "all",
+      "mode": "hybrid",
+      "n": 30,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.9278,
+      "p50_seconds": 0.51,
+      "p95_seconds": 0.674
+    },
+    {
+      "split": "development",
+      "mode": "bm25",
+      "n": 19,
+      "hit_at_5": 0.8947,
+      "mrr_at_5": 0.8158,
+      "p50_seconds": 0.013,
+      "p95_seconds": 0.021
+    },
+    {
+      "split": "development",
+      "mode": "dense",
+      "n": 19,
+      "hit_at_5": 0.8947,
+      "mrr_at_5": 0.7544,
+      "p50_seconds": 0.012,
+      "p95_seconds": 0.016
+    },
+    {
+      "split": "development",
+      "mode": "hybrid",
+      "n": 19,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.886,
+      "p50_seconds": 0.495,
+      "p95_seconds": 0.681
+    },
+    {
+      "split": "challenge",
+      "mode": "bm25",
+      "n": 11,
+      "hit_at_5": 0.9091,
+      "mrr_at_5": 0.7682,
+      "p50_seconds": 0.015,
+      "p95_seconds": 0.018
+    },
+    {
+      "split": "challenge",
+      "mode": "dense",
+      "n": 11,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.9273,
+      "p50_seconds": 0.012,
+      "p95_seconds": 0.015
+    },
+    {
+      "split": "challenge",
+      "mode": "hybrid",
+      "n": 11,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "p50_seconds": 0.513,
+      "p95_seconds": 0.653
+    }
+  ],
+  "answers": {
+    "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
+    "ordinary_n": 30,
+    "all_required_facts_proxy": 0.5667,
+    "fact_coverage_proxy": 0.5667,
+    "generated_n": 35,
+    "mechanical_validation_pass_rate": 0.5714,
+    "evidence_only_fallbacks": 15,
+    "guardrails_n": 6,
+    "guardrail_expected_status_rate": 0.8333,
+    "p50_seconds": 7.85,
+    "p95_seconds": 13.62,
+    "mean_word_count": 27.7,
+    "followup_fact_passes": {
+      "F01.2": true,
+      "F02.2": true,
+      "F03.2": false,
+      "F04.2": true
+    },
+    "limitations": "AI-authored labels; challenge set is not a blind holdout after inspection. Term matching and citation checks do not establish semantic correctness, relevance, or completeness. Human SME review remains required."
+  }
+}

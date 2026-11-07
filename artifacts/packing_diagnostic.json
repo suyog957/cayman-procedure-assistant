@@ -1,0 +1,129 @@
+[
+  {
+    "answer": "Relevant source passages are available below. Generative answering is not loaded.",
+    "status": "evidence_only",
+    "question": "What is the savings bond redemption limit for an account open less than 12 months, and what is the exception?",
+    "retrieval_query": "What is the savings bond redemption limit for an account open less than 12 months, and what is the exception?",
+    "sources": [
+      {
+        "label": "S1",
+        "chunk_id": "PR1949-6084a9a18c4f",
+        "doc_id": "PR1949",
+        "title": "Savings Bonds: Rate and Redeem - PR1949",
+        "published": "Published December 17, 2025",
+        "section": "Rate and redeem",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+        "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+        "anchor": "1944634862",
+        "text": "Active account status: Opened less than 12 months | Action: You may redeem bonds up to $1,000 per day (aggregate redemption value). If the total redemption value is more than $1,000, provide the following options: Redeem the bonds up to the allowable $1,000 total value and take back the remaining bonds. Redeem all bonds at full value using the Treasury Direct website.",
+        "table_id": "PR1949-T007",
+        "row_id": 2,
+        "retrieval": {
+          "bm25": 20.5051,
+          "cosine": 0.6419,
+          "rerank": 6.5207
+        }
+      },
+      {
+        "label": "S2",
+        "chunk_id": "PR1949-8d8591baf3f9",
+        "doc_id": "PR1949",
+        "title": "Savings Bonds: Rate and Redeem - PR1949",
+        "published": "Published December 17, 2025",
+        "section": "Understand the rules",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+        "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+        "anchor": "1710564397",
+        "text": "Confirm the presenter is a consumer customer with an open and active Cayman Bank checking, savings, or time account (CD), for 12 months or longer.\nNote: If the account has been opened less than 12 months, you may redeem bonds up to $1,000 per day (aggregate redemption value). If the total cash redemption value is more than $1,000, the customer has the following bond redemption options:\nRedeem the bonds up to the allowable $1,000 total value and take back the remaining bonds.\nRedeem all bonds at full value using the Treasury Direct website.",
+        "table_id": null,
+        "row_id": null,
+        "retrieval": {
+          "bm25": 28.3126,
+          "cosine": 0.648,
+          "rerank": 5.5762
+        }
+      }
+    ],
+    "model": null,
+    "generator_used": false,
+    "metrics": {
+      "retrieval_seconds": 0.654,
+      "context_resolution": "named_topic"
+    },
+    "checks": {},
+    "trace_id": "f47ef07764bd"
+  },
+  {
+    "answer": "Relevant source passages are available below. Generative answering is not loaded.",
+    "status": "evidence_only",
+    "question": "What if they are eligible for The Private Bank Experience?",
+    "retrieval_query": "Context: What is the savings bond redemption limit for an account open less than 12 months, and what is the exception?\nFollow-up: What if they are eligible for The Private Bank Experience?",
+    "sources": [
+      {
+        "label": "S1",
+        "chunk_id": "PR1949-6084a9a18c4f",
+        "doc_id": "PR1949",
+        "title": "Savings Bonds: Rate and Redeem - PR1949",
+        "published": "Published December 17, 2025",
+        "section": "Rate and redeem",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+        "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+        "anchor": "1944634862",
+        "text": "Active account status: Opened less than 12 months | Action: You may redeem bonds up to $1,000 per day (aggregate redemption value). If the total redemption value is more than $1,000, provide the following options: Redeem the bonds up to the allowable $1,000 total value and take back the remaining bonds. Redeem all bonds at full value using the Treasury Direct website.",
+        "table_id": "PR1949-T007",
+        "row_id": 2,
+        "retrieval": {
+          "bm25": 20.5051,
+          "cosine": 0.5963,
+          "rerank": 3.5438
+        }
+      },
+      {
+        "label": "S2",
+        "chunk_id": "PR1949-8d8591baf3f9",
+        "doc_id": "PR1949",
+        "title": "Savings Bonds: Rate and Redeem - PR1949",
+        "published": "Published December 17, 2025",
+        "section": "Understand the rules",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+        "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+        "anchor": "1710564397",
+        "text": "Confirm the presenter is a consumer customer with an open and active Cayman Bank checking, savings, or time account (CD), for 12 months or longer.\nNote: If the account has been opened less than 12 months, you may redeem bonds up to $1,000 per day (aggregate redemption value). If the total cash redemption value is more than $1,000, the customer has the following bond redemption options:\nRedeem the bonds up to the allowable $1,000 total value and take back the remaining bonds.\nRedeem all bonds at full value using the Treasury Direct website.",
+        "table_id": null,
+        "row_id": null,
+        "retrieval": {
+          "bm25": 29.7386,
+          "cosine": 0.6157,
+          "rerank": 3.0534
+        }
+      },
+      {
+        "label": "S3",
+        "chunk_id": "PR1949-9d0fb8a6a88f",
+        "doc_id": "PR1949",
+        "title": "Savings Bonds: Rate and Redeem - PR1949",
+        "published": "Published December 17, 2025",
+        "section": "Before you begin",
+        "source_file": "Cayman_Bank_HTML_Files 2/PR1949_Cayman_Bank.html",
+        "source_sha256": "885103171645ed7852a16e61881850e10267907d716aa62abfa087e18be9ca14",
+        "anchor": "1237438450",
+        "text": "Request method: Customer is present | Action: Confirm the presenter is a consumer customer with an open and active Cayman Bank checking, savings, or time account (CD), for 12 months or longer: Criteria is met: Go to step 2. Customer does not have an eligible account: Give the presenter the following options:Redeem bonds at full value using the Treasury Direct website. Visit their bank where they have a deposit account. This procedure is complete. Account has been opened less than 12 months: Tell the customer:The maximum amount that can be redeemed is $1,000. They must be present for the entire redemption transaction. Notes:",
+        "table_id": "PR1949-T002",
+        "row_id": 1,
+        "retrieval": {
+          "bm25": 28.5921,
+          "cosine": 0.6039,
+          "rerank": 2.7694
+        }
+      }
+    ],
+    "model": null,
+    "generator_used": false,
+    "metrics": {
+      "retrieval_seconds": 0.437,
+      "context_resolution": "followup"
+    },
+    "checks": {},
+    "trace_id": "d5683857654b"
+  }
+]

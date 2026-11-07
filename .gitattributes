@@ -1,0 +1,14 @@
+# Consistent source-code checkouts across Windows and Unix.
+* text=auto eol=lf
+*.ps1 text eol=crlf
+
+# Integrity manifests depend on the exact original and passage-store bytes.
+*.html -text
+artifacts/index/chunks.jsonl -text
+
+# Binary deliverables and generated evidence.
+*.pdf binary
+*.pptx binary
+*.png binary
+*.npy binary
+*.zip binary

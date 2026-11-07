@@ -1,0 +1,90 @@
+[
+  {
+    "doc_id": "PR1000",
+    "source_5grams": 754,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR1263",
+    "source_5grams": 776,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR1277",
+    "source_5grams": 122,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR1779",
+    "source_5grams": 4146,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR1949",
+    "source_5grams": 976,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR2306",
+    "source_5grams": 1295,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR2321",
+    "source_5grams": 580,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR472",
+    "source_5grams": 869,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR607",
+    "source_5grams": 861,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR63",
+    "source_5grams": 202,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  },
+  {
+    "doc_id": "PR7554",
+    "source_5grams": 719,
+    "missing_5grams": 0,
+    "coverage": 1.0,
+    "missing_examples": [],
+    "interpretation": "Text preservation diagnostic; does not validate table semantics or policy interpretation."
+  }
+]

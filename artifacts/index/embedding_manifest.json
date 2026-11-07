@@ -1,0 +1,8 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dimensions": 384,
+  "chunks": 1388,
+  "max_seq_length": 384,
+  "chunks_sha256": "b96eb117fe2afac1f5d0cfa1027e1df461bcb5e34eaf47c29e0e5522ddd35a60",
+  "elapsed_seconds": 10.84
+}

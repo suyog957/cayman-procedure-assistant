@@ -1,0 +1,351 @@
+[
+  {
+    "id": "opening",
+    "title": "An answer you can inspect.",
+    "kind": "card",
+    "chapter": "01 / Purpose and architecture",
+    "start": 0.0,
+    "duration": 28.666666666666668,
+    "end": 28.6667
+  },
+  {
+    "id": "workspace",
+    "title": "Start with a branch question",
+    "kind": "browser",
+    "chapter": "01 / Purpose and architecture",
+    "start": 28.6667,
+    "duration": 20.966666666666665,
+    "end": 49.6333,
+    "capture": "welcome"
+  },
+  {
+    "id": "architecture",
+    "title": "Follow the evidence through the system",
+    "kind": "card",
+    "chapter": "01 / Purpose and architecture",
+    "start": 49.6333,
+    "duration": 25.666666666666668,
+    "end": 75.3
+  },
+  {
+    "id": "ingestion",
+    "title": "Keep the rule with its conditions",
+    "kind": "card",
+    "chapter": "01 / Purpose and architecture",
+    "start": 75.3,
+    "duration": 26.7,
+    "end": 102.0
+  },
+  {
+    "id": "retrieval",
+    "title": "Exact terms plus semantic meaning",
+    "kind": "card",
+    "chapter": "01 / Purpose and architecture",
+    "start": 102.0,
+    "duration": 22.833333333333332,
+    "end": 124.8333
+  },
+  {
+    "id": "first_question",
+    "title": "Ask a concrete operational question",
+    "kind": "browser",
+    "chapter": "02 / Ask and inspect",
+    "start": 124.8333,
+    "duration": 23.9,
+    "end": 148.7333,
+    "capture": "coin_question"
+  },
+  {
+    "id": "exact_evidence",
+    "title": "Open the passage behind the answer",
+    "kind": "browser",
+    "chapter": "02 / Ask and inspect",
+    "start": 148.7333,
+    "duration": 19.866666666666667,
+    "end": 168.6,
+    "capture": "coin_evidence"
+  },
+  {
+    "id": "provenance",
+    "title": "Know which document supplied the rule",
+    "kind": "browser",
+    "chapter": "02 / Ask and inspect",
+    "start": 168.6,
+    "duration": 24.866666666666667,
+    "end": 193.4667,
+    "capture": "source_provenance"
+  },
+  {
+    "id": "ranking_signals",
+    "title": "Inspect matching signals without inventing confidence",
+    "kind": "browser",
+    "chapter": "02 / Ask and inspect",
+    "start": 193.4667,
+    "duration": 18.366666666666667,
+    "end": 211.8333,
+    "capture": "retrieval_signals"
+  },
+  {
+    "id": "original",
+    "title": "Review the complete original procedure",
+    "kind": "browser",
+    "chapter": "02 / Ask and inspect",
+    "start": 211.8333,
+    "duration": 15.066666666666666,
+    "end": 226.9,
+    "capture": "original_download"
+  },
+  {
+    "id": "checks",
+    "title": "Inspect each statement's supporting evidence",
+    "kind": "browser",
+    "chapter": "02 / Ask and inspect",
+    "start": 226.9,
+    "duration": 27.466666666666665,
+    "end": 254.3667,
+    "capture": "claim_checks"
+  },
+  {
+    "id": "activity",
+    "title": "See what the system actually did",
+    "kind": "browser",
+    "chapter": "02 / Ask and inspect",
+    "start": 254.3667,
+    "duration": 23.066666666666666,
+    "end": 277.4333,
+    "capture": "runtime_activity"
+  },
+  {
+    "id": "technical_record",
+    "title": "Keep a reviewable record of one response",
+    "kind": "browser",
+    "chapter": "02 / Ask and inspect",
+    "start": 277.4333,
+    "duration": 20.6,
+    "end": 298.0333,
+    "capture": "technical_record"
+  },
+  {
+    "id": "followup",
+    "title": "Ask about a different task in the same procedure",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 298.0333,
+    "duration": 20.466666666666665,
+    "end": 318.5,
+    "capture": "coin_followup"
+  },
+  {
+    "id": "fresh_evidence",
+    "title": "Verify that the evidence changed with the task",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 318.5,
+    "duration": 18.766666666666666,
+    "end": 337.2667,
+    "capture": "followup_evidence"
+  },
+  {
+    "id": "topic_change",
+    "title": "Switch topics explicitly",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 337.2667,
+    "duration": 18.5,
+    "end": 355.7667,
+    "capture": "topic_switch"
+  },
+  {
+    "id": "library",
+    "title": "Browse the collection or focus an investigation",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 355.7667,
+    "duration": 20.6,
+    "end": 376.3667,
+    "capture": "procedure_library"
+  },
+  {
+    "id": "scope",
+    "title": "Scope is enforced, not decorative",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 376.3667,
+    "duration": 20.8,
+    "end": 397.1667,
+    "capture": "procedure_scope"
+  },
+  {
+    "id": "notary",
+    "title": "Test a rule with an important prohibition",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 397.1667,
+    "duration": 17.7,
+    "end": 414.8667,
+    "capture": "notary_question"
+  },
+  {
+    "id": "notary_follow",
+    "title": "A follow-up must preserve the original condition",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 414.8667,
+    "duration": 21.266666666666666,
+    "end": 436.1333,
+    "capture": "notary_followup"
+  },
+  {
+    "id": "bond",
+    "title": "Ask about a limit with eligibility conditions",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 436.1333,
+    "duration": 20.233333333333334,
+    "end": 456.3667,
+    "capture": "bond_limit"
+  },
+  {
+    "id": "exception",
+    "title": "Check the exception explicitly",
+    "kind": "browser",
+    "chapter": "03 / Conversation and scope",
+    "start": 456.3667,
+    "duration": 22.866666666666667,
+    "end": 479.2333,
+    "capture": "bond_exception"
+  },
+  {
+    "id": "correction",
+    "title": "A bounded correction can recover a failed draft",
+    "kind": "card",
+    "chapter": "04 / Correction and safe outcomes",
+    "start": 479.2333,
+    "duration": 25.333333333333332,
+    "end": 504.5667
+  },
+  {
+    "id": "fallback",
+    "title": "A withheld answer is a review outcome",
+    "kind": "card",
+    "chapter": "04 / Correction and safe outcomes",
+    "start": 504.5667,
+    "duration": 27.733333333333334,
+    "end": 532.3
+  },
+  {
+    "id": "feedback",
+    "title": "Capture feedback and preserve the investigation",
+    "kind": "browser",
+    "chapter": "04 / Correction and safe outcomes",
+    "start": 532.3,
+    "duration": 21.466666666666665,
+    "end": 553.7667,
+    "capture": "feedback_export"
+  },
+  {
+    "id": "clarification",
+    "title": "Ask for context instead of inventing a situation",
+    "kind": "browser",
+    "chapter": "04 / Correction and safe outcomes",
+    "start": 553.7667,
+    "duration": 20.3,
+    "end": 574.0667,
+    "capture": "reset_clarify"
+  },
+  {
+    "id": "unsupported",
+    "title": "Stay within the supplied knowledge boundary",
+    "kind": "browser",
+    "chapter": "04 / Correction and safe outcomes",
+    "start": 574.0667,
+    "duration": 19.6,
+    "end": 593.6667,
+    "capture": "unsupported"
+  },
+  {
+    "id": "unknown",
+    "title": "Do not invent an unavailable procedure",
+    "kind": "browser",
+    "chapter": "04 / Correction and safe outcomes",
+    "start": 593.6667,
+    "duration": 13.766666666666667,
+    "end": 607.4333,
+    "capture": "unknown_procedure"
+  },
+  {
+    "id": "guard",
+    "title": "Demonstrate the input boundary honestly",
+    "kind": "browser",
+    "chapter": "04 / Correction and safe outcomes",
+    "start": 607.4333,
+    "duration": 23.0,
+    "end": 630.4333,
+    "capture": "instruction_guard"
+  },
+  {
+    "id": "mobile",
+    "title": "Keep the entry workflow usable on a narrow screen",
+    "kind": "card",
+    "chapter": "05 / Validation and delivery",
+    "start": 630.4333,
+    "duration": 16.333333333333332,
+    "end": 646.7667
+  },
+  {
+    "id": "evaluation",
+    "title": "Separate retrieval success from answer quality",
+    "kind": "browser",
+    "chapter": "05 / Validation and delivery",
+    "start": 646.7667,
+    "duration": 25.833333333333332,
+    "end": 672.6,
+    "capture": "evaluation"
+  },
+  {
+    "id": "interpretation",
+    "title": "Make the limitations as visible as the metrics",
+    "kind": "card",
+    "chapter": "05 / Validation and delivery",
+    "start": 672.6,
+    "duration": 29.233333333333334,
+    "end": 701.8333
+  },
+  {
+    "id": "human_review",
+    "title": "Evaluate the employee task, not just the text",
+    "kind": "card",
+    "chapter": "05 / Validation and delivery",
+    "start": 701.8333,
+    "duration": 28.366666666666667,
+    "end": 730.2
+  },
+  {
+    "id": "deliverables",
+    "title": "Take the evidence and presentation with you",
+    "kind": "browser",
+    "chapter": "05 / Validation and delivery",
+    "start": 730.2,
+    "duration": 29.866666666666667,
+    "end": 760.0667,
+    "capture": "report_download"
+  },
+  {
+    "id": "production",
+    "title": "A measured prototype, then a controlled validation",
+    "kind": "card",
+    "chapter": "05 / Validation and delivery",
+    "start": 760.0667,
+    "duration": 28.2,
+    "end": 788.2667
+  },
+  {
+    "id": "closing",
+    "title": "Ask. Inspect. Refine. Review.",
+    "kind": "card",
+    "chapter": "05 / Validation and delivery",
+    "start": 788.2667,
+    "duration": 22.3,
+    "end": 810.5667
+  }
+]

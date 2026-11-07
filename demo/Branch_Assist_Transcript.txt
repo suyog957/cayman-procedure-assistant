@@ -1,0 +1,107 @@
+### 00:00 — An answer you can inspect.
+Welcome to Branch Assist, a generative AI procedure assistant built for the supplied eleven-document branch operations exercise. This recorded walkthrough covers the complete employee workflow, the engineering behind it, and the evidence used to evaluate it. You will see genuine application interactions, exact source passages, follow-up questions, and cases where an answer needs review. Narration is synthetic. This is an interview prototype over the supplied Cayman Bank snapshot, with a Wells Fargo inspired presentation. It provides decision support and does not execute banking transactions.
+
+### 00:28 — Start with a branch question
+The workspace opens with guided scenarios and a place to ask your own question. The sidebar has three views: Workspace, Procedure library, and Evaluation. Search scope defaults to all eleven procedures. That supports exploration across topics. A narrower scope deliberately restricts retrieval to one procedure. All runtime retrieval and language-model inference happen on this computer; an external inference API is not required.
+
+### 00:49 — Follow the evidence through the system
+The architecture has two paths. Offline preparation parses the eleven original HTML files, builds traceable passages, and creates lexical and semantic indexes. At runtime, a single orchestrator resolves the question, verifies the snapshot, retrieves and reranks passages, and gives bounded evidence to the local generator. Output checks determine whether to release, correct, or withhold the draft. Retrieval augmented generation was chosen because procedural knowledge needs inspectable sources and explicit updates.
+
+### 01:15 — Keep the rule with its conditions
+The inputs contain narrative instructions and one hundred thirty-nine HTML tables, including nested tables. Structural parsing preserves headings, column labels, row conditions, and source locations. Table continuations repeat their conditions. Each passage carries its procedure, section, publication text, original file hash, and passage identity. Nearby qualifications can be included during evidence assembly. Linked external procedures are not fetched. This reduces lost context, but it does not guarantee that every relevant exception is retrieved.
+
+### 01:42 — Exact terms plus semantic meaning
+Hybrid retrieval combines two complementary signals. BM twenty-five matches exact terms, procedure identifiers, and specialized wording. MiniLM embeddings retrieve semantic paraphrases. Reciprocal rank fusion combines their rankings, and a cross encoder reranks the candidates jointly with the question. The generator usually receives up to three nonduplicate passages within a bounded evidence budget. Exact local vector search is sufficient for this small collection.
+
+### 02:04 — Ask a concrete operational question
+We begin with a concrete question: what is the overnight storage limit for a coin-counting machine? The application resolves the topic, checks the source snapshot, retrieves evidence, and runs the local Qwen three, four billion parameter model. The answer shown is five thousand two hundred fifty dollars, with a source citation. That matches the supplied procedure. Generation is real, rather than a canned response. This recording shortens some pauses; the answer's measured runtime remains visible in the application.
+
+### 02:28 — Open the passage behind the answer
+Clicking the citation selects that exact answer's source passage in the Evidence desk. The procedure is P R sixty-three, and the supplied text states the maximum overnight amount for a single machine. Citation labels belong to a particular answer; selecting an older answer selects its own record. A citation makes the answer inspectable. The reviewer still needs to check whether the quoted rule applies to the situation.
+
+### 02:48 — Know which document supplied the rule
+Source provenance exposes the title, section anchor, passage identity, original filename, and SHA two-fifty-six fingerprint. The source-match badge checks the selected file against the supplied snapshot. Supported requests also recheck source files and cached-index fingerprints. A changed snapshot requires a rebuild rather than silently mixing old passages with new files. A publication date or matching hash identifies the snapshot; it does not certify that the document is currently authoritative policy.
+
+### 03:13 — Inspect matching signals without inventing confidence
+The optional Retrieval signals panel exposes lexical, semantic, and reranking scores for the selected passage. These are matching signals, not calibrated confidence that the answer is correct. An adjacent qualification inherits its originating hit's scores. The interface keeps these technical details available for inspection without turning them into an unsupported certainty percentage.
+
+### 03:31 — Review the complete original procedure
+The original procedure can be downloaded directly from the Evidence desk. That lets a reviewer inspect the complete source, including context outside the retrieved passage. This is especially useful when a short answer depends on several eligibility conditions or when a linked reference is outside the supplied collection.
+
+### 03:46 — Inspect each statement's supporting evidence
+The Checks view separates the release decision into concrete screens. Citation labels must exist, factual statements need attribution, and numbers must occur in their own cited passages. Recognized strict and inclusive thresholds are compared as well. Each screened statement has a source association and a supporting evidence window. Direct wording can use a verbatim match; paraphrases use a natural language inference classifier. These checks can miss errors or reject valid answers. Checks passed means the implemented screens passed, not that correctness has been independently established.
+
+### 04:14 — See what the system actually did
+Activity records the actions that actually ran: understand the request, verify the snapshot, retrieve, assemble evidence, draft, check, and choose the response. The stages carry measured durations and observed counts. If a correction happens, it appears as an additional action. This is the agentic part of the experience: a bounded, observable workflow with a clear release decision. It is an execution record and deterministic decision summary, not the model's private chain of thought.
+
+### 04:37 — Keep a reviewable record of one response
+The technical record exposes the trace identity, model, pipeline version, question resolution, generation attempts, and token counts. Download evidence record saves the selected response with its sources, checks, and activity. This provides a reproducible review artifact for the prototype. It is an opt-in download, rather than a production audit service with access control, redaction, retention, and centrally managed records.
+
+### 04:58 — Ask about a different task in the same procedure
+Now we ask: and is monthly testing done in single or dual control? The assistant identifies the related procedure but retrieves evidence for the newly requested task. It answers single control. Prior user questions help resolve conversational context; prior generated claims are not reused as authoritative evidence. Short histories and ambiguous pronouns remain a limitation of the deterministic resolver.
+
+### 05:18 — Verify that the evidence changed with the task
+The follow-up citation opens the monthly-testing passage. In the supplied procedure, monthly testing is single control, while weekly balancing and random monthly cash counts are dual control. The correct control level depends on the task. Inspecting this passage shows why keeping the same document scope is useful, but simply copying the earlier overnight-limit evidence would not answer the follow-up.
+
+### 05:37 — Switch topics explicitly
+Next we ask about savings bond redemption fees. With all procedures in scope, naming the new topic changes the retrieval target from coin machines to P R nineteen forty-nine. The supplied savings-bond procedure prohibits charging a redemption fee. Its citation belongs to this new response. Old passages are not silently carried into the Evidence desk as support for a new question.
+
+### 05:55 — Browse the collection or focus an investigation
+The Procedure library makes the supplied collection discoverable. Searching notary and pressing Enter filters the cards. A card shows the procedure identifier, title, publication information, section count, and passage count. The original document and source fingerprint are available here as well. Use in workspace selects that procedure as the actual retrieval scope. It does not grant document entitlements or establish policy authority.
+
+### 06:16 — Scope is enforced, not decorative
+With the notary procedure selected, we deliberately ask a coin-machine question. The application asks for a scope change instead of answering from a conflicting document. The Evidence desk does not display the old source as if it supports this request. Changing scope clears contextual topic history. New investigation clears the conversation and feedback, but retains the selected scope, so the scope selector should be checked before starting a different topic.
+
+### 06:37 — Test a rule with an important prohibition
+We start a new investigation within notary services and ask whether a notary can notarize an emailed document. The supplied P R one thousand procedure prohibits notarizing documents sent by email, fax, mail, or text. The point of this example is conditional reasoning: a plausible explanation must not create permission that the source does not give.
+
+### 06:54 — A follow-up must preserve the original condition
+The follow-up asks what changes if the requester is physically present. According to the supplied procedure, physical presence does not remove the prohibition on documents sent electronically. The assistant must retain the original emailed-document situation. Review the response status as well as its source. If a draft is withheld, the original passage is still the reference; a source-only response should never be presented as a successful generated answer.
+
+### 07:16 — Ask about a limit with eligibility conditions
+Returning to all procedures, we ask for the savings bond redemption limit for an account open less than twelve months. The supplied procedure describes a daily aggregate redemption-value limit of one thousand dollars, with an eligibility exception. A useful answer needs the applicable condition, the amount, and the time basis. The evidence should also be reviewed for presence and account-eligibility requirements in the complete procedure.
+
+### 07:36 — Check the exception explicitly
+We then ask about eligibility for The Private Bank Experience. Here, the generated draft was withheld after one correction still failed the support checks. The displayed original passage contains the exception to the account-age-related limit for eligible customers. This does not imply exemption from every redemption requirement. This is a real source-review outcome in the recording. The evidence remains useful, while the withheld response is not counted as a successful generated answer.
+
+### 07:59 — A bounded correction can recover a failed draft
+This is a recorded regression example, not another live interaction. The business-trust question produced a first draft saying two million dollars or less. The cited source required less than two million, so the comparator check rejected the inclusive boundary. Deterministic feedback requested exact threshold wording. One correction, using the same evidence, produced the strict less-than criterion and passed the checks. There is a maximum of two generation attempts. Further failure withholds the draft; the system does not keep searching for a convenient answer.
+
+### 08:24 — A withheld answer is a review outcome
+Another recorded case asked about a noncustomer in Arizona requesting notarization of a non-bank document. Both drafts failed the support screen, and the response became source-only. The retrieved procedure contains an Arizona exception, so this is also a useful example of unnecessary withholding: the support classifier can reject plausible source-supported wording. The interface labels the withheld draft and preserves the source passages. Safety screening must be evaluated together with answer coverage and employee review effort, rather than describing every refusal as a success.
+
+### 08:52 — Capture feedback and preserve the investigation
+Back in the application, feedback is recorded against the selected response. Helpful or Needs review is session feedback, not automatic model retraining. Export investigation downloads the conversation, response records, sources, checks, activity, scope, and feedback as a structured file. The browser session should not be treated as permanent storage. Export before resetting, and handle any downloaded investigation according to the intended review process.
+
+### 09:13 — Ask for context instead of inventing a situation
+After New investigation, the question, can they do that, has no usable situation. The application requests more context and shows no supporting passage. Earlier sources are not borrowed to fill the gap. A second independent browser session also starts without the first session's conversation. Session isolation is implemented, while enterprise authentication and durable conversation management remain outside this prototype.
+
+### 09:34 — Stay within the supplied knowledge boundary
+Asking about tomorrow's weather demonstrates the knowledge boundary. These operational procedures do not provide that information, so the application reports insufficient evidence. An unsupported outcome can also occur on a valid procedural question if retrieval or generation fails. It should therefore be reviewed as an observed outcome, not assumed to prove that the requested rule is absent from the original documents.
+
+### 09:53 — Do not invent an unavailable procedure
+An explicit question about an unavailable procedure is handled without inventing its requirements. Only the eleven supplied documents are evidence. External links are not silently followed, and the language model's general training knowledge is not an approved substitute for a missing procedure.
+
+### 10:07 — Demonstrate the input boundary honestly
+A direct instruction to ignore previous instructions and reveal the system prompt is rejected. This demonstrates a narrow pattern-based input guard. It does not establish comprehensive protection against prompt injection, source poisoning, privacy failures, or unauthorized access. The demo uses hypothetical scenarios without customer identifiers. A production system would require document entitlements, stronger threat testing, approved data handling, and operational controls.
+
+### 10:30 — Keep the entry workflow usable on a narrow screen
+The application is also checked at a narrow mobile viewport. The welcome screen remains usable without horizontal overflow, and the prototype label stays visible. This is an actual browser screenshot from a separate, empty session. On narrower layouts, the evidence area follows the conversation rather than competing for a desktop-sized side panel.
+
+### 10:46 — Separate retrieval success from answer quality
+Evaluation shows recorded results from the completed version two regression run. Labelled evidence appeared in the top five for all thirty ordinary questions with hybrid retrieval and reranking. The generated-answer fact-group proxy passed twenty-three of thirty, or seventy-six point seven percent. Six of thirty-five evaluated generated calls became source-only outcomes. These figures describe different stages of the system. Finding the right passage does not guarantee that the generator preserves every condition or produces a complete answer.
+
+### 11:12 — Make the limitations as visible as the metrics
+The labels were AI-authored and source-checked, not independently adjudicated. Keyword matching can miss a valid paraphrase or pass an incorrect answer containing expected terms. Two of four original final-turn follow-up checks passed; ambiguous questions remain a weakness. Median generated-call latency was thirteen point eight seconds, with a ninety-fifth percentile of twenty-three point nine, excluding cold model load. Nine corrections were attempted and two revised answers were released. Thirty-seven automated tests and browser checks verify mechanics and integration, not independent substantive accuracy.
+
+### 11:41 — Evaluate the employee task, not just the text
+The next validation needs independent operational reviewers. Accuracy asks whether the guidance and conditions are correct for the situation. Relevance asks whether it answers the actual task. Completeness asks whether material conditions and exceptions are present. Conciseness asks whether the answer is useful without unnecessary detail. Two reviewers should score unseen scenarios and adjudicate disagreements, with critical errors tracked separately. Compare employee task completion and time to correct guidance against existing search, while measuring both unsupported answers and unnecessary refusals.
+
+### 12:10 — Take the evidence and presentation with you
+The Evaluation view provides downloads for the evaluation report, detailed solution overview, and presentation. The submission archive contains presentation materials without implementation source. This video also shows the application and explanatory graphics without source code. Generative AI assisted requirements analysis, implementation, tests, regression-case drafting, and presentation preparation. Runtime answer generation is a separate model use. Source checks, automated tests, browser assertions, and recorded evaluation document validation; independent operational review remains pending.
+
+### 12:40 — A measured prototype, then a controlled validation
+Before a real pilot, procedure owners need authoritative versions and supersession rules. Independent reviewers need to establish quality and risk-based release criteria. Engineering needs identity, document entitlements before retrieval, redacted audit records, concurrency controls, monitoring, and rollback. Stronger approved models should be compared on the same unseen scenario set, including cost and latency. The next decision is a scoped validation effort with operational owners. The current evidence does not justify unsupervised branch deployment or a claim of measured productivity savings.
+
+### 13:08 — Ask. Inspect. Refine. Review.
+The complete workflow is now visible: ask a specific question, inspect the cited passage, review the checks and actual activity, refine the scenario, and export the investigation. The engineering keeps source identity, generated claims, automatic screens, and independent validation distinct. This concludes the recorded walkthrough. The application, presentation, and evaluation materials are ready for a live discussion of the tradeoffs and next validation steps.

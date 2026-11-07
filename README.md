@@ -6,6 +6,10 @@ Version 2 adds a Wells Fargo–inspired workspace with a procedure library and a
 
 ![Branch Assist workspace](artifacts/screenshots/welcome.png)
 
+Watch the complete narrated recording in [the local demo player](demo/Watch_Demo.html), or play [the captioned MP4](demo/Branch_Assist_Full_Demo.mp4) directly. It covers architecture, actual questions and follow-ups, evidence/checks/activity, document scope, correction and withholding, exports, safe outcomes, evaluation and delivery. A [transcript](demo/Branch_Assist_Transcript.md), captions, chapters and [feature index](demo/FEATURE_COVERAGE.md) accompany it. See [video production and provenance](docs/VIDEO_PRODUCTION.md) for the recording/editing boundaries and reproducible build.
+
+For reliable chapter seeking in a browser, run `python scripts/serve_demo_video.py` and open **http://127.0.0.1:8502/Watch_Demo.html**. This serves only the demo folder on localhost and supports MP4 byte ranges. The standalone MP4 also works directly in a media player.
+
 The project is saved in the private repository [suyog957/cayman-procedure-assistant](https://github.com/suyog957/cayman-procedure-assistant). It includes the supplied documents, prepared index, evaluation evidence and presentation materials. Downloaded model weights, environments, secrets and local caches are excluded; the pinned downloader recreates the models.
 
 ```powershell

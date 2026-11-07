@@ -1,0 +1,60 @@
+{
+  "title": "Branch Assist | A grounded AI workflow, end to end",
+  "duration_seconds": 810.567,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "scenes": 36,
+  "chapters": [
+    {
+      "start": 0.0,
+      "title": "Purpose and architecture"
+    },
+    {
+      "start": 124.83333333333333,
+      "title": "Ask and inspect"
+    },
+    {
+      "start": 298.03333333333336,
+      "title": "Conversation and scope"
+    },
+    {
+      "start": 479.23333333333335,
+      "title": "Correction and safe outcomes"
+    },
+    {
+      "start": 630.4333333333333,
+      "title": "Validation and delivery"
+    }
+  ],
+  "narration": "Local Kokoro ONNX; synthetic af_heart voice",
+  "narration_pacing_factor": 1.418601,
+  "captions": "Burned in, embedded English, SRT and VTT; sentence-aligned timing",
+  "source_capture": "Actual local application; no mocked or substituted responses",
+  "editing": "Pauses may be shortened; final-frame holds support explanation. Model time remains visible.",
+  "recorded_regressions": [
+    "B02",
+    "N03"
+  ],
+  "source_code_shown": false,
+  "pipeline_version": "2.0",
+  "application_commit": "ad94a5b7d6c5530b328fd9e70b4d05fa2691aae9",
+  "narrator_models": [
+    {
+      "name": "kokoro-v1.0.onnx",
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/kokoro-v1.0.onnx",
+      "bytes": 325505369,
+      "sha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a"
+    },
+    {
+      "name": "voices-v1.0.bin",
+      "url": "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/voices-v1.0.bin",
+      "bytes": 28214398,
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"
+    }
+  ],
+  "bytes": 31905984,
+  "sha256": "61b25f38b175e73fabc7ebdd1382816ca9dfa6412b3ca9f47225ce03bf6c867f"
+}

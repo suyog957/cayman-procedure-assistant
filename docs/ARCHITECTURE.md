@@ -27,8 +27,8 @@ flowchart LR
   E --> L[Local Qwen generation]
   L --> M[Citations, numbers, length + claim screening]
   M -->|Pass| O[Answer + source passages]
-  M -->|First failure| F[One correction with the same evidence]
-  F --> L
+  M -->|First failure| C[One correction with the same evidence]
+  C --> L
   M -->|Still fails| X[Explicitly labeled source excerpts]
 ```
 

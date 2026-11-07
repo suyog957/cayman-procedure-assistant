@@ -2,9 +2,11 @@
 
 The assignment allows 20 minutes for the presentation and 15 minutes for the technical walkthrough and demonstration. Use the six-slide deck and the local application. Do not show or submit implementation source code. This guide is preparation material; use the source-free PDF copy in `submission/` if sharing it.
 
+The separately delivered narrated recording, `demo/Branch_Assist_Full_Demo.mp4`, covers the end-to-end technical workflow within the walkthrough slot. Open `demo/Watch_Demo.html` to jump to chapters or individual scenes. It includes synthetic narration, captions, actual UI interactions and explicitly labelled saved regression cases. Present it as a recorded walkthrough. Keep the live application ready for questions and leave room for discussion; the separate 20-minute slide presentation and candidate Q&A still apply. See `demo/FEATURE_COVERAGE.md` and `docs/VIDEO_PRODUCTION.md` for timing and provenance. The video is delivered alongside the presentation ZIP, rather than inside it.
+
 ## Version 2 workspace controls
 
-Use **New investigation** to reset. Citation buttons such as **[S1] PR63** select the exact passage in the **Evidence desk**. Its **Evidence**, **Checks** and **Activity** views expose sources, statement support and actual execution events. A failed draft may receive one bounded correction; show that step only when it appears in the actual activity record. The **Procedure library** searches source documents and sets retrieval scope. Keep **All 11 procedures** selected for the topic-switch demonstration. The **Evaluation** view shows measured results and limitations. Do not describe activity events as the model?s private reasoning.
+Use **New investigation** to reset. Citation buttons such as **[S1] PR63** select the exact passage in the **Evidence desk**. Its **Evidence**, **Checks** and **Activity** views expose sources, statement support and actual execution events. A failed draft may receive one bounded correction; show that step only when it appears in the actual activity record. The **Procedure library** searches source documents and sets retrieval scope. Keep **All 11 procedures** selected for the topic-switch demonstration. The **Evaluation** view shows measured results and limitations. Do not describe activity events as the model’s private reasoning.
 
 ## Before the meeting
 

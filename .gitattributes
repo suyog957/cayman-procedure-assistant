@@ -12,3 +12,6 @@ artifacts/index/chunks.jsonl -text
 *.png binary
 *.npy binary
 *.zip binary
+*.mp4 binary
+*.webm binary
+*.jpg binary

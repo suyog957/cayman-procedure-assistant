@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Branch Assist · Narrated demonstration</title>
+  <style>
+    :root{color-scheme:light;--red:#d71e28;--ink:#3b3331;--muted:#746c69;--line:#e2dbd7}
+    *{box-sizing:border-box}body{margin:0;background:#f9f7f6;color:var(--ink);font-family:Arial,sans-serif}
+    header{background:var(--red);border-bottom:4px solid #ffcd41;padding:24px 4%;color:white;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    header strong{font-size:24px}header span{font-size:13px}main{max-width:1600px;margin:35px auto;padding:0 28px}
+    h1{font-family:Georgia,serif;font-size:38px;font-weight:400;margin:0 0 12px}p{line-height:1.65;color:var(--muted)}
+    video{display:block;width:100%;background:#3b3331;border-radius:12px;box-shadow:0 8px 35px #3b333118}
+    .chapters{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}button,a.download{background:white;border:1px solid var(--line);color:var(--ink);border-radius:22px;padding:12px 17px;font:inherit;cursor:pointer;text-decoration:none}
+    button:hover,button:focus-visible,a:hover{border-color:var(--red);color:var(--red)}button small{color:var(--muted);padding-right:8px}
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.note{font-size:13px}summary{cursor:pointer;font-weight:bold;padding:20px 0}
+    .scene-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.scene-list button{text-align:left;border-radius:8px}
+    footer{border-top:1px solid var(--line);padding:22px 0;margin-top:28px;font-size:13px;color:var(--muted)}
+    @media(max-width:700px){header{align-items:flex-start;flex-direction:column}main{padding:0 16px}h1{font-size:29px}.scene-list{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header><strong>Branch Assist · Recorded walkthrough</strong><span>Interview prototype · Supplied Cayman Bank procedures</span></header>
+  <main>
+    <h1>A grounded AI workflow, end to end.</h1>
+    <p>Actual application interactions, synthetic narration, readable callouts, and built-in captions. Select a chapter or watch the complete demonstration.</p>
+    <video id="demo" controls preload="metadata" poster="Branch_Assist_Cover.png">
+      <source src="Branch_Assist_Full_Demo.mp4" type="video/mp4">
+      Your browser cannot play this video. <a href="Branch_Assist_Full_Demo.mp4">Open the MP4 directly.</a>
+    </video>
+    <nav class="chapters" aria-label="Video chapters" id="chapters"></nav>
+    <div class="links">
+      <a class="download" href="Branch_Assist_Full_Demo.mp4" download>Download video</a>
+      <a class="download" href="Branch_Assist_Transcript.md">Narration transcript</a>
+      <a class="download" href="Branch_Assist_Demo.srt" download>Download SRT captions</a>
+      <a class="download" href="FEATURE_COVERAGE.md">Feature coverage</a>
+    </div>
+    <p class="note">The recording shortens some pauses and holds final frames for explanation. Model runtimes remain visible. Saved regression cases are labelled. Automatic support checks and regression proxies are not independently established accuracy.</p>
+    <details><summary>Jump to an individual scene</summary><div class="scene-list" id="scenes"></div></details>
+    <footer>Source code is not shown. Runtime answers use the local Qwen model. Narration uses a separate local synthetic voice. The candidate remains responsible for understanding the design and answering questions.</footer>
+  </main>
+  <script>
+    const chapters=__CHAPTERS__;
+    const scenes=__SCENES__;
+    const video=document.getElementById('demo');
+    const stamp=t=>`${Math.floor(t/60).toString().padStart(2,'0')}:${Math.floor(t%60).toString().padStart(2,'0')}`;
+    function addButton(parent,label,start){const b=document.createElement('button');const time=document.createElement('small');time.textContent=stamp(start);b.append(time,document.createTextNode(label));b.onclick=()=>{video.currentTime=start;video.play().catch(()=>{});video.scrollIntoView({behavior:'smooth',block:'center'})};parent.append(b)}
+    chapters.forEach(c=>addButton(document.getElementById('chapters'),c.title,c.start));
+    scenes.forEach(c=>addButton(document.getElementById('scenes'),c.title,c.start));
+  </script>
+</body>
+</html>

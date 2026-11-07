@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "duration_seconds": 810.567,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "embedded_captions": true,
+  "chapter_count": 5,
+  "scene_count": 36,
+  "caption_cues": 207,
+  "full_media_decode_passed": true,
+  "caption_timing_passed": true,
+  "audio_video_duration_delta": 0.00033,
+  "integrated_loudness_lufs": -16.8,
+  "true_peak_dbfs": -1.0,
+  "capture_assertions_passed": true,
+  "client_errors": [],
+  "source_code_shown": false,
+  "video_sha256": "61b25f38b175e73fabc7ebdd1382816ca9dfa6412b3ca9f47225ce03bf6c867f",
+  "note": "Automated media checks and visual contact sheet support review; no independent SME validation is implied."
+}

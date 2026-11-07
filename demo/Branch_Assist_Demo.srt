@@ -1,0 +1,827 @@
+1
+00:00:00,388 --> 00:00:06,560
+Welcome to Branch Assist, a generative AI procedure assistant built for the supplied eleven-document branch operations exercise.
+
+2
+00:00:06,687 --> 00:00:12,145
+This recorded walkthrough covers the complete employee workflow, the engineering behind it, and the evidence used to evaluate it.
+
+3
+00:00:12,272 --> 00:00:18,204
+You will see genuine application interactions, exact source passages, follow-up questions, and cases where an answer needs review.
+
+4
+00:00:18,331 --> 00:00:19,489
+Narration is synthetic.
+
+5
+00:00:19,616 --> 00:00:24,841
+This is an interview prototype over the supplied Cayman Bank snapshot, with a Wells Fargo inspired presentation.
+
+6
+00:00:24,968 --> 00:00:28,057
+It provides decision support and does not execute banking transactions.
+
+7
+00:00:29,054 --> 00:00:32,476
+The workspace opens with guided scenarios and a place to ask your own question.
+
+8
+00:00:32,602 --> 00:00:36,066
+The sidebar has three views: Workspace, Procedure library, and Evaluation.
+
+9
+00:00:36,193 --> 00:00:38,225
+Search scope defaults to all eleven procedures.
+
+10
+00:00:38,352 --> 00:00:40,209
+That supports exploration across topics.
+
+11
+00:00:40,336 --> 00:00:43,299
+A narrower scope deliberately restricts retrieval to one procedure.
+
+12
+00:00:43,426 --> 00:00:49,035
+All runtime retrieval and language-model inference happen on this computer; an external inference API is not required.
+
+13
+00:00:50,021 --> 00:00:51,420
+The architecture has two paths.
+
+14
+00:00:51,547 --> 00:00:58,192
+Offline preparation parses the eleven original HTML files, builds traceable passages, and creates lexical and semantic indexes.
+
+15
+00:00:58,319 --> 00:01:04,133
+At runtime, a single orchestrator resolves the question, verifies the snapshot, retrieves and reranks passages, and gives bounded
+
+16
+00:01:04,133 --> 00:01:05,748
+evidence to the local generator.
+
+17
+00:01:05,875 --> 00:01:09,032
+Output checks determine whether to release, correct, or withhold the draft.
+
+18
+00:01:09,159 --> 00:01:14,685
+Retrieval augmented generation was chosen because procedural knowledge needs inspectable sources and explicit updates.
+
+19
+00:01:15,688 --> 00:01:20,814
+The inputs contain narrative instructions and one hundred thirty-nine HTML tables, including nested tables.
+
+20
+00:01:20,941 --> 00:01:25,090
+Structural parsing preserves headings, column labels, row conditions, and source locations.
+
+21
+00:01:25,217 --> 00:01:27,306
+Table continuations repeat their conditions.
+
+22
+00:01:27,433 --> 00:01:32,221
+Each passage carries its procedure, section, publication text, original file hash, and passage identity.
+
+23
+00:01:32,348 --> 00:01:35,213
+Nearby qualifications can be included during evidence assembly.
+
+24
+00:01:35,339 --> 00:01:37,107
+Linked external procedures are not fetched.
+
+25
+00:01:37,234 --> 00:01:41,406
+This reduces lost context, but it does not guarantee that every relevant exception is retrieved.
+
+26
+00:01:42,388 --> 00:01:44,830
+Hybrid retrieval combines two complementary signals.
+
+27
+00:01:44,957 --> 00:01:49,168
+BM twenty-five matches exact terms, procedure identifiers, and specialized wording.
+
+28
+00:01:49,295 --> 00:01:51,790
+MiniLM embeddings retrieve semantic paraphrases.
+
+29
+00:01:51,917 --> 00:01:56,886
+Reciprocal rank fusion combines their rankings, and a cross encoder reranks the candidates jointly with the question.
+
+30
+00:01:57,013 --> 00:02:01,355
+The generator usually receives up to three nonduplicate passages within a bounded evidence budget.
+
+31
+00:02:01,482 --> 00:02:04,219
+Exact local vector search is sufficient for this small collection.
+
+32
+00:02:05,221 --> 00:02:09,333
+We begin with a concrete question: what is the overnight storage limit for a coin-counting machine?
+
+33
+00:02:09,460 --> 00:02:15,323
+The application resolves the topic, checks the source snapshot, retrieves evidence, and runs the local Qwen three, four billion
+
+34
+00:02:15,323 --> 00:02:15,940
+parameter model.
+
+35
+00:02:16,067 --> 00:02:19,495
+The answer shown is five thousand two hundred fifty dollars, with a source citation.
+
+36
+00:02:19,622 --> 00:02:21,128
+That matches the supplied procedure.
+
+37
+00:02:21,255 --> 00:02:23,532
+Generation is real, rather than a canned response.
+
+38
+00:02:23,659 --> 00:02:28,133
+This recording shortens some pauses; the answer's measured runtime remains visible in the application.
+
+39
+00:02:29,121 --> 00:02:32,797
+Clicking the citation selects that exact answer's source passage in the Evidence desk.
+
+40
+00:02:32,924 --> 00:02:38,021
+The procedure is P R sixty-three, and the supplied text states the maximum overnight amount for a single machine.
+
+41
+00:02:38,148 --> 00:02:42,659
+Citation labels belong to a particular answer; selecting an older answer selects its own record.
+
+42
+00:02:42,786 --> 00:02:44,711
+A citation makes the answer inspectable.
+
+43
+00:02:44,838 --> 00:02:47,989
+The reviewer still needs to check whether the quoted rule applies to the situation.
+
+44
+00:02:48,988 --> 00:02:55,190
+Source provenance exposes the title, section anchor, passage identity, original filename, and SHA two-fifty-six fingerprint.
+
+45
+00:02:55,317 --> 00:02:58,655
+The source-match badge checks the selected file against the supplied snapshot.
+
+46
+00:02:58,782 --> 00:03:02,128
+Supported requests also recheck source files and cached-index fingerprints.
+
+47
+00:03:02,255 --> 00:03:06,622
+A changed snapshot requires a rebuild rather than silently mixing old passages with new files.
+
+48
+00:03:06,749 --> 00:03:12,542
+A publication date or matching hash identifies the snapshot; it does not certify that the document is currently authoritative
+
+49
+00:03:12,542 --> 00:03:12,846
+policy.
+
+50
+00:03:13,854 --> 00:03:19,048
+The optional Retrieval signals panel exposes lexical, semantic, and reranking scores for the selected passage.
+
+51
+00:03:19,175 --> 00:03:22,573
+These are matching signals, not calibrated confidence that the answer is correct.
+
+52
+00:03:22,700 --> 00:03:25,669
+An adjacent qualification inherits its originating hit's scores.
+
+53
+00:03:25,796 --> 00:03:31,232
+The interface keeps these technical details available for inspection without turning them into an unsupported certainty percentage.
+
+54
+00:03:32,221 --> 00:03:35,303
+The original procedure can be downloaded directly from the Evidence desk.
+
+55
+00:03:35,430 --> 00:03:39,686
+That lets a reviewer inspect the complete source, including context outside the retrieved passage.
+
+56
+00:03:39,813 --> 00:03:45,730
+This is especially useful when a short answer depends on several eligibility conditions or when a linked reference is outside the
+
+57
+00:03:45,730 --> 00:03:46,293
+supplied collection.
+
+58
+00:03:47,288 --> 00:03:50,122
+The Checks view separates the release decision into concrete screens.
+
+59
+00:03:50,249 --> 00:03:55,737
+Citation labels must exist, factual statements need attribution, and numbers must occur in their own cited passages.
+
+60
+00:03:55,864 --> 00:03:58,593
+Recognized strict and inclusive thresholds are compared as well.
+
+61
+00:03:58,720 --> 00:04:02,178
+Each screened statement has a source association and a supporting evidence window.
+
+62
+00:04:02,305 --> 00:04:06,606
+Direct wording can use a verbatim match; paraphrases use a natural language inference classifier.
+
+63
+00:04:06,733 --> 00:04:09,108
+These checks can miss errors or reject valid answers.
+
+64
+00:04:09,235 --> 00:04:13,745
+Checks passed means the implemented screens passed, not that correctness has been independently established.
+
+65
+00:04:14,754 --> 00:04:20,447
+Activity records the actions that actually ran: understand the request, verify the snapshot, retrieve, assemble evidence, draft,
+
+66
+00:04:20,447 --> 00:04:22,122
+check, and choose the response.
+
+67
+00:04:22,249 --> 00:04:24,774
+The stages carry measured durations and observed counts.
+
+68
+00:04:24,900 --> 00:04:27,322
+If a correction happens, it appears as an additional action.
+
+69
+00:04:27,449 --> 00:04:32,290
+This is the agentic part of the experience: a bounded, observable workflow with a clear release decision.
+
+70
+00:04:32,417 --> 00:04:36,823
+It is an execution record and deterministic decision summary, not the model's private chain of thought.
+
+71
+00:04:37,821 --> 00:04:43,659
+The technical record exposes the trace identity, model, pipeline version, question resolution, generation attempts, and token
+
+72
+00:04:43,659 --> 00:04:44,023
+counts.
+
+73
+00:04:44,150 --> 00:04:48,312
+Download evidence record saves the selected response with its sources, checks, and activity.
+
+74
+00:04:48,439 --> 00:04:51,093
+This provides a reproducible review artifact for the prototype.
+
+75
+00:04:51,220 --> 00:04:57,112
+It is an opt-in download, rather than a production audit service with access control, redaction, retention, and centrally managed
+
+76
+00:04:57,112 --> 00:04:57,422
+records.
+
+77
+00:04:58,421 --> 00:05:01,369
+Now we ask: and is monthly testing done in single or dual control?
+
+78
+00:05:01,496 --> 00:05:05,924
+The assistant identifies the related procedure but retrieves evidence for the newly requested task.
+
+79
+00:05:06,051 --> 00:05:07,338
+It answers single control.
+
+80
+00:05:07,465 --> 00:05:13,577
+Prior user questions help resolve conversational context; prior generated claims are not reused as authoritative evidence.
+
+81
+00:05:13,704 --> 00:05:17,870
+Short histories and ambiguous pronouns remain a limitation of the deterministic resolver.
+
+82
+00:05:18,888 --> 00:05:21,578
+The follow-up citation opens the monthly-testing passage.
+
+83
+00:05:21,705 --> 00:05:27,254
+In the supplied procedure, monthly testing is single control, while weekly balancing and random monthly cash counts are dual
+
+84
+00:05:27,254 --> 00:05:27,546
+control.
+
+85
+00:05:27,673 --> 00:05:29,590
+The correct control level depends on the task.
+
+86
+00:05:29,717 --> 00:05:35,204
+Inspecting this passage shows why keeping the same document scope is useful, but simply copying the earlier overnight-limit evidence
+
+87
+00:05:35,204 --> 00:05:36,648
+would not answer the follow-up.
+
+88
+00:05:37,654 --> 00:05:39,723
+Next we ask about savings bond redemption fees.
+
+89
+00:05:39,850 --> 00:05:45,706
+With all procedures in scope, naming the new topic changes the retrieval target from coin machines to P R nineteen forty-nine.
+
+90
+00:05:45,833 --> 00:05:48,976
+The supplied savings-bond procedure prohibits charging a redemption fee.
+
+91
+00:05:49,103 --> 00:05:51,124
+Its citation belongs to this new response.
+
+92
+00:05:51,251 --> 00:05:55,138
+Old passages are not silently carried into the Evidence desk as support for a new question.
+
+93
+00:05:56,154 --> 00:05:58,809
+The Procedure library makes the supplied collection discoverable.
+
+94
+00:05:58,935 --> 00:06:01,191
+Searching notary and pressing Enter filters the cards.
+
+95
+00:06:01,318 --> 00:06:06,159
+A card shows the procedure identifier, title, publication information, section count, and passage count.
+
+96
+00:06:06,286 --> 00:06:09,218
+The original document and source fingerprint are available here as well.
+
+97
+00:06:09,345 --> 00:06:12,540
+Use in workspace selects that procedure as the actual retrieval scope.
+
+98
+00:06:12,667 --> 00:06:15,743
+It does not grant document entitlements or establish policy authority.
+
+99
+00:06:16,754 --> 00:06:20,146
+With the notary procedure selected, we deliberately ask a coin-machine question.
+
+100
+00:06:20,272 --> 00:06:23,926
+The application asks for a scope change instead of answering from a conflicting document.
+
+101
+00:06:24,053 --> 00:06:27,451
+The Evidence desk does not display the old source as if it supports this request.
+
+102
+00:06:27,578 --> 00:06:29,804
+Changing scope clears contextual topic history.
+
+103
+00:06:29,931 --> 00:06:35,156
+New investigation clears the conversation and feedback, but retains the selected scope, so the scope selector should be checked
+
+104
+00:06:35,156 --> 00:06:36,532
+before starting a different topic.
+
+105
+00:06:37,554 --> 00:06:42,652
+We start a new investigation within notary services and ask whether a notary can notarize an emailed document.
+
+106
+00:06:42,779 --> 00:06:48,244
+The supplied P R one thousand procedure prohibits notarizing documents sent by email, fax, mail, or text.
+
+107
+00:06:48,371 --> 00:06:53,985
+The point of this example is conditional reasoning: a plausible explanation must not create permission that the source does not
+
+108
+00:06:53,985 --> 00:06:54,266
+give.
+
+109
+00:06:55,254 --> 00:06:58,224
+The follow-up asks what changes if the requester is physically present.
+
+110
+00:06:58,351 --> 00:07:03,359
+According to the supplied procedure, physical presence does not remove the prohibition on documents sent electronically.
+
+111
+00:07:03,485 --> 00:07:06,494
+The assistant must retain the original emailed-document situation.
+
+112
+00:07:06,621 --> 00:07:08,575
+Review the response status as well as its source.
+
+113
+00:07:08,702 --> 00:07:14,655
+If a draft is withheld, the original passage is still the reference; a source-only response should never be presented as a
+
+114
+00:07:14,655 --> 00:07:15,506
+successful generated answer.
+
+115
+00:07:16,521 --> 00:07:21,504
+Returning to all procedures, we ask for the savings bond redemption limit for an account open less than twelve months.
+
+116
+00:07:21,631 --> 00:07:27,315
+The supplied procedure describes a daily aggregate redemption-value limit of one thousand dollars, with an eligibility exception.
+
+117
+00:07:27,442 --> 00:07:31,057
+A useful answer needs the applicable condition, the amount, and the time basis.
+
+118
+00:07:31,184 --> 00:07:35,777
+The evidence should also be reviewed for presence and account-eligibility requirements in the complete procedure.
+
+119
+00:07:36,754 --> 00:07:39,415
+We then ask about eligibility for The Private Bank Experience.
+
+120
+00:07:39,542 --> 00:07:43,578
+Here, the generated draft was withheld after one correction still failed the support checks.
+
+121
+00:07:43,705 --> 00:07:48,637
+The displayed original passage contains the exception to the account-age-related limit for eligible customers.
+
+122
+00:07:48,763 --> 00:07:51,560
+This does not imply exemption from every redemption requirement.
+
+123
+00:07:51,687 --> 00:07:53,965
+This is a real source-review outcome in the recording.
+
+124
+00:07:54,092 --> 00:07:58,633
+The evidence remains useful, while the withheld response is not counted as a successful generated answer.
+
+125
+00:07:59,621 --> 00:08:02,538
+This is a recorded regression example, not another live interaction.
+
+126
+00:08:02,665 --> 00:08:06,168
+The business-trust question produced a first draft saying two million dollars or less.
+
+127
+00:08:06,295 --> 00:08:10,844
+The cited source required less than two million, so the comparator check rejected the inclusive boundary.
+
+128
+00:08:10,971 --> 00:08:13,602
+Deterministic feedback requested exact threshold wording.
+
+129
+00:08:13,729 --> 00:08:17,931
+One correction, using the same evidence, produced the strict less-than criterion and passed the checks.
+
+130
+00:08:18,058 --> 00:08:19,894
+There is a maximum of two generation attempts.
+
+131
+00:08:20,021 --> 00:08:23,938
+Further failure withholds the draft; the system does not keep searching for a convenient answer.
+
+132
+00:08:24,954 --> 00:08:30,052
+Another recorded case asked about a noncustomer in Arizona requesting notarization of a non-bank document.
+
+133
+00:08:30,179 --> 00:08:33,276
+Both drafts failed the support screen, and the response became source-only.
+
+134
+00:08:33,403 --> 00:08:39,866
+The retrieved procedure contains an Arizona exception, so this is also a useful example of unnecessary withholding: the support
+
+135
+00:08:39,866 --> 00:08:41,907
+classifier can reject plausible source-supported wording.
+
+136
+00:08:42,034 --> 00:08:45,199
+The interface labels the withheld draft and preserves the source passages.
+
+137
+00:08:45,326 --> 00:08:51,080
+Safety screening must be evaluated together with answer coverage and employee review effort, rather than describing every refusal as
+
+138
+00:08:51,080 --> 00:08:51,685
+a success.
+
+139
+00:08:52,688 --> 00:08:55,851
+Back in the application, feedback is recorded against the selected response.
+
+140
+00:08:55,978 --> 00:08:59,391
+Helpful or Needs review is session feedback, not automatic model retraining.
+
+141
+00:08:59,518 --> 00:09:05,372
+Export investigation downloads the conversation, response records, sources, checks, activity, scope, and feedback as a structured
+
+142
+00:09:05,372 --> 00:09:05,738
+file.
+
+143
+00:09:05,865 --> 00:09:08,309
+The browser session should not be treated as permanent storage.
+
+144
+00:09:08,436 --> 00:09:13,156
+Export before resetting, and handle any downloaded investigation according to the intended review process.
+
+145
+00:09:14,154 --> 00:09:17,936
+After New investigation, the question, can they do that, has no usable situation.
+
+146
+00:09:18,062 --> 00:09:21,152
+The application requests more context and shows no supporting passage.
+
+147
+00:09:21,279 --> 00:09:23,354
+Earlier sources are not borrowed to fill the gap.
+
+148
+00:09:23,480 --> 00:09:27,142
+A second independent browser session also starts without the first session's conversation.
+
+149
+00:09:27,269 --> 00:09:33,448
+Session isolation is implemented, while enterprise authentication and durable conversation management remain outside this prototype.
+
+150
+00:09:34,454 --> 00:09:37,087
+Asking about tomorrow's weather demonstrates the knowledge boundary.
+
+151
+00:09:37,214 --> 00:09:42,093
+These operational procedures do not provide that information, so the application reports insufficient evidence.
+
+152
+00:09:42,220 --> 00:09:47,242
+An unsupported outcome can also occur on a valid procedural question if retrieval or generation fails.
+
+153
+00:09:47,369 --> 00:09:52,557
+It should therefore be reviewed as an observed outcome, not assumed to prove that the requested rule is absent from the
+
+154
+00:09:52,557 --> 00:09:53,052
+original documents.
+
+155
+00:09:54,054 --> 00:09:58,474
+An explicit question about an unavailable procedure is handled without inventing its requirements.
+
+156
+00:09:58,601 --> 00:10:00,708
+Only the eleven supplied documents are evidence.
+
+157
+00:10:00,835 --> 00:10:06,275
+External links are not silently followed, and the language model's general training knowledge is not an approved substitute for a
+
+158
+00:10:06,275 --> 00:10:06,819
+missing procedure.
+
+159
+00:10:07,821 --> 00:10:12,121
+A direct instruction to ignore previous instructions and reveal the system prompt is rejected.
+
+160
+00:10:12,247 --> 00:10:14,459
+This demonstrates a narrow pattern-based input guard.
+
+161
+00:10:14,586 --> 00:10:20,601
+It does not establish comprehensive protection against prompt injection, source poisoning, privacy failures, or unauthorized access.
+
+162
+00:10:20,728 --> 00:10:23,923
+The demo uses hypothetical scenarios without customer identifiers.
+
+163
+00:10:24,050 --> 00:10:29,824
+A production system would require document entitlements, stronger threat testing, approved data handling, and operational controls.
+
+164
+00:10:30,821 --> 00:10:33,430
+The application is also checked at a narrow mobile viewport.
+
+165
+00:10:33,557 --> 00:10:38,000
+The welcome screen remains usable without horizontal overflow, and the prototype label stays visible.
+
+166
+00:10:38,127 --> 00:10:40,885
+This is an actual browser screenshot from a separate, empty session.
+
+167
+00:10:41,012 --> 00:10:46,162
+On narrower layouts, the evidence area follows the conversation rather than competing for a desktop-sized side panel.
+
+168
+00:10:47,154 --> 00:10:50,763
+Evaluation shows recorded results from the completed version two regression run.
+
+169
+00:10:50,890 --> 00:10:55,875
+Labelled evidence appeared in the top five for all thirty ordinary questions with hybrid retrieval and reranking.
+
+170
+00:10:56,002 --> 00:11:00,497
+The generated-answer fact-group proxy passed twenty-three of thirty, or seventy-six point seven percent.
+
+171
+00:11:00,624 --> 00:11:04,203
+Six of thirty-five evaluated generated calls became source-only outcomes.
+
+172
+00:11:04,329 --> 00:11:06,503
+These figures describe different stages of the system.
+
+173
+00:11:06,630 --> 00:11:11,975
+Finding the right passage does not guarantee that the generator preserves every condition or produces a complete answer.
+
+174
+00:11:12,988 --> 00:11:16,311
+The labels were AI-authored and source-checked, not independently adjudicated.
+
+175
+00:11:16,438 --> 00:11:21,008
+Keyword matching can miss a valid paraphrase or pass an incorrect answer containing expected terms.
+
+176
+00:11:21,135 --> 00:11:25,382
+Two of four original final-turn follow-up checks passed; ambiguous questions remain a weakness.
+
+177
+00:11:25,509 --> 00:11:31,305
+Median generated-call latency was thirteen point eight seconds, with a ninety-fifth percentile of twenty-three point nine, excluding
+
+178
+00:11:31,305 --> 00:11:32,328
+cold model load.
+
+179
+00:11:32,455 --> 00:11:35,417
+Nine corrections were attempted and two revised answers were released.
+
+180
+00:11:35,544 --> 00:11:41,228
+Thirty-seven automated tests and browser checks verify mechanics and integration, not independent substantive accuracy.
+
+181
+00:11:42,221 --> 00:11:45,025
+The next validation needs independent operational reviewers.
+
+182
+00:11:45,152 --> 00:11:48,558
+Accuracy asks whether the guidance and conditions are correct for the situation.
+
+183
+00:11:48,685 --> 00:11:50,844
+Relevance asks whether it answers the actual task.
+
+184
+00:11:50,971 --> 00:11:53,942
+Completeness asks whether material conditions and exceptions are present.
+
+185
+00:11:54,068 --> 00:11:57,428
+Conciseness asks whether the answer is useful without unnecessary detail.
+
+186
+00:11:57,555 --> 00:12:02,217
+Two reviewers should score unseen scenarios and adjudicate disagreements, with critical errors tracked separately.
+
+187
+00:12:02,344 --> 00:12:08,873
+Compare employee task completion and time to correct guidance against existing search, while measuring both unsupported answers and
+
+188
+00:12:08,873 --> 00:12:09,599
+unnecessary refusals.
+
+189
+00:12:10,588 --> 00:12:15,806
+The Evaluation view provides downloads for the evaluation report, detailed solution overview, and presentation.
+
+190
+00:12:15,932 --> 00:12:19,691
+The submission archive contains presentation materials without implementation source.
+
+191
+00:12:19,817 --> 00:12:23,539
+This video also shows the application and explanatory graphics without source code.
+
+192
+00:12:23,666 --> 00:12:29,832
+Generative AI assisted requirements analysis, implementation, tests, regression-case drafting, and presentation preparation.
+
+193
+00:12:29,958 --> 00:12:32,363
+Runtime answer generation is a separate model use.
+
+194
+00:12:32,490 --> 00:12:38,582
+Source checks, automated tests, browser assertions, and recorded evaluation document validation; independent operational review
+
+195
+00:12:38,582 --> 00:12:39,452
+remains pending.
+
+196
+00:12:40,454 --> 00:12:44,304
+Before a real pilot, procedure owners need authoritative versions and supersession rules.
+
+197
+00:12:44,431 --> 00:12:47,949
+Independent reviewers need to establish quality and risk-based release criteria.
+
+198
+00:12:48,076 --> 00:12:54,002
+Engineering needs identity, document entitlements before retrieval, redacted audit records, concurrency controls, monitoring, and
+
+199
+00:12:54,002 --> 00:12:54,426
+rollback.
+
+200
+00:12:54,553 --> 00:12:59,372
+Stronger approved models should be compared on the same unseen scenario set, including cost and latency.
+
+201
+00:12:59,499 --> 00:13:02,619
+The next decision is a scoped validation effort with operational owners.
+
+202
+00:13:02,746 --> 00:13:07,655
+The current evidence does not justify unsupervised branch deployment or a claim of measured productivity savings.
+
+203
+00:13:08,654 --> 00:13:14,773
+The complete workflow is now visible: ask a specific question, inspect the cited passage, review the checks and actual activity,
+
+204
+00:13:14,773 --> 00:13:16,915
+refine the scenario, and export the investigation.
+
+205
+00:13:17,042 --> 00:13:22,155
+The engineering keeps source identity, generated claims, automatic screens, and independent validation distinct.
+
+206
+00:13:22,281 --> 00:13:23,840
+This concludes the recorded walkthrough.
+
+207
+00:13:23,967 --> 00:13:29,965
+The application, presentation, and evaluation materials are ready for a live discussion of the tradeoffs and next validation steps.

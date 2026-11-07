@@ -44,3 +44,7 @@ The candidate should review the response traces, rehearse the demo, personalize 
 ## Version 2 validation records
 
 The current workspace adds claim-local citation binding, current source/index integrity checks, statement-to-source evidence windows and one bounded correction. Runtime activity shows observed actions and deterministic check results, not fabricated agent thinking or private model reasoning. The same regression suite is rerun, with earlier results retained under `artifacts/experiments/v1_complete_before_workspace_v2`. The current evaluation records correction attempts and how many revised drafts passed the release checks. More inspectability does not itself establish factual correctness.
+
+## Narrated demonstration
+
+The end-to-end video uses genuine browser interactions and a separately generated local synthetic narration voice. It does not clone or represent the candidate's own voice. AI assisted the narration script, scene planning and production automation. B02 and N03 are explicitly labelled saved regression examples, and a freshly captured source-only follow-up is described as withheld. Processing pauses may be shortened and final frames held for explanation; model runtimes remain visible. Source code is not displayed. Media, caption and playback checks support the recording's quality but do not add independent SME validation. The editable script, capture outcomes, production/model hashes and verification report accompany the video under `demo/`; the recording boundaries and reproduction steps are in `docs/VIDEO_PRODUCTION.md`.

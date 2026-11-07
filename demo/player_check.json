@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "video_loads_and_decodes": true,
+  "duration_seconds": 810.567,
+  "chapter_buttons": 5,
+  "scene_buttons": 36,
+  "chapter_seeking_passed": true,
+  "scene_seeking_passed": true,
+  "playback_time_advances": true,
+  "client_errors": [],
+  "http_range_requests_passed": true,
+  "url": "http://127.0.0.1:8502/Watch_Demo.html"
+}

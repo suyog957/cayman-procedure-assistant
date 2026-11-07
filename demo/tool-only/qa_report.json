@@ -1,9 +1,9 @@
 {
   "status": "passed",
-  "duration_seconds": 281.0,
+  "duration_seconds": 564.967,
   "resolution": [
-    1920,
-    1080
+    2560,
+    1440
   ],
   "scene_count": 25,
   "chapter_count": 7,
@@ -16,10 +16,38 @@
   "continuous_timeline": true,
   "currency_display_verified": true,
   "feedback_and_export_verified": true,
+  "capture_pixels": [
+    3072,
+    1728
+  ],
+  "lossless_png_files_verified": 2255,
+  "normal_speed_interactions": true,
+  "minimum_reading_hold_seconds": 9.9,
+  "large_bottom_descriptions": true,
+  "description_font_pixels": 40,
+  "max_description_lines": 2,
+  "descriptions_clear_of_ui": true,
+  "external_controls_clear_of_picture": true,
+  "fullscreen_controls_clear_of_picture": true,
+  "speed_control_passed": true,
+  "visual_reference_checks": [
+    {
+      "scene": "coin_evidence",
+      "reference_ssim": 0.995434
+    },
+    {
+      "scene": "claim_checks",
+      "reference_ssim": 0.995942
+    },
+    {
+      "scene": "bond_limit",
+      "reference_ssim": 0.99428
+    }
+  ],
   "browser_playback_passed": true,
   "chapter_and_step_seeking_passed": true,
   "http_byte_ranges_passed": true,
   "client_errors": [],
-  "sha256": "3cae267a6162d853f287497db49cf17bf1ba7fee925e4ffdbf09aec72af42b81",
+  "sha256": "68cf410c9ec02c0e54b14f70aafef976489c877ab4dba2e5e88f51249a85075e",
   "url": "http://127.0.0.1:8502/tool-only/Watch_Tool_Demo.html"
 }

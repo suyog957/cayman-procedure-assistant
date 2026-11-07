@@ -1,6 +1,6 @@
 # Branch Assist — demo videos
 
-The primary recording is the **[silent, tool-only demo](tool-only/Watch_Tool_Demo.html)**: 4 minutes 41 seconds, 1080p, 25 genuine application scenes with concise tags and focused highlights. The MP4 has no audio stream, narration, music or slide segments. Open [the silent MP4](tool-only/Branch_Assist_Tool_Demo.mp4) directly or use **http://127.0.0.1:8502/tool-only/Watch_Tool_Demo.html** with the local player server. Its [README](tool-only/README.md), [scene guide](tool-only/SCENE_GUIDE.md) and QA report describe the workflow and checks.
+The primary recording is the **[silent, tool-only demo](tool-only/Watch_Tool_Demo.html)**: 9 minutes 25 seconds, 1440p, 25 genuine application scenes with large bottom descriptions, focused zooms and longer reading holds. Fresh double-density lossless capture improves the source detail. The MP4 has no audio stream, narration, music or slide segments. Open [the silent MP4](tool-only/Branch_Assist_Tool_Demo.mp4) directly or use **http://127.0.0.1:8502/tool-only/Watch_Tool_Demo.html** with the local player server. Its [README](tool-only/README.md), [scene guide](tool-only/SCENE_GUIDE.md) and QA report describe the workflow and checks.
 
 ## Earlier narrated demonstration
 

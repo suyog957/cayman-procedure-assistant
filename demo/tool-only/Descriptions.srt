@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:12,000
+Start with a question or one of the guided scenarios. The sidebar controls which of the 11 supplied
+procedures the assistant can search.
+
+2
+00:00:12,000 --> 00:00:41,133
+Ask about the overnight coin limit. The assistant answers $5,250 and cites PR63; use the citation to
+check the original rule.
+
+3
+00:00:41,133 --> 00:01:01,133
+Open the citation beneath the answer. The Evidence desk selects the exact source passage, including the
+conditions around the overnight limit.
+
+4
+00:01:01,133 --> 00:01:19,133
+Expand Source provenance to inspect the document, passage ID and source fingerprint. A matching hash
+identifies the supplied snapshot, rather than certifying current policy.
+
+5
+00:01:19,133 --> 00:01:38,867
+Inspect the retrieval signals for this passage. BM25, semantic similarity and reranker scores describe
+matching; they are not probabilities that the answer is correct.
+
+6
+00:01:38,867 --> 00:01:56,533
+Download the original procedure when you need more context. The full supplied HTML document remains
+available alongside the short answer.
+
+7
+00:01:56,533 --> 00:02:20,533
+Open Checks to see how each statement maps to its cited evidence. Citation, numeric and support screens
+are inspectable, but can still miss errors.
+
+8
+00:02:20,533 --> 00:02:42,533
+Activity shows the actions that actually ran, with their timings. Follow retrieval, evidence assembly,
+drafting and validation through the release decision.
+
+9
+00:02:42,533 --> 00:03:00,533
+Open the technical record and download the selected answer's evidence. Trace identity, model, question
+resolution, token counts and checks travel with the record.
+
+10
+00:03:00,533 --> 00:03:25,533
+Ask a follow-up about monthly testing. The assistant keeps the procedure context, retrieves fresh
+evidence and answers that this task uses single control.
+
+11
+00:03:25,533 --> 00:03:45,533
+Select the follow-up's citation to inspect the testing passage. This task has its own evidence; the
+overnight-storage passage is not reused as proof.
+
+12
+00:03:45,533 --> 00:04:09,533
+Name a new topic: savings-bond redemption fees. The source changes from coin-machine procedure PR63 to
+savings-bond procedure PR1949.
+
+13
+00:04:09,533 --> 00:04:27,767
+Search the Procedure library for notary services. Inspect the matching document, then use it in the
+workspace to restrict retrieval to that procedure.
+
+14
+00:04:27,767 --> 00:04:50,600
+A coin-machine question conflicts with the selected notary scope. The assistant asks for a scope change
+and does not reuse an earlier source.
+
+15
+00:04:50,600 --> 00:05:20,033
+Ask whether an emailed document can be notarized. The supplied procedure prohibits it, even when the
+requester is physically present; inspect the citation.
+
+16
+00:05:20,033 --> 00:05:46,800
+Refine the scenario by saying the requester is present. The follow-up must retain the original emailed-
+document condition and preserve the source's prohibition.
+
+17
+00:05:46,800 --> 00:06:27,700
+Ask about an account open less than 12 months. Read the $1,000 daily aggregate redemption limit together
+with the procedure's eligibility conditions.
+
+18
+00:06:27,700 --> 00:06:57,500
+Ask about The Private Bank Experience exception. In this recorded run, one correction still failed
+validation, so the draft is withheld and original passages remain available.
+
+19
+00:06:57,500 --> 00:07:19,500
+Inspect the failed check, mark the response Needs review and export the investigation. The download
+includes the conversation, evidence, checks, activity and feedback.
+
+20
+00:07:19,500 --> 00:07:40,400
+Start a new investigation and ask an ambiguous question. Without the earlier situation, the assistant
+requests context and shows no borrowed evidence.
+
+21
+00:07:40,400 --> 00:08:00,233
+Ask about tomorrow's weather. The supplied procedures cannot support that request, so the assistant
+reports insufficient evidence and does not invent a sourced answer.
+
+22
+00:08:00,233 --> 00:08:20,067
+Ask about a procedure that is not in the collection. The assistant identifies the missing source instead
+of inventing its requirements.
+
+23
+00:08:20,067 --> 00:08:40,967
+Try an obvious direct instruction attack. The request is rejected by a narrow pattern guard; this example
+does not establish comprehensive security protection.
+
+24
+00:08:40,967 --> 00:09:04,967
+Open Evaluation to inspect the recorded results. Evidence retrieval, generated-answer fact coverage and
+withheld drafts are separate measures, each with stated limitations.
+
+25
+00:09:04,967 --> 00:09:24,967
+Download the evaluation report, detailed solution overview and presentation. These materials preserve the
+design, measured results and limitations for deeper review.

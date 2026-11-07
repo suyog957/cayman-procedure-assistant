@@ -1,31 +1,31 @@
-# Silent tool walkthrough — scenes and on-screen tags
+# Silent tool walkthrough — readable edition
 
-Only actual application capture is shown. There is no audio track, narration, slide deck or presentation graphic. Processing pauses may be shortened; real final capture frames are held for reading.
+Actual UI only, with double-density lossless PNG capture. Descriptions remain in a large bottom panel; focus zooms and normal-speed interactions are followed by deliberate reading holds. Only idle processing waits may be cut. No audio, narration or slides.
 
-| Time | Action | On-screen information |
-|---|---|---|
-| 00:00 | Start with a procedure question | Ask directly or choose a starter. Search all 11 procedures, or focus on one. |
-| 00:06 | Ask about the coin-machine overnight limit | The answer cites PR63: a maximum of $5,250 in a single machine overnight. |
-| 00:22 | Open the citation and read the exact passage | Click [S1] to inspect the source wording and the conditions surrounding the rule. |
-| 00:32 | Inspect the source identity | Procedure, passage, original file and SHA256 identify the supplied snapshot. |
-| 00:40 | Inspect how the passage matched | BM25, semantic similarity and reranking scores are matching signals, not answer confidence. |
-| 00:48 | Download the original procedure | Review the complete supplied HTML document when the surrounding context matters. |
-| 00:54 | Check each statement against its cited source | Inspect attribution, numeric checks and the statement-to-source map. Screens remain fallible. |
-| 01:08 | Follow the actual execution steps | Observed retrieval, drafting and validation steps show their real counts and timings. |
-| 01:19 | Export the evidence record for one answer | The record includes trace identity, model, resolved question, checks and evidence. |
-| 01:27 | Ask a follow-up about monthly testing | A new task in the same procedure triggers fresh retrieval: monthly testing is single control. |
-| 01:43 | Verify the follow-up against its own passage | The testing passage supports [S2]; the overnight-storage passage is not reused as proof. |
-| 01:52 | Switch from coin machines to savings-bond fees | Naming the new topic changes the source from PR63 to PR1949. |
-| 02:08 | Find a procedure in the library | Search a topic or identifier; inspect the document and choose Use in workspace. |
-| 02:18 | See document scope enforced | A coin question conflicts with the selected notary procedure. Change scope to continue. |
-| 02:29 | Ask whether an emailed document can be notarized | The cited procedure prohibits emailed documents, even when the requester is present. |
-| 02:45 | Refine the situation: the requester is present | The follow-up retains the emailed-document condition; presence does not remove the prohibition. |
-| 03:01 | Ask about an account open less than 12 months | Inspect the $1,000 daily aggregate limit together with the procedure's eligibility conditions. |
-| 03:19 | Ask about The Private Bank Experience exception | One correction did not pass the checks. The draft is withheld; original evidence stays available. |
-| 03:37 | Review the outcome, give feedback and export | The export preserves the conversation, evidence, checks, activity, scope and feedback. |
-| 03:47 | Reset the conversation and test missing context | After New investigation, 'Can they do that?' needs a situation. Earlier evidence is not borrowed. |
-| 03:57 | Ask a question outside the supplied documents | The procedures cannot establish tomorrow's weather. No unsupported answer is released. |
-| 04:05 | Ask about an unavailable procedure | PR999999 is outside the 11-document collection; its requirements are not invented. |
-| 04:13 | See an obvious instruction attack rejected | A narrow direct-instruction guard rejects this request; it is not comprehensive security validation. |
-| 04:21 | Inspect the recorded evaluation | Evidence hit@5 and the answer fact proxy measure different things. Review their stated limitations. |
-| 04:33 | Download the reports and presentation | Take the evaluation report, solution overview and presentation for deeper review. |
+| Time | Step | Bottom description | Reading hold |
+|---|---|---|---|
+| 00:00 | Start with a procedure question | Start with a question or one of the guided scenarios. The sidebar controls which of the 11 supplied procedures the assistant can search. | 9.9s |
+| 00:12 | Ask about the coin-machine overnight limit | Ask about the overnight coin limit. The assistant answers $5,250 and cites PR63; use the citation to check the original rule. | 10.0s |
+| 00:41 | Open the citation and read the exact passage | Open the citation beneath the answer. The Evidence desk selects the exact source passage, including the conditions around the overnight limit. | 14.4s |
+| 01:01 | Inspect the source identity | Expand Source provenance to inspect the document, passage ID and source fingerprint. A matching hash identifies the supplied snapshot, rather than certifying current policy. | 13.9s |
+| 01:19 | Inspect how the passage matched | Inspect the retrieval signals for this passage. BM25, semantic similarity and reranker scores describe matching; they are not probabilities that the answer is correct. | 12.0s |
+| 01:38 | Download the original procedure | Download the original procedure when you need more context. The full supplied HTML document remains available alongside the short answer. | 10.0s |
+| 01:56 | Check each statement against its cited source | Open Checks to see how each statement maps to its cited evidence. Citation, numeric and support screens are inspectable, but can still miss errors. | 19.7s |
+| 02:20 | Follow the actual execution steps | Activity shows the actions that actually ran, with their timings. Follow retrieval, evidence assembly, drafting and validation through the release decision. | 18.2s |
+| 02:42 | Export the evidence record for one answer | Open the technical record and download the selected answer's evidence. Trace identity, model, question resolution, token counts and checks travel with the record. | 12.8s |
+| 03:00 | Ask a follow-up about monthly testing | Ask a follow-up about monthly testing. The assistant keeps the procedure context, retrieves fresh evidence and answers that this task uses single control. | 12.3s |
+| 03:25 | Verify the follow-up against its own passage | Select the follow-up's citation to inspect the testing passage. This task has its own evidence; the overnight-storage passage is not reused as proof. | 14.5s |
+| 03:45 | Switch from coin machines to savings-bond fees | Name a new topic: savings-bond redemption fees. The source changes from coin-machine procedure PR63 to savings-bond procedure PR1949. | 10.4s |
+| 04:09 | Find a procedure in the library | Search the Procedure library for notary services. Inspect the matching document, then use it in the workspace to restrict retrieval to that procedure. | 10.0s |
+| 04:27 | See document scope enforced | A coin-machine question conflicts with the selected notary scope. The assistant asks for a scope change and does not reuse an earlier source. | 10.0s |
+| 04:50 | Ask whether an emailed document can be notarized | Ask whether an emailed document can be notarized. The supplied procedure prohibits it, even when the requester is physically present; inspect the citation. | 10.0s |
+| 05:20 | Refine the situation: the requester is present | Refine the scenario by saying the requester is present. The follow-up must retain the original emailed-document condition and preserve the source's prohibition. | 12.0s |
+| 05:46 | Ask about an account open less than 12 months | Ask about an account open less than 12 months. Read the $1,000 daily aggregate redemption limit together with the procedure's eligibility conditions. | 14.0s |
+| 06:27 | Ask about The Private Bank Experience exception | Ask about The Private Bank Experience exception. In this recorded run, one correction still failed validation, so the draft is withheld and original passages remain available. | 14.0s |
+| 06:57 | Review the outcome, give feedback and export | Inspect the failed check, mark the response Needs review and export the investigation. The download includes the conversation, evidence, checks, activity and feedback. | 14.9s |
+| 07:19 | Reset the conversation and test missing context | Start a new investigation and ask an ambiguous question. Without the earlier situation, the assistant requests context and shows no borrowed evidence. | 10.0s |
+| 07:40 | Ask a question outside the supplied documents | Ask about tomorrow's weather. The supplied procedures cannot support that request, so the assistant reports insufficient evidence and does not invent a sourced answer. | 10.0s |
+| 08:00 | Ask about an unavailable procedure | Ask about a procedure that is not in the collection. The assistant identifies the missing source instead of inventing its requirements. | 10.0s |
+| 08:20 | See an obvious instruction attack rejected | Try an obvious direct instruction attack. The request is rejected by a narrow pattern guard; this example does not establish comprehensive security protection. | 10.0s |
+| 08:40 | Inspect the recorded evaluation | Open Evaluation to inspect the recorded results. Evidence retrieval, generated-answer fact coverage and withheld drafts are separate measures, each with stated limitations. | 20.4s |
+| 09:04 | Download the reports and presentation | Download the evaluation report, detailed solution overview and presentation. These materials preserve the design, measured results and limitations for deeper review. | 12.9s |

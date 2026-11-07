@@ -1,7 +1,7 @@
 {
   "title": "Branch Assist | Silent tool walkthrough",
-  "width": 1920,
-  "height": 1080,
+  "width": 2560,
+  "height": 1440,
   "fps": 30,
   "audio": false,
   "scenes": [
@@ -11,7 +11,7 @@
       "title": "Start with a procedure question",
       "tag": "WORKSPACE",
       "note": "Ask directly or choose a starter. Search all 11 procedures, or focus on one.",
-      "duration": 6,
+      "duration": 12,
       "highlights": [
         [
           300,
@@ -19,7 +19,9 @@
           1180,
           49
         ]
-      ]
+      ],
+      "description": "Start with a question or one of the guided scenarios. The sidebar controls which of the 11 supplied procedures the assistant can search.",
+      "min_reading_seconds": 8
     },
     {
       "capture": "coin_question",
@@ -27,7 +29,7 @@
       "title": "Ask about the coin-machine overnight limit",
       "tag": "CITED ANSWER",
       "note": "The answer cites PR63: a maximum of $5,250 in a single machine overnight.",
-      "duration": 16,
+      "duration": 24,
       "highlights": [
         [
           316,
@@ -35,7 +37,9 @@
           654,
           73
         ]
-      ]
+      ],
+      "description": "Ask about the overnight coin limit. The assistant answers $5,250 and cites PR63; use the citation to check the original rule.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "coin_evidence",
@@ -43,7 +47,7 @@
       "title": "Open the citation and read the exact passage",
       "tag": "EVIDENCE",
       "note": "Click [S1] to inspect the source wording and the conditions surrounding the rule.",
-      "duration": 10,
+      "duration": 20,
       "highlights": [
         [
           1075,
@@ -57,7 +61,9 @@
           644,
           44
         ]
-      ]
+      ],
+      "description": "Open the citation beneath the answer. The Evidence desk selects the exact source passage, including the conditions around the overnight limit.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "source_provenance",
@@ -65,7 +71,7 @@
       "title": "Inspect the source identity",
       "tag": "PROVENANCE",
       "note": "Procedure, passage, original file and SHA256 identify the supplied snapshot.",
-      "duration": 8,
+      "duration": 18,
       "highlights": [
         [
           1063,
@@ -73,7 +79,9 @@
           402,
           391
         ]
-      ]
+      ],
+      "description": "Expand Source provenance to inspect the document, passage ID and source fingerprint. A matching hash identifies the supplied snapshot, rather than certifying current policy.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "retrieval_signals",
@@ -81,7 +89,7 @@
       "title": "Inspect how the passage matched",
       "tag": "RANKING SIGNALS",
       "note": "BM25, semantic similarity and reranking scores are matching signals, not answer confidence.",
-      "duration": 8,
+      "duration": 18,
       "highlights": [
         [
           1070,
@@ -89,7 +97,9 @@
           391,
           272
         ]
-      ]
+      ],
+      "description": "Inspect the retrieval signals for this passage. BM25, semantic similarity and reranker scores describe matching; they are not probabilities that the answer is correct.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "original_download",
@@ -97,7 +107,7 @@
       "title": "Download the original procedure",
       "tag": "ORIGINAL SOURCE",
       "note": "Review the complete supplied HTML document when the surrounding context matters.",
-      "duration": 6,
+      "duration": 14,
       "highlights": [
         [
           1060,
@@ -105,7 +115,9 @@
           405,
           30
         ]
-      ]
+      ],
+      "description": "Download the original procedure when you need more context. The full supplied HTML document remains available alongside the short answer.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "claim_checks",
@@ -113,7 +125,7 @@
       "title": "Check each statement against its cited source",
       "tag": "CLAIM CHECKS",
       "note": "Inspect attribution, numeric checks and the statement-to-source map. Screens remain fallible.",
-      "duration": 14,
+      "duration": 24,
       "highlights": [
         [
           1061,
@@ -121,7 +133,9 @@
           405,
           264
         ]
-      ]
+      ],
+      "description": "Open Checks to see how each statement maps to its cited evidence. Citation, numeric and support screens are inspectable, but can still miss errors.",
+      "min_reading_seconds": 14
     },
     {
       "capture": "runtime_activity",
@@ -129,7 +143,7 @@
       "title": "Follow the actual execution steps",
       "tag": "ACTIVITY",
       "note": "Observed retrieval, drafting and validation steps show their real counts and timings.",
-      "duration": 11,
+      "duration": 22,
       "highlights": [
         [
           1060,
@@ -137,7 +151,9 @@
           408,
           400
         ]
-      ]
+      ],
+      "description": "Activity shows the actions that actually ran, with their timings. Follow retrieval, evidence assembly, drafting and validation through the release decision.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "technical_record",
@@ -145,7 +161,7 @@
       "title": "Export the evidence record for one answer",
       "tag": "TRACE EXPORT",
       "note": "The record includes trace identity, model, resolved question, checks and evidence.",
-      "duration": 8,
+      "duration": 18,
       "highlights": [
         [
           1061,
@@ -153,7 +169,9 @@
           405,
           405
         ]
-      ]
+      ],
+      "description": "Open the technical record and download the selected answer's evidence. Trace identity, model, question resolution, token counts and checks travel with the record.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "coin_followup",
@@ -161,7 +179,7 @@
       "title": "Ask a follow-up about monthly testing",
       "tag": "FOLLOW-UP",
       "note": "A new task in the same procedure triggers fresh retrieval: monthly testing is single control.",
-      "duration": 16,
+      "duration": 25,
       "highlights": [
         [
           319,
@@ -169,7 +187,9 @@
           646,
           71
         ]
-      ]
+      ],
+      "description": "Ask a follow-up about monthly testing. The assistant keeps the procedure context, retrieves fresh evidence and answers that this task uses single control.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "followup_evidence",
@@ -177,7 +197,7 @@
       "title": "Verify the follow-up against its own passage",
       "tag": "FRESH EVIDENCE",
       "note": "The testing passage supports [S2]; the overnight-storage passage is not reused as proof.",
-      "duration": 9,
+      "duration": 20,
       "highlights": [
         [
           1075,
@@ -191,7 +211,9 @@
           643,
           45
         ]
-      ]
+      ],
+      "description": "Select the follow-up's citation to inspect the testing passage. This task has its own evidence; the overnight-storage passage is not reused as proof.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "topic_switch",
@@ -199,7 +221,7 @@
       "title": "Switch from coin machines to savings-bond fees",
       "tag": "TOPIC CHANGE",
       "note": "Naming the new topic changes the source from PR63 to PR1949.",
-      "duration": 16,
+      "duration": 24,
       "highlights": [
         [
           1073,
@@ -213,7 +235,9 @@
           651,
           83
         ]
-      ]
+      ],
+      "description": "Name a new topic: savings-bond redemption fees. The source changes from coin-machine procedure PR63 to savings-bond procedure PR1949.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "procedure_library",
@@ -221,7 +245,7 @@
       "title": "Find a procedure in the library",
       "tag": "PROCEDURE LIBRARY",
       "note": "Search a topic or identifier; inspect the document and choose Use in workspace.",
-      "duration": 10,
+      "duration": 18,
       "highlights": [
         [
           302,
@@ -235,7 +259,9 @@
           267,
           42
         ]
-      ]
+      ],
+      "description": "Search the Procedure library for notary services. Inspect the matching document, then use it in the workspace to restrict retrieval to that procedure.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "procedure_scope",
@@ -243,7 +269,7 @@
       "title": "See document scope enforced",
       "tag": "SCOPE CHECK",
       "note": "A coin question conflicts with the selected notary procedure. Change scope to continue.",
-      "duration": 11,
+      "duration": 20,
       "highlights": [
         [
           317,
@@ -257,7 +283,9 @@
           201,
           91
         ]
-      ]
+      ],
+      "description": "A coin-machine question conflicts with the selected notary scope. The assistant asks for a scope change and does not reuse an earlier source.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "notary_question",
@@ -265,7 +293,7 @@
       "title": "Ask whether an emailed document can be notarized",
       "tag": "NOTARY SCENARIO",
       "note": "The cited procedure prohibits emailed documents, even when the requester is present.",
-      "duration": 16,
+      "duration": 25,
       "highlights": [
         [
           319,
@@ -273,7 +301,9 @@
           650,
           111
         ]
-      ]
+      ],
+      "description": "Ask whether an emailed document can be notarized. The supplied procedure prohibits it, even when the requester is physically present; inspect the citation.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "notary_followup",
@@ -281,7 +311,7 @@
       "title": "Refine the situation: the requester is present",
       "tag": "CONDITION PRESERVED",
       "note": "The follow-up retains the emailed-document condition; presence does not remove the prohibition.",
-      "duration": 16,
+      "duration": 25,
       "highlights": [
         [
           1074,
@@ -295,7 +325,9 @@
           651,
           108
         ]
-      ]
+      ],
+      "description": "Refine the scenario by saying the requester is present. The follow-up must retain the original emailed-document condition and preserve the source's prohibition.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "bond_limit",
@@ -303,7 +335,7 @@
       "title": "Ask about an account open less than 12 months",
       "tag": "SAVINGS-BOND LIMIT",
       "note": "Inspect the $1,000 daily aggregate limit together with the procedure's eligibility conditions.",
-      "duration": 18,
+      "duration": 28,
       "highlights": [
         [
           319,
@@ -311,7 +343,9 @@
           650,
           144
         ]
-      ]
+      ],
+      "description": "Ask about an account open less than 12 months. Read the $1,000 daily aggregate redemption limit together with the procedure's eligibility conditions.",
+      "min_reading_seconds": 14
     },
     {
       "capture": "bond_exception",
@@ -319,21 +353,23 @@
       "title": "Ask about The Private Bank Experience exception",
       "tag": "SOURCE REVIEW NEEDED",
       "note": "One correction did not pass the checks. The draft is withheld; original evidence stays available.",
-      "duration": 18,
+      "duration": 28,
       "highlights": [
         [
-          319,
-          245,
-          650,
-          118
+          317,
+          461,
+          651,
+          86
         ],
         [
           1074,
-          347,
-          382,
-          204
+          445,
+          383,
+          149
         ]
-      ]
+      ],
+      "description": "Ask about The Private Bank Experience exception. In this recorded run, one correction still failed validation, so the draft is withheld and original passages remain available.",
+      "min_reading_seconds": 14
     },
     {
       "capture": "feedback_export",
@@ -341,19 +377,19 @@
       "title": "Review the outcome, give feedback and export",
       "tag": "INVESTIGATION EXPORT",
       "note": "The export preserves the conversation, evidence, checks, activity, scope and feedback.",
-      "duration": 10,
+      "duration": 22,
       "highlights": [
         [
           1060,
-          288,
+          367,
           406,
-          66
+          59
         ],
         [
           1060,
-          590,
-          407,
-          81
+          716,
+          408,
+          32
         ],
         [
           24,
@@ -361,7 +397,9 @@
           199,
           39
         ]
-      ]
+      ],
+      "description": "Inspect the failed check, mark the response Needs review and export the investigation. The download includes the conversation, evidence, checks, activity and feedback.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "reset_clarify",
@@ -369,7 +407,7 @@
       "title": "Reset the conversation and test missing context",
       "tag": "CLARIFICATION",
       "note": "After New investigation, 'Can they do that?' needs a situation. Earlier evidence is not borrowed.",
-      "duration": 10,
+      "duration": 18,
       "highlights": [
         [
           318,
@@ -377,7 +415,9 @@
           652,
           87
         ]
-      ]
+      ],
+      "description": "Start a new investigation and ask an ambiguous question. Without the earlier situation, the assistant requests context and shows no borrowed evidence.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "unsupported",
@@ -385,7 +425,7 @@
       "title": "Ask a question outside the supplied documents",
       "tag": "INSUFFICIENT EVIDENCE",
       "note": "The procedures cannot establish tomorrow's weather. No unsupported answer is released.",
-      "duration": 8,
+      "duration": 16,
       "highlights": [
         [
           318,
@@ -393,7 +433,9 @@
           652,
           124
         ]
-      ]
+      ],
+      "description": "Ask about tomorrow's weather. The supplied procedures cannot support that request, so the assistant reports insufficient evidence and does not invent a sourced answer.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "unknown_procedure",
@@ -401,7 +443,7 @@
       "title": "Ask about an unavailable procedure",
       "tag": "MISSING PROCEDURE",
       "note": "PR999999 is outside the 11-document collection; its requirements are not invented.",
-      "duration": 8,
+      "duration": 16,
       "highlights": [
         [
           318,
@@ -409,7 +451,9 @@
           652,
           124
         ]
-      ]
+      ],
+      "description": "Ask about a procedure that is not in the collection. The assistant identifies the missing source instead of inventing its requirements.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "instruction_guard",
@@ -417,7 +461,7 @@
       "title": "See an obvious instruction attack rejected",
       "tag": "INPUT GUARD",
       "note": "A narrow direct-instruction guard rejects this request; it is not comprehensive security validation.",
-      "duration": 8,
+      "duration": 16,
       "highlights": [
         [
           318,
@@ -425,7 +469,9 @@
           652,
           124
         ]
-      ]
+      ],
+      "description": "Try an obvious direct instruction attack. The request is rejected by a narrow pattern guard; this example does not establish comprehensive security protection.",
+      "min_reading_seconds": 10
     },
     {
       "capture": "evaluation",
@@ -433,7 +479,7 @@
       "title": "Inspect the recorded evaluation",
       "tag": "EVALUATION",
       "note": "Evidence hit@5 and the answer fact proxy measure different things. Review their stated limitations.",
-      "duration": 12,
+      "duration": 24,
       "highlights": [
         [
           302,
@@ -441,7 +487,9 @@
           1180,
           125
         ]
-      ]
+      ],
+      "description": "Open Evaluation to inspect the recorded results. Evidence retrieval, generated-answer fact coverage and withheld drafts are separate measures, each with stated limitations.",
+      "min_reading_seconds": 12
     },
     {
       "capture": "report_download",
@@ -449,7 +497,7 @@
       "title": "Download the reports and presentation",
       "tag": "REVIEW MATERIALS",
       "note": "Take the evaluation report, solution overview and presentation for deeper review.",
-      "duration": 8,
+      "duration": 20,
       "highlights": [
         [
           303,
@@ -469,7 +517,13 @@
           382,
           36
         ]
-      ]
+      ],
+      "description": "Download the evaluation report, detailed solution overview and presentation. These materials preserve the design, measured results and limitations for deeper review.",
+      "min_reading_seconds": 10
     }
-  ]
+  ],
+  "layout_version": "2.0",
+  "capture": "double-density lossless PNG",
+  "description_position": "bottom",
+  "description_font_size": 40
 }

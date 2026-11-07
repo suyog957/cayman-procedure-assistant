@@ -4,24 +4,36 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Branch Assist · Silent tool demo</title>
 <style>
-*{box-sizing:border-box}body{margin:0;color:#3b3331;background:#f9f7f6;font-family:Arial,sans-serif}header{padding:24px 4%;background:#d71e28;color:white;border-bottom:4px solid #ffcd41;display:flex;justify-content:space-between;gap:20px}header strong{font-size:24px}header span{font-size:13px}main{max-width:1600px;margin:30px auto;padding:0 24px}h1{font:38px Georgia,serif;margin:0 0 12px}p{color:#746c69;line-height:1.6}video{display:block;width:100%;background:#3b3331;border-radius:10px;box-shadow:0 8px 35px #3b333118}.chapters,.links{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}button,a.download{border:1px solid #e2dbd7;background:white;border-radius:22px;padding:12px 16px;color:#3b3331;font:inherit;text-decoration:none;cursor:pointer}button:hover,button:focus-visible,a:hover{border-color:#d71e28;color:#d71e28}small{color:#746c69;padding-right:8px}summary{padding:18px 0;font-weight:bold;cursor:pointer}.scenes{display:grid;grid-template-columns:1fr 1fr;gap:10px}.scenes button{text-align:left;border-radius:8px}footer{border-top:1px solid #e2dbd7;margin-top:24px;padding:20px 0;font-size:13px;color:#746c69}@media(max-width:700px){header{flex-direction:column}h1{font-size:29px}.scenes{grid-template-columns:1fr}}
+*{box-sizing:border-box}body{margin:0;color:#3b3331;background:#f9f7f6;font-family:Arial,sans-serif}header{padding:24px 4%;background:#d71e28;color:white;border-bottom:4px solid #ffcd41;display:flex;justify-content:space-between;gap:20px}header strong{font-size:24px}header span{font-size:13px}main{max-width:1800px;margin:30px auto;padding:0 24px}h1{font:38px Georgia,serif;margin:0 0 12px}p{color:#746c69;line-height:1.6}.film{background:#312a27;border-radius:14px;overflow:hidden;box-shadow:0 10px 38px #3b33311a}video{display:block;width:100%;height:auto;background:#312a27;cursor:pointer}.controls{display:flex;align-items:center;gap:14px;padding:12px 16px;color:#fffdfb;background:#312a27;min-height:62px;font-size:14px}.controls button{padding:8px 13px;white-space:nowrap}.controls input{flex:1;min-width:70px;accent-color:#ffcd41}.controls select{padding:8px;border-radius:7px;background:#fffdfb;color:#3b3331;border:0}.controls output{font-variant-numeric:tabular-nums;white-space:nowrap}.film:fullscreen{width:100vw;height:100vh;display:flex;flex-direction:column;justify-content:center;border-radius:0}.film:fullscreen video{height:calc(100vh - 70px);object-fit:contain}.film:fullscreen .controls{flex-shrink:0}.chapters,.links{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}button,a.download{border:1px solid #e2dbd7;background:white;border-radius:22px;padding:12px 16px;color:#3b3331;font:inherit;text-decoration:none;cursor:pointer}button:hover,button:focus-visible,a:hover{border-color:#d71e28;color:#d71e28}small{color:#746c69;padding-right:8px}summary{padding:18px 0;font-weight:bold;cursor:pointer}.scenes{display:grid;grid-template-columns:1fr 1fr;gap:10px}.scenes button{text-align:left;border-radius:8px}footer{border-top:1px solid #e2dbd7;margin-top:24px;padding:20px 0;font-size:13px;color:#746c69}@media(max-width:700px){header{flex-direction:column}h1{font-size:29px}.scenes{grid-template-columns:1fr}.controls{gap:8px;flex-wrap:wrap}.controls input{min-width:140px}.controls label{display:none}}
 </style>
 </head>
 <body>
-<header><strong>Branch Assist · Silent tool demo</strong><span>Actual UI · On-screen tags and highlights</span></header>
+<header><strong>Branch Assist · Silent tool demo</strong><span>Sharper capture · Bottom descriptions · Reading pauses</span></header>
 <main>
-<h1>The complete tool workflow.</h1>
-<p>Watch the application end to end with concise labels, focused highlights and reading pauses. This video has no audio track.</p>
-<video id="demo" controls preload="metadata" poster="Cover.png"><source src="Branch_Assist_Tool_Demo.mp4" type="video/mp4"></video>
+<h1>Follow the workflow at a readable pace.</h1>
+<p>A silent 1440p walkthrough with large bottom descriptions, focused zooms and longer reading pauses. Playback controls stay below the picture, so they do not cover the text.</p>
+<div class="film" id="film">
+<video id="demo" playsinline preload="metadata" tabindex="0" aria-label="Silent tool walkthrough" poster="Cover.png?v=__VIDEO_VERSION__"><source src="Branch_Assist_Tool_Demo.mp4?v=__VIDEO_VERSION__" type="video/mp4"></video>
+<div class="controls"><button id="toggle" aria-label="Play video">Play</button><output id="clock">00:00 / 00:00</output><input id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek video"><label for="pace">Speed</label><select id="pace" aria-label="Playback speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option></select><button id="full" aria-label="Full screen">Full screen</button></div>
+</div>
 <nav id="chapters" class="chapters" aria-label="Video chapters"></nav>
-<div class="links"><a class="download" href="Branch_Assist_Tool_Demo.mp4" download>Download silent MP4</a><a class="download" href="SCENE_GUIDE.md">Scene guide</a><a class="download" href="../Watch_Demo.html">Earlier narrated version</a></div>
-<p style="font-size:13px">Recorded interactions over the supplied Cayman Bank snapshot. Some processing pauses are shortened; final UI frames are held for reading. Automatic checks remain fallible. Interview prototype.</p>
+<div class="links"><a class="download" href="Branch_Assist_Tool_Demo.mp4?v=__VIDEO_VERSION__" download>Download silent MP4</a><a class="download" href="SCENE_GUIDE.md">Scene guide</a><a class="download" href="Descriptions.srt" download>Download descriptions</a><a class="download" href="../Watch_Demo.html">Earlier narrated version</a></div>
+<p style="font-size:13px">Recorded interactions over the supplied Cayman Bank snapshot. Mouse and typing actions retain normal speed; idle pauses may be cut. Descriptions and focused UI views remain on screen for reading. Automatic checks remain fallible. Interview prototype.</p>
 <details><summary>Jump to an individual step</summary><div id="scenes" class="scenes"></div></details>
 <footer>No narration, music, presentation slides or source-code display.</footer>
 </main>
 <script>
 const chapters=__CHAPTERS__;const scenes=__SCENES__;const video=document.getElementById('demo');
 const stamp=t=>`${Math.floor(t/60).toString().padStart(2,'0')}:${Math.floor(t%60).toString().padStart(2,'0')}`;
+const toggle=document.getElementById('toggle'),seek=document.getElementById('seek'),clock=document.getElementById('clock');
+function update(){clock.textContent=`${stamp(video.currentTime)} / ${stamp(Number.isFinite(video.duration)?video.duration:0)}`;seek.value=video.duration?video.currentTime/video.duration*1000:0}
+toggle.onclick=()=>video.paused?video.play().catch(()=>{}):video.pause();video.onclick=toggle.onclick;
+video.addEventListener('play',()=>{toggle.textContent='Pause';toggle.setAttribute('aria-label','Pause video')});video.addEventListener('pause',()=>{toggle.textContent='Play';toggle.setAttribute('aria-label','Play video')});
+video.addEventListener('timeupdate',update);video.addEventListener('loadedmetadata',update);
+seek.oninput=()=>{if(video.duration)video.currentTime=Number(seek.value)/1000*video.duration};
+document.getElementById('pace').onchange=e=>video.playbackRate=Number(e.target.value);
+document.getElementById('full').onclick=()=>document.fullscreenElement?document.exitFullscreen():document.getElementById('film').requestFullscreen();
+video.onkeydown=e=>{if(e.code==='Space'){e.preventDefault();toggle.onclick()}};
 function button(parent,row){const b=document.createElement('button');const s=document.createElement('small');s.textContent=stamp(row.start);b.append(s,document.createTextNode(row.title));b.onclick=()=>{video.currentTime=row.start;video.play().catch(()=>{});video.scrollIntoView({behavior:'smooth',block:'center'})};parent.append(b)}
 chapters.forEach(row=>button(document.getElementById('chapters'),row));scenes.forEach(row=>button(document.getElementById('scenes'),row));
 </script>

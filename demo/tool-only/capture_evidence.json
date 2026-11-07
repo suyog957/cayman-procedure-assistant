@@ -1,10 +1,15 @@
 {
   "status": "passed",
-  "pipeline_version": "2.0",
+  "format": "lossless PNG",
   "viewport": [
     1536,
     864
   ],
+  "pixel_dimensions": [
+    3072,
+    1728
+  ],
+  "device_scale_factor": 2,
   "responses": {
     "coin": {
       "answer": "The overnight storage limit for a coin-counting machine is $5,250 [S1].",
@@ -36,15 +41,15 @@
       "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
       "generator_used": true,
       "metrics": {
-        "retrieval_seconds": 1.216,
+        "retrieval_seconds": 0.965,
         "context_resolution": "named_topic",
-        "generation_seconds": 2.418,
-        "verification_seconds": 0.649,
+        "generation_seconds": 7.547,
+        "verification_seconds": 1.014,
         "input_tokens": 481,
         "output_tokens": 21,
         "generation_attempts": 1,
         "repair_attempted": false,
-        "total_seconds": 4.327,
+        "total_seconds": 9.685,
         "pipeline_version": "2.0"
       },
       "checks": {
@@ -81,14 +86,14 @@
         },
         "rejected_attempts": []
       },
-      "trace_id": "39b65ef56d9e",
+      "trace_id": "f9b16aa65964",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "complete",
           "detail": "Resolved as named topic; searching all 11 procedures.",
-          "elapsed_seconds": 0.002,
+          "elapsed_seconds": 0.001,
           "query": "What is the overnight storage limit for a coin-counting machine?",
           "scope": "all"
         },
@@ -97,7 +102,7 @@
           "label": "Verify the source snapshot",
           "state": "complete",
           "detail": "11 supplied procedure files match the indexed snapshot.",
-          "elapsed_seconds": 0.014,
+          "elapsed_seconds": 0.046,
           "documents": 11
         },
         {
@@ -105,7 +110,7 @@
           "label": "Find relevant procedure passages",
           "state": "complete",
           "detail": "Retrieved and ranked 8 candidate passages.",
-          "elapsed_seconds": 1.218,
+          "elapsed_seconds": 0.966,
           "passages": 8
         },
         {
@@ -113,7 +118,7 @@
           "label": "Assemble the evidence",
           "state": "complete",
           "detail": "Selected 1 passages from 1 procedure.",
-          "elapsed_seconds": 0.003,
+          "elapsed_seconds": 0.001,
           "source_labels": [
             "S1"
           ],
@@ -124,7 +129,7 @@
           "label": "Draft the answer",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 2.426,
+          "elapsed_seconds": 7.628,
           "output_tokens": 21
         },
         {
@@ -132,7 +137,7 @@
           "label": "Check the answer",
           "state": "complete",
           "detail": "All required output checks passed.",
-          "elapsed_seconds": 0.651,
+          "elapsed_seconds": 1.015,
           "passed": true
         },
         {
@@ -140,7 +145,7 @@
           "label": "Choose the response",
           "state": "complete",
           "detail": "The answer was released after citation, numeric, threshold and claim-support screening.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.001
         }
       ],
       "grounding": {
@@ -242,15 +247,15 @@
       "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
       "generator_used": true,
       "metrics": {
-        "retrieval_seconds": 0.926,
+        "retrieval_seconds": 0.599,
         "context_resolution": "followup",
-        "generation_seconds": 4.804,
-        "verification_seconds": 0.35,
+        "generation_seconds": 3.136,
+        "verification_seconds": 0.171,
         "input_tokens": 553,
         "output_tokens": 12,
         "generation_attempts": 1,
         "repair_attempted": false,
-        "total_seconds": 6.13,
+        "total_seconds": 3.988,
         "pipeline_version": "2.0"
       },
       "checks": {
@@ -287,14 +292,14 @@
         },
         "rejected_attempts": []
       },
-      "trace_id": "4c590f857ddc",
+      "trace_id": "696256d31c1d",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "complete",
           "detail": "Resolved as followup; searching PR63.",
-          "elapsed_seconds": 0.003,
+          "elapsed_seconds": 0.001,
           "query": "And is monthly testing done in single or dual control?",
           "scope": "PR63"
         },
@@ -303,7 +308,7 @@
           "label": "Verify the source snapshot",
           "state": "complete",
           "detail": "11 supplied procedure files match the indexed snapshot.",
-          "elapsed_seconds": 0.018,
+          "elapsed_seconds": 0.019,
           "documents": 11
         },
         {
@@ -311,7 +316,7 @@
           "label": "Find relevant procedure passages",
           "state": "complete",
           "detail": "Retrieved and ranked 8 candidate passages.",
-          "elapsed_seconds": 0.928,
+          "elapsed_seconds": 0.6,
           "passages": 8
         },
         {
@@ -319,7 +324,7 @@
           "label": "Assemble the evidence",
           "state": "complete",
           "detail": "Selected 2 passages from 1 procedure.",
-          "elapsed_seconds": 0.002,
+          "elapsed_seconds": 0.001,
           "source_labels": [
             "S1",
             "S2"
@@ -331,7 +336,7 @@
           "label": "Draft the answer",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 4.812,
+          "elapsed_seconds": 3.189,
           "output_tokens": 12
         },
         {
@@ -339,7 +344,7 @@
           "label": "Check the answer",
           "state": "complete",
           "detail": "All required output checks passed.",
-          "elapsed_seconds": 0.352,
+          "elapsed_seconds": 0.172,
           "passed": true
         },
         {
@@ -347,7 +352,7 @@
           "label": "Choose the response",
           "state": "complete",
           "detail": "The answer was released after citation, numeric, threshold and claim-support screening.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.001
         }
       ],
       "grounding": {
@@ -469,15 +474,15 @@
       "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
       "generator_used": true,
       "metrics": {
-        "retrieval_seconds": 1.42,
+        "retrieval_seconds": 0.537,
         "context_resolution": "named_topic",
-        "generation_seconds": 14.591,
-        "verification_seconds": 0.67,
+        "generation_seconds": 8.948,
+        "verification_seconds": 0.277,
         "input_tokens": 687,
         "output_tokens": 27,
         "generation_attempts": 1,
         "repair_attempted": false,
-        "total_seconds": 16.723,
+        "total_seconds": 9.798,
         "pipeline_version": "2.0"
       },
       "checks": {
@@ -514,14 +519,14 @@
         },
         "rejected_attempts": []
       },
-      "trace_id": "2837f727657e",
+      "trace_id": "64ca3003b8bb",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "complete",
           "detail": "Resolved as named topic; searching all 11 procedures.",
-          "elapsed_seconds": 0.002,
+          "elapsed_seconds": 0.0,
           "query": "What about savings bond redemption fees?",
           "scope": "all"
         },
@@ -530,7 +535,7 @@
           "label": "Verify the source snapshot",
           "state": "complete",
           "detail": "11 supplied procedure files match the indexed snapshot.",
-          "elapsed_seconds": 0.014,
+          "elapsed_seconds": 0.013,
           "documents": 11
         },
         {
@@ -538,7 +543,7 @@
           "label": "Find relevant procedure passages",
           "state": "complete",
           "detail": "Retrieved and ranked 8 candidate passages.",
-          "elapsed_seconds": 1.421,
+          "elapsed_seconds": 0.539,
           "passages": 8
         },
         {
@@ -546,7 +551,7 @@
           "label": "Assemble the evidence",
           "state": "complete",
           "detail": "Selected 3 passages from 1 procedure.",
-          "elapsed_seconds": 0.002,
+          "elapsed_seconds": 0.001,
           "source_labels": [
             "S1",
             "S2",
@@ -559,7 +564,7 @@
           "label": "Draft the answer",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 14.6,
+          "elapsed_seconds": 8.959,
           "output_tokens": 27
         },
         {
@@ -567,7 +572,7 @@
           "label": "Check the answer",
           "state": "complete",
           "detail": "All required output checks passed.",
-          "elapsed_seconds": 0.671,
+          "elapsed_seconds": 0.278,
           "passed": true
         },
         {
@@ -575,7 +580,7 @@
           "label": "Choose the response",
           "state": "complete",
           "detail": "The answer was released after citation, numeric, threshold and claim-support screening.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.001
         }
       ],
       "grounding": {
@@ -636,26 +641,26 @@
       "model": null,
       "generator_used": false,
       "metrics": {
-        "total_seconds": 0.004,
+        "total_seconds": 0.001,
         "pipeline_version": "2.0",
         "context_resolution": "named_topic"
       },
       "checks": {},
-      "trace_id": "26e1d6ed7eee",
+      "trace_id": "816af15ea8d2",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "blocked",
           "detail": "This question refers to PR63, while the selected search scope is PR1000. Choose All procedures or select PR63 to continue.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.0
         },
         {
           "key": "decision",
           "label": "Choose the response",
           "state": "review",
           "detail": "More context is needed before retrieving or answering safely.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.0
         }
       ],
       "grounding": {
@@ -752,15 +757,15 @@
       "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
       "generator_used": true,
       "metrics": {
-        "retrieval_seconds": 1.882,
+        "retrieval_seconds": 0.604,
         "context_resolution": "named_topic",
-        "generation_seconds": 15.835,
-        "verification_seconds": 2.588,
+        "generation_seconds": 10.246,
+        "verification_seconds": 0.887,
         "input_tokens": 666,
         "output_tokens": 46,
         "generation_attempts": 1,
         "repair_attempted": false,
-        "total_seconds": 20.357,
+        "total_seconds": 11.784,
         "pipeline_version": "2.0"
       },
       "checks": {
@@ -811,14 +816,14 @@
         },
         "rejected_attempts": []
       },
-      "trace_id": "b3ddd70a4fea",
+      "trace_id": "e374967b7487",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "complete",
           "detail": "Resolved as named topic; searching PR1000.",
-          "elapsed_seconds": 0.002,
+          "elapsed_seconds": 0.001,
           "query": "Can a notary notarize an emailed document?",
           "scope": "PR1000"
         },
@@ -827,7 +832,7 @@
           "label": "Verify the source snapshot",
           "state": "complete",
           "detail": "11 supplied procedure files match the indexed snapshot.",
-          "elapsed_seconds": 0.016,
+          "elapsed_seconds": 0.006,
           "documents": 11
         },
         {
@@ -835,7 +840,7 @@
           "label": "Find relevant procedure passages",
           "state": "complete",
           "detail": "Retrieved and ranked 8 candidate passages.",
-          "elapsed_seconds": 1.885,
+          "elapsed_seconds": 0.606,
           "passages": 8
         },
         {
@@ -843,7 +848,7 @@
           "label": "Assemble the evidence",
           "state": "complete",
           "detail": "Selected 2 passages from 1 procedure.",
-          "elapsed_seconds": 0.003,
+          "elapsed_seconds": 0.001,
           "source_labels": [
             "S1",
             "S2"
@@ -855,7 +860,7 @@
           "label": "Draft the answer",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 15.844,
+          "elapsed_seconds": 10.279,
           "output_tokens": 46
         },
         {
@@ -863,7 +868,7 @@
           "label": "Check the answer",
           "state": "complete",
           "detail": "All required output checks passed.",
-          "elapsed_seconds": 2.591,
+          "elapsed_seconds": 0.888,
           "passed": true
         },
         {
@@ -871,7 +876,7 @@
           "label": "Choose the response",
           "state": "complete",
           "detail": "The answer was released after citation, numeric, threshold and claim-support screening.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.001
         }
       ],
       "grounding": {
@@ -973,15 +978,15 @@
       "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
       "generator_used": true,
       "metrics": {
-        "retrieval_seconds": 2.005,
+        "retrieval_seconds": 0.703,
         "context_resolution": "followup",
-        "generation_seconds": 16.254,
-        "verification_seconds": 1.335,
+        "generation_seconds": 10.513,
+        "verification_seconds": 0.522,
         "input_tokens": 680,
         "output_tokens": 51,
         "generation_attempts": 1,
         "repair_attempted": false,
-        "total_seconds": 19.639,
+        "total_seconds": 11.767,
         "pipeline_version": "2.0"
       },
       "checks": {
@@ -1032,14 +1037,14 @@
         },
         "rejected_attempts": []
       },
-      "trace_id": "42bfd259eb7f",
+      "trace_id": "5856fe124801",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "complete",
           "detail": "Resolved as followup; searching PR1000.",
-          "elapsed_seconds": 0.002,
+          "elapsed_seconds": 0.0,
           "query": "Current question: What if the requester is physically present?\nPrior situation: Can a notary notarize an emailed document?",
           "scope": "PR1000"
         },
@@ -1048,7 +1053,7 @@
           "label": "Verify the source snapshot",
           "state": "complete",
           "detail": "11 supplied procedure files match the indexed snapshot.",
-          "elapsed_seconds": 0.017,
+          "elapsed_seconds": 0.007,
           "documents": 11
         },
         {
@@ -1056,7 +1061,7 @@
           "label": "Find relevant procedure passages",
           "state": "complete",
           "detail": "Retrieved and ranked 8 candidate passages.",
-          "elapsed_seconds": 2.006,
+          "elapsed_seconds": 0.703,
           "passages": 8
         },
         {
@@ -1064,7 +1069,7 @@
           "label": "Assemble the evidence",
           "state": "complete",
           "detail": "Selected 2 passages from 1 procedure.",
-          "elapsed_seconds": 0.003,
+          "elapsed_seconds": 0.001,
           "source_labels": [
             "S1",
             "S2"
@@ -1076,7 +1081,7 @@
           "label": "Draft the answer",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 16.262,
+          "elapsed_seconds": 10.524,
           "output_tokens": 51
         },
         {
@@ -1084,7 +1089,7 @@
           "label": "Check the answer",
           "state": "complete",
           "detail": "All required output checks passed.",
-          "elapsed_seconds": 1.337,
+          "elapsed_seconds": 0.523,
           "passed": true
         },
         {
@@ -1092,7 +1097,7 @@
           "label": "Choose the response",
           "state": "complete",
           "detail": "The answer was released after citation, numeric, threshold and claim-support screening.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.001
         }
       ],
       "grounding": {
@@ -1214,15 +1219,15 @@
       "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
       "generator_used": true,
       "metrics": {
-        "retrieval_seconds": 1.513,
+        "retrieval_seconds": 0.641,
         "context_resolution": "named_topic",
-        "generation_seconds": 35.150999999999996,
-        "verification_seconds": 2.16,
+        "generation_seconds": 18.055,
+        "verification_seconds": 0.885,
         "input_tokens": 1495,
         "output_tokens": 106,
         "generation_attempts": 2,
         "repair_attempted": true,
-        "total_seconds": 38.934,
+        "total_seconds": 19.613,
         "pipeline_version": "2.0"
       },
       "checks": {
@@ -1281,14 +1286,14 @@
           }
         ]
       },
-      "trace_id": "c6c81254ef26",
+      "trace_id": "eb9b59becd7f",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "complete",
           "detail": "Resolved as named topic; searching all 11 procedures.",
-          "elapsed_seconds": 0.011,
+          "elapsed_seconds": 0.001,
           "query": "What is the savings bond redemption limit for an account open less than 12 months?",
           "scope": "all"
         },
@@ -1297,7 +1302,7 @@
           "label": "Verify the source snapshot",
           "state": "complete",
           "detail": "11 supplied procedure files match the indexed snapshot.",
-          "elapsed_seconds": 0.024,
+          "elapsed_seconds": 0.006,
           "documents": 11
         },
         {
@@ -1305,7 +1310,7 @@
           "label": "Find relevant procedure passages",
           "state": "complete",
           "detail": "Retrieved and ranked 8 candidate passages.",
-          "elapsed_seconds": 1.514,
+          "elapsed_seconds": 0.642,
           "passages": 8
         },
         {
@@ -1313,7 +1318,7 @@
           "label": "Assemble the evidence",
           "state": "complete",
           "detail": "Selected 3 passages from 1 procedure.",
-          "elapsed_seconds": 0.003,
+          "elapsed_seconds": 0.001,
           "source_labels": [
             "S1",
             "S2",
@@ -1326,7 +1331,7 @@
           "label": "Draft the answer",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 24.444,
+          "elapsed_seconds": 10.526,
           "output_tokens": 33
         },
         {
@@ -1334,7 +1339,7 @@
           "label": "Check the answer",
           "state": "review",
           "detail": "The draft failed one or more required checks.",
-          "elapsed_seconds": 1.082,
+          "elapsed_seconds": 0.259,
           "passed": false
         },
         {
@@ -1342,7 +1347,7 @@
           "label": "Revise the draft once",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 10.749,
+          "elapsed_seconds": 7.539,
           "output_tokens": 73
         },
         {
@@ -1350,7 +1355,7 @@
           "label": "Check the revised answer",
           "state": "complete",
           "detail": "All required output checks passed.",
-          "elapsed_seconds": 1.085,
+          "elapsed_seconds": 0.629,
           "passed": true
         },
         {
@@ -1358,7 +1363,7 @@
           "label": "Choose the response",
           "state": "complete",
           "detail": "The answer was released after citation, numeric, threshold and claim-support screening.",
-          "elapsed_seconds": 0.003
+          "elapsed_seconds": 0.001
         }
       ],
       "grounding": {
@@ -1480,15 +1485,15 @@
       "model": "Qwen/Qwen3-4B-GGUF:Q4_K_M",
       "generator_used": true,
       "metrics": {
-        "retrieval_seconds": 1.099,
+        "retrieval_seconds": 0.64,
         "context_resolution": "followup",
-        "generation_seconds": 25.006999999999998,
-        "verification_seconds": 0.447,
+        "generation_seconds": 17.262999999999998,
+        "verification_seconds": 0.298,
         "input_tokens": 1473,
         "output_tokens": 98,
         "generation_attempts": 2,
         "repair_attempted": true,
-        "total_seconds": 26.632,
+        "total_seconds": 18.23,
         "pipeline_version": "2.0"
       },
       "checks": {
@@ -1531,7 +1536,7 @@
         ],
         "withheld_draft": "The savings bond redemption limit for an account open less than 12 months is $1,000 [S1]. If the customer is eligible for The Private Bank Experience, the $1,000 allowable redemption amount does not apply to them regardless of how long the account has been opened [S1]."
       },
-      "trace_id": "c5ca5b4de6c2",
+      "trace_id": "6e82face6c7b",
       "activity": [
         {
           "key": "resolve",
@@ -1547,7 +1552,7 @@
           "label": "Verify the source snapshot",
           "state": "complete",
           "detail": "11 supplied procedure files match the indexed snapshot.",
-          "elapsed_seconds": 0.024,
+          "elapsed_seconds": 0.007,
           "documents": 11
         },
         {
@@ -1555,7 +1560,7 @@
           "label": "Find relevant procedure passages",
           "state": "complete",
           "detail": "Retrieved and ranked 8 candidate passages.",
-          "elapsed_seconds": 1.101,
+          "elapsed_seconds": 0.641,
           "passages": 8
         },
         {
@@ -1563,7 +1568,7 @@
           "label": "Assemble the evidence",
           "state": "complete",
           "detail": "Selected 3 passages from 1 procedure.",
-          "elapsed_seconds": 0.002,
+          "elapsed_seconds": 0.001,
           "source_labels": [
             "S1",
             "S2",
@@ -1576,7 +1581,7 @@
           "label": "Draft the answer",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 15.629,
+          "elapsed_seconds": 10.301,
           "output_tokens": 33
         },
         {
@@ -1584,7 +1589,7 @@
           "label": "Check the answer",
           "state": "review",
           "detail": "The draft failed one or more required checks.",
-          "elapsed_seconds": 0.449,
+          "elapsed_seconds": 0.298,
           "passed": false
         },
         {
@@ -1592,7 +1597,7 @@
           "label": "Revise the draft once",
           "state": "complete",
           "detail": "The local model completed its output from the supplied evidence context.",
-          "elapsed_seconds": 9.404,
+          "elapsed_seconds": 6.969,
           "output_tokens": 65
         },
         {
@@ -1600,7 +1605,7 @@
           "label": "Check the revised answer",
           "state": "review",
           "detail": "The draft failed one or more required checks.",
-          "elapsed_seconds": 0.004,
+          "elapsed_seconds": 0.003,
           "passed": false
         },
         {
@@ -1674,21 +1679,21 @@
         "context_resolution": "standalone"
       },
       "checks": {},
-      "trace_id": "99cea4d3aee1",
+      "trace_id": "22178e52ac18",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "blocked",
           "detail": "Which procedure or situation are you asking about? For example, notary services, identification, or coin-counting machines.",
-          "elapsed_seconds": 0.001
+          "elapsed_seconds": 0.002
         },
         {
           "key": "decision",
           "label": "Choose the response",
           "state": "review",
           "detail": "More context is needed before retrieving or answering safely.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.001
         }
       ],
       "grounding": {
@@ -1744,13 +1749,13 @@
       "model": null,
       "generator_used": false,
       "metrics": {
-        "retrieval_seconds": 1.928,
+        "retrieval_seconds": 0.647,
         "context_resolution": "standalone",
-        "total_seconds": 1.959,
+        "total_seconds": 0.67,
         "pipeline_version": "2.0"
       },
       "checks": {},
-      "trace_id": "636eaa75021d",
+      "trace_id": "1e657c885c4a",
       "activity": [
         {
           "key": "resolve",
@@ -1766,7 +1771,7 @@
           "label": "Verify the source snapshot",
           "state": "complete",
           "detail": "11 supplied procedure files match the indexed snapshot.",
-          "elapsed_seconds": 0.021,
+          "elapsed_seconds": 0.018,
           "documents": 11
         },
         {
@@ -1774,7 +1779,7 @@
           "label": "Find relevant procedure passages",
           "state": "complete",
           "detail": "Retrieved and ranked 8 candidate passages.",
-          "elapsed_seconds": 1.929,
+          "elapsed_seconds": 0.648,
           "passages": 8
         },
         {
@@ -1782,7 +1787,7 @@
           "label": "Choose the response",
           "state": "review",
           "detail": "The request did not meet the source or input requirements for an answer.",
-          "elapsed_seconds": 0.003
+          "elapsed_seconds": 0.001
         }
       ],
       "grounding": {
@@ -1838,26 +1843,26 @@
       "model": null,
       "generator_used": false,
       "metrics": {
-        "total_seconds": 0.004,
+        "total_seconds": 0.002,
         "pipeline_version": "2.0",
         "context_resolution": "explicit_procedure"
       },
       "checks": {},
-      "trace_id": "93c57e12ec71",
+      "trace_id": "143cde7f6a11",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "blocked",
           "detail": "That procedure is not among the 11 supplied documents. Please select a supplied procedure or ask your supervisor for the current source.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.001
         },
         {
           "key": "decision",
           "label": "Choose the response",
           "state": "review",
           "detail": "The request did not meet the source or input requirements for an answer.",
-          "elapsed_seconds": 0.001
+          "elapsed_seconds": 0.0
         }
       ],
       "grounding": {
@@ -1913,26 +1918,26 @@
       "model": null,
       "generator_used": false,
       "metrics": {
-        "total_seconds": 0.005,
+        "total_seconds": 0.001,
         "pipeline_version": "2.0",
         "context_resolution": "not_resolved"
       },
       "checks": {},
-      "trace_id": "ab4f949a8e46",
+      "trace_id": "cd3700c03d94",
       "activity": [
         {
           "key": "resolve",
           "label": "Understand the request",
           "state": "blocked",
           "detail": "I can help with questions grounded in the 11 supplied procedures. Please ask about a branch procedure.",
-          "elapsed_seconds": 0.002
+          "elapsed_seconds": 0.0
         },
         {
           "key": "decision",
           "label": "Choose the response",
           "state": "review",
           "detail": "The request did not meet the source or input requirements for an answer.",
-          "elapsed_seconds": 0.004
+          "elapsed_seconds": 0.0
         }
       ],
       "grounding": {
@@ -1981,15 +1986,33 @@
     }
   },
   "client_errors": [],
-  "notice": "Real browser capture; editorial cursor/highlight only. No substituted answers.",
-  "complete_export_verified": true,
-  "mobile_verified": true,
-  "independent_session_starts_empty": true,
-  "currency_rendering": "Dollar signs are escaped for display; response text and evidence remain unchanged.",
+  "source_code_shown": false,
   "interface_sha256": "158ca9752e768adf8bb83a1dbfdc2e8332390dfba600bfed1b6ad4aacea0fa57",
+  "notice": "Genuine local app; editorial pointer and real scrolling only. No substituted answers.",
   "currency_display_verified": true,
+  "complete_export_verified": true,
   "silent_feedback": "Needs review",
-  "silent_client_errors": [],
+  "report_button_boxes": [
+    [
+      303,
+      718,
+      382,
+      36
+    ],
+    [
+      701,
+      718,
+      382,
+      36
+    ],
+    [
+      1099,
+      718,
+      382,
+      36
+    ]
+  ],
+  "total_png_frames": 2230,
   "scenes": [
     {
       "id": "welcome",

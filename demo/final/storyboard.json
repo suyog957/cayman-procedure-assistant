@@ -1,0 +1,530 @@
+{
+  "title": "Branch Assist | Silent tool walkthrough",
+  "width": 2560,
+  "height": 1440,
+  "fps": 30,
+  "audio": false,
+  "scenes": [
+    {
+      "capture": "welcome",
+      "chapter": "Ask your first question",
+      "title": "Ask your first question",
+      "tag": "GETTING STARTED",
+      "note": "Ask a banking procedure question or choose an example. Search all 11 provided documents, or select one to keep the conversation focused.",
+      "duration": 12,
+      "highlights": [
+        [
+          300,
+          507,
+          1180,
+          49
+        ]
+      ],
+      "description": "Ask a banking procedure question or choose an example. Search all 11 provided documents, or select one to keep the conversation focused.",
+      "min_reading_seconds": 8
+    },
+    {
+      "capture": "coin_question",
+      "chapter": "Ask your first question",
+      "title": "Ask how much coin can stay overnight",
+      "tag": "ANSWER WITH A SOURCE",
+      "note": "Ask how much coin can stay in a machine overnight. The answer gives a $5,250 limit and links to procedure PR63, so you can check the rule for yourself.",
+      "duration": 24,
+      "highlights": [
+        [
+          316,
+          241,
+          654,
+          73
+        ]
+      ],
+      "description": "Ask how much coin can stay in a machine overnight. The answer gives a $5,250 limit and links to procedure PR63, so you can check the rule for yourself.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "coin_evidence",
+      "chapter": "Check the answers and sources",
+      "title": "Read the rule behind the answer",
+      "tag": "CHECK THE ORIGINAL RULE",
+      "note": "Select the source link below the answer to read the exact rule. The original wording and nearby conditions appear beside the conversation, making the answer easy to check.",
+      "duration": 20,
+      "highlights": [
+        [
+          1075,
+          572,
+          382,
+          54
+        ],
+        [
+          320,
+          347,
+          644,
+          44
+        ]
+      ],
+      "description": "Select the source link below the answer to read the exact rule. The original wording and nearby conditions appear beside the conversation, making the answer easy to check.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "source_provenance",
+      "chapter": "Check the answers and sources",
+      "title": "See where the information came from",
+      "tag": "DOCUMENT DETAILS",
+      "note": "See which document the answer came from and whether the file matches the copy provided for this exercise. This confirms the source copy; it does not tell us if the policy has changed.",
+      "duration": 18,
+      "highlights": [
+        [
+          1063,
+          250,
+          402,
+          391
+        ]
+      ],
+      "description": "See which document the answer came from and whether the file matches the copy provided for this exercise. This confirms the source copy; it does not tell us if the policy has changed.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "retrieval_signals",
+      "chapter": "Check the answers and sources",
+      "title": "See why this passage was chosen",
+      "tag": "FINDING THE RIGHT SOURCE",
+      "note": "See why this passage was chosen for your question. The scores help rank useful source text. To judge the answer itself, read the linked passage and review the answer checks.",
+      "duration": 18,
+      "highlights": [
+        [
+          1070,
+          431,
+          391,
+          272
+        ]
+      ],
+      "description": "See why this passage was chosen for your question. The scores help rank useful source text. To judge the answer itself, read the linked passage and review the answer checks.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "original_download",
+      "chapter": "Check the answers and sources",
+      "title": "Read the complete procedure",
+      "tag": "FULL DOCUMENT",
+      "note": "Download the complete procedure when a short excerpt is not enough. You can read the surrounding steps, conditions and exceptions before deciding what to do next.",
+      "duration": 14,
+      "highlights": [
+        [
+          1060,
+          716,
+          405,
+          30
+        ]
+      ],
+      "description": "Download the complete procedure when a short excerpt is not enough. You can read the surrounding steps, conditions and exceptions before deciding what to do next.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "claim_checks",
+      "chapter": "Check the answers and sources",
+      "title": "See how the answer was checked",
+      "tag": "ANSWER CHECKS",
+      "note": "Open Checks to see whether the answer links to a source, uses supported numbers and agrees with the quoted text. These checks help flag problems, but a person should still review the guidance.",
+      "duration": 24,
+      "highlights": [
+        [
+          1061,
+          287,
+          405,
+          264
+        ]
+      ],
+      "description": "Open Checks to see whether the answer links to a source, uses supported numbers and agrees with the quoted text. These checks help flag problems, but a person should still review the guidance.",
+      "min_reading_seconds": 14
+    },
+    {
+      "capture": "runtime_activity",
+      "chapter": "Check the answers and sources",
+      "title": "Follow the steps behind the answer",
+      "tag": "WHAT THE TOOL DID",
+      "note": "Follow what the tool did: find relevant passages, write a draft and check it before showing the answer. The activity list also shows how long each step took.",
+      "duration": 22,
+      "highlights": [
+        [
+          1060,
+          343,
+          408,
+          400
+        ]
+      ],
+      "description": "Follow what the tool did: find relevant passages, write a draft and check it before showing the answer. The activity list also shows how long each step took.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "technical_record",
+      "chapter": "Check the answers and sources",
+      "title": "Save a record of this answer",
+      "tag": "ANSWER RECORD",
+      "note": "Save a record of this answer, including your question, the source passages and the checks. This gives a reviewer the information needed to follow how the response was produced.",
+      "duration": 18,
+      "highlights": [
+        [
+          1061,
+          299,
+          405,
+          405
+        ]
+      ],
+      "description": "Save a record of this answer, including your question, the source passages and the checks. This gives a reviewer the information needed to follow how the response was produced.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "coin_followup",
+      "chapter": "Follow up and change topics",
+      "title": "Ask a related question about monthly testing",
+      "tag": "CONTINUE THE CONVERSATION",
+      "note": "Ask whether monthly coin-machine testing needs one person or two. The assistant stays on the same topic and finds the testing rule, which says this task uses one-person control.",
+      "duration": 25,
+      "highlights": [
+        [
+          319,
+          482,
+          646,
+          71
+        ]
+      ],
+      "description": "Ask whether monthly coin-machine testing needs one person or two. The assistant stays on the same topic and finds the testing rule, which says this task uses one-person control.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "followup_evidence",
+      "chapter": "Follow up and change topics",
+      "title": "Check the source for the follow-up",
+      "tag": "A SOURCE FOR EACH ANSWER",
+      "note": "Check the source for the follow-up too. The assistant links to the monthly-testing instructions, so this answer can be checked against the rule for that specific task.",
+      "duration": 20,
+      "highlights": [
+        [
+          1075,
+          444,
+          381,
+          158
+        ],
+        [
+          321,
+          592,
+          643,
+          45
+        ]
+      ],
+      "description": "Check the source for the follow-up too. The assistant links to the monthly-testing instructions, so this answer can be checked against the rule for that specific task.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "topic_switch",
+      "chapter": "Follow up and change topics",
+      "title": "Move on to savings-bond fees",
+      "tag": "CHANGE THE TOPIC",
+      "note": "Ask a new question about savings-bond fees. The assistant moves to the savings-bond procedure, keeping the answer tied to the new topic.",
+      "duration": 24,
+      "highlights": [
+        [
+          1073,
+          605,
+          384,
+          54
+        ],
+        [
+          317,
+          468,
+          651,
+          83
+        ]
+      ],
+      "description": "Ask a new question about savings-bond fees. The assistant moves to the savings-bond procedure, keeping the answer tied to the new topic.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "procedure_library",
+      "chapter": "Find and choose procedures",
+      "title": "Find the procedure you need",
+      "tag": "PROCEDURE LIBRARY",
+      "note": "Find the notary procedure by searching the library. Choose Use in workspace to focus your next questions on that document.",
+      "duration": 18,
+      "highlights": [
+        [
+          302,
+          304,
+          1181,
+          42
+        ],
+        [
+          316,
+          590,
+          267,
+          42
+        ]
+      ],
+      "description": "Find the notary procedure by searching the library. Choose Use in workspace to focus your next questions on that document.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "procedure_scope",
+      "chapter": "Find and choose procedures",
+      "title": "Keep questions within the selected document",
+      "tag": "CHOOSE THE RIGHT DOCUMENT",
+      "note": "The workspace is set to the notary procedure, but the question is about coin machines. The assistant asks you to change the selected document before continuing.",
+      "duration": 20,
+      "highlights": [
+        [
+          317,
+          531,
+          652,
+          87
+        ],
+        [
+          24,
+          641,
+          201,
+          91
+        ]
+      ],
+      "description": "The workspace is set to the notary procedure, but the question is about coin machines. The assistant asks you to change the selected document before continuing.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "notary_question",
+      "chapter": "Try everyday branch questions",
+      "title": "Ask about notarizing an emailed document",
+      "tag": "NOTARY EXAMPLE",
+      "note": "Ask if an emailed document can be notarized. The provided procedure says no, even if the requester is there in person. Open the source link to read the full rule.",
+      "duration": 25,
+      "highlights": [
+        [
+          319,
+          245,
+          650,
+          111
+        ]
+      ],
+      "description": "Ask if an emailed document can be notarized. The provided procedure says no, even if the requester is there in person. Open the source link to read the full rule.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "notary_followup",
+      "chapter": "Try everyday branch questions",
+      "title": "Change one detail and ask again",
+      "tag": "REMEMBER THE SITUATION",
+      "note": "Now ask, \"What if the person is here?\" The assistant remembers that the document was emailed, so it keeps the same restriction and points you back to the relevant rule.",
+      "duration": 25,
+      "highlights": [
+        [
+          1074,
+          650,
+          381,
+          73
+        ],
+        [
+          317,
+          440,
+          651,
+          108
+        ]
+      ],
+      "description": "Now ask, \"What if the person is here?\" The assistant remembers that the document was emailed, so it keeps the same restriction and points you back to the relevant rule.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "bond_limit",
+      "chapter": "Try everyday branch questions",
+      "title": "Check the savings-bond limit for a newer account",
+      "tag": "SAVINGS-BOND EXAMPLE",
+      "note": "For an account open less than 12 months, the source lists a total savings-bond redemption limit of $1,000 per day. Read the related conditions alongside the amount.",
+      "duration": 28,
+      "highlights": [
+        [
+          319,
+          245,
+          650,
+          144
+        ]
+      ],
+      "description": "For an account open less than 12 months, the source lists a total savings-bond redemption limit of $1,000 per day. Read the related conditions alongside the amount.",
+      "min_reading_seconds": 14
+    },
+    {
+      "capture": "bond_exception",
+      "chapter": "Try everyday branch questions",
+      "title": "See what happens when an answer fails a check",
+      "tag": "REVIEW THE SOURCE",
+      "note": "Ask about The Private Bank Experience exception. After one retry, the draft still fails a check, so the tool holds it back and shows the original source text for you to review.",
+      "duration": 28,
+      "highlights": [
+        [
+          317,
+          461,
+          651,
+          86
+        ],
+        [
+          1074,
+          445,
+          383,
+          149
+        ]
+      ],
+      "description": "Ask about The Private Bank Experience exception. After one retry, the draft still fails a check, so the tool holds it back and shows the original source text for you to review.",
+      "min_reading_seconds": 14
+    },
+    {
+      "capture": "feedback_export",
+      "chapter": "Save your work and start fresh",
+      "title": "Flag a response and save your work",
+      "tag": "FEEDBACK AND DOWNLOAD",
+      "note": "Mark the response Needs review and save the conversation. The download includes the questions, answers, source text, checks and your feedback for someone to follow up.",
+      "duration": 22,
+      "highlights": [
+        [
+          1060,
+          367,
+          406,
+          59
+        ],
+        [
+          1060,
+          716,
+          408,
+          32
+        ],
+        [
+          24,
+          692,
+          199,
+          39
+        ]
+      ],
+      "description": "Mark the response Needs review and save the conversation. The download includes the questions, answers, source text, checks and your feedback for someone to follow up.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "reset_clarify",
+      "chapter": "Save your work and start fresh",
+      "title": "Start fresh and ask for clarification",
+      "tag": "A NEW CONVERSATION",
+      "note": "Start a new conversation, then ask, \"Can they do that?\" The assistant asks what situation you mean. Details from the previous conversation are not carried into the new one.",
+      "duration": 18,
+      "highlights": [
+        [
+          318,
+          162,
+          652,
+          87
+        ]
+      ],
+      "description": "Start a new conversation, then ask, \"Can they do that?\" The assistant asks what situation you mean. Details from the previous conversation are not carried into the new one.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "unsupported",
+      "chapter": "Save your work and start fresh",
+      "title": "Try a question the documents cannot answer",
+      "tag": "KNOWING THE LIMITS",
+      "note": "Ask about tomorrow's weather. The tool only has the provided banking procedures to work from, so it explains that it cannot answer this question from those documents.",
+      "duration": 16,
+      "highlights": [
+        [
+          318,
+          479,
+          652,
+          124
+        ]
+      ],
+      "description": "Ask about tomorrow's weather. The tool only has the provided banking procedures to work from, so it explains that it cannot answer this question from those documents.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "unknown_procedure",
+      "chapter": "Save your work and start fresh",
+      "title": "Ask about a document that is missing",
+      "tag": "MISSING INFORMATION",
+      "note": "Ask about a procedure that was not provided. The assistant explains that the document is missing, so you know another source is needed before its rules can be checked.",
+      "duration": 16,
+      "highlights": [
+        [
+          318,
+          479,
+          652,
+          124
+        ]
+      ],
+      "description": "Ask about a procedure that was not provided. The assistant explains that the document is missing, so you know another source is needed before its rules can be checked.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "instruction_guard",
+      "chapter": "Save your work and start fresh",
+      "title": "Try asking the tool to ignore its rules",
+      "tag": "A SAFEGUARD IN ACTION",
+      "note": "Try asking the assistant to ignore its rules. This example is blocked. It demonstrates one safeguard; more testing is needed to assess security.",
+      "duration": 16,
+      "highlights": [
+        [
+          318,
+          479,
+          652,
+          124
+        ]
+      ],
+      "description": "Try asking the assistant to ignore its rules. This example is blocked. It demonstrates one safeguard; more testing is needed to assess security.",
+      "min_reading_seconds": 10
+    },
+    {
+      "capture": "evaluation",
+      "chapter": "Review results and takeaways",
+      "title": "Review the test results and their limits",
+      "tag": "HOW THE TOOL WAS TESTED",
+      "note": "Review how often the tool found useful passages and how much of the expected answer it covered. These tests help reveal gaps; they do not replace review by a subject expert.",
+      "duration": 24,
+      "highlights": [
+        [
+          302,
+          374,
+          1180,
+          125
+        ]
+      ],
+      "description": "Review how often the tool found useful passages and how much of the expected answer it covered. These tests help reveal gaps; they do not replace review by a subject expert.",
+      "min_reading_seconds": 12
+    },
+    {
+      "capture": "report_download",
+      "chapter": "Review results and takeaways",
+      "title": "Take the reports and presentation with you",
+      "tag": "TAKEAWAY MATERIALS",
+      "note": "Download the results report, solution overview and presentation. They explain how the tool was built, what was tested and where further review or improvement is needed.",
+      "duration": 20,
+      "highlights": [
+        [
+          303,
+          718,
+          382,
+          36
+        ],
+        [
+          701,
+          718,
+          382,
+          36
+        ],
+        [
+          1099,
+          718,
+          382,
+          36
+        ]
+      ],
+      "description": "Download the results report, solution overview and presentation. They explain how the tool was built, what was tested and where further review or improvement is needed.",
+      "min_reading_seconds": 10
+    }
+  ],
+  "layout_version": "2.0",
+  "capture": "double-density lossless PNG",
+  "description_position": "bottom",
+  "description_font_size": 40,
+  "description_style": "Plain English: explain the action, the outcome and why it matters; keep limitations understandable."
+}

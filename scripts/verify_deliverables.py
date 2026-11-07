@@ -1,5 +1,6 @@
 """Final consistency and source-free packaging checks."""
 from pathlib import Path
+from hashlib import sha256
 import json
 import sys
 import zipfile
@@ -10,11 +11,11 @@ from pptx import Presentation
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
-from cayman_assistant.retrieval import verify_sources
+from cayman_assistant.retrieval import verify_sources, load_embedding_index
 
 verify_sources(ROOT,ROOT/'artifacts/index')
 manifest=json.loads((ROOT/'artifacts/index/corpus_manifest.json').read_text())
-vectors=np.load(ROOT/'artifacts/index/embeddings.npy',allow_pickle=False)
+vectors=load_embedding_index(ROOT/'artifacts/index',manifest['chunk_count'])
 assert vectors.shape == (manifest['chunk_count'],384)
 assert np.allclose(np.linalg.norm(vectors,axis=1),1,atol=1e-5)
 deck=Presentation(ROOT/'submission/Cayman_Procedure_Assistant.pptx')
@@ -30,6 +31,19 @@ with zipfile.ZipFile(ROOT/'submission/Presentation_Materials.zip') as archive:
     assert set(archive.namelist())==allowlist
     assert archive.testzip() is None
     assert all(info.file_size>0 for info in archive.infolist())
+    assert all(archive.read(name)==(ROOT/'submission'/name).read_bytes() for name in allowlist), 'Submission ZIP is stale; rebuild it.'
+approved_dir=ROOT/'demo/final'
+approved=json.loads((approved_dir/'APPROVED_FINAL.json').read_text(encoding='utf-8'))
+assert approved['sha256']=='48bc8f2c63d31c7efd5080606f4c2b2165c873c0c31e79b9cb6b318afe0d2c0b'
+for name,digest in approved['files'].items():
+    path=(approved_dir/name).resolve()
+    path.relative_to(approved_dir.resolve())
+    assert sha256(path.read_bytes()).hexdigest()==digest, 'Approved final artifact changed: '+name
+assert approved['files'][approved['approved_video']]==approved['sha256']
+run_manifest=ROOT/'artifacts/evaluation/run_manifest.json'
+if run_manifest.exists():
+    for name,digest in json.loads(run_manifest.read_text(encoding='utf-8'))['files'].items():
+        assert sha256((ROOT/'artifacts/evaluation'/name).read_bytes()).hexdigest()==digest
 metrics=json.loads((ROOT/'artifacts/evaluation/metrics.json').read_text())
 answers=json.loads((ROOT/'artifacts/evaluation/answer_details.json').read_text())
 assert len(answers)==40
@@ -57,6 +71,8 @@ summary={
     'pipeline_version':'2.0','automated_tests_passed':tests,'browser_integration_passed':True,
     'claim_citation_map_tested':True,'document_scope_tested':True,'observable_activity_tested':True,
     'recorded_evaluation_cases':len(answers),'metrics_consistent':True,
+    'submission_archive_matches_current_files':True,'approved_final_video_preserved':True,
+    'approved_final_sha256':approved['sha256'],'embedding_matrix_hash_verified':True,
     'limitation':'Structural and integration verification, not independent SME validation of generated answers.'}
 (ROOT/'artifacts/verification_summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
 print(json.dumps(summary,indent=2))

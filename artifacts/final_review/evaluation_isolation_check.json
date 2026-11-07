@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "retrieval_runs": 90,
+  "all_three_methods_and_splits_match_accepted_retrieval_quality": true,
+  "accepted_evaluation_files_unchanged": true,
+  "rerun_isolated_from_presentation_results": true,
+  "new_run_latency_not_substituted_for_original_timing": true,
+  "presentation_rebuild_did_not_modify_accepted_evaluation": true
+}

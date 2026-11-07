@@ -1,6 +1,6 @@
 # Branch Assist — demo videos
 
-The primary recording is the **[silent, tool-only demo](tool-only/Watch_Tool_Demo.html)**: 9 minutes 25 seconds, 1440p, 25 genuine application scenes with large plain-language descriptions at the bottom, focused zooms and longer reading holds. Fresh double-density lossless capture improves the source detail. The MP4 has no audio stream, narration, music or slide segments. Open [the silent MP4](tool-only/Branch_Assist_Tool_Demo.mp4) directly or use **http://127.0.0.1:8502/tool-only/Watch_Tool_Demo.html** with the local player server. Its [README](tool-only/README.md), [scene guide](tool-only/SCENE_GUIDE.md) and QA report describe the workflow and checks.
+The approved final recording is the **[silent, tool-only demo](final/Watch_Final_Demo.html)**: 9 minutes 25 seconds, 1440p, 25 genuine application scenes with large plain-language descriptions at the bottom, focused zooms and longer reading holds. Fresh double-density lossless capture improves the source detail. The MP4 has no audio stream, narration, music or slide segments. Open [the silent MP4](final/Branch_Assist_Final_Approved.mp4) directly or use **http://127.0.0.1:8502/final/Watch_Final_Demo.html** with the local player server. Its [README](final/README.md), [scene guide](final/SCENE_GUIDE.md) and QA report describe the workflow and checks.
 
 ## Earlier narrated demonstration
 
@@ -32,3 +32,5 @@ Processing pauses may be shortened and final frames held for explanation. Actual
 Use the original procedures to check conditions. The recorded regression metrics and automatic screens are not independent accuracy estimates. No video, presentation or source material is automatically submitted or posted externally.
 
 Build details and primary narration-tool attribution: [VIDEO_PRODUCTION.md](../docs/VIDEO_PRODUCTION.md).
+
+The approved copy in `final/` is preserved without overwrite. `tool-only/` remains the editable production build; any later demo must have a distinct path and filename.

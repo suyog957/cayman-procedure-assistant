@@ -27,8 +27,8 @@ flowchart LR
   E --> L[Local Qwen generation]
   L --> M[Citations, numbers, length + claim screening]
   M -->|Pass| O[Answer + source passages]
-  M -->|First failure| C[One correction with the same evidence]
-  C --> L
+  M -->|First failure| CR[One correction with the same evidence]
+  CR --> L
   M -->|Still fails| X[Explicitly labeled source excerpts]
 ```
 
@@ -67,7 +67,7 @@ Narrative content is grouped within a section to a target of 110 whitespace word
 
 The initial 180-word grouping diluted specific rules and encouraged unrelated context. Shorter passages were selected after observing those development failures. No claim is made that this is globally optimal. A production parser should represent table cells and branching logic as typed structures and have SME-approved extraction coverage tests.
 
-The index contains a JSONL passage store, a JSON source manifest, normalized Markdown extracts and an unpickled NumPy embedding matrix. The embedding manifest binds the matrix to the exact passage-file hash. At startup, original source hashes and the passage/embedding relationship are checked. Every supported request also checks the source files and cached-index fingerprints; changed input requires a rebuild. This detects stale local input, not malicious tampering with every artifact at once. Signed manifests and trusted artifact storage are production improvements.
+The index contains a JSONL passage store, a JSON source manifest, normalized Markdown extracts and an unpickled NumPy embedding matrix. The embedding manifest binds both the matrix bytes and the exact passage-file hash. Startup checks the matrix hash, dimensions, finite values and normalization, as well as original sources. Every supported request checks the source files and cached-index fingerprints, including the matrix file; changed input requires a rebuild. This detects stale local input, not malicious tampering with every artifact at once. Signed manifests and trusted artifact storage are production improvements.
 
 ## Retrieval sequence
 

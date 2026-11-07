@@ -15,3 +15,9 @@ artifacts/index/chunks.jsonl -text
 *.mp4 binary
 *.webm binary
 *.jpg binary
+
+# Approval hashes bind the exact preserved final bytes, including sidecars.
+demo/final/** -text -whitespace
+
+# The submission ZIP carries this exact generated text file too.
+submission/README.txt -text -whitespace

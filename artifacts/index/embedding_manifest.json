@@ -4,5 +4,6 @@
   "chunks": 1388,
   "max_seq_length": 384,
   "chunks_sha256": "b96eb117fe2afac1f5d0cfa1027e1df461bcb5e34eaf47c29e0e5522ddd35a60",
-  "elapsed_seconds": 10.84
+  "elapsed_seconds": 10.84,
+  "embeddings_sha256": "5298740b12eb1972aaa8d685bfd31ed61f2d5d0c862eb1591a975c1d5d9dc64a"
 }

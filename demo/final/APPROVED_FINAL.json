@@ -1,0 +1,30 @@
+{
+  "status": "user-approved final copy; preserve without overwrite",
+  "approved_video": "Branch_Assist_Final_Approved.mp4",
+  "sha256": "48bc8f2c63d31c7efd5080606f4c2b2165c873c0c31e79b9cb6b318afe0d2c0b",
+  "bytes": 54165376,
+  "duration_seconds": 564.96667,
+  "resolution": [
+    2560,
+    1440
+  ],
+  "audio_streams": 0,
+  "source_commit": "460b77d5010a0be8a6e9ad4179d542e173b5a047",
+  "preserved_utc": "2026-11-07T21:42:43.160608+00:00",
+  "instruction": "Do not overwrite this directory. Any subsequent demo must use a different directory and filename.",
+  "files": {
+    "Branch_Assist_Final_Approved.mp4": "48bc8f2c63d31c7efd5080606f4c2b2165c873c0c31e79b9cb6b318afe0d2c0b",
+    "Descriptions.srt": "e798858f6a206143418048c0d09b26e38d0d1f6f745b4af0fb558ef49e797108",
+    "Descriptions.vtt": "decb1ee0421b2faee05cef72aee0fb91a5a00c297900abaa0bb43aa6bd029afc",
+    "Cover.png": "9da87cf7fec040d98c85bfa039a97623e8b63a8467faa277057a4b9b2f134089",
+    "SCENE_GUIDE.md": "ccc0a112d928703e936e51b8e27f54acb8d99886416ee329f1cd58957c98d096",
+    "chapters.txt": "5349541da7cb7e8d3aed33df4a70d9344751edc0db521918e04291f2c42b8b68",
+    "timeline.json": "dd2c8d38c5cec3c845ac5b26ac73d5c5e941c63a3c9c3da3a4b672b7b222223b",
+    "production_manifest.json": "4f10596842866fbda7e5addcb975feaa0bca9149f3b40fed794f96744f560a62",
+    "qa_report_at_approval.json": "8ff6ee8995f1feca7bbb8fba1fc63ea12400b3977ba968e7b6e30b3007f55bae",
+    "Player_Preview.png": "30a5babe14cc941a0467a7f3983889a5769003b2affdb5feeb327bcbd4a25511",
+    "Contact_Sheet.jpg": "140750cf103511ac0f11796b02fea9069098dc184c42a2aed0ca4524ab455ec4",
+    "storyboard.json": "855523b83c067d19fb3473b16dad60e677b4b7488964eb393a8323046a786ace",
+    "Watch_Final_Demo.html": "6b40af577f3fa777035eb1d39eba63a699cd8024836deab95b0d009f705df757"
+  }
+}

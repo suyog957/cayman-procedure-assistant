@@ -4,6 +4,8 @@ Source: `Sr Ld Quantitative Analytics Specialist_R-573883_PresSE Candidate_SRF #
 
 The exercise asks the candidate to act as a Senior Lead Quantitative Analytics Specialist supporting AI development. The business problem is helping branch employees find and use information in eleven operational procedures. Success requires a working generative conversational assistant and a leadership presentation that explains and demonstrates the engineering choices.
 
+The completed post-approval review is recorded in [FINAL_REVIEW.md](FINAL_REVIEW.md), including requirement coverage, the fixes made, fresh verification evidence and preservation of the approved final video.
+
 ## Requirement traceability
 
 | ID | PDF expectation | Implementation or evidence | Acceptance check |

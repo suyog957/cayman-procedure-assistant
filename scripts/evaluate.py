@@ -13,16 +13,26 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from cayman_assistant.assistant import Assistant, Turn, resolve_question
 from cayman_assistant.retrieval import Retriever
 from cayman_assistant.observability import PIPELINE_VERSION
+from cayman_assistant.evaluation_runs import new_run_directory, publish_completed_run
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--generate", action="store_true")
 parser.add_argument("--limit", type=int)
 parser.add_argument("--backend", choices=["qwen3", "qwen2.5"], default="qwen3")
+parser.add_argument("--output-dir", type=Path, help="New or empty directory for this isolated run.")
+parser.add_argument("--publish", action="store_true", help="Promote a completed full Qwen3 evaluation to the presentation results.")
 args = parser.parse_args()
 root = Path(__file__).resolve().parents[1]
 suite = json.loads((root / "evaluation" / "cases.json").read_text(encoding="utf-8"))
-out_dir = root / "artifacts" / "evaluation"
-out_dir.mkdir(parents=True, exist_ok=True)
+if args.limit is not None and (not args.generate or not 1 <= args.limit <= len(suite["cases"])):
+    parser.error("--limit requires --generate and a positive count within the procedure suite.")
+if args.publish and (not args.generate or args.limit is not None or args.backend != "qwen3"):
+    parser.error("--publish requires a full --generate run with the Qwen3 backend and no --limit.")
+try:
+    out_dir = new_run_directory(root, args.output_dir, "evaluation" if args.generate else "retrieval")
+except ValueError as error:
+    parser.error(str(error))
+print("Isolated evaluation output: " + str(out_dir), flush=True)
 
 
 def term_checks(answer, required):
@@ -102,15 +112,20 @@ if args.generate:
         "generated_n": len(generated), "output_screen_pass_rate": round(len(valid) / len(generated), 4),
         "repair_attempts": sum(bool(r['result']['metrics'].get('repair_attempted')) for r in generated),
         "repairs_released": sum(bool(r['result']['metrics'].get('repair_attempted')) and r['result']['status'] in {'answered','partial'} for r in generated),
-        "mechanical_validation_pass_rate": round(float(np.mean([bool(r['result']['checks'].get('valid_citations') and r['result']['checks'].get('all_paragraphs_cited') and not r['result']['checks'].get('novel_numbers') and not r['result']['checks'].get('comparison_conflicts') and r['result']['checks'].get('word_count',999)>0 and r['result']['checks'].get('word_count',999)<=190) for r in generated])),4),
+        "mechanical_validation_pass_rate": round(float(np.mean([bool(r['result']['checks'].get('valid_citations') and r['result']['checks'].get('all_paragraphs_cited') and r['result']['checks'].get('all_claims_attributed') and not r['result']['checks'].get('numeric_citation_conflicts') and not r['result']['checks'].get('novel_numbers') and not r['result']['checks'].get('comparison_conflicts') and r['result']['checks'].get('word_count',999)>0 and r['result']['checks'].get('word_count',999)<=190) for r in generated])),4),
         "evidence_only_fallbacks": sum(r["result"]["status"] == "evidence_only" for r in generated),
         "guardrails_n": len(guardrails), "guardrail_expected_status_rate": round(float(np.mean([r["expected_status_pass"] for r in guardrails])), 4),
         "p50_seconds": round(float(np.median(latencies)), 2), "p95_seconds": round(float(np.percentile(latencies, 95)), 2),
         "mean_word_count": round(float(np.mean([r["result"]["checks"]["word_count"] for r in generated if 'word_count' in r['result']['checks']])), 1),
+        "draft_word_count_n": sum('word_count' in r['result']['checks'] for r in generated),
         "followup_fact_passes": {r["id"]: r["all_required_facts_proxy"] for r in factual if r["id"].startswith("F")},
         "limitations": "AI-authored labels; challenge set is not a blind holdout after inspection. Term matching and citation checks do not establish semantic correctness, relevance, or completeness. Human SME review remains required."
     }
     (out_dir / "metrics.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary["answers"], indent=2), flush=True)
+    if args.publish:
+        publish_completed_run(out_dir, root / "artifacts/evaluation", len(suite["cases"]),
+                              len(suite["cases"]) + len(suite["conversations"]) + len(suite["guardrails"]))
+        print("Completed evaluation published to artifacts/evaluation.", flush=True)
     if hasattr(assistant.generator, "close"):
         assistant.generator.close()

@@ -1,0 +1,81 @@
+{
+  "title": "Branch Assist | Silent tool walkthrough",
+  "layout_version": "2.0",
+  "duration_seconds": 564.96667,
+  "resolution": [
+    2560,
+    1440
+  ],
+  "fps": 30,
+  "scene_count": 25,
+  "chapters": [
+    {
+      "start": 0,
+      "title": "Ask your first question"
+    },
+    {
+      "start": 41.13333,
+      "title": "Check the answers and sources"
+    },
+    {
+      "start": 180.53333,
+      "title": "Follow up and change topics"
+    },
+    {
+      "start": 249.53333,
+      "title": "Find and choose procedures"
+    },
+    {
+      "start": 290.6,
+      "title": "Try everyday branch questions"
+    },
+    {
+      "start": 417.5,
+      "title": "Save your work and start fresh"
+    },
+    {
+      "start": 520.96667,
+      "title": "Review results and takeaways"
+    }
+  ],
+  "audio_streams": 0,
+  "narration": false,
+  "presentation_slides": false,
+  "browser_only": true,
+  "capture_format": "lossless PNG",
+  "capture_pixel_dimensions": [
+    3072,
+    1728
+  ],
+  "capture_device_scale_factor": 2,
+  "capture_frames": 2230,
+  "encoding": "H.264 CRF 15 fast; Lanczos resampling; BT.709; yuv420p",
+  "description_position": "dedicated bottom panel outside the UI",
+  "description_font_pixels": 40,
+  "description_max_lines": 2,
+  "player_control_safe_bottom_pixels": 86,
+  "min_reading_hold_seconds": 9.9,
+  "max_description_characters_per_second": 11.333,
+  "interaction_speed": 1.0,
+  "idle_waits_removed_seconds": 66.939,
+  "unchanged_tails_removed_seconds": 32.749,
+  "app_frame_pixels": [
+    296,
+    76,
+    1968,
+    1107
+  ],
+  "description_panel_pixels": [
+    160,
+    1200,
+    2240,
+    154
+  ],
+  "editing": "Normal-speed interaction PNGs; idle processing waits and unchanged tails may be cut; 1.2s eased focus zoom; unhurried reading hold.",
+  "currency_display_verified": true,
+  "interface_sha256": "158ca9752e768adf8bb83a1dbfdc2e8332390dfba600bfed1b6ad4aacea0fa57",
+  "capture_manifest_sha256": "300f7b4316ee066d748dd22311ba75721e5223f43fb70220e3d5f155347a3e12",
+  "source_code_shown": false,
+  "bytes": 54165376,
+  "sha256": "48bc8f2c63d31c7efd5080606f4c2b2165c873c0c31e79b9cb6b318afe0d2c0b"
+}

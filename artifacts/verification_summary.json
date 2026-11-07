@@ -27,12 +27,16 @@
     "Recorded_Demo.pdf"
   ],
   "pipeline_version": "2.0",
-  "automated_tests_passed": 37,
+  "automated_tests_passed": 49,
   "browser_integration_passed": true,
   "claim_citation_map_tested": true,
   "document_scope_tested": true,
   "observable_activity_tested": true,
   "recorded_evaluation_cases": 40,
   "metrics_consistent": true,
+  "submission_archive_matches_current_files": true,
+  "approved_final_video_preserved": true,
+  "approved_final_sha256": "48bc8f2c63d31c7efd5080606f4c2b2165c873c0c31e79b9cb6b318afe0d2c0b",
+  "embedding_matrix_hash_verified": true,
   "limitation": "Structural and integration verification, not independent SME validation of generated answers."
 }

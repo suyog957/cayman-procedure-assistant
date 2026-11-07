@@ -6,9 +6,9 @@ Version 2 adds a Wells Fargo–inspired workspace with a procedure library and a
 
 ![Branch Assist workspace](artifacts/screenshots/welcome.png)
 
-Watch the **[silent, tool-only demo](demo/tool-only/Watch_Tool_Demo.html)**, or play [its MP4](demo/tool-only/Branch_Assist_Tool_Demo.mp4) directly: **9:25, 1440p, 25 actual UI scenes, large plain-language descriptions at the bottom, focused zooms and unhurried reading holds, with no audio track**. The readable edition uses fresh, double-density lossless browser capture and normal-speed interactions. It covers questions, citations, checks/activity, follow-ups, procedure search/scope, review, exports, safe outcomes and evaluation. The [scene guide](demo/tool-only/SCENE_GUIDE.md) and [production details](docs/VIDEO_PRODUCTION.md) document the edit and verification. The [earlier narrated version](demo/Watch_Demo.html) remains available separately.
+Watch the approved **[silent, tool-only demo](demo/final/Watch_Final_Demo.html)**, or play [its MP4](demo/final/Branch_Assist_Final_Approved.mp4) directly: **9:25, 1440p, 25 actual UI scenes, large plain-language descriptions at the bottom, focused zooms and unhurried reading holds, with no audio track**. The readable edition uses fresh, double-density lossless browser capture and normal-speed interactions. It covers questions, citations, checks/activity, follow-ups, procedure search/scope, review, exports, safe outcomes and evaluation. The [scene guide](demo/final/SCENE_GUIDE.md) and [production details](docs/VIDEO_PRODUCTION.md) document the edit and verification. The [earlier narrated version](demo/Watch_Demo.html) remains available separately.
 
-For reliable chapter seeking in a browser, run `python scripts/serve_demo_video.py` and open **http://127.0.0.1:8502/tool-only/Watch_Tool_Demo.html**. This serves only the demo folder on localhost and supports MP4 byte ranges. The standalone MP4 also works directly in a media player.
+For reliable chapter seeking in a browser, run `python scripts/serve_demo_video.py` and open **http://127.0.0.1:8502/final/Watch_Final_Demo.html**. This serves only the demo folder on localhost and supports MP4 byte ranges. The standalone MP4 also works directly in a media player.
 
 The project is saved in the private repository [suyog957/cayman-procedure-assistant](https://github.com/suyog957/cayman-procedure-assistant). It includes the supplied documents, prepared index, evaluation evidence and presentation materials. Downloaded model weights, environments, secrets and local caches are excluded; the pinned downloader recreates the models.
 
@@ -16,6 +16,8 @@ The project is saved in the private repository [suyog957/cayman-procedure-assist
 git clone https://github.com/suyog957/cayman-procedure-assistant.git
 cd cayman-procedure-assistant
 ```
+
+The approved final video and its supporting files are preserved separately in `demo/final/`. `APPROVED_FINAL.json` records their hashes; build scripts do not write to this directory. See [the end-to-end final review](docs/FINAL_REVIEW.md) for assignment coverage, fixes, checks and the recording decision.
 
 ## Run the prepared demonstration
 
@@ -65,7 +67,7 @@ python scripts/audit_artifacts.py
 python scripts/build_deliverables.py
 ```
 
-`evaluate.py` without `--generate` runs retrieval ablations only. Full generative evaluation takes several minutes on CPU. It retains raw responses and evidence at `artifacts/evaluation/answer_details.json` and metrics at `artifacts/evaluation/metrics.json`. Cases and expected fact groups are in `evaluation/cases.json`.
+`evaluate.py` without `--generate` runs retrieval ablations only. Every run writes to a new isolated directory under `artifacts/experiments/`, printed at startup, so partial or retrieval-only runs cannot overwrite the accepted presentation results. Use `--output-dir` for a new/empty custom run directory. A completed full Qwen3 run can replace the accepted results with `python scripts/evaluate.py --generate --publish`; rebuild and recheck the presentation afterward. Existing accepted responses and metrics remain at `artifacts/evaluation/answer_details.json` and `metrics.json`. Cases and expected fact groups are in `evaluation/cases.json`.
 
 For a terminal conversation:
 

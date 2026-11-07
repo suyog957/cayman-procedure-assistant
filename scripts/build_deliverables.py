@@ -37,11 +37,14 @@ mechanical_passes = [row for row in generated_rows if (
     and not row['result']['checks'].get('novel_numbers') and not row['result']['checks'].get('comparison_conflicts')
     and 0 < row['result']['checks'].get('word_count',999) <= 190)]
 draft_lengths = [row['result']['checks']['word_count'] for row in generated_rows if 'word_count' in row['result']['checks']]
-A['mechanical_validation_pass_rate'] = round(len(mechanical_passes) / len(generated_rows),4)
-A['mean_word_count'] = round(sum(draft_lengths)/len(draft_lengths),1)
-A['draft_word_count_n'] = len(draft_lengths)
-METRICS['answers'] = A
-(ROOT / 'artifacts/evaluation/metrics.json').write_text(json.dumps(METRICS,indent=2),encoding='utf-8')
+derived = {'mechanical_validation_pass_rate':round(len(mechanical_passes) / len(generated_rows),4),
+           'mean_word_count':round(sum(draft_lengths)/len(draft_lengths),1),
+           'draft_word_count_n':len(draft_lengths)}
+for name,value in derived.items():
+    if name in A and A[name] != value:
+        raise ValueError('Saved evaluation summary disagrees with raw answers: '+name)
+A.update(derived)
+# Presentation builds consume accepted evidence; they never rewrite it.
 BY_ID = {r["id"]: r for r in ANSWERS}
 R = {r["mode"]: r for r in METRICS["retrieval"] if r["split"] == "all"}
 browser_file=ROOT / "artifacts/browser_check.json"
@@ -450,11 +453,11 @@ Narrative grouping targets roughly 110 words within sections, with 20-word overl
 5. Check citation labels, claim-local attribution, numeric values and recognized boundaries against the cited passages; screen claim support with verbatim matching or NLI.
 6. If a draft fails, allow one bounded correction with the same evidence and deterministic feedback, then apply the same checks. Display a passing answer with evidence; otherwise withhold it and show sources. Unsupported questions receive abstention or clarification. Record the actual stages and decision for inspection.
 
-Source hashes detect changed originals; the embedding manifest binds vectors to the passage-file hash. Plain JSON and NumPy files avoid loading pickled index objects. Runtime model loading uses local files; external linked documents are not retrieved. Some supplied links are placeholders and are not treated as evidence.
+Source hashes detect changed originals; the embedding manifest binds the exact vector-matrix bytes and the passage-file hash. Startup validates dimensions, finite values and normalization, and requests detect changes to the cached matrix file as well as metadata. Plain JSON and NumPy files avoid loading pickled index objects. Runtime model loading uses local files; external linked documents are not retrieved. Some supplied links are placeholders and are not treated as evidence.
 
 ## Follow-ups and user experience
 
-Browser sessions own their question history; cached models/indexes do not own user conversation memory. Prior user questions can resolve an elliptical follow-up. A follow-up naming a new task in the same procedure retains scope without repeating unrelated prior-task keywords. Named topic changes replace previous scope. Every follow-up performs fresh retrieval; previous generated claims are never authoritative evidence.
+Browser sessions own their question history; cached models/indexes do not own user conversation memory. Prior user questions can resolve an elliptical follow-up. A hypothetical repeating the same topic or procedure ID retains the earlier situation, including conditions such as an emailed document. A follow-up naming a new task in the same procedure retains scope without repeating unrelated prior-task keywords. Named topic changes replace previous scope. Every follow-up performs fresh retrieval; previous generated claims are never authoritative evidence.
 
 The interface provides starter scenarios, a searchable procedure library, optional document-scoped retrieval, citation selection, original-procedure downloads, publication information, reset, opt-in investigation export and feedback. The Evidence desk separates exact passages, claim-support checks and observed activity. Conflicting document scope prompts clarification, and a new unsupported response does not silently show an earlier response's sources. The resolver remains bounded and can misinterpret ambiguous or long conversations.
 

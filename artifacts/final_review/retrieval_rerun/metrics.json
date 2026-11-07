@@ -1,0 +1,87 @@
+{
+  "pipeline_version": "2.0",
+  "label_status": "AI-authored, source-checked development/regression cases; not independently adjudicated",
+  "retrieval": [
+    {
+      "split": "all",
+      "mode": "bm25",
+      "n": 30,
+      "hit_at_5": 0.9,
+      "mrr_at_5": 0.7983,
+      "p50_seconds": 0.013,
+      "p95_seconds": 0.015
+    },
+    {
+      "split": "all",
+      "mode": "dense",
+      "n": 30,
+      "hit_at_5": 0.9333,
+      "mrr_at_5": 0.8178,
+      "p50_seconds": 0.01,
+      "p95_seconds": 0.013
+    },
+    {
+      "split": "all",
+      "mode": "hybrid",
+      "n": 30,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.9278,
+      "p50_seconds": 0.398,
+      "p95_seconds": 0.537
+    },
+    {
+      "split": "development",
+      "mode": "bm25",
+      "n": 19,
+      "hit_at_5": 0.8947,
+      "mrr_at_5": 0.8158,
+      "p50_seconds": 0.013,
+      "p95_seconds": 0.017
+    },
+    {
+      "split": "development",
+      "mode": "dense",
+      "n": 19,
+      "hit_at_5": 0.8947,
+      "mrr_at_5": 0.7544,
+      "p50_seconds": 0.01,
+      "p95_seconds": 0.013
+    },
+    {
+      "split": "development",
+      "mode": "hybrid",
+      "n": 19,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.886,
+      "p50_seconds": 0.401,
+      "p95_seconds": 0.556
+    },
+    {
+      "split": "challenge",
+      "mode": "bm25",
+      "n": 11,
+      "hit_at_5": 0.9091,
+      "mrr_at_5": 0.7682,
+      "p50_seconds": 0.013,
+      "p95_seconds": 0.015
+    },
+    {
+      "split": "challenge",
+      "mode": "dense",
+      "n": 11,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.9273,
+      "p50_seconds": 0.01,
+      "p95_seconds": 0.013
+    },
+    {
+      "split": "challenge",
+      "mode": "hybrid",
+      "n": 11,
+      "hit_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "p50_seconds": 0.395,
+      "p95_seconds": 0.509
+    }
+  ]
+}

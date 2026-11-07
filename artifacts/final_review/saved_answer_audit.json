@@ -1,0 +1,7 @@
+{
+  "saved_responses_inspected": 40,
+  "source_references_bound_to_current_passages": 67,
+  "released_answers_passing_current_mechanical_checks": 26,
+  "all_saved_source_records_consistent": true,
+  "limitation": "Mechanical and source-consistency review; not independent semantic correctness or SME adjudication."
+}

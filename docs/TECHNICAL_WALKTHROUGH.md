@@ -8,7 +8,7 @@ An employee asks a question. Input checks bound its length and reject a small se
 
 BM25 finds exact language and identifiers; dense vectors find paraphrases. RRF combines their rankings. A cross-encoder reorders the candidates. Weak evidence produces a clarification or abstention. Strong candidates are packed into a small evidence block with labels, sections and source identity. A local language model writes an answer from that block.
 
-Checks validate citation labels, cited paragraphs, numeric literals, length and claim-support signals. A failed draft is withheld and the UI shows labelled excerpts instead. The employee can inspect the sources, continue the scenario, switch topics, reset or export the conversation.
+Checks validate citation labels, cited paragraphs, numeric literals, length and claim-support signals. A failed draft can receive one correction using the same evidence and failed-check feedback. If it still fails, the draft is withheld and the UI shows labelled excerpts instead. The employee can inspect the sources, continue the scenario, switch topics, reset or export the conversation.
 
 ## Questions to be ready to answer
 
@@ -42,7 +42,7 @@ The first larger grouping diluted specific requirements. The final target is abo
 
 **How do you handle follow-ups?**
 
-Previous user questions resolve context; previous generated claims are not factual input. Follow-ups retrieve fresh evidence within the prior procedure when appropriate. Explicit IDs and new topics override that scope. Session state isolates browser conversations. Ambiguous or long histories remain a limitation.
+Previous user questions resolve context; previous generated claims are not factual input. Follow-ups retrieve fresh evidence within the prior procedure when appropriate. A hypothetical repeating the same topic or procedure ID retains the prior situation; a different topic or ID starts a new one. A newly named task such as monthly testing keeps procedure scope without irrelevant overnight-storage terms. Session state isolates browser conversations. Ambiguous or long histories remain a limitation.
 
 **How do you evaluate accuracy, relevance, completeness and conciseness?**
 

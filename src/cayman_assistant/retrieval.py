@@ -5,6 +5,7 @@ from collections import Counter
 from dataclasses import dataclass
 from hashlib import sha256
 from pathlib import Path
+from io import BytesIO
 import json
 import re
 import time
@@ -66,6 +67,22 @@ def verify_sources(root: Path, index_dir: Path):
             raise ValueError(f"Source changed or missing: {doc['source_file']}. Rebuild the index.")
 
 
+def load_embedding_index(index_dir: Path, chunk_count: int) -> np.ndarray:
+    """Bind the exact loaded matrix to the passage store and its manifest."""
+    meta = json.loads((index_dir / "embedding_manifest.json").read_text(encoding="utf-8"))
+    matrix_bytes = (index_dir / "embeddings.npy").read_bytes()
+    if sha256(matrix_bytes).hexdigest() != meta.get("embeddings_sha256"):
+        raise ValueError("Embeddings do not match their manifest; rebuild the index")
+    if sha256((index_dir / "chunks.jsonl").read_bytes()).hexdigest() != meta["chunks_sha256"]:
+        raise ValueError("Chunks do not match embeddings; rebuild the index")
+    vectors = np.load(BytesIO(matrix_bytes), allow_pickle=False)
+    if (meta.get("chunks") != chunk_count or meta.get("dimensions") != 384
+            or vectors.shape != (chunk_count, 384) or not np.isfinite(vectors).all()
+            or not np.allclose(np.linalg.norm(vectors, axis=1), 1, atol=1e-5)):
+        raise ValueError("Invalid embedding index; rebuild it")
+    return vectors
+
+
 class Retriever:
     def __init__(self, root: Path, mode: str = "hybrid", verify: bool = True):
         from sentence_transformers import SentenceTransformer, CrossEncoder
@@ -76,19 +93,13 @@ class Retriever:
         if verify:
             verify_sources(root, self.index_dir)
         self.chunks = load_chunks(self.index_dir)
-        self._integrity_files = ["corpus_manifest.json", "chunks.jsonl", "embedding_manifest.json"]
+        self._integrity_files = ["corpus_manifest.json", "chunks.jsonl", "embedding_manifest.json", "embeddings.npy"]
         self._snapshot_hashes = {name: sha256((self.index_dir / name).read_bytes()).hexdigest() for name in self._integrity_files}
         self.by_position = {(c.doc_id, c.ordinal): c for c in self.chunks}
         self.bm25 = BM25([c.search_text for c in self.chunks])
         self.encoder = SentenceTransformer(str(root / "models" / "embedder"), local_files_only=True, device="cpu", trust_remote_code=False)
         self.encoder.max_seq_length = 384
-        self.vectors = np.load(self.index_dir / "embeddings.npy", allow_pickle=False)
-        if self.vectors.shape[0] != len(self.chunks) or not np.isfinite(self.vectors).all():
-            raise ValueError("Invalid embedding index; rebuild it")
-        index_meta = json.loads((self.index_dir / "embedding_manifest.json").read_text(encoding="utf-8"))
-        actual = sha256((self.index_dir / "chunks.jsonl").read_bytes()).hexdigest()
-        if actual != index_meta["chunks_sha256"]:
-            raise ValueError("Chunks do not match embeddings; rebuild the index")
+        self.vectors = load_embedding_index(self.index_dir, len(self.chunks))
         self.reranker = CrossEncoder(str(root / "models" / "reranker_v2"), device="cpu", max_length=512, local_files_only=True, trust_remote_code=False)
         self.mode = mode
 
@@ -169,6 +180,7 @@ def build_embeddings(root: Path):
     meta = {"model": "sentence-transformers/all-MiniLM-L6-v2", "dimensions": int(vectors.shape[1]),
             "chunks": len(chunks), "max_seq_length": 384,
             "chunks_sha256": sha256((index_dir / "chunks.jsonl").read_bytes()).hexdigest(),
+            "embeddings_sha256": sha256((index_dir / "embeddings.npy").read_bytes()).hexdigest(),
             "elapsed_seconds": round(time.perf_counter() - start, 2)}
     (index_dir / "embedding_manifest.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
     return meta

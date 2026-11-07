@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "approved_files_verified": 13,
+  "approved_sha256": "48bc8f2c63d31c7efd5080606f4c2b2165c873c0c31e79b9cb6b318afe0d2c0b",
+  "video_unchanged": true,
+  "silent_1440p": true,
+  "duration_seconds": 564.967,
+  "preserved_copy_browser_playback_and_chapter_seek": true,
+  "byte_ranges": true,
+  "client_errors": [],
+  "url": "http://127.0.0.1:8502/final/Watch_Final_Demo.html"
+}

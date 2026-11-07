@@ -57,19 +57,25 @@ class Response:
 
 
 def resolve_question(question: str, history: list[Turn]) -> tuple[str, str | None, str]:
+    scenario_followup = bool(re.match(r"^(?:and\s+)?what if\b", question, re.I))
+
+    def with_situation():
+        return f"Current question: {question}\nPrior situation: {history[-1].retrieval_query[-700:]}"
+
     explicit = re.search(r"\bPR\s*(\d+)\b", question, re.I)
     if explicit:
-        return question, "PR" + explicit.group(1), "explicit_procedure"
+        doc_id = "PR" + explicit.group(1)
+        query = with_situation() if history and history[-1].doc_id == doc_id and scenario_followup else question
+        return query, doc_id, "explicit_procedure"
     named = [doc for doc, pattern in TOPICS.items() if re.search(pattern, question, re.I)]
     if len(named) == 1:
-        # Carry a previous scenario when the follow-up names the same topic.
+        # A hypothetical changes a condition within the prior situation, even
+        # when it repeats the procedure name. A newly named task stands alone.
         if history and history[-1].doc_id == named[0] and FOLLOWUP.search(question):
-            # A newly named task needs its own evidence; retain procedure scope
-            # without diluting the new task with the previous task's keywords.
-            return question, named[0], "followup"
+            return with_situation() if scenario_followup else question, named[0], "followup"
         return question, None, "named_topic"
     if history and history[-1].doc_id and (FOLLOWUP.search(question) or re.search(r"\b(it|that|those|these|they|them|there|same)\b", question, re.I)):
-        return f"Current question: {question}\nPrior situation: {history[-1].retrieval_query[-700:]}", history[-1].doc_id, "followup"
+        return with_situation(), history[-1].doc_id, "followup"
     return question, None, "standalone"
 
 

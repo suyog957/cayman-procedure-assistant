@@ -15,8 +15,8 @@ The completed post-approval review is recorded in [FINAL_REVIEW.md](FINAL_REVIEW
 | R03 | Approximately five to six PPT slides | `submission/Cayman_Procedure_Assistant.pptx` | Exactly six slides; presenter notes; PDF companion |
 | R04 | Explain methodology and architecture | Slides 2–4; `docs/ARCHITECTURE.md` | Trace a question through retrieval, context, generation and checks |
 | R05 | Explain technology choices and key decisions | Slides 2–4; architecture decision table | Defend RAG, local models, hybrid search, reranking and in-memory indexing |
-| R06 | Explain document processing and organization | Slide 3; manifests; normalized source extracts | Show section and table condition preservation; source provenance |
-| R07 | Explain chunking and retrieval | Slide 3; retrieval ablation results | Explain bounded sections, overlap, row labels, BM25, vectors, RRF and reranking |
+| R06 | Explain document processing and organization | Slide 2; manifests; normalized source extracts | Show section and table condition preservation; source provenance |
+| R07 | Explain chunking and retrieval | Slides 2–3; retrieval ablation results | Explain bounded sections, overlap, row labels, BM25, vectors, RRF and reranking |
 | R08 | Describe testing: accuracy, relevance, completeness and conciseness | Slide 5; evaluation report and review rubric | Separate retrieval metrics, answer diagnostics and human evaluation |
 | R09 | Address user experience | Slide 4; interactive app | Guided starters, citations, source inspection, reset, feedback and export |
 | R10 | Handle follow-up questions | Session-scoped question context and explicit topic switching | Four saved two-turn conversations; unit tests for isolation and switching |

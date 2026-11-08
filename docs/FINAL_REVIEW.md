@@ -4,6 +4,8 @@ Review date: November 7, 2026. Both pages of the original assignment were reread
 
 The requested implementation and presentation deliverables are present. The review found and fixed a conversational edge case and several integrity/reproducibility gaps. The result remains an interview prototype with explicitly disclosed answer-quality limitations. Independent subject-matter validation and recruiter-specific submission logistics have not been completed or implied.
 
+The subsequent leadership-deck redesign retains six slides and the accepted results, with a connected narrative, light visual treatment, richer technical notes and an explicit four-dimension evaluation matrix. See [the presentation story and requirement coverage](PRESENTATION_STORY.md) and the native PowerPoint layout/content checks under `artifacts/presentation/`. The approved final tool video remains unchanged.
+
 ## Approved video: preserved without overwrite
 
 The user-approved final is [Branch_Assist_Final_Approved.mp4](../demo/final/Branch_Assist_Final_Approved.mp4). Open [the final player](../demo/final/Watch_Final_Demo.html), or run the local video server and visit `http://127.0.0.1:8502/final/Watch_Final_Demo.html`.

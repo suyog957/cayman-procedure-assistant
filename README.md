@@ -39,7 +39,9 @@ See [the timed demo runbook](docs/DEMO_RUNBOOK.md) for the full presentation seq
 
 ## Presentation and submission
 
-`submission/Cayman_Procedure_Assistant.pptx` is the six-slide deck with speaker notes. The same folder contains a PDF companion, demo runbook and recorded demonstration responses. `submission/Presentation_Materials.zip` contains an allowlisted set of presentation artifacts and excludes implementation source, model files and raw evaluation internals.
+The redesigned **[six-slide leadership PowerPoint](submission/Cayman_Procedure_Assistant.pptx)** and [matching PDF](submission/Cayman_Procedure_Assistant.pdf) follow one connected story: employee need → organized rules → answer pipeline → conversation → evidence → demonstration and decision. The deck uses a light cover, restrained red/gold accents, editable diagrams and charts, a real source-pane capture, and detailed 20-minute speaker notes. See [the six-slide preview](artifacts/presentation/Leadership_Deck_Preview.jpg) and [the presentation story and requirement map](docs/PRESENTATION_STORY.md).
+
+The same folder contains presenter notes, the timed demo runbook and recorded demonstration responses. `submission/Presentation_Materials.zip` contains the current allowlisted presentation artifacts and excludes implementation source, model files and raw evaluation internals. The approved final video remains separate and unchanged.
 
 The assignment says not to submit or show source code in presentation materials or the demonstration. Keep the implementation files in this workspace for preparation. Check the recruiter email for the deadline, recipient and meeting details; those were not provided. Nothing has been submitted externally.
 
@@ -77,7 +79,7 @@ python scripts/ask.py "What is the coin-counting machine overnight limit?" "And 
 
 `scripts/check_browser.py --chat` is an optional browser integration check using Playwright and installed Chrome. It verifies citations, check/activity views, the procedure library, export and session behavior. It is a development check, not a runtime dependency. Start the local Streamlit server first. Screenshots and browser results are stored under `artifacts/`.
 
-After the full browser check and a test run with `--junitxml=artifacts/test_results.xml`, `python scripts/verify_deliverables.py` checks source integrity, index dimensions, slide count, notes, evaluation consistency and the source-free archive. The prepared workspace includes these verification artifacts.
+After the full browser check and a test run with `--junitxml=artifacts/test_results.xml`, `python scripts/verify_deliverables.py` checks source integrity, index dimensions, slide count, notes, evaluation consistency and the source-free archive. The prepared workspace includes these verification artifacts. Rebuilding the redesigned deck uses desktop Microsoft PowerPoint on Windows for the actual PDF export and native text-fit checks. Install the preparation extras with `python -m pip install -e ".[dev,presentation]"`; the app itself does not require PowerPoint. Run `python scripts/verify_presentation.py` after rebuilding to check assignment coverage, metric labels, editability and PDF consistency.
 
 ## Project map
 

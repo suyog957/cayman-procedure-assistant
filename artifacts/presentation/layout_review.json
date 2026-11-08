@@ -1,0 +1,4085 @@
+{
+  "status": "passed",
+  "render_engine": "Microsoft PowerPoint",
+  "slide_count": 6,
+  "native_editable_text_boxes": 194,
+  "text_bound_overflows": [],
+  "bounds": [
+    {
+      "slide": 1,
+      "shape": "text_1_000",
+      "width": 690.0,
+      "height": 19.0,
+      "text_width": 300.5,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_001",
+      "width": 120.0,
+      "height": 16.0,
+      "text_width": 94.25,
+      "text_height": 9.710000038146973
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_002",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 39.125038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_003",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 47.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_004",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 63.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_005",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 58.375038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_006",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 51.0,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_007",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 49.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_008",
+      "width": 30.0,
+      "height": 16.0,
+      "text_width": 15.75,
+      "text_height": 10.789999961853027
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_009",
+      "width": 490.0,
+      "height": 20.0,
+      "text_width": 108.75,
+      "text_height": 12.585039138793945
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_010",
+      "width": 492.0,
+      "height": 101.0,
+      "text_width": 460.1250305175781,
+      "text_height": 82.48999786376953
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_011",
+      "width": 475.0,
+      "height": 57.0,
+      "text_width": 456.96502685546875,
+      "text_height": 42.4050407409668
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_012",
+      "width": 475.0,
+      "height": 17.0,
+      "text_width": 85.12503814697266,
+      "text_height": 12.585039138793945
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_013",
+      "width": 475.0,
+      "height": 43.0,
+      "text_width": 364.1250305175781,
+      "text_height": 19.18000030517578
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_014",
+      "width": 475.0,
+      "height": 17.0,
+      "text_width": 96.75,
+      "text_height": 12.585039138793945
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_015",
+      "width": 485.0,
+      "height": 29.0,
+      "text_width": 338.2050476074219,
+      "text_height": 19.18000030517578
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_016",
+      "width": 316.0,
+      "height": 18.0,
+      "text_width": 150.75,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_017",
+      "width": 290.0,
+      "height": 43.0,
+      "text_width": 269.1250305175781,
+      "text_height": 39.9150390625
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_018",
+      "width": 316.0,
+      "height": 17.0,
+      "text_width": 178.25,
+      "text_height": 11.385039329528809
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_019",
+      "width": 165.0,
+      "height": 48.0,
+      "text_width": 116.12503814697266,
+      "text_height": 40.75
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_020",
+      "width": 143.0,
+      "height": 43.0,
+      "text_width": 123.5199966430664,
+      "text_height": 33.68000030517578
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_021",
+      "width": 316.0,
+      "height": 45.0,
+      "text_width": 246.0,
+      "text_height": 39.9150390625
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_022",
+      "width": 217.0,
+      "height": 18.0,
+      "text_width": 178.1250457763672,
+      "text_height": 13.785038948059082
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_023",
+      "width": 95.0,
+      "height": 37.0,
+      "text_width": 35.625038146972656,
+      "text_height": 29.959999084472656
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_024",
+      "width": 175.0,
+      "height": 23.0,
+      "text_width": 119.66000366210938,
+      "text_height": 15.585039138793945
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_025",
+      "width": 95.0,
+      "height": 37.0,
+      "text_width": 50.0,
+      "text_height": 29.959999084472656
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_026",
+      "width": 175.0,
+      "height": 23.0,
+      "text_width": 74.75,
+      "text_height": 15.585039138793945
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_027",
+      "width": 95.0,
+      "height": 37.0,
+      "text_width": 71.12503814697266,
+      "text_height": 29.959999084472656
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_028",
+      "width": 175.0,
+      "height": 23.0,
+      "text_width": 110.95503997802734,
+      "text_height": 15.585039138793945
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_029",
+      "width": 872.0,
+      "height": 21.0,
+      "text_width": 588.489990234375,
+      "text_height": 16.059999465942383
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_030",
+      "width": 872.0,
+      "height": 13.0,
+      "text_width": 483.0,
+      "text_height": 10.1899995803833
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_031",
+      "width": 690.0,
+      "height": 19.0,
+      "text_width": 304.3750305175781,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_032",
+      "width": 120.0,
+      "height": 16.0,
+      "text_width": 94.25,
+      "text_height": 9.710000038146973
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_033",
+      "width": 872.0,
+      "height": 72.0,
+      "text_width": 412.6250305175781,
+      "text_height": 72.48999786376953
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_034",
+      "width": 872.0,
+      "height": 34.0,
+      "text_width": 510.7099914550781,
+      "text_height": 16.780000686645508
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_035",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 37.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_036",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 50.25,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_037",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 63.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_038",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 58.375038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_039",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 51.0,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_040",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 49.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_041",
+      "width": 30.0,
+      "height": 16.0,
+      "text_width": 15.75,
+      "text_height": 10.789999961853027
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_042",
+      "width": 270.0,
+      "height": 22.0,
+      "text_width": 269.32000732421875,
+      "text_height": 16.540000915527344
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_043",
+      "width": 155.0,
+      "height": 18.0,
+      "text_width": 52.375038146972656,
+      "text_height": 13.785038948059082
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_044",
+      "width": 95.0,
+      "height": 18.0,
+      "text_width": 43.625038146972656,
+      "text_height": 13.785038948059082
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_045",
+      "width": 153.0,
+      "height": 31.0,
+      "text_width": 92.9000015258789,
+      "text_height": 15.345039367675781
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_046",
+      "width": 85.0,
+      "height": 23.0,
+      "text_width": 42.875038146972656,
+      "text_height": 16.185039520263672
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_047",
+      "width": 153.0,
+      "height": 31.0,
+      "text_width": 102.4000015258789,
+      "text_height": 15.345039367675781
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_048",
+      "width": 85.0,
+      "height": 23.0,
+      "text_width": 33.0,
+      "text_height": 16.185039520263672
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_049",
+      "width": 153.0,
+      "height": 31.0,
+      "text_width": 129.6250457763672,
+      "text_height": 31.935039520263672
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_050",
+      "width": 85.0,
+      "height": 23.0,
+      "text_width": 33.0,
+      "text_height": 16.185039520263672
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_051",
+      "width": 176.0,
+      "height": 18.0,
+      "text_width": 54.75,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_052",
+      "width": 176.0,
+      "height": 27.0,
+      "text_width": 121.44503784179688,
+      "text_height": 20.37504005432129
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_053",
+      "width": 176.0,
+      "height": 99.0,
+      "text_width": 167.4199981689453,
+      "text_height": 53.83000183105469
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_054",
+      "width": 176.0,
+      "height": 18.0,
+      "text_width": 59.625038146972656,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_055",
+      "width": 176.0,
+      "height": 27.0,
+      "text_width": 109.8950424194336,
+      "text_height": 20.37504005432129
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_056",
+      "width": 176.0,
+      "height": 99.0,
+      "text_width": 161.13504028320312,
+      "text_height": 53.83000183105469
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_057",
+      "width": 176.0,
+      "height": 18.0,
+      "text_width": 55.125038146972656,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_058",
+      "width": 176.0,
+      "height": 27.0,
+      "text_width": 111.45999908447266,
+      "text_height": 20.37504005432129
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_059",
+      "width": 176.0,
+      "height": 99.0,
+      "text_width": 173.25,
+      "text_height": 53.83000183105469
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_060",
+      "width": 872.0,
+      "height": 18.0,
+      "text_width": 260.5,
+      "text_height": 12.585039138793945
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_061",
+      "width": 184.0,
+      "height": 23.0,
+      "text_width": 84.23999786376953,
+      "text_height": 17.6200008392334
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_062",
+      "width": 184.0,
+      "height": 19.0,
+      "text_width": 107.87503814697266,
+      "text_height": 12.945039749145508
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_063",
+      "width": 184.0,
+      "height": 23.0,
+      "text_width": 106.0,
+      "text_height": 17.6200008392334
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_064",
+      "width": 184.0,
+      "height": 19.0,
+      "text_width": 122.37503814697266,
+      "text_height": 12.945039749145508
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_065",
+      "width": 184.0,
+      "height": 23.0,
+      "text_width": 128.82000732421875,
+      "text_height": 17.6200008392334
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_066",
+      "width": 184.0,
+      "height": 19.0,
+      "text_width": 139.75,
+      "text_height": 12.945039749145508
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_067",
+      "width": 184.0,
+      "height": 23.0,
+      "text_width": 110.25,
+      "text_height": 17.6200008392334
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_068",
+      "width": 184.0,
+      "height": 19.0,
+      "text_width": 129.6250457763672,
+      "text_height": 12.945039749145508
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_069",
+      "width": 872.0,
+      "height": 13.0,
+      "text_width": 456.8750305175781,
+      "text_height": 10.1899995803833
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_070",
+      "width": 690.0,
+      "height": 19.0,
+      "text_width": 295.3750305175781,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_071",
+      "width": 120.0,
+      "height": 16.0,
+      "text_width": 94.25,
+      "text_height": 9.710000038146973
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_072",
+      "width": 872.0,
+      "height": 72.0,
+      "text_width": 582.1250610351562,
+      "text_height": 72.48999786376953
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_073",
+      "width": 872.0,
+      "height": 34.0,
+      "text_width": 558.5399780273438,
+      "text_height": 16.780000686645508
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_074",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 37.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_075",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 47.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_076",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 68.25,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_077",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 58.375038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_078",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 51.0,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_079",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 49.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_080",
+      "width": 30.0,
+      "height": 16.0,
+      "text_width": 15.75,
+      "text_height": 10.789999961853027
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_081",
+      "width": 846.0,
+      "height": 18.0,
+      "text_width": 416.5,
+      "text_height": 13.90503978729248
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_082",
+      "width": 132.0,
+      "height": 17.0,
+      "text_width": 67.37503814697266,
+      "text_height": 11.385039329528809
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_083",
+      "width": 112.0,
+      "height": 59.0,
+      "text_width": 112.07504272460938,
+      "text_height": 33.42504119873047
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_084",
+      "width": 132.0,
+      "height": 17.0,
+      "text_width": 45.125038146972656,
+      "text_height": 11.385039329528809
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_085",
+      "width": 112.0,
+      "height": 59.0,
+      "text_width": 106.0,
+      "text_height": 33.42504119873047
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_086",
+      "width": 132.0,
+      "height": 17.0,
+      "text_width": 34.375038146972656,
+      "text_height": 11.385039329528809
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_087",
+      "width": 112.0,
+      "height": 59.0,
+      "text_width": 80.49504089355469,
+      "text_height": 33.42504119873047
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_088",
+      "width": 132.0,
+      "height": 17.0,
+      "text_width": 50.375038146972656,
+      "text_height": 11.385039329528809
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_089",
+      "width": 112.0,
+      "height": 59.0,
+      "text_width": 90.9350357055664,
+      "text_height": 33.42504119873047
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_090",
+      "width": 132.0,
+      "height": 17.0,
+      "text_width": 32.75,
+      "text_height": 11.385039329528809
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_091",
+      "width": 112.0,
+      "height": 59.0,
+      "text_width": 61.58000183105469,
+      "text_height": 50.790000915527344
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_092",
+      "width": 132.0,
+      "height": 17.0,
+      "text_width": 46.875038146972656,
+      "text_height": 11.385039329528809
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_093",
+      "width": 112.0,
+      "height": 59.0,
+      "text_width": 107.52503967285156,
+      "text_height": 33.42504119873047
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_094",
+      "width": 407.0,
+      "height": 25.0,
+      "text_width": 301.8299865722656,
+      "text_height": 14.979999542236328
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_095",
+      "width": 406.0,
+      "height": 25.0,
+      "text_width": 297.3699951171875,
+      "text_height": 14.979999542236328
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_096",
+      "width": 278.0,
+      "height": 29.0,
+      "text_width": 256.85504150390625,
+      "text_height": 16.905038833618164
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_097",
+      "width": 278.0,
+      "height": 42.0,
+      "text_width": 238.10000610351562,
+      "text_height": 33.18000030517578
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_098",
+      "width": 278.0,
+      "height": 29.0,
+      "text_width": 133.6250457763672,
+      "text_height": 16.905038833618164
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_099",
+      "width": 278.0,
+      "height": 42.0,
+      "text_width": 240.2899932861328,
+      "text_height": 33.18000030517578
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_100",
+      "width": 278.0,
+      "height": 29.0,
+      "text_width": 124.9150390625,
+      "text_height": 16.905038833618164
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_101",
+      "width": 278.0,
+      "height": 42.0,
+      "text_width": 274.7699890136719,
+      "text_height": 15.945039749145508
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_102",
+      "width": 872.0,
+      "height": 13.0,
+      "text_width": 511.75,
+      "text_height": 10.1899995803833
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_103",
+      "width": 690.0,
+      "height": 19.0,
+      "text_width": 319.3750305175781,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_104",
+      "width": 120.0,
+      "height": 16.0,
+      "text_width": 94.25,
+      "text_height": 9.710000038146973
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_105",
+      "width": 872.0,
+      "height": 72.0,
+      "text_width": 568.8750610351562,
+      "text_height": 72.48999786376953
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_106",
+      "width": 872.0,
+      "height": 34.0,
+      "text_width": 497.4950256347656,
+      "text_height": 16.780000686645508
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_107",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 37.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_108",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 47.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_109",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 63.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_110",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 62.0,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_111",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 51.0,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_112",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 49.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_113",
+      "width": 30.0,
+      "height": 16.0,
+      "text_width": 15.75,
+      "text_height": 10.789999961853027
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_114",
+      "width": 500.0,
+      "height": 19.0,
+      "text_width": 182.5,
+      "text_height": 12.215039253234863
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_115",
+      "width": 474.0,
+      "height": 39.0,
+      "text_width": 436.6350402832031,
+      "text_height": 18.21504020690918
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_116",
+      "width": 474.0,
+      "height": 54.0,
+      "text_width": 471.57000732421875,
+      "text_height": 42.4050407409668
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_117",
+      "width": 474.0,
+      "height": 38.0,
+      "text_width": 363.3050537109375,
+      "text_height": 18.21504020690918
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_118",
+      "width": 474.0,
+      "height": 36.0,
+      "text_width": 370.1199951171875,
+      "text_height": 20.37504005432129
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_119",
+      "width": 332.0,
+      "height": 18.0,
+      "text_width": 156.1250457763672,
+      "text_height": 12.345039367675781
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_120",
+      "width": 500.0,
+      "height": 23.0,
+      "text_width": 301.61505126953125,
+      "text_height": 15.345039367675781
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_121",
+      "width": 872.0,
+      "height": 13.0,
+      "text_width": 539.6250610351562,
+      "text_height": 10.1899995803833
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_122",
+      "width": 690.0,
+      "height": 19.0,
+      "text_width": 317.8750305175781,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_123",
+      "width": 120.0,
+      "height": 16.0,
+      "text_width": 94.25,
+      "text_height": 9.710000038146973
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_124",
+      "width": 872.0,
+      "height": 72.0,
+      "text_width": 491.6250305175781,
+      "text_height": 72.48999786376953
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_125",
+      "width": 872.0,
+      "height": 34.0,
+      "text_width": 604.8300170898438,
+      "text_height": 16.780000686645508
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_126",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 37.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_127",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 47.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_128",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 63.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_129",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 58.375038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_130",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 53.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_131",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 49.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_132",
+      "width": 30.0,
+      "height": 16.0,
+      "text_width": 15.75,
+      "text_height": 10.789999961853027
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_133",
+      "width": 305.0,
+      "height": 18.0,
+      "text_width": 159.8750457763672,
+      "text_height": 12.105039596557617
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_134",
+      "width": 114.0,
+      "height": 23.0,
+      "text_width": 50.5099983215332,
+      "text_height": 14.859999656677246
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_135",
+      "width": 65.0,
+      "height": 25.0,
+      "text_width": 46.0,
+      "text_height": 18.34000015258789
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_136",
+      "width": 114.0,
+      "height": 23.0,
+      "text_width": 53.375038146972656,
+      "text_height": 14.859999656677246
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_137",
+      "width": 65.0,
+      "height": 25.0,
+      "text_width": 46.0,
+      "text_height": 18.34000015258789
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_138",
+      "width": 114.0,
+      "height": 23.0,
+      "text_width": 96.25,
+      "text_height": 14.859999656677246
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_139",
+      "width": 65.0,
+      "height": 25.0,
+      "text_width": 46.0,
+      "text_height": 18.34000015258789
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_140",
+      "width": 310.0,
+      "height": 45.0,
+      "text_width": 93.75,
+      "text_height": 37.1550407409668
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_141",
+      "width": 228.0,
+      "height": 43.0,
+      "text_width": 133.8650360107422,
+      "text_height": 34.42504119873047
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_142",
+      "width": 323.0,
+      "height": 37.0,
+      "text_width": 315.3750305175781,
+      "text_height": 29.190000534057617
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_143",
+      "width": 526.0,
+      "height": 18.0,
+      "text_width": 268.25,
+      "text_height": 12.105039596557617
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_144",
+      "width": 112.0,
+      "height": 27.0,
+      "text_width": 59.625038146972656,
+      "text_height": 15.945039749145508
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_145",
+      "width": 408.0,
+      "height": 22.0,
+      "text_width": 218.39999389648438,
+      "text_height": 14.619999885559082
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_146",
+      "width": 408.0,
+      "height": 22.0,
+      "text_width": 249.88999938964844,
+      "text_height": 15.100000381469727
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_147",
+      "width": 112.0,
+      "height": 27.0,
+      "text_width": 65.97000122070312,
+      "text_height": 15.945039749145508
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_148",
+      "width": 408.0,
+      "height": 22.0,
+      "text_width": 201.5350341796875,
+      "text_height": 14.619999885559082
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_149",
+      "width": 408.0,
+      "height": 22.0,
+      "text_width": 196.19000244140625,
+      "text_height": 15.100000381469727
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_150",
+      "width": 112.0,
+      "height": 27.0,
+      "text_width": 90.69999694824219,
+      "text_height": 15.945039749145508
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_151",
+      "width": 408.0,
+      "height": 22.0,
+      "text_width": 146.33999633789062,
+      "text_height": 14.619999885559082
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_152",
+      "width": 408.0,
+      "height": 22.0,
+      "text_width": 275.8850402832031,
+      "text_height": 15.100000381469727
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_153",
+      "width": 112.0,
+      "height": 27.0,
+      "text_width": 78.25,
+      "text_height": 15.945039749145508
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_154",
+      "width": 408.0,
+      "height": 22.0,
+      "text_width": 208.14999389648438,
+      "text_height": 14.619999885559082
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_155",
+      "width": 408.0,
+      "height": 22.0,
+      "text_width": 252.25503540039062,
+      "text_height": 15.100000381469727
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_156",
+      "width": 526.0,
+      "height": 22.0,
+      "text_width": 404.0,
+      "text_height": 14.025039672851562
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_157",
+      "width": 292.0,
+      "height": 23.0,
+      "text_width": 193.6250457763672,
+      "text_height": 12.945039749145508
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_158",
+      "width": 281.0,
+      "height": 23.0,
+      "text_width": 189.75,
+      "text_height": 12.945039749145508
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_159",
+      "width": 248.0,
+      "height": 23.0,
+      "text_width": 137.3750457763672,
+      "text_height": 12.945039749145508
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_160",
+      "width": 872.0,
+      "height": 13.0,
+      "text_width": 571.5,
+      "text_height": 10.1899995803833
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_161",
+      "width": 690.0,
+      "height": 19.0,
+      "text_width": 336.1250305175781,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_162",
+      "width": 120.0,
+      "height": 16.0,
+      "text_width": 94.25,
+      "text_height": 9.710000038146973
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_163",
+      "width": 872.0,
+      "height": 72.0,
+      "text_width": 416.6250305175781,
+      "text_height": 72.48999786376953
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_164",
+      "width": 872.0,
+      "height": 34.0,
+      "text_width": 553.3650512695312,
+      "text_height": 16.780000686645508
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_165",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 37.625038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_166",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 47.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_167",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 63.875038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_168",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 58.375038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_169",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 51.0,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_170",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 52.25,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_171",
+      "width": 30.0,
+      "height": 16.0,
+      "text_width": 15.75,
+      "text_height": 10.789999961853027
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_172",
+      "width": 475.0,
+      "height": 19.0,
+      "text_width": 268.8750305175781,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_173",
+      "width": 17.0,
+      "height": 18.0,
+      "text_width": 14.875039100646973,
+      "text_height": 12.465039253234863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_174",
+      "width": 444.0,
+      "height": 23.0,
+      "text_width": 129.61000061035156,
+      "text_height": 18.100000381469727
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_175",
+      "width": 444.0,
+      "height": 20.0,
+      "text_width": 260.8750305175781,
+      "text_height": 14.025039672851562
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_176",
+      "width": 444.0,
+      "height": 22.0,
+      "text_width": 283.25,
+      "text_height": 14.025039672851562
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_177",
+      "width": 17.0,
+      "height": 18.0,
+      "text_width": 14.875039100646973,
+      "text_height": 12.465039253234863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_178",
+      "width": 444.0,
+      "height": 23.0,
+      "text_width": 141.5,
+      "text_height": 18.100000381469727
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_179",
+      "width": 444.0,
+      "height": 20.0,
+      "text_width": 257.8750305175781,
+      "text_height": 14.025039672851562
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_180",
+      "width": 444.0,
+      "height": 22.0,
+      "text_width": 312.8750305175781,
+      "text_height": 14.025039672851562
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_181",
+      "width": 17.0,
+      "height": 18.0,
+      "text_width": 14.875039100646973,
+      "text_height": 12.465039253234863
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_182",
+      "width": 444.0,
+      "height": 23.0,
+      "text_width": 150.24000549316406,
+      "text_height": 18.100000381469727
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_183",
+      "width": 444.0,
+      "height": 20.0,
+      "text_width": 276.1250305175781,
+      "text_height": 14.025039672851562
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_184",
+      "width": 444.0,
+      "height": 22.0,
+      "text_width": 321.25,
+      "text_height": 14.025039672851562
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_185",
+      "width": 332.0,
+      "height": 20.0,
+      "text_width": 161.8750457763672,
+      "text_height": 11.985039710998535
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_186",
+      "width": 332.0,
+      "height": 25.0,
+      "text_width": 232.47000122070312,
+      "text_height": 16.6650390625
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_187",
+      "width": 332.0,
+      "height": 41.0,
+      "text_width": 260.5650329589844,
+      "text_height": 31.18000030517578
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_188",
+      "width": 332.0,
+      "height": 25.0,
+      "text_width": 238.52503967285156,
+      "text_height": 16.6650390625
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_189",
+      "width": 332.0,
+      "height": 41.0,
+      "text_width": 214.5350341796875,
+      "text_height": 31.18000030517578
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_190",
+      "width": 332.0,
+      "height": 25.0,
+      "text_width": 228.9150390625,
+      "text_height": 16.6650390625
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_191",
+      "width": 332.0,
+      "height": 41.0,
+      "text_width": 329.0400085449219,
+      "text_height": 14.979999542236328
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_192",
+      "width": 848.0,
+      "height": 22.0,
+      "text_width": 549.8599853515625,
+      "text_height": 16.780000686645508
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_193",
+      "width": 872.0,
+      "height": 13.0,
+      "text_width": 589.3750610351562,
+      "text_height": 10.1899995803833
+    }
+  ],
+  "layout": [
+    {
+      "slide": 1,
+      "shape": "text_1_000",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  THE EMPLOYEE NEED",
+      "size": 10,
+      "role": "label",
+      "box": [
+        44,
+        23,
+        690,
+        19
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_001",
+      "text": "INTERVIEW PROTOTYPE",
+      "size": 8.1,
+      "role": "source",
+      "box": [
+        638,
+        28,
+        120,
+        16
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_002",
+      "text": "01  Need",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        44,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_003",
+      "text": "02  Content",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        181,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_004",
+      "text": "03  Architecture",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        318,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_005",
+      "text": "04  Experience",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        455,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_006",
+      "text": "05  Evidence",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        592,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_007",
+      "text": "06  Decision",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        729,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_008",
+      "text": "1/6",
+      "size": 9,
+      "role": "navigation",
+      "box": [
+        886,
+        514,
+        30,
+        16
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_009",
+      "text": "THE EMPLOYEE NEED",
+      "size": 10.5,
+      "role": "label",
+      "box": [
+        44,
+        71,
+        490,
+        20
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_010",
+      "text": "From procedure search\nto guidance you can verify.",
+      "size": 33,
+      "role": "headline",
+      "box": [
+        44,
+        102,
+        492,
+        101
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_011",
+      "text": "A working conversational assistant for the situation behind a branch employee’s question.",
+      "size": 17,
+      "role": "body",
+      "box": [
+        44,
+        213,
+        475,
+        57
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_012",
+      "text": "EMPLOYEE TASK",
+      "size": 10.5,
+      "role": "label",
+      "box": [
+        44,
+        286,
+        475,
+        17
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_013",
+      "text": "Find the applicable rule, conditions and exceptions.",
+      "size": 16,
+      "role": "body",
+      "box": [
+        44,
+        308,
+        475,
+        43
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_014",
+      "text": "DESIGN RESPONSE",
+      "size": 10.5,
+      "role": "label",
+      "box": [
+        44,
+        354,
+        475,
+        17
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_015",
+      "text": "Ask → inspect the source → refine the situation.",
+      "size": 16,
+      "role": "body",
+      "box": [
+        44,
+        376,
+        485,
+        29
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_016",
+      "text": "A REAL PROCEDURE QUESTION",
+      "size": 10,
+      "role": "label",
+      "box": [
+        580,
+        107,
+        316,
+        18
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_017",
+      "text": "How much coin can stay in a machine overnight?",
+      "size": 16,
+      "role": "body",
+      "box": [
+        593,
+        149,
+        290,
+        43
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_018",
+      "text": "BRANCH ASSIST / RECORDED ANSWER",
+      "size": 9.5,
+      "role": "label",
+      "box": [
+        580,
+        216,
+        316,
+        17
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_019",
+      "text": "$5,250",
+      "size": 34,
+      "role": "body",
+      "box": [
+        580,
+        245,
+        165,
+        48
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_020",
+      "text": "maximum overnight\nin a single machine",
+      "size": 13.5,
+      "role": "body",
+      "box": [
+        751,
+        249,
+        143,
+        43
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_021",
+      "text": "Open the cited rule and inspect its conditions.",
+      "size": 16,
+      "role": "body",
+      "box": [
+        580,
+        308,
+        316,
+        45
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_022",
+      "text": "PR63  ·  original source available",
+      "size": 11.5,
+      "role": "label",
+      "box": [
+        589,
+        372,
+        217,
+        18
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_023",
+      "text": "11",
+      "size": 25,
+      "role": "body",
+      "box": [
+        44,
+        424,
+        95,
+        37
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_024",
+      "text": "supplied procedures",
+      "size": 13,
+      "role": "body",
+      "box": [
+        144,
+        435,
+        175,
+        23
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_025",
+      "text": "139",
+      "size": 25,
+      "role": "body",
+      "box": [
+        341,
+        424,
+        95,
+        37
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_026",
+      "text": "HTML tables",
+      "size": 13,
+      "role": "body",
+      "box": [
+        441,
+        435,
+        175,
+        23
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_027",
+      "text": "1,388",
+      "size": 25,
+      "role": "body",
+      "box": [
+        638,
+        424,
+        95,
+        37
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_028",
+      "text": "traceable passages",
+      "size": 13,
+      "role": "body",
+      "box": [
+        738,
+        435,
+        175,
+        23
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_029",
+      "text": "Business goal to test: faster access to correct guidance, with evidence employees can inspect.",
+      "size": 13.4,
+      "role": "body",
+      "box": [
+        44,
+        469,
+        872,
+        21
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_030",
+      "text": "Interview prototype · supplied Cayman Bank snapshot · AI-assisted development and runtime answers · no transaction execution",
+      "size": 8.5,
+      "role": "source",
+      "box": [
+        44,
+        486,
+        872,
+        13
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_031",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  ORGANIZE THE RULES",
+      "size": 10,
+      "role": "label",
+      "box": [
+        44,
+        23,
+        690,
+        19
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_032",
+      "text": "INTERVIEW PROTOTYPE",
+      "size": 8.1,
+      "role": "source",
+      "box": [
+        638,
+        28,
+        120,
+        16
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_033",
+      "text": "Reliable answers start with\nwell-organized rules.",
+      "size": 29,
+      "role": "headline",
+      "box": [
+        44,
+        65,
+        872,
+        72
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_034",
+      "text": "Preserve the situation attached to each instruction before searching for an answer.",
+      "size": 14,
+      "role": "body",
+      "box": [
+        44,
+        145,
+        872,
+        34
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_035",
+      "text": "01  Need",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        44,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_036",
+      "text": "02  Content",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        181,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_037",
+      "text": "03  Architecture",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        318,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_038",
+      "text": "04  Experience",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        455,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_039",
+      "text": "05  Evidence",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        592,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_040",
+      "text": "06  Decision",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        729,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_041",
+      "text": "2/6",
+      "size": 9,
+      "role": "navigation",
+      "box": [
+        886,
+        514,
+        30,
+        16
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_042",
+      "text": "PR63: keep the task and control together",
+      "size": 13.8,
+      "role": "body",
+      "box": [
+        59,
+        203,
+        270,
+        22
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_043",
+      "text": "Situation",
+      "size": 11.5,
+      "role": "label",
+      "box": [
+        69,
+        240,
+        155,
+        18
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_044",
+      "text": "Control",
+      "size": 11.5,
+      "role": "label",
+      "box": [
+        230,
+        240,
+        95,
+        18
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_045",
+      "text": "Monthly testing",
+      "size": 12.8,
+      "role": "body",
+      "box": [
+        69,
+        271,
+        153,
+        31
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_046",
+      "text": "Single",
+      "size": 13.5,
+      "role": "body",
+      "box": [
+        230,
+        271,
+        85,
+        23
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_047",
+      "text": "Weekly balancing",
+      "size": 12.8,
+      "role": "body",
+      "box": [
+        69,
+        300,
+        153,
+        31
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_048",
+      "text": "Dual",
+      "size": 13.5,
+      "role": "body",
+      "box": [
+        230,
+        300,
+        85,
+        23
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_049",
+      "text": "Random monthly cash count",
+      "size": 12.8,
+      "role": "body",
+      "box": [
+        69,
+        329,
+        153,
+        31
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_050",
+      "text": "Dual",
+      "size": 13.5,
+      "role": "body",
+      "box": [
+        230,
+        329,
+        85,
+        23
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_051",
+      "text": "01 / PARSE",
+      "size": 10,
+      "role": "label",
+      "box": [
+        366,
+        197,
+        176,
+        18
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_052",
+      "text": "Keep structure",
+      "size": 17,
+      "role": "body",
+      "box": [
+        366,
+        227,
+        176,
+        27
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_053",
+      "text": "HTML headings, lists and table rows. Linked content is not fetched.",
+      "size": 14.2,
+      "role": "body",
+      "box": [
+        366,
+        266,
+        176,
+        99
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_054",
+      "text": "02 / CHUNK",
+      "size": 10,
+      "role": "label",
+      "box": [
+        553,
+        197,
+        176,
+        18
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_055",
+      "text": "Keep context",
+      "size": 17,
+      "role": "body",
+      "box": [
+        553,
+        227,
+        176,
+        27
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_056",
+      "text": "~110 narrative words; 20-word overlap. Carry table labels and conditions.",
+      "size": 14.2,
+      "role": "body",
+      "box": [
+        553,
+        266,
+        176,
+        99
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_057",
+      "text": "03 / TRACE",
+      "size": 10,
+      "role": "label",
+      "box": [
+        740,
+        197,
+        176,
+        18
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_058",
+      "text": "Keep identity",
+      "size": 17,
+      "role": "body",
+      "box": [
+        740,
+        227,
+        176,
+        27
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_059",
+      "text": "Procedure, section, date and original-file fingerprint on each passage.",
+      "size": 14.2,
+      "role": "body",
+      "box": [
+        740,
+        266,
+        176,
+        99
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_060",
+      "text": "SEARCH THE SAME VERIFIED PASSAGE COLLECTION",
+      "size": 10.5,
+      "role": "label",
+      "box": [
+        44,
+        385,
+        872,
+        18
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_061",
+      "text": "Exact terms",
+      "size": 14.7,
+      "role": "body",
+      "box": [
+        55,
+        421,
+        184,
+        23
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_062",
+      "text": "BM25 keyword search",
+      "size": 10.8,
+      "role": "label",
+      "box": [
+        55,
+        447,
+        184,
+        19
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_063",
+      "text": "Same meaning",
+      "size": 14.7,
+      "role": "body",
+      "box": [
+        277,
+        421,
+        184,
+        23
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_064",
+      "text": "MiniLM · 384 dimensions",
+      "size": 10.8,
+      "role": "label",
+      "box": [
+        277,
+        447,
+        184,
+        19
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_065",
+      "text": "Combine + rerank",
+      "size": 14.7,
+      "role": "body",
+      "box": [
+        499,
+        421,
+        184,
+        23
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_066",
+      "text": "Rank fusion + cross-encoder",
+      "size": 10.8,
+      "role": "label",
+      "box": [
+        499,
+        447,
+        184,
+        19
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_067",
+      "text": "Select evidence",
+      "size": 14.7,
+      "role": "body",
+      "box": [
+        721,
+        421,
+        184,
+        23
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_068",
+      "text": "≤3 passages / ~520 words",
+      "size": 10.8,
+      "role": "label",
+      "box": [
+        721,
+        447,
+        184,
+        19
+      ]
+    },
+    {
+      "slide": 2,
+      "shape": "text_2_069",
+      "text": "Supplied PR63 facts · 110 words is a narrative target, not an exact token count · table continuations repeat their condition",
+      "size": 8.5,
+      "role": "source",
+      "box": [
+        44,
+        486,
+        872,
+        13
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_070",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  BUILD THE ANSWER",
+      "size": 10,
+      "role": "label",
+      "box": [
+        44,
+        23,
+        690,
+        19
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_071",
+      "text": "INTERVIEW PROTOTYPE",
+      "size": 8.1,
+      "role": "source",
+      "box": [
+        638,
+        28,
+        120,
+        16
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_072",
+      "text": "Retrieve the rule. Generate an answer.\nCheck the claims before release.",
+      "size": 29,
+      "role": "headline",
+      "box": [
+        44,
+        65,
+        872,
+        72
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_073",
+      "text": "A small local pipeline makes evidence, control decisions and failure outcomes inspectable.",
+      "size": 14,
+      "role": "body",
+      "box": [
+        44,
+        145,
+        872,
+        34
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_074",
+      "text": "01  Need",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        44,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_075",
+      "text": "02  Content",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        181,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_076",
+      "text": "03  Architecture",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        318,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_077",
+      "text": "04  Experience",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        455,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_078",
+      "text": "05  Evidence",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        592,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_079",
+      "text": "06  Decision",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        729,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_080",
+      "text": "3/6",
+      "size": 9,
+      "role": "navigation",
+      "box": [
+        886,
+        514,
+        30,
+        16
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_081",
+      "text": "PREPARED OFFLINE   Verified passages + keyword statistics + normalized vectors",
+      "size": 11.6,
+      "role": "label",
+      "box": [
+        57,
+        190,
+        846,
+        18
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_082",
+      "text": "UNDERSTAND",
+      "size": 9.5,
+      "role": "label",
+      "box": [
+        44,
+        227,
+        132,
+        17
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_083",
+      "text": "Question context\n+ search scope",
+      "size": 13.4,
+      "role": "body",
+      "box": [
+        54,
+        260,
+        112,
+        59
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_084",
+      "text": "RETRIEVE",
+      "size": 9.5,
+      "role": "label",
+      "box": [
+        192,
+        227,
+        132,
+        17
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_085",
+      "text": "BM25 + MiniLM\nfusion + rerank",
+      "size": 13.4,
+      "role": "body",
+      "box": [
+        202,
+        260,
+        112,
+        59
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_086",
+      "text": "SELECT",
+      "size": 9.5,
+      "role": "label",
+      "box": [
+        340,
+        227,
+        132,
+        17
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_087",
+      "text": "≤3 passages\n~520 words",
+      "size": 13.4,
+      "role": "body",
+      "box": [
+        350,
+        260,
+        112,
+        59
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_088",
+      "text": "GENERATE",
+      "size": 9.5,
+      "role": "label",
+      "box": [
+        488,
+        227,
+        132,
+        17
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_089",
+      "text": "Qwen3-4B Q4\nlocal CPU",
+      "size": 13.4,
+      "role": "body",
+      "box": [
+        498,
+        260,
+        112,
+        59
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_090",
+      "text": "CHECK",
+      "size": 9.5,
+      "role": "label",
+      "box": [
+        636,
+        227,
+        132,
+        17
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_091",
+      "text": "Citations\nNumbers\nSupport",
+      "size": 13.4,
+      "role": "body",
+      "box": [
+        646,
+        260,
+        112,
+        59
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_092",
+      "text": "RESPOND",
+      "size": 9.5,
+      "role": "label",
+      "box": [
+        784,
+        227,
+        132,
+        17
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_093",
+      "text": "Cited answer\nor source review",
+      "size": 13.4,
+      "role": "body",
+      "box": [
+        794,
+        260,
+        112,
+        59
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_094",
+      "text": "Weak evidence → clarify or report insufficient support.",
+      "size": 12.5,
+      "role": "body",
+      "box": [
+        55,
+        348,
+        407,
+        25
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_095",
+      "text": "Failed checks → one revision → withhold if still failing.",
+      "size": 12.5,
+      "role": "body",
+      "box": [
+        499,
+        348,
+        406,
+        25
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_096",
+      "text": "Why retrieval-augmented generation?",
+      "size": 14.1,
+      "role": "body",
+      "box": [
+        44,
+        399,
+        278,
+        29
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_097",
+      "text": "Replaceable source material and explicit citations.",
+      "size": 13.3,
+      "role": "body",
+      "box": [
+        44,
+        435,
+        278,
+        42
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_098",
+      "text": "Why hybrid search?",
+      "size": 14.1,
+      "role": "body",
+      "box": [
+        341,
+        399,
+        278,
+        29
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_099",
+      "text": "Exact identifiers plus paraphrases; jointly rerank.",
+      "size": 13.3,
+      "role": "body",
+      "box": [
+        341,
+        435,
+        278,
+        42
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_100",
+      "text": "Why this runtime?",
+      "size": 14.1,
+      "role": "body",
+      "box": [
+        638,
+        399,
+        278,
+        29
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_101",
+      "text": "Local CPU, no API key; small in-memory index.",
+      "size": 13.3,
+      "role": "body",
+      "box": [
+        638,
+        435,
+        278,
+        42
+      ]
+    },
+    {
+      "slide": 3,
+      "shape": "text_3_102",
+      "text": "MiniLM-L6 embeddings/reranker · DeBERTa NLI support screen · bounded orchestration · no transaction tools or confidence percentage",
+      "size": 8.5,
+      "role": "source",
+      "box": [
+        44,
+        486,
+        872,
+        13
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_103",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  USE THE CONVERSATION",
+      "size": 10,
+      "role": "label",
+      "box": [
+        44,
+        23,
+        690,
+        19
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_104",
+      "text": "INTERVIEW PROTOTYPE",
+      "size": 8.1,
+      "role": "source",
+      "box": [
+        638,
+        28,
+        120,
+        16
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_105",
+      "text": "One question becomes a conversation\nyou can inspect.",
+      "size": 29,
+      "role": "headline",
+      "box": [
+        44,
+        65,
+        872,
+        72
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_106",
+      "text": "Use the source to check the answer, then change the task or refine the situation.",
+      "size": 14,
+      "role": "body",
+      "box": [
+        44,
+        145,
+        872,
+        34
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_107",
+      "text": "01  Need",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        44,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_108",
+      "text": "02  Content",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        181,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_109",
+      "text": "03  Architecture",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        318,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_110",
+      "text": "04  Experience",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        455,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_111",
+      "text": "05  Evidence",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        592,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_112",
+      "text": "06  Decision",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        729,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_113",
+      "text": "4/6",
+      "size": 9,
+      "role": "navigation",
+      "box": [
+        886,
+        514,
+        30,
+        16
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_114",
+      "text": "RECORDED TOOL WORKFLOW / PR63",
+      "size": 10.2,
+      "role": "label",
+      "box": [
+        44,
+        189,
+        500,
+        19
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_115",
+      "text": "What is the overnight storage limit for a coin-counting machine?",
+      "size": 15.2,
+      "role": "body",
+      "box": [
+        57,
+        227,
+        474,
+        39
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_116",
+      "text": "The overnight storage limit for a coin-counting machine is $5,250 [S1].",
+      "size": 17,
+      "role": "body",
+      "box": [
+        57,
+        282,
+        474,
+        54
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_117",
+      "text": "And is monthly testing done in single or dual control?",
+      "size": 15.2,
+      "role": "body",
+      "box": [
+        57,
+        351,
+        474,
+        38
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_118",
+      "text": "Monthly testing is done in single control. [S2]",
+      "size": 17,
+      "role": "body",
+      "box": [
+        57,
+        405,
+        474,
+        36
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_119",
+      "text": "[S2] PR63 / MONTHLY TESTING",
+      "size": 10.3,
+      "role": "label",
+      "box": [
+        584,
+        187,
+        332,
+        18
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_120",
+      "text": "Same procedure. Fresh evidence for the new task.",
+      "size": 12.8,
+      "role": "body",
+      "box": [
+        44,
+        459,
+        500,
+        23
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_121",
+      "text": "Actual recorded answers and source-pane capture · inspect Evidence / Checks / Activity · topic switch, reset, feedback and export are supported",
+      "size": 8.5,
+      "role": "source",
+      "box": [
+        44,
+        486,
+        872,
+        13
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_122",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  MEASURE THE EVIDENCE",
+      "size": 10,
+      "role": "label",
+      "box": [
+        44,
+        23,
+        690,
+        19
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_123",
+      "text": "INTERVIEW PROTOTYPE",
+      "size": 8.1,
+      "role": "source",
+      "box": [
+        638,
+        28,
+        120,
+        16
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_124",
+      "text": "Finding evidence is the first test.\nAnswer quality is the next.",
+      "size": 29,
+      "role": "headline",
+      "box": [
+        44,
+        65,
+        872,
+        72
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_125",
+      "text": "Measured local regression results; independent review is still required for an operational decision.",
+      "size": 14,
+      "role": "body",
+      "box": [
+        44,
+        145,
+        872,
+        34
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_126",
+      "text": "01  Need",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        44,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_127",
+      "text": "02  Content",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        181,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_128",
+      "text": "03  Architecture",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        318,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_129",
+      "text": "04  Experience",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        455,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_130",
+      "text": "05  Evidence",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        592,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_131",
+      "text": "06  Decision",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        729,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_132",
+      "text": "5/6",
+      "size": 9,
+      "role": "navigation",
+      "box": [
+        886,
+        514,
+        30,
+        16
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_133",
+      "text": "RELEVANT PASSAGE IN TOP FIVE",
+      "size": 10.1,
+      "role": "label",
+      "box": [
+        44,
+        189,
+        305,
+        18
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_134",
+      "text": "Keyword",
+      "size": 12.4,
+      "role": "body",
+      "box": [
+        44,
+        223,
+        114,
+        23
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_135",
+      "text": "27/30",
+      "size": 15.3,
+      "role": "body",
+      "box": [
+        300,
+        222,
+        65,
+        25
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_136",
+      "text": "Semantic",
+      "size": 12.4,
+      "role": "body",
+      "box": [
+        44,
+        257,
+        114,
+        23
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_137",
+      "text": "28/30",
+      "size": 15.3,
+      "role": "body",
+      "box": [
+        300,
+        256,
+        65,
+        25
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_138",
+      "text": "Hybrid + rerank",
+      "size": 12.4,
+      "role": "body",
+      "box": [
+        44,
+        291,
+        114,
+        23
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_139",
+      "text": "30/30",
+      "size": 15.3,
+      "role": "body",
+      "box": [
+        300,
+        290,
+        65,
+        25
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_140",
+      "text": "23/30",
+      "size": 31,
+      "role": "body",
+      "box": [
+        44,
+        330,
+        310,
+        45
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_141",
+      "text": "answers pass the\nexpected-fact proxy",
+      "size": 13.8,
+      "role": "body",
+      "box": [
+        135,
+        338,
+        228,
+        43
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_142",
+      "text": "Phrase matching can miss valid wording or pass an incorrect answer.",
+      "size": 11.7,
+      "role": "body",
+      "box": [
+        44,
+        382,
+        323,
+        37
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_143",
+      "text": "WHAT TO MEASURE / WHAT A REVIEWER MUST JUDGE",
+      "size": 10.1,
+      "role": "label",
+      "box": [
+        390,
+        188,
+        526,
+        18
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_144",
+      "text": "Accuracy",
+      "size": 13.3,
+      "role": "body",
+      "box": [
+        390,
+        220,
+        112,
+        27
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_145",
+      "text": "Citations, numbers and support screens.",
+      "size": 12.2,
+      "role": "body",
+      "box": [
+        508,
+        218,
+        408,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_146",
+      "text": "Is every instruction correct for this situation?",
+      "size": 12.6,
+      "role": "body",
+      "box": [
+        508,
+        239,
+        408,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_147",
+      "text": "Relevance",
+      "size": 13.3,
+      "role": "body",
+      "box": [
+        390,
+        267,
+        112,
+        27
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_148",
+      "text": "Passage ranking and direct response.",
+      "size": 12.2,
+      "role": "body",
+      "box": [
+        508,
+        265,
+        408,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_149",
+      "text": "Does it answer the exact question?",
+      "size": 12.6,
+      "role": "body",
+      "box": [
+        508,
+        286,
+        408,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_150",
+      "text": "Completeness",
+      "size": 13.3,
+      "role": "body",
+      "box": [
+        390,
+        314,
+        112,
+        27
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_151",
+      "text": "23/30 expected-fact proxy.",
+      "size": 12.2,
+      "role": "body",
+      "box": [
+        508,
+        312,
+        408,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_152",
+      "text": "Are material conditions and exceptions included?",
+      "size": 12.6,
+      "role": "body",
+      "box": [
+        508,
+        333,
+        408,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_153",
+      "text": "Conciseness",
+      "size": 13.3,
+      "role": "body",
+      "box": [
+        390,
+        361,
+        112,
+        27
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_154",
+      "text": "28-word mean draft; bounded output.",
+      "size": 12.2,
+      "role": "body",
+      "box": [
+        508,
+        359,
+        408,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_155",
+      "text": "Is it brief without losing necessary guidance?",
+      "size": 12.6,
+      "role": "body",
+      "box": [
+        508,
+        380,
+        408,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_156",
+      "text": "Next: two independent reviewers, unseen scenarios, critical-error checks.",
+      "size": 11.7,
+      "role": "body",
+      "box": [
+        390,
+        409,
+        526,
+        22
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_157",
+      "text": "6/35 generated evaluations: source only",
+      "size": 10.8,
+      "role": "label",
+      "box": [
+        56,
+        450,
+        292,
+        23
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_158",
+      "text": "2/4 original follow-ups: fact-proxy pass",
+      "size": 10.8,
+      "role": "label",
+      "box": [
+        363,
+        450,
+        281,
+        23
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_159",
+      "text": "CPU p50 / p95: 13.8s / 23.9s",
+      "size": 10.8,
+      "role": "label",
+      "box": [
+        656,
+        450,
+        248,
+        23
+      ]
+    },
+    {
+      "slide": 5,
+      "shape": "text_5_160",
+      "text": "30 procedure questions + 4 two-turn conversations + 6 selected guardrails · AI-authored/source-checked labels · cold load excluded · draft length n=32",
+      "size": 8.5,
+      "role": "source",
+      "box": [
+        44,
+        486,
+        872,
+        13
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_161",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  DEMONSTRATE AND DECIDE",
+      "size": 10,
+      "role": "label",
+      "box": [
+        44,
+        23,
+        690,
+        19
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_162",
+      "text": "INTERVIEW PROTOTYPE",
+      "size": 8.1,
+      "role": "source",
+      "box": [
+        638,
+        28,
+        120,
+        16
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_163",
+      "text": "Demonstrate the workflow.\nValidate before a pilot.",
+      "size": 29,
+      "role": "headline",
+      "box": [
+        44,
+        65,
+        872,
+        72
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_164",
+      "text": "The working prototype is ready to inspect; the next decision is a scoped validation phase.",
+      "size": 14,
+      "role": "body",
+      "box": [
+        44,
+        145,
+        872,
+        34
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_165",
+      "text": "01  Need",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        44,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_166",
+      "text": "02  Content",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        181,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_167",
+      "text": "03  Architecture",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        318,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_168",
+      "text": "04  Experience",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        455,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_169",
+      "text": "05  Evidence",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        592,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_170",
+      "text": "06  Decision",
+      "size": 8.8,
+      "role": "navigation",
+      "box": [
+        729,
+        514,
+        123,
+        16
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_171",
+      "text": "6/6",
+      "size": 9,
+      "role": "navigation",
+      "box": [
+        886,
+        514,
+        30,
+        16
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_172",
+      "text": "DEMONSTRATE / LIVE TOOL OR APPROVED RECORDING",
+      "size": 10,
+      "role": "label",
+      "box": [
+        44,
+        190,
+        475,
+        19
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_173",
+      "text": "01",
+      "size": 10.4,
+      "role": "label",
+      "box": [
+        53,
+        224,
+        17,
+        18
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_174",
+      "text": "Ask a routine rule",
+      "size": 15.1,
+      "role": "body",
+      "box": [
+        91,
+        219,
+        444,
+        23
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_175",
+      "text": "Coin overnight limit → monthly-testing follow-up.",
+      "size": 11.7,
+      "role": "body",
+      "box": [
+        91,
+        245,
+        444,
+        20
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_176",
+      "text": "$5,250 overnight; single control for testing. [PR63]",
+      "size": 11.7,
+      "role": "body",
+      "box": [
+        91,
+        264,
+        444,
+        22
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_177",
+      "text": "02",
+      "size": 10.4,
+      "role": "label",
+      "box": [
+        53,
+        293,
+        17,
+        18
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_178",
+      "text": "Change a condition",
+      "size": 15.1,
+      "role": "body",
+      "box": [
+        91,
+        288,
+        444,
+        23
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_179",
+      "text": "Emailed notary document → requester is present.",
+      "size": 11.7,
+      "role": "body",
+      "box": [
+        91,
+        314,
+        444,
+        20
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_180",
+      "text": "The emailed-document restriction still applies. [PR1000]",
+      "size": 11.7,
+      "role": "body",
+      "box": [
+        91,
+        333,
+        444,
+        22
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_181",
+      "text": "03",
+      "size": 10.4,
+      "role": "label",
+      "box": [
+        53,
+        362,
+        17,
+        18
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_182",
+      "text": "Inspect an exception",
+      "size": 15.1,
+      "role": "body",
+      "box": [
+        91,
+        357,
+        444,
+        23
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_183",
+      "text": "Newer account → Private Bank Experience exception.",
+      "size": 11.7,
+      "role": "body",
+      "box": [
+        91,
+        383,
+        444,
+        20
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_184",
+      "text": "$1,000/day rule; review the source if checks fail. [PR1949]",
+      "size": 11.7,
+      "role": "body",
+      "box": [
+        91,
+        402,
+        444,
+        22
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_185",
+      "text": "VALIDATE / OWNERS AND GATES",
+      "size": 10,
+      "role": "label",
+      "box": [
+        584,
+        190,
+        332,
+        20
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_186",
+      "text": "Quality · procedure owners + SMEs",
+      "size": 13.9,
+      "role": "body",
+      "box": [
+        584,
+        220,
+        332,
+        25
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_187",
+      "text": "Unseen scenarios; four quality scores.\nCritical errors and coverage are separate gates.",
+      "size": 12.5,
+      "role": "body",
+      "box": [
+        584,
+        249,
+        332,
+        41
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_188",
+      "text": "Value · branch operations + AI team",
+      "size": 13.9,
+      "role": "body",
+      "box": [
+        584,
+        291,
+        332,
+        25
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_189",
+      "text": "Task success; time to correct guidance.\nCompare with current search.",
+      "size": 12.5,
+      "role": "body",
+      "box": [
+        584,
+        320,
+        332,
+        41
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_190",
+      "text": "Pilot controls · security + platform",
+      "size": 13.9,
+      "role": "body",
+      "box": [
+        584,
+        362,
+        332,
+        25
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_191",
+      "text": "Identity, source access/versioning, monitoring and rollback.",
+      "size": 12.5,
+      "role": "body",
+      "box": [
+        584,
+        391,
+        332,
+        41
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_192",
+      "text": "Recommendation: validate quality and employee value before an operational pilot.",
+      "size": 14,
+      "role": "body",
+      "box": [
+        56,
+        454,
+        848,
+        22
+      ]
+    },
+    {
+      "slide": 6,
+      "shape": "text_6_193",
+      "text": "20-minute presentation → 15-minute walkthrough · approved silent recording 9:25 + live inspection/Q&A · AI assistance disclosed; candidate owns decisions",
+      "size": 8.5,
+      "role": "source",
+      "box": [
+        44,
+        486,
+        872,
+        13
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "asset": "recorded_followup_evidence.png",
+  "kind": "unaltered real browser screenshot from the approved silent demo capture",
+  "sha256": "418acd7e8a533f7f45df5d07e02de8a5e7274b8852535bfc5bdc610c50e8f3f7",
+  "capture_manifest_sha256": "300f7b4316ee066d748dd22311ba75721e5223f43fb70220e3d5f155347a3e12",
+  "editing": "Native PowerPoint picture crop only; image pixels and source text are unchanged.",
+  "case": "coin-machine follow-up, monthly testing, PR63 / S2"
+}

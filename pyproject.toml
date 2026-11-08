@@ -16,6 +16,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest==8.2.0", "pypdf==7.0.0", "pymupdf==1.28.2", "python-pptx==1.0.2", "playwright==1.56.0"]
+presentation = ["pywin32==312; sys_platform == 'win32'"]
 demo = ["kokoro-onnx==0.6.1", "soundfile==0.13.1", "onnxruntime==1.23.2", "phonemizer==3.6.0", "espeakng-loader==0.2.4"]
 
 [tool.setuptools.packages.find]

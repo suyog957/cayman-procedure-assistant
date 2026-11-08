@@ -1,54 +1,47 @@
-# Leadership presentation: story, design and requirement coverage
+# Solution presentation: content and requirement coverage
 
-The six-slide deck is designed for the assignment's 20-minute senior-leadership presentation, followed by the separate 15-minute technical walkthrough. It explains the employee outcome first, then the engineering choices and measured evidence behind it. Detailed speaker notes provide the technical depth and explicit transitions; the visible slides carry the main argument.
+The presentation explains the solution to senior leadership in six slides. The opening establishes the objective, implemented scope and methodology. Examples support the user-experience and demonstration sections. Speaker notes provide the technical detail and transitions for a 20-minute presentation, followed by a separate 15-minute walkthrough.
 
-## The connected story
+## Slide structure
 
-| Slide / timing | Leadership question | Main message | Connection to the next slide |
-|---|---|---|---|
-| 1 / 0:00–2:30 | What employee problem did we solve? | A working assistant turns a procedure question into guidance with an inspectable source. Faster access to correct guidance is a goal to test, not a claimed saving. | An inspectable answer starts with how the original rules are organized. |
-| 2 / 2:30–6:00 | How did the supplied documents become usable evidence? | Preserve the task, conditions, exceptions and source identity before retrieving passages. | The prepared collection feeds a bounded request pipeline. |
-| 3 / 6:00–9:30 | How is an answer produced, and why these choices? | Resolve context, retrieve/rerank, select evidence, generate locally and screen the output. Explain weak evidence, one correction and source review. | These controls must be usable in an employee conversation. |
-| 4 / 9:30–13:00 | How does it work for the employee and their follow-up? | Actual recorded coin-machine responses show fresh evidence for a new task. The original source is visible beside the dialogue. | A convincing interaction needs separate tests for evidence retrieval and response quality. |
-| 5 / 13:00–17:00 | What does the evidence establish, and what remains to validate? | Compare retrieval methods; distinguish the expected-fact proxy from accuracy; explicitly measure accuracy, relevance, completeness and conciseness. | The observed limits define the demonstration and next leadership decision. |
-| 6 / 17:00–20:00 | What should we inspect now and validate next? | Demonstrate routine, conditional and exception scenarios; recommend a scoped validation phase with owners and gates. | Hand off to the live application or approved 9:25 silent recording, with time for source inspection and questions. |
+| Slide | Core purpose | Content |
+|---|---|---|
+| 1 → Solution overview | Define the business objective, scope and methodology | Employee access to applicable guidance; generative chat over all eleven procedures; retrieval-augmented generation; follow-ups, evidence workspace and evaluation capabilities. No example question or answer card. |
+| 2 → Document engineering | Explain preparation and organization of the complete collection | Inventory/profile; structural HTML parsing; ~110-word narrative chunks and 20-word overlap; table labels and conditions; 1,388 indexed passages; BM25 and 384D vectors; source identity and integrity. No procedure-specific example. |
+| 3 → Architecture and design choices | Explain the request path and defend technology choices | Context/scope → hybrid retrieval and reranking → selected evidence → local Qwen generation → citation/numeric/support checks → answer or source review. Explain why RAG, hybrid retrieval and the local runtime were selected. |
+| 4 → Experience and follow-ups | Explain interaction and conversation design | Library and search scope; context retention and topic changes; citations, checks/activity, feedback and export. A bounded panel reproduces an actual recorded question, answer and follow-up to illustrate those rules. |
+| 5 → Evaluation | Explain how response quality is tested and what was measured | Accuracy, relevance, completeness and conciseness have explicit diagnostics and independent-review questions. Compare retrieval methods; show fact-proxy coverage, source-only outcomes, follow-up misses and latency with clear limitations. |
+| 6 → Demonstration | Show observable solution behavior and summarize the engineering work | Routine question/follow-up, changed notary condition and savings-bond exception. Inspect source grounding, conversation continuity and failure handling. Conclude with independent quality review, exception coverage and deployment work. |
 
-The coin-machine question is the running example across the opening, table-preparation example and recorded conversation. This continuity connects the employee need to the data design and visible tool behavior. Notary and savings-bond examples then demonstrate condition preservation and honest fallback. The closing recommendation follows from the measured results.
+The story is objective → evidence preparation → answer architecture → employee interaction → evaluation → demonstration. A single example does not define the business problem or the content-engineering method.
 
-## Assignment coverage
+## Requirement coverage
 
-| Assignment expectation | Where the deck answers it |
+| Requested expectation | Presentation evidence |
 |---|---|
-| Functional generative chat grounded in all eleven procedures | Slide 1 defines the delivered scope; slide 3 shows actual local Qwen generation; slide 4 reproduces real recorded outputs. The tool and separate demonstration are the execution evidence. |
-| Approximately five to six slides for senior leadership | Exactly six slides, with takeaway headlines, a business-first opening, measurable evidence and a closing decision. |
-| Methodology, architecture, technology choices and key design decisions | Slides 2–3 show structural parsing, bounded passages, hybrid search, rank fusion, reranking, Qwen3 quantization, local CPU inference, claim checks and fallback. Notes explain RAG versus fine-tuning/full-corpus prompting, exact in-memory search and the limits of local models. |
-| Document processing, organization, chunking and retrieval | Slide 2 explicitly shows task/control preservation, source identity, ~110-word narrative targets, 20-word overlap, table conditions, BM25, 384-dimensional MiniLM vectors, fusion/reranking and the evidence pack. |
-| Accuracy, relevance, completeness and conciseness | All four dimensions are visible on slide 5 with included diagnostics and the question an independent reviewer must judge. Notes cover unseen scenarios, two reviewers, adjudication, critical errors, coverage and false refusal. |
-| User experience and follow-ups | Slide 4 shows an actual question, answer, follow-up and fresh citation. Notes explain scenario retention, new tasks, named topic/ID changes, document scope, reset, isolation, feedback, export and Evidence/Checks/Activity views. |
-| Demonstrate procedure questions, responses and follow-ups | Slide 4 contains real recorded dialogue and source evidence. Slide 6 gives the live/recorded demonstration sequence across coin machines, emailed notary documents and savings-bond exceptions. The runbook allocates the separate 15-minute walkthrough. |
-| Be prepared to defend technical choices | Notes explain tradeoffs, development failures, local runtime constraints, checks that can fail and proposed validation/production work. |
-| Explain generative-AI use and validation | Visible disclosure on slides 1 and 6; detailed notes distinguish AI-assisted development, runtime generation, source checking and non-independent regression labels. |
-| No implementation source in presentation or demo | All diagrams, charts and text are native presentation objects. The only product image is a real source-pane screenshot. The source-free archive retains its six-file allowlist. |
+| Functional generative conversational solution based on eleven procedures | Slide 1 defines the scope and implemented capabilities; slide 3 shows runtime generation; slides 4 and 6 show actual outputs and the demonstration workflow. |
+| Approximately five to six slides for senior leadership | Exactly six, with a business objective, technical methodology, measured results and a clear demonstration handoff. |
+| Methodology, architecture, technologies and key decisions | Slides 1–3 explain RAG, structural parsing, bounded evidence, lexical/dense retrieval, rank fusion/reranking, local quantized Qwen inference and checks. Notes defend the choices and tradeoffs. |
+| Document processing, organization, chunking and retrieval | Slide 2 covers the full collection and extraction/chunking/indexing rules. Slide 3 explains question-time retrieval and evidence selection. |
+| Accuracy, relevance, completeness and conciseness | All four dimensions are visible on slide 5; notes explain independent reviewers, unseen scenarios, adjudication, critical errors, coverage and false refusal. |
+| User experience and follow-up handling | Slide 4 explains scope, context retention, fresh retrieval, topic changes, evidence inspection, feedback/export and session behavior, with a short recorded dialogue. |
+| Questions, responses and follow-ups in the demonstration | Slide 6 and the solution walkthrough cover routine, conditional and exception scenarios, plus clarification and unsupported requests. |
+| Explanation of technical approach and decisions | Detailed speaker notes and the architecture document explain model/retrieval tradeoffs, table semantics, token budgets, bounded correction, integrity checks and known failures. |
+| Generative-AI use and validation | Slide 6 and notes distinguish development assistance from runtime generation, and explain source checking, engineering tests, retained traces and non-independent labels. |
+| No implementation source in shared presentation materials | The package has a fixed six-file allowlist. Slides contain editable text/diagrams/charts and the wordmark; implementation files are excluded. |
 
-## Visual choices
+## Design and language
 
-- Warm white replaces the full red cover. Red identifies structure and emphasis; gold marks the evidence flow. Deep green distinguishes source-supported examples and the validation recommendation.
-- A shared six-stage navigation rail makes the progression explicit: Need → Content → Architecture → Experience → Evidence → Decision.
-- Large Georgia takeaway headlines and Segoe UI body text use locally available fonts. Core content is editable PowerPoint text, shapes and bar charts, not flattened slide images.
-- Each composition fits its message: a tangible answer example, a source-table transformation, a pipeline, an actual dialogue/source view, an evaluation matrix and a demo/decision handoff.
-- The original wordmark remains unmodified in a small red badge. The deck is clearly labelled as an interview prototype over supplied Cayman Bank documents.
-- The product image is an unaltered browser capture from the approved demo, displayed using a native crop. Its source hash and provenance are recorded in `assets/presentation/PROVENANCE.json`.
+Warm white backgrounds, restrained red/gold accents, serif takeaway headings and consistent navigation connect the deck. Native PowerPoint objects keep the content editable. Slides and speaker notes use professional solution language without interview, mock-assignment or prototype labels. Measured outcomes, quality limits and future capabilities remain explicit.
 
-## Evidence and interpretation
+The completed file is `submission/Branch_Assist_Solution_Presentation_Final.pptx`, with a matching PDF. Earlier PowerPoints were open during revision and are left untouched at their previous filenames. The application download path also receives the current PDF; the shared ZIP includes the newly named presentation.
 
-Slide 5 uses the accepted evaluation files, not invented benchmarks: 27/30 keyword evidence hits, 28/30 semantic hits and 30/30 hybrid hits in the first five; 23/30 cases passing the expected-fact proxy; six source-only outcomes among 35 generated evaluations; two of four original follow-up fact proxies passing; local serial CPU p50/p95 of 13.8/23.9 seconds excluding cold load. The 28-word mean is explicitly draft length, with 32 recorded drafts, and includes withheld drafts.
+## Validation and rendering
 
-The deck does not label the proxy as independently established accuracy, hide fallback losses, imply comprehensive security from six selected cases, or claim measured productivity gains. Pilot controls are future work. The recommendation is validation before operational deployment.
+`presentation_deck.py` builds the editable file. PowerPoint is used when background opening is available; local LibreOffice Impress provides an independent rendering path when it is not. A separate local tool/profile keeps existing open presentations intact. Rendered text is checked against intended boxes and the PPT text; all six slides are inspected visually.
 
-## Production and checks
+`verify_presentation.py` checks that the first two slides contain solution/method content without procedure examples, that contextual labels are absent, that all four quality dimensions are visible, and that recorded dialogue and measured values match their evidence. It also verifies the PDF, source-free package and all preserved final-video hashes.
 
-`scripts/presentation_deck.py` builds native editable PowerPoint objects. Desktop Microsoft PowerPoint opens only the generated deck without a presentation window, checks rendered text bounds, exports the actual PDF and produces 1920×1080 slide previews. Existing user presentations are left alone. `scripts/build_deliverables.py` then generates the notes/runbook PDFs and source-free package.
+The accepted evaluation remains unchanged: 27/30, 28/30 and 30/30 top-five evidence hits for keyword, semantic and hybrid retrieval; 23/30 expected-fact proxy passes; six source-only outcomes among 35 generated evaluations; two of four original follow-up fact proxies passing; CPU p50/p95 of 13.8/23.9 seconds, excluding cold load. The mean of 28 words is draft length across 32 records, including withheld drafts. These are diagnostics with stated limits, not independently established accuracy.
 
-Rebuilding requires the prepared Windows environment, desktop PowerPoint and `python -m pip install -e ".[dev,presentation]"`. The runtime assistant does not require PowerPoint. Use `python scripts/verify_presentation.py` and `python scripts/verify_deliverables.py` for content, layout, metric, PDF and package consistency. Visual previews are in `artifacts/slides/` and `artifacts/presentation/Leadership_Deck_Preview.jpg`.
-
-This redesign changes presentation materials and the packaged PDFs. It does not change the assistant, its accepted evaluation results or the approved final recording. The silent tool-only video does not display the slide deck; a replacement video is unnecessary. All preserved final-video hashes remain subject to verification.
+The approved silent tool recording remains unchanged. This revision changes presentation content and the accompanying shared materials; it does not change the chat workflow or its accepted results.

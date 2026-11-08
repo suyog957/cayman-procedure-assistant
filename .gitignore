@@ -15,3 +15,9 @@ dist/
 .mypy_cache/
 .ruff_cache/
 artifacts/video_build/
+~$*
+# Intermediate review copies can remain open while the revised deck is built.
+submission/Branch_Assist_Solution_Presentation.pptx
+submission/Branch_Assist_Solution_Presentation.pdf
+submission/Branch_Assist_Solution_Presentation_Revised.pptx
+submission/Branch_Assist_Solution_Presentation_Revised.pdf

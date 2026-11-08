@@ -6,5 +6,8 @@
   "slides": 6,
   "source_free_zip_matches_files": true,
   "approved_video_and_sidecar_hashes_survive_checkout": true,
-  "models_not_required_for_structural_artifact_verification": true
+  "models_not_required_for_structural_artifact_verification": true,
+  "presentation_basename": "Branch_Assist_Solution_Presentation_Final",
+  "pptx_sha256": "3148f556895aac81bd9f15e90ef1c6724a3e7ceb73df151fb974912cb45ca829",
+  "pdf_sha256": "5ef6ce042c790775c9a032b2ba9afe57ae5190f5aae30f21a5d1b6c8cbcc9e38"
 }

@@ -9,18 +9,18 @@
   "embedding_norms_valid": true,
   "slides": 6,
   "speaker_note_words_per_slide": [
-    335,
-    363,
-    381,
-    375,
+    361,
+    385,
+    382,
+    389,
     418,
-    427
+    426
   ],
   "slide_pdf_valid": true,
   "submission_archive_source_free": true,
   "archive_files": [
-    "Cayman_Procedure_Assistant.pdf",
-    "Cayman_Procedure_Assistant.pptx",
+    "Branch_Assist_Solution_Presentation_Final.pdf",
+    "Branch_Assist_Solution_Presentation_Final.pptx",
     "Demo_Runbook.pdf",
     "Presenter_Notes.pdf",
     "README.txt",

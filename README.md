@@ -1,8 +1,8 @@
 # Branch Assist · Cayman Bank Procedure Assistant
 
-A working local generative chat assistant, evaluation suite, and six-slide presentation for the supplied Senior Lead Quantitative Analytics Specialist exercise. Both PDF pages were reviewed and all eleven supplied HTML procedures are indexed. Start with [the detailed solution overview](SOLUTION_OVERVIEW.md) and [the requirement traceability review](docs/ASSIGNMENT_REVIEW.md).
+A local generative conversational assistant, evaluation suite and six-slide solution presentation over eleven operational procedures. Start with [the detailed solution overview](SOLUTION_OVERVIEW.md) and [the requirement traceability review](docs/ASSIGNMENT_REVIEW.md).
 
-Version 2 adds a Wells Fargo–inspired workspace with a procedure library and an evidence desk. Inspect exact source passages, statement-to-source checks and actual execution activity; a failed draft can receive one bounded correction before being withheld. Read [the version 2 design](docs/EXPERIENCE_V2.md) for the architecture and limitations. This is an interview prototype using the supplied Cayman Bank documents, not a Wells Fargo service.
+Version 2 adds a Wells Fargo–inspired workspace with a procedure library and an evidence desk. Inspect exact source passages, statement-to-source checks and actual execution activity; a failed draft can receive one bounded correction before being withheld. Read [the version 2 design](docs/EXPERIENCE_V2.md) for the architecture and limitations. The knowledge collection is limited to the provided Cayman Bank documents.
 
 ![Branch Assist workspace](artifacts/screenshots/welcome.png)
 
@@ -35,15 +35,15 @@ Try these in one conversation:
 2. “And is monthly testing done in single or dual control?”
 3. “What about savings bond redemption fees?”
 
-See [the timed demo runbook](docs/DEMO_RUNBOOK.md) for the full presentation sequence, expected source facts and fallback procedure.
+See [the solution walkthrough](docs/SOLUTION_WALKTHROUGH.md) for the full presentation sequence, expected source facts and fallback procedure.
 
 ## Presentation and submission
 
-The redesigned **[six-slide leadership PowerPoint](submission/Cayman_Procedure_Assistant.pptx)** and [matching PDF](submission/Cayman_Procedure_Assistant.pdf) follow one connected story: employee need → organized rules → answer pipeline → conversation → evidence → demonstration and decision. The deck uses a light cover, restrained red/gold accents, editable diagrams and charts, a real source-pane capture, and detailed 20-minute speaker notes. See [the six-slide preview](artifacts/presentation/Leadership_Deck_Preview.jpg) and [the presentation story and requirement map](docs/PRESENTATION_STORY.md).
+The **[six-slide solution PowerPoint](submission/Branch_Assist_Solution_Presentation_Final.pptx)** and [matching PDF](submission/Branch_Assist_Solution_Presentation_Final.pdf) present the objective and implemented scope, document engineering, architecture and technology choices, user experience and follow-ups, evaluation, and demonstration. Opening slides explain the solution and its methodology; examples are confined to the experience and demonstration sections. See [the slide preview](artifacts/presentation/Leadership_Deck_Preview.jpg) and [the presentation content map](docs/PRESENTATION_STORY.md).
 
 The same folder contains presenter notes, the timed demo runbook and recorded demonstration responses. `submission/Presentation_Materials.zip` contains the current allowlisted presentation artifacts and excludes implementation source, model files and raw evaluation internals. The approved final video remains separate and unchanged.
 
-The assignment says not to submit or show source code in presentation materials or the demonstration. Keep the implementation files in this workspace for preparation. Check the recruiter email for the deadline, recipient and meeting details; those were not provided. Nothing has been submitted externally.
+The shared presentation package excludes implementation source and model files. Use the solution walkthrough for the presentation flow, procedure questions and source facts to inspect.
 
 ## Reproduce on another Windows machine
 
@@ -79,7 +79,7 @@ python scripts/ask.py "What is the coin-counting machine overnight limit?" "And 
 
 `scripts/check_browser.py --chat` is an optional browser integration check using Playwright and installed Chrome. It verifies citations, check/activity views, the procedure library, export and session behavior. It is a development check, not a runtime dependency. Start the local Streamlit server first. Screenshots and browser results are stored under `artifacts/`.
 
-After the full browser check and a test run with `--junitxml=artifacts/test_results.xml`, `python scripts/verify_deliverables.py` checks source integrity, index dimensions, slide count, notes, evaluation consistency and the source-free archive. The prepared workspace includes these verification artifacts. Rebuilding the redesigned deck uses desktop Microsoft PowerPoint on Windows for the actual PDF export and native text-fit checks. Install the preparation extras with `python -m pip install -e ".[dev,presentation]"`; the app itself does not require PowerPoint. Run `python scripts/verify_presentation.py` after rebuilding to check assignment coverage, metric labels, editability and PDF consistency.
+After the full browser check and a test run with `--junitxml=artifacts/test_results.xml`, `python scripts/verify_deliverables.py` checks source integrity, index dimensions, slide count, notes, evaluation consistency and the source-free archive. The prepared workspace includes these verification artifacts. Rebuilding uses desktop PowerPoint when available, with local LibreOffice Impress as an independent rendering option. Both produce the PDF and visual previews from the editable PPTX. Install the preparation extras with `python -m pip install -e ".[dev,presentation]"`; the app itself does not require PowerPoint. Run `python scripts/verify_presentation.py` after rebuilding to check assignment coverage, metric labels, editability and PDF consistency.
 
 ## Project map
 
@@ -99,6 +99,6 @@ After the full browser check and a test run with `--junitxml=artifacts/test_resu
 
 ## Interpretation of results
 
-This is a tested prototype using a fixed supplied snapshot. A retrieved citation is not a guarantee of a correct answer. Automatic fact matching and the NLI screen can be wrong. Cases are AI-authored and source-checked, not independently SME-labelled. The evaluation report states observed failures, coverage, fallback behavior and the need for independent review. Enterprise authentication, document entitlements, current-policy authority, production monitoring and approval have not been implemented.
+The implementation uses a fixed provided document collection. A retrieved citation is not a guarantee of a correct answer. Automatic fact matching and the NLI screen can be wrong. Cases are AI-authored and source-checked, not independently SME-labelled. The evaluation report states observed failures, coverage, fallback behavior and the need for independent review. Enterprise authentication, document entitlements, current-policy authority, production monitoring and approval have not been implemented.
 
 Read [the architecture](docs/ARCHITECTURE.md), [AI use and validation](docs/AI_USE_AND_VALIDATION.md), and [the review rubric](evaluation/REVIEW_RUBRIC.md) before presenting the results.

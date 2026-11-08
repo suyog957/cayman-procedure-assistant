@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 import numpy as np
 import pymupdf
 from pptx import Presentation
+from presentation_deck import DECK_BASENAME
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
@@ -18,15 +19,15 @@ manifest=json.loads((ROOT/'artifacts/index/corpus_manifest.json').read_text())
 vectors=load_embedding_index(ROOT/'artifacts/index',manifest['chunk_count'])
 assert vectors.shape == (manifest['chunk_count'],384)
 assert np.allclose(np.linalg.norm(vectors,axis=1),1,atol=1e-5)
-deck=Presentation(ROOT/'submission/Cayman_Procedure_Assistant.pptx')
+deck=Presentation(ROOT/'submission'/(DECK_BASENAME+'.pptx'))
 assert len(deck.slides)==6
 notes_counts=[len(s.notes_slide.notes_text_frame.text.split()) for s in deck.slides]
 assert min(notes_counts)>150
-pdf=pymupdf.open(ROOT/'submission/Cayman_Procedure_Assistant.pdf')
+pdf=pymupdf.open(ROOT/'submission'/(DECK_BASENAME+'.pdf'))
 assert len(pdf)==6 and all(len(p.get_text())>200 for p in pdf)
 assert all(abs(p.rect.width/p.rect.height-16/9)<.001 for p in pdf)
 pdf.close()
-allowlist={'Cayman_Procedure_Assistant.pptx','Cayman_Procedure_Assistant.pdf','Demo_Runbook.pdf','Recorded_Demo.pdf','Presenter_Notes.pdf','README.txt'}
+allowlist={DECK_BASENAME+'.pptx',DECK_BASENAME+'.pdf','Demo_Runbook.pdf','Recorded_Demo.pdf','Presenter_Notes.pdf','README.txt'}
 with zipfile.ZipFile(ROOT/'submission/Presentation_Materials.zip') as archive:
     assert set(archive.namelist())==allowlist
     assert archive.testzip() is None

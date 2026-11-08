@@ -1,26 +1,37 @@
 {
   "SOLUTION_OVERVIEW.pdf": {
     "pages": 5,
-    "all_pages_have_text": true
+    "all_pages_have_text": true,
+    "contextual_labels_absent": true
   },
   "docs/EVALUATION_REPORT.pdf": {
     "pages": 4,
-    "all_pages_have_text": true
+    "all_pages_have_text": true,
+    "contextual_labels_absent": true
+  },
+  "submission/Branch_Assist_Solution_Presentation_Final.pdf": {
+    "pages": 6,
+    "all_pages_have_text": true,
+    "contextual_labels_absent": true
   },
   "submission/Cayman_Procedure_Assistant.pdf": {
     "pages": 6,
-    "all_pages_have_text": true
+    "all_pages_have_text": true,
+    "contextual_labels_absent": true
   },
   "submission/Demo_Runbook.pdf": {
-    "pages": 3,
-    "all_pages_have_text": true
+    "pages": 2,
+    "all_pages_have_text": true,
+    "contextual_labels_absent": true
   },
   "submission/Presenter_Notes.pdf": {
     "pages": 5,
-    "all_pages_have_text": true
+    "all_pages_have_text": true,
+    "contextual_labels_absent": true
   },
   "submission/Recorded_Demo.pdf": {
     "pages": 7,
-    "all_pages_have_text": true
+    "all_pages_have_text": true,
+    "contextual_labels_absent": true
   }
 }

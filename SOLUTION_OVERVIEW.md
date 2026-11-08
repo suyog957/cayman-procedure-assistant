@@ -1,6 +1,6 @@
 # Detailed solution overview
 
-The complete assignment PDF was reviewed and an end-to-end, locally runnable generative chat solution was built over all eleven supplied procedures. The deliverables include six editable PowerPoint slides with speaker notes, a matching PDF, a timed demonstration guide, measured evaluation, raw evidence traces and a source-free presentation archive. This is a tested exercise prototype, not a bank-approved operational deployment.
+Branch Assist is a locally runnable generative conversational solution over eleven operational procedures. It combines structured document processing, hybrid retrieval, evidence-based generation and inspectable output checks. The supporting materials include a six-slide solution presentation, measured evaluation, response traces and a timed demonstration guide.
 
 ## What was built and why
 
@@ -8,15 +8,13 @@ The system helps employees ask a procedure question, inspect the supporting pass
 
 The final generator is Qwen/Qwen3-4B-GGUF:Q4_K_M. The Qwen3 model uses four-bit GGUF inference through llama.cpp on CPU. An earlier Qwen2.5 1.5B float32 baseline produced too many distracting details and withheld drafts; its complete results are retained separately. Model choice was evaluated empirically rather than inferred from published benchmarks.
 
-The solution uses structure-aware HTML parsing, a JSONL passage store, BM25 lexical search, 384-dimensional MiniLM embeddings, reciprocal rank fusion, MiniLM cross-encoder reranking, bounded evidence, actual local generation, citation-local numeric checks and a DeBERTa NLI screening signal. The Wells Fargo–inspired version 2 workspace exposes a searchable procedure library and an Evidence desk with Evidence, Checks and Activity views. The brand asset is the unmodified official website wordmark, and the interface is explicitly labelled as an interview prototype using the supplied Cayman Bank documents.
+The solution uses structure-aware HTML parsing, a JSONL passage store, BM25 lexical search, 384-dimensional MiniLM embeddings, reciprocal rank fusion, MiniLM cross-encoder reranking, bounded evidence, actual local generation, citation-local numeric checks and a DeBERTa NLI screening signal. The Wells Fargo–inspired version 2 workspace exposes a searchable procedure library and an Evidence desk with Evidence, Checks and Activity views. The workspace uses the supplied Cayman Bank documents as its knowledge collection.
 
 Version 2 checks original sources and cached-index fingerprints on every supported request. It binds explicit citations to individual claims and records the source passage and evidence window behind each support check. A failed draft may receive one correction using the same evidence; the revised draft must pass the same checks or be withheld. Actual stage events and deterministic decision criteria are visible; the interface does not fabricate private model reasoning or a confidence percentage. Details are in [the version 2 design](docs/EXPERIENCE_V2.md).
 
-## Assignment alignment
+## Solution presentation
 
-The PDF asks for a functional generative conversational solution grounded in eleven documents, approximately five to six PPT slides, methodology and architecture, technology and design decisions, document processing/chunking/retrieval, quality measurement, follow-ups and a demonstration. It allows generative AI, requires explanation of its use and validation, and excludes source code from the presentation and demonstration. Each expectation is mapped in [the assignment review](docs/ASSIGNMENT_REVIEW.md).
-
-The deck has exactly six slides. Presenter notes support a 20-minute delivery; the runbook allocates the separate 15-minute walkthrough. Presentation files are isolated from implementation source. The recruiter-specific deadline, recipient and meeting details were not supplied and are not inferred from the PDF date. No materials have been sent externally.
+The six-slide presentation covers the business objective and solution scope, document engineering, architecture and technology choices, user experience and follow-ups, quality evaluation, and the demonstration. Speaker notes support a 20-minute explanation followed by a 15-minute walkthrough. The presentation package contains solution materials and excludes implementation source.
 
 ## Input review and content preservation
 
@@ -101,22 +99,22 @@ Initial failures combined rules from different situations and invented an except
 
 Independent SME-authored and adjudicated cases are the first priority. Evaluate accuracy, relevance, completeness and conciseness separately, and treat critical errors independently of averages. Include unseen scenarios, long conversations, cross-references, conditional tables, outdated/conflicting sources, malicious retrieved content and realistic employee tasks.
 
-Production also needs authoritative effective policy versions, approved ingestion and rollback, employee SSO, document-level entitlements, approved model selection, redacted audit/retention, monitoring, rate limits, concurrency, timeouts, escalation and required enterprise review. The prototype's local processing and simple identifier patterns do not replace these controls.
+Production also needs authoritative effective policy versions, approved ingestion and rollback, employee SSO, document-level entitlements, approved model selection, redacted audit/retention, monitoring, rate limits, concurrency, timeouts, escalation and required enterprise review. Local processing and simple identifier patterns do not replace these controls.
 
 The recommended next step is a scoped validation phase with procedure owners and model/platform teams. A pilot should depend on agreed critical-error, coverage, correctness, completeness and latency gates and measured employee benefit over existing search. No productivity, cost saving or enterprise-compliance achievement is claimed here.
 
 ## Where to find the deliverables
 
-- `submission/Cayman_Procedure_Assistant.pptx`: six editable slides and presenter notes.
-- `submission/Cayman_Procedure_Assistant.pdf`: matching slide PDF.
+- `submission/Branch_Assist_Solution_Presentation_Final.pptx`: six editable slides and presenter notes.
+- `submission/Branch_Assist_Solution_Presentation_Final.pdf`: matching slide PDF.
 - `submission/Demo_Runbook.pdf`: timed presentation and demonstration guide.
 - `submission/Recorded_Demo.pdf`: clearly labelled saved responses for rehearsal and backup.
 - `submission/Presentation_Materials.zip`: allowlisted source-free presentation package.
 - `docs/ARCHITECTURE.md`: component design, decisions, parameters and production path.
 - `docs/ASSIGNMENT_REVIEW.md`: every requirement, acceptance evidence and three-day plan.
 - `docs/AI_USE_AND_VALIDATION.md`: development/runtime AI use and validation boundaries.
-- `docs/TECHNICAL_WALKTHROUGH.md`: design defense and interview questions.
+- `docs/TECHNICAL_WALKTHROUGH.md`: technical design decisions and review questions.
 - `evaluation/REVIEW_RUBRIC.md`: independent-review scoring and proposed release gates.
 - `artifacts/index/`, `artifacts/evaluation/` and `artifacts/runtime_manifest.json`: reproducible source, measurement and model provenance.
 
-Run the application with the instructions in `README.md`. Review the source traces and personalize the narrative before presenting. The candidate must verify deadline/submission logistics and be able to explain and defend the work personally.
+Run the application using `README.md`. Inspect the recorded evidence, measured results and documented limitations when reviewing the solution.

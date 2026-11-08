@@ -21,12 +21,12 @@ Use **New investigation** to reset. Citation buttons such as **[S1] PR63** selec
 
 | Time | Slide | Message |
 |---|---|---|
-| 0:00–2:30 | 1 — The employee need | Establish the task, tangible answer example and business goal to validate |
-| 2:30–6:00 | 2 — Organize the rules | Keep task and control together; explain parsing, chunking, source identity and retrieval |
+| 0:00–2:30 | 1 — Solution overview | Establish the business objective, implemented capabilities, scope and RAG methodology |
+| 2:30–6:00 | 2 — Document engineering | Explain profiling, structural parsing, chunking, indexing, conditions and source identity across all eleven documents |
 | 6:00–9:30 | 3 — Build the answer | Trace the request, release/fallback paths, technology choices and tradeoffs |
 | 9:30–13:00 | 4 — Use the conversation | Show actual recorded answers, fresh evidence, follow-ups and employee controls |
 | 13:00–17:00 | 5 — Evaluation | Separate retrieval success, generated fact coverage, screening, conciseness and human correctness |
-| 17:00–20:00 | 6 — Demonstrate and decide | Hand off to the tool demo and propose quality, value and pilot-control gates with owners |
+| 17:00–20:00 | 6 — Demonstration | Hand off to routine, conditional and exception scenarios; inspect grounding, continuity and failure handling |
 
 Numbers on slide 5 are generated from the final local metrics. Do not replace proxy labels with a claim of independently established accuracy. Leave a few seconds per slide for transitions and questions; adjust speaking pace during rehearsal.
 

@@ -90,6 +90,6 @@ On the same 30-question regression set, the previous version had 73.3% all-fact 
 
 Do not report these proxies as independently established accuracy. Have two operational SMEs independently score accuracy, relevance, completeness and conciseness, adjudicate disagreements, and mark critical errors separately. Use unseen scenarios, realistic branch tasks, source-version conflicts and long conversations. Measure answer coverage, correct abstention, unnecessary refusal, employee task success and time to correct guidance against existing search.
 
-Proposed pilot gates are in the rubric and are not achieved enterprise service levels. This exercise demonstrates a measurable prototype with explicit limits; it does not justify unsupervised operational deployment.
+Proposed pilot gates are in the rubric and are not achieved enterprise service levels. Independent assessment and deployment controls are required before operational use.
 
 Raw metrics: `artifacts/evaluation/metrics.json`. Retrieval rankings: `artifacts/evaluation/retrieval_details.json`. Answers, withheld drafts, sources, checks and timings: `artifacts/evaluation/answer_details.json`. Earlier experiments are retained separately under `artifacts/experiments/`.

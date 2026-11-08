@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "staged_artifacts_match_reviewed_hashes": true,
+  "source_free_archive_matches_staged_files": true,
+  "accepted_evaluation_and_index_unchanged": true,
+  "earlier_tracked_powerpoint_unchanged": true,
+  "approved_final_files_preserved": 13,
+  "application_source_unchanged": true,
+  "local_renderer_cache_excluded": true,
+  "credential_signature_scan_passed": true,
+  "all_repository_files_below_100_MB": true
+}

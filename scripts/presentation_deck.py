@@ -1,7 +1,7 @@
 """Six-slide leadership narrative, built as editable native PowerPoint objects.
 
-PowerPoint itself exports the PDF and slide previews. No generated slide image
-is used in place of editable text, diagrams or charts.
+PowerPoint or local LibreOffice Impress exports the PDF and slide previews.
+No generated slide image replaces editable text, diagrams or charts.
 """
 from __future__ import annotations
 
@@ -10,6 +10,11 @@ from pathlib import Path
 import json
 import subprocess
 import textwrap
+import os
+import shutil
+import uuid
+import re
+import unicodedata
 
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -22,7 +27,8 @@ from pptx.oxml.ns import qn
 BG='FBFAF7'; WHITE='FFFFFF'; INK='302B28'; MUTED='665F59'
 RED='C51E2A'; GOLD='E8B532'; LINE='E4DED7'; PALE='F2EEE7'
 TEAL='24655F'; GREEN_PALE='EAF2EE'; AMBER_PALE='FCF3DF'
-STAGES=['Need','Content','Architecture','Experience','Evidence','Decision']
+DECK_BASENAME='Branch_Assist_Solution_Presentation_Final'
+STAGES=['Solution','Data','Architecture','Experience','Evaluation','Demo']
 
 
 @dataclass
@@ -78,7 +84,6 @@ class LeadershipDeck:
         self.number=number;self.slide=self.prs.slides.add_slide(self.prs.slide_layouts[6])
         self.rect(0,0,960,540,BG)
         self.text(44,23,690,19,'BRANCH ASSIST  /  LEADERSHIP BRIEF  /  '+section.upper(),10,RED,True,role='label')
-        self.text(638,28,120,16,'INTERVIEW PROTOTYPE',8.1,MUTED,True,role='source')
         self.rect(766,20,150,28,RED)
         self.slide.shapes.add_picture(str(self.root/'assets/brand/wells-fargo-wordmark.png'),Pt(777),Pt(27),width=Pt(128))
         if title:self.text(44,65,872,72,title,29,INK,True,font='Georgia',role='headline')
@@ -144,95 +149,124 @@ def render_in_powerpoint(deck,output):
     if issues:raise ValueError('PowerPoint text overflow: '+str(issues))
 
 
+def render_in_libreoffice(deck,output,office_error):
+    """Render locally in an independent engine when Office rejects new opens."""
+    import pymupdf
+    cache=deck.root/'artifacts/video_build/render_tools'
+    configured=os.environ.get('BRANCH_ASSIST_SOFFICE') or shutil.which('soffice')
+    candidates=[Path(configured)] if configured else []
+    candidates += list((cache/'libreoffice').rglob('soffice.exe'))
+    if not candidates:raise RuntimeError('No independent local renderer available.') from office_error
+    profile=cache/('profile_'+uuid.uuid4().hex[:8])
+    result=subprocess.run([str(candidates[0]),'-env:UserInstallation='+profile.resolve().as_uri(),
+                           '--headless','--convert-to','pdf:impress_pdf_Export','--outdir',str(output.parent.resolve()),str(output.resolve())],
+                          capture_output=True,text=True,timeout=120,
+                          creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+    if result.returncode or not output.with_suffix('.pdf').exists():
+        raise RuntimeError('Independent presentation render failed: '+result.stderr)
+    def compact(value):return ''.join(re.findall(r'\w+',unicodedata.normalize('NFKC',value).casefold()))
+    issues=[];bounds=[];folder=deck.root/'artifacts/slides';folder.mkdir(exist_ok=True)
+    with pymupdf.open(output.with_suffix('.pdf')) as pdf:
+        assert len(pdf)==6
+        for record in deck.records:
+            x,y,w,h=record['box'];page=pdf[record['slide']-1]
+            clipped=compact(page.get_text(clip=pymupdf.Rect(x-2.5,y-2.5,x+w+2.5,y+h+2.5)))
+            fits=compact(record['text']) in clipped
+            bounds.append({'slide':record['slide'],'shape':record['shape'],'fits_exported_box':fits})
+            if not fits:issues.append(record)
+        for i,page in enumerate(pdf):
+            assert abs(page.rect.width/page.rect.height-16/9)<.001
+            page.get_pixmap(matrix=pymupdf.Matrix(2,2),alpha=False).save(folder/f'slide_{i+1}.png')
+    qa=deck.root/'artifacts/presentation';qa.mkdir(exist_ok=True)
+    report={'status':'passed' if not issues else 'needs_layout_fix','render_engine':'LibreOffice Impress',
+            'bounds_method':'Exported PDF text within intended native text-box rectangles',
+            'powerpoint_background_open_unavailable':True,'slide_count':6,'native_editable_text_boxes':len(bounds),
+            'text_bound_overflows':issues,'bounds':bounds,'layout':deck.records}
+    (qa/'layout_review.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+    if issues:raise ValueError('Rendered text exceeds its intended box: '+str(issues))
+
+
 def build_leadership_deck(root,corpus,metrics):
     deck=LeadershipDeck(root)
     answer=metrics['answers'];retrieval={r['mode']:r for r in metrics['retrieval'] if r['split']=='all'}
     count=answer['ordinary_n'];fact_pass=round(answer['all_required_facts_proxy']*count)
 
-    # 1. The mandate and a tangible employee outcome, without a red cover wall.
-    deck.new(1,'The employee need')
-    deck.text(44,71,490,20,'THE EMPLOYEE NEED',10.5,RED,True,role='label')
-    deck.text(44,102,492,101,'From procedure search\nto guidance you can verify.',33,INK,True,font='Georgia',role='headline')
-    deck.text(44,213,475,57,'A working conversational assistant for the situation behind a branch employee’s question.',17,MUTED)
-    deck.text(44,286,475,17,'EMPLOYEE TASK',10.5,RED,True,role='label')
-    deck.text(44,308,475,43,'Find the applicable rule, conditions and exceptions.',16)
-    deck.text(44,354,475,17,'DESIGN RESPONSE',10.5,RED,True,role='label')
-    deck.text(44,376,485,29,'Ask → inspect the source → refine the situation.',16)
-    deck.rect(560,88,356,318,WHITE,LINE,radius=True)
-    deck.text(580,107,316,18,'A REAL PROCEDURE QUESTION',10,RED,True,role='label')
-    deck.rect(580,138,316,58,PALE,radius=True)
-    deck.text(593,149,290,43,'How much coin can stay in a machine overnight?',16)
-    deck.text(580,216,316,17,'BRANCH ASSIST / RECORDED ANSWER',9.5,MUTED,True,role='label')
-    deck.text(580,245,165,48,'$5,250',34,TEAL,True)
-    deck.text(751,249,143,43,'maximum overnight\nin a single machine',13.5,MUTED)
-    deck.text(580,308,316,45,'Open the cited rule and inspect its conditions.',16)
-    deck.pill(580,368,235,'PR63  ·  original source available')
-    for x,value,label in [(44,'11','supplied procedures'),(341,'139','HTML tables'),(638,f"{corpus['chunk_count']:,}",'traceable passages')]:
-        deck.text(x,424,95,37,value,25,INK,True)
-        deck.text(x+100,435,175,23,label,13,MUTED)
-    deck.line(44,414,872)
-    deck.text(44,469,872,21,'Business goal to test: faster access to correct guidance, with evidence employees can inspect.',13.4,TEAL,True)
-    deck.source('Interview prototype · supplied Cayman Bank snapshot · AI-assisted development and runtime answers · no transaction execution')
+    # 1. Establish the objective, implemented scope and solution methodology.
+    deck.new(1,'Solution overview','Generative AI for grounded\nprocedure guidance.',
+             'Conversational access to eleven operational procedures, with traceable answers and contextual follow-ups.')
+    deck.text(44,194,402,19,'BUSINESS OBJECTIVE',10.5,RED,True,role='label')
+    deck.text(44,222,402,68,'Help branch employees find and verify applicable guidance across long, conditional procedures.',17)
+    deck.text(44,305,402,19,'SOLUTION METHODOLOGY',10.5,RED,True,role='label')
+    deck.text(44,333,420,71,'Retrieve supporting passages, generate a concise answer, then check each claim against its cited source.',16,MUTED)
+    deck.rect(494,193,422,225,WHITE,LINE,radius=True)
+    deck.text(511,207,389,19,'IMPLEMENTED CAPABILITIES',10.2,RED,True,role='label')
+    for x,y,title,body in [
+        (511,241,'Generative chat','Answers from procedure evidence with source citations.'),
+        (716,241,'Follow-up handling','Retain the situation and retrieve fresh evidence.'),
+        (511,330,'Evidence workspace','Original text, answer checks and execution activity.'),
+        (716,330,'Quality evaluation','Retrieval comparisons and response-quality diagnostics.')]:
+        deck.text(x,y,184,25,title,14.6,INK,True)
+        deck.text(x,y+31,184,55,body,13.2,MUTED)
+    deck.line(44,429,872)
+    for x,value,label in [(44,'11','source procedures'),(341,'139','HTML tables'),(638,f"{corpus['chunk_count']:,}",'indexed passages')]:
+        deck.text(x,436,95,34,value,24,INK,True)
+        deck.text(x+100,445,175,22,label,12.7,MUTED)
+    deck.text(44,472,872,21,'Value to measure: accurate, relevant, complete and concise guidance with less search effort.',13.2,TEAL,True)
+    deck.source('Implementation scope: provided Cayman Bank procedures · local model inference · source citations and reviewable check records')
     deck.notes('''
-        Timing: 0:00–2:30. The leadership story starts with an employee trying to find the right rule for a particular situation.
+        Timing: 0:00 to 2:30. Establish the business objective, implemented solution and methodology before moving into the technical design.
 
-        Branch employees often need a specific answer from a long procedure while they are helping someone. Finding a keyword is only part of the task. The employee needs the applicable action, the conditions that make it applicable, and any exception that changes the outcome. The business objective is faster access to correct guidance, with evidence the employee can inspect. No time savings or productivity uplift have been measured in this exercise.
+        Branch employees need efficient access to information in operational procedures. The information task includes finding the applicable requirement, understanding its conditions and exceptions, and verifying that the answer is supported by the source. The business objective is to reduce search effort while retaining the detail needed for a correct decision. Productivity improvement is an outcome to measure, not a saving already established by this work.
 
-        I built a functional conversational assistant over all eleven supplied Cayman Bank procedures. The collection includes 139 HTML tables and produces 1,388 traceable passages. The example on the right is a real source fact and a recorded tool outcome: the overnight limit is $5,250 in a single coin-counting machine. The employee can open the original passage rather than taking the fluent answer on trust.
+        Branch Assist is a working generative conversational solution over the eleven provided Cayman Bank procedures. The collection contains 139 HTML tables and is organized into 1,388 traceable passages. Questions execute an actual local language model. The interface supports generated answers, contextual follow-ups, procedure selection, citations, source inspection, feedback and conversation export.
 
-        Three ideas hold the solution together. First, keep the rule attached to its situation during document preparation. Second, retrieve relevant source material before asking a language model to write an answer. Third, make sources, checks and appropriate fallback part of the employee experience. A follow-up starts a fresh evidence search; a previous generated answer is never treated as proof.
+        The methodology is retrieval-augmented generation. The system first finds relevant procedure evidence, then asks a model to synthesize a concise answer from that evidence. It checks source references, numeric values, recognizable thresholds and claim support before releasing a draft. The source text and check record remain available to the employee. If support is insufficient, the system asks for context or withholds the draft and exposes the original passages.
 
-        The delivered prototype includes actual local language-model inference, a conversational workspace, source inspection, procedure search, feedback, exports and measured evaluation. It does not execute transactions or establish that the supplied snapshot is current production policy. The Wells Fargo-inspired visual treatment is explicitly an interview prototype over the supplied Cayman Bank documents.
+        Four design principles define the solution. Keep each requirement attached to its conditions during document preparation. Retrieve evidence for the current question instead of using a previous generated answer as proof. Make the evidence and response decision inspectable. Evaluate retrieval and response quality separately, including the coverage lost when answers are withheld.
 
-        Generative AI assisted requirements analysis, implementation, tests and presentation preparation, and powers runtime answers. The candidate owns the review and must be able to explain the decisions personally. AI-authored evaluation cases are useful regression material, not independent ground truth. The recommendation is a scoped validation phase with procedure owners before any operational pilot.
+        The knowledge boundary is the eleven provided files; external linked procedures and live policy updates are not ingested. The system answers information questions and does not execute bank transactions. The local runtime was selected to work on the available CPU without an API key; its latency and model limitations are measured explicitly.
 
-        Transition: to understand why this answer can be checked, first look at how the original rules were organized.
+        Success must be judged across accuracy, relevance, completeness and conciseness. Those dimensions drive the evaluation approach later in the presentation. The implemented controls and recorded diagnostics support review; they do not replace independent assessment of substantive instructions.
+
+        Transition: the first engineering step is turning the original documents into structured, traceable evidence that retrieval can use.
     ''')
 
-    # 2. A source rule stays attached to its situation throughout preparation.
-    deck.new(2,'Organize the rules','Reliable answers start with\nwell-organized rules.',
-             'Preserve the situation attached to each instruction before searching for an answer.')
-    deck.rect(44,191,300,176,WHITE,LINE,radius=True)
-    deck.text(59,203,270,22,'PR63: keep the task and control together',13.8,INK,True)
-    deck.rect(59,236,270,25,PALE)
-    deck.text(69,240,155,18,'Situation',11.5,MUTED,True,role='label')
-    deck.text(230,240,95,18,'Control',11.5,MUTED,True,role='label')
-    for y,task,control in [(271,'Monthly testing','Single'),(300,'Weekly balancing','Dual'),(329,'Random monthly cash count','Dual')]:
-        deck.text(69,y,153,31,task,12.8)
-        deck.text(230,y,85,23,control,13.5,TEAL,True)
-    for x,label,title,body in [
-        (366,'01 / PARSE','Keep structure','HTML headings, lists and table rows. Linked content is not fetched.'),
-        (553,'02 / CHUNK','Keep context','~110 narrative words; 20-word overlap. Carry table labels and conditions.'),
-        (740,'03 / TRACE','Keep identity','Procedure, section, date and original-file fingerprint on each passage.')]:
-        deck.text(x,197,176,18,label,10,RED,True,role='label')
-        deck.text(x,227,176,27,title,17,INK,True)
-        deck.text(x,266,176,99,body,14.2,MUTED)
-    deck.text(44,385,872,18,'SEARCH THE SAME VERIFIED PASSAGE COLLECTION',10.5,RED,True,role='label')
-    for i,(title,detail) in enumerate([
-        ('Exact terms','BM25 keyword search'),('Same meaning','MiniLM · 384 dimensions'),
-        ('Combine + rerank','Rank fusion + cross-encoder'),('Select evidence','≤3 passages / ~520 words')]):
+    # 2. Explain the complete document-engineering method without a domain example.
+    deck.new(2,'Document engineering','From original documents\nto structured, searchable evidence.',
+             'Preserve content, conditions and source identity throughout ingestion, chunking and indexing.')
+    total_words=sum(d['words'] for d in corpus['documents'])
+    columns=[
+        ('01 / PROFILE','Inventory\nand profile',f"11 HTML files; {total_words:,}\nextracted words; 139 tables.\nCapture titles, IDs and\npublication details."),
+        ('02 / EXTRACT','Parse\nstructure','UTF-8 headings, lists and\ntable rows. Preserve column\nlabels, row conditions and\nnested content.'),
+        ('03 / ORGANIZE','Chunk\nwith context','~110 narrative words;\n20-word overlap. Repeat\ntable conditions on\ncontinuation passages.'),
+        ('04 / INDEX','Index\nand trace',f"{corpus['chunk_count']:,} passages; BM25 +\n384D dense vectors. Record\nsource, section and\noriginal-file hash.")]
+    for i,(label,title,body) in enumerate(columns):
         x=44+i*222
-        deck.rect(x,412,206,57,WHITE,LINE,radius=True)
-        deck.text(x+11,421,184,23,title,14.7,INK,True)
-        deck.text(x+11,447,184,19,detail,10.8,MUTED,role='label')
-        if i<3:deck.arrow(x+209,434,10,12)
-    deck.source('Supplied PR63 facts · 110 words is a narrative target, not an exact token count · table continuations repeat their condition')
+        deck.rect(x,191,206,204,WHITE,LINE,radius=True)
+        deck.text(x+14,205,178,19,label,10.2,RED,True,role='label')
+        deck.text(x+14,237,178,46,title,17,INK,True)
+        deck.text(x+14,294,182,92,body,13.2,MUTED)
+        if i<3:deck.arrow(x+209,280,10,14)
+    deck.rect(44,413,872,60,PALE,radius=True)
+    deck.text(57,426,145,19,'DESIGN RATIONALE',10.2,RED,True,role='label')
+    deck.text(213,422,687,45,'Focused passages improve retrieval; repeated conditions protect applicability. Source fingerprints and index checks detect changed inputs.',13.5)
+    deck.source('Narrative chunk size is a word target · table rows preserve their labels and conditions · original source bytes remain unchanged')
     deck.notes('''
-        Timing: 2:30–6:00. Continue the coin-machine example to explain the data choices, not simply the tools.
+        Timing: 2:30 to 6:00. Explain what happens to all eleven documents and why each preparation decision matters.
 
-        A monthly task is not enough context to choose a control level. In PR63, monthly testing is single control, while weekly balancing and random monthly cash counts use dual control. If extraction separates the action from its row label, the generator can retrieve the right words and still give the wrong instruction. This is why the content design comes before model selection.
+        The input is a collection of eleven HTML exports with approximately seventy-nine thousand extracted words and 139 tables, including nested tables. Document sizes are uneven, with the business-deposit-account procedure substantially larger than the others. The ingestion process profiles file identity, document title, publication text, section structure and tables before building the searchable collection.
 
-        The eleven input files are HTML exports with meaningful policy classes. The parser recognizes titles, publication text, sections and subsections, and explicitly decodes UTF-8. It removes scripts and presentation-only material, never executes source HTML, and does not fetch linked procedures. Linked material is outside the supplied evidence boundary.
+        Extraction uses the meaningful policy classes in the HTML exports, including headings that are not ordinary heading tags. It explicitly decodes UTF-8 and retains paragraphs and lists. Scripts and display-only material are excluded, and linked content is not fetched. The original files are preserved so every derived passage can be checked against its source.
 
-        Tables are serialized with column labels, row conditions and positions. Rowspans carry their conditions forward; colspans preserve alignment; nested table content is included once. Oversized row continuations repeat the leftmost condition. This reduces detachment of a requirement from its situation, but does not prove that every complex table has been semantically interpreted correctly.
+        Tables need more than plain text extraction. The parser retains column labels, carries conditions through rowspans, accounts for colspans and includes nested table text once. Oversized row continuations repeat their leftmost condition. This is intended to reduce the risk of separating an action from the situation in which it applies. Text-preservation checks are useful, but do not establish that every table branch has been interpreted correctly.
 
-        Narrative passages target roughly 110 whitespace words within a section. Long blocks overlap by 20 words. Unsplit table rows can reach 130 words, and a repeated condition can make a continuation longer. These are word targets. The generator separately enforces its prompt-token budget. An earlier larger grouping diluted specific instructions, so shorter passages were selected after observing development failures.
+        Narrative passages target roughly 110 whitespace words within a section. Long blocks use a 20-word overlap to reduce context loss at a boundary. Unsplit table rows can reach 130 words, and repeating a condition can make a continuation longer. These are word targets; a separate model-token budget limits the prompt. Shorter passages were selected after larger groupings introduced competing instructions during development. The choice is empirical rather than a universal optimum.
 
-        Every passage retains its procedure ID, source filename and hash, section, publication text, anchor and table location. The original eleven files remain unchanged. Identical input produces stable passage identities; changed input requires rebuilding the index. Extraction diagnostics found all checked paragraph five-word sequences, which is evidence of text preservation, not proof of policy interpretation.
+        Each passage records its procedure ID, section, source filename, publication text, original-file hash, stable passage identity and table location where relevant. An identical rebuild preserves passage IDs. Source changes require reindexing. The vector matrix is bound to the passage store and checked for shape, finite values, normalization and its own file hash.
 
-        Search then combines complementary strengths: BM25 for exact identifiers and specialized wording; MiniLM vectors for paraphrases; reciprocal rank fusion to combine positions; and a cross-encoder to judge question and passage jointly. It selects up to three nonduplicate passages, targeting about 520 words. Ranking scores choose evidence; they are not probabilities that an answer is correct.
+        The resulting collection has 1,388 passages with a BM25 keyword index and normalized 384-dimensional MiniLM vectors. These complementary indexes support exact terminology and paraphrases. At question time, rankings are combined and reranked before selecting the evidence pack. Retrieval scores rank source matches; they do not estimate the probability that a generated answer is correct.
 
-        Transition: the next slide follows that evidence through the live request, including the release and fallback decisions.
+        Transition: the prepared collection now feeds the request architecture, where evidence selection, generation and output checks operate together.
     ''')
 
     # 3. One traceable pipeline, with explicit choices and failure paths.
@@ -260,7 +294,7 @@ def build_leadership_deck(root,corpus,metrics):
                          (638,'Why this runtime?','Local CPU, no API key; small in-memory index.')]:
         deck.text(x,399,278,29,title,14.1,INK,True)
         deck.text(x,435,278,42,body,13.3,MUTED)
-    deck.source('MiniLM-L6 embeddings/reranker · DeBERTa NLI support screen · bounded orchestration · no transaction tools or confidence percentage')
+    deck.source('MiniLM-L6 embeddings and reranking · DeBERTa NLI support screening · source identity and claim-local citations')
     deck.notes('''
         Timing: 6:00–9:30. Explain the request in order, then defend the choices and their limits.
 
@@ -270,7 +304,7 @@ def build_leadership_deck(root,corpus,metrics):
 
         Relevant source passages, including a bounded adjacent qualification when applicable, become the evidence pack. Qwen3-4B in Q4_K_M GGUF form generates locally through llama.cpp on CPU. Non-thinking operation, greedy decoding, a 3,800-input-token limit and a 240-output-token limit suit this constrained answer task. The prompt asks for the exact fact first, relevant conditions and citations, using only evidence. Greedy decoding does not guarantee correctness.
 
-        Qwen3 was selected after development comparisons with a smaller Qwen2.5 baseline that produced more distracting detail and withheld drafts. This was an end-to-end engineering iteration, not an isolated causal experiment. Local inference avoids API-key and hosted inference dependencies for the exercise, while adding CPU latency. A stronger approved deployment model still needs comparison before a pilot.
+        Qwen3 was selected after development comparisons with a smaller Qwen2.5 baseline that produced more distracting detail and withheld drafts. This was an end-to-end engineering iteration, not an isolated causal experiment. Local inference avoids API-key and hosted inference dependencies for the local runtime, while adding CPU latency. A stronger approved deployment model still needs comparison before a pilot.
 
         Checks bind claims to their actual citations, compare numeric values and recognizable thresholds, and screen support. Substantive exact wording is matched to the cited passage; paraphrases use a DeBERTa NLI model. Its thresholds are development settings, not calibrated confidence. A failed draft gets at most one correction with the same evidence and failed-check feedback. If it still fails, the draft is withheld and source text remains available. The screen can also reject a correct answer or miss an error.
 
@@ -279,42 +313,44 @@ def build_leadership_deck(root,corpus,metrics):
         Transition: these controls matter only if an employee can understand and use them in conversation.
     ''')
 
-    # 4. Genuine dialogue, plus a real source-pane crop from the approved take.
-    deck.new(4,'Use the conversation','One question becomes a conversation\nyou can inspect.',
-             'Use the source to check the answer, then change the task or refine the situation.')
-    deck.text(44,189,500,19,'RECORDED TOOL WORKFLOW / PR63',10.2,RED,True,role='label')
-    deck.rect(44,219,500,48,PALE,radius=True)
-    deck.text(57,227,474,39,'What is the overnight storage limit for a coin-counting machine?',15.2)
-    deck.text(57,282,474,54,'The overnight storage limit for a coin-counting machine is $5,250 [S1].',17,TEAL,True)
-    deck.rect(44,344,500,45,PALE,radius=True)
-    deck.text(57,351,474,38,'And is monthly testing done in single or dual control?',15.2)
-    deck.text(57,405,474,36,'Monthly testing is done in single control. [S2]',17,TEAL,True)
-    deck.text(584,187,332,18,'[S2] PR63 / MONTHLY TESTING',10.3,RED,True,role='label')
-    deck.rect(578,211,338,258,WHITE,LINE,radius=True)
-    deck.image_crop(root/'assets/presentation/recorded_followup_evidence.png',584,217,328,248,
-                    (2108,600,844,638))
-    deck.text(44,459,500,23,'Same procedure. Fresh evidence for the new task.',12.8,INK,True)
-    deck.source('Actual recorded answers and source-pane capture · inspect Evidence / Checks / Activity · topic switch, reset, feedback and export are supported')
+    # 4. Put conversation design first; keep the example in a bounded panel.
+    deck.new(4,'Experience and follow-ups','Context, citations and review\nin one conversational workflow.',
+             'A follow-up retains the user’s situation while retrieving new supporting evidence.')
+    for y,title,body in [
+        (196,'Search and scope','Procedure library and guided starters; selected documents restrict retrieval.'),
+        (287,'Follow-up resolution','Retain the situation. A new topic changes scope; every turn retrieves evidence.'),
+        (390,'Inspect and review','Open citations, checks and activity; flag a response and export the investigation.')]:
+        deck.text(44,y,300,28,title,16,INK,True)
+        deck.text(44,y+35,300,60,body,13.7,MUTED)
+    deck.rect(374,191,542,282,WHITE,LINE,radius=True)
+    deck.text(391,207,508,19,'RECORDED CONVERSATION / PR63',10.2,RED,True,role='label')
+    deck.text(391,239,508,41,'What is the overnight storage limit for a coin-counting machine?',14.6)
+    deck.text(391,286,508,49,'The overnight storage limit for a coin-counting machine is $5,250 [S1].',15.5,TEAL,True)
+    deck.line(391,341,508)
+    deck.text(391,356,508,38,'And is monthly testing done in single or dual control?',14.6)
+    deck.text(391,400,508,40,'Monthly testing is done in single control. [S2]',15.5,TEAL,True)
+    deck.text(391,447,508,20,'S1: overnight storage → S2: monthly testing',11.7,MUTED)
+    deck.source('Every turn retrieves evidence · prior generated answers are not source material · scope, reset, session isolation, feedback and export are supported')
     deck.notes('''
-        Timing: 9:30–13:00. Read the short conversation and point to the selected evidence, then explain the broader experience.
+        Timing: 9:30 to 13:00. Explain the employee workflow and context rules, then use the short recorded dialogue as supporting evidence.
 
-        The dialogue reproduces actual recorded application responses. First the employee asks about the overnight coin-machine limit. The assistant answers $5,250 and cites S1. The employee then asks whether monthly testing is single or dual control. The assistant retrieves the monthly-testing instruction and answers single control with S2. The source crop on the right is an unaltered browser capture from the approved recording, displayed through a native PowerPoint crop.
+        The experience begins with focused access to the procedure collection. Employees can ask directly, use a guided starter, search the procedure library or restrict retrieval to a selected document. Scope is enforced: a question naming a different procedure asks the user to change the selected scope rather than answering from the wrong collection.
 
-        The useful behavior is fresh evidence for a different task within the same procedure. The resolver retains PR63 as the topic but does not dilute testing retrieval with overnight-storage wording. Citation buttons select the exact passage for that particular answer. The employee can read the section, date and surrounding conditions or download the original procedure.
+        Conversation state uses prior user questions to resolve the current situation. Previous generated claims are never factual evidence. A newly named task in the same procedure retains procedure scope while avoiding irrelevant terms from the earlier task. A hypothetical changing a condition keeps the earlier situation, even when the user repeats the procedure name or ID. An explicitly different topic replaces that context and searches the new procedure. Ambiguous or long conversations remain a limitation of the deterministic resolver.
 
-        Different follow-ups require different handling. After an emailed-document notary question, saying that the requester is physically present must retain the emailed-document situation. The supplied rule still prohibits it. A hypothetical repeating the notary topic or PR1000 now preserves that original condition too. An explicitly different topic, such as savings-bond fees, replaces old scope and retrieves a new procedure. This is bounded deterministic context handling; ambiguous long conversations remain a limitation.
+        The panel reproduces actual recorded responses. The first question asks about overnight coin storage and receives the $5,250 answer with S1. The follow-up asks about single or dual control for monthly testing. The system retrieves the testing instruction and answers single control with S2. The example illustrates the context rule; the product capability is fresh evidence retrieval for each turn.
 
-        The workspace includes guided starters, optional procedure scope, a searchable library and an Evidence desk. Evidence shows original text and source identity. Checks exposes citation, amount, threshold and support screening. Activity shows the actions that actually ran and their timings. A failed draft can be corrected once; a still-failing draft is withheld while original evidence stays available. The interface does not show a fabricated certainty score.
+        Citation buttons select the source passage belonging to that answer. The Evidence desk exposes the procedure, section, publication text, source-file check and original document. Checks shows citation attribution, numeric consistency, recognized thresholds and support screening. Activity shows observed execution stages and elapsed times, with a deterministic explanation of the response decision rather than simulated private model reasoning.
 
-        Search scope is a real restriction: a question about a different selected procedure prompts clarification. New investigation clears conversation context. Browser sessions keep histories isolated, while model objects are cached for reuse. The employee can mark a response for review and export the conversation with sources, checks, activity and feedback. These are session features, not an implemented enterprise audit service.
+        A failed draft may receive one correction using the same evidence and check feedback. If it still fails, the system withholds the draft and leaves the source passages available for review. Weak evidence or missing context produces an explicit insufficient-support or clarification outcome. These controls can still miss errors or reject a correct answer, so the original procedure remains inspectable.
 
-        The demo later shows these cases in the live tool or the approved silent recording. Source-code editors and terminals are excluded, as required by the assignment.
+        Browser sessions isolate conversation histories. New investigation resets the situation. Employees can mark a response for review and export the questions, answers, evidence, checks, activity and feedback. The export is opt-in; an enterprise audit and retention service is separate deployment work.
 
-        Transition: now distinguish a convincing interaction from evidence that the solution answers reliably.
+        Transition: the interface makes responses inspectable; evaluation must determine their accuracy, relevance, completeness and conciseness independently of presentation quality.
     ''')
 
     # 5. Explicitly cover all four required response-quality dimensions.
-    deck.new(5,'Measure the evidence','Finding evidence is the first test.\nAnswer quality is the next.',
+    deck.new(5,'Measure the evidence','Evaluate retrieval and response quality\nas separate measures.',
              'Measured local regression results; independent review is still required for an operational decision.')
     deck.text(44,189,305,18,'RELEVANT PASSAGE IN TOP FIVE',10.1,RED,True,role='label')
     for i,(label,mode) in enumerate([('Keyword','bm25'),('Semantic','dense'),('Hybrid + rerank','hybrid')]):
@@ -362,13 +398,13 @@ def build_leadership_deck(root,corpus,metrics):
         Transition: these findings shape both what we will demonstrate now and what leadership should validate next.
     ''')
 
-    # 6. A clear demo handoff and a responsible leadership decision.
-    deck.new(6,'Demonstrate and decide','Demonstrate the workflow.\nValidate before a pilot.',
-             'The working prototype is ready to inspect; the next decision is a scoped validation phase.')
-    deck.text(44,190,475,19,'DEMONSTRATE / LIVE TOOL OR APPROVED RECORDING',10,RED,True,role='label')
+    # 6. Demonstrate the implemented behavior and conclude with engineering next steps.
+    deck.new(6,'Demonstration','Demonstrate answers, follow-ups\nand evidence review.',
+             'Show the functional chat with procedure questions, changed conditions and a clear review path.')
+    deck.text(44,190,475,19,'DEMONSTRATION SEQUENCE',10,RED,True,role='label')
     demo_rows=[('01','Ask a routine rule','Coin overnight limit → monthly-testing follow-up.','$5,250 overnight; single control for testing. [PR63]'),
                ('02','Change a condition','Emailed notary document → requester is present.','The emailed-document restriction still applies. [PR1000]'),
-               ('03','Inspect an exception','Newer account → Private Bank Experience exception.','$1,000/day rule; review the source if checks fail. [PR1949]')]
+               ('03','Inspect an exception','Newer account → Private Bank Experience exception.','$1,000/day base rule; inspect the exception. [PR1949]')]
     for i,(number,title,prompt,outcome) in enumerate(demo_rows):
         y=220+i*69
         deck.pill(44,y,35,number,PALE,RED,size=10.4)
@@ -376,38 +412,49 @@ def build_leadership_deck(root,corpus,metrics):
         deck.text(91,y+25,444,20,prompt,11.7,MUTED)
         deck.text(91,y+44,444,22,outcome,11.7,TEAL,True)
     deck.line(560,190,1,height=238)
-    deck.text(584,190,332,20,'VALIDATE / OWNERS AND GATES',10,RED,True,role='label')
-    for y,title,body in [(220,'Quality · procedure owners + SMEs','Unseen scenarios; four quality scores.\nCritical errors and coverage are separate gates.'),
-                         (291,'Value · branch operations + AI team','Task success; time to correct guidance.\nCompare with current search.'),
-                         (362,'Pilot controls · security + platform','Identity, source access/versioning, monitoring and rollback.')]:
+    deck.text(584,190,332,20,'WHAT TO OBSERVE',10,RED,True,role='label')
+    for y,title,body in [
+        (220,'Grounding and traceability','Inspect the exact passage and the checks behind the released response.'),
+        (291,'Conversation continuity','Preserve applicable conditions; change topics without carrying old evidence.'),
+        (362,'Bounded failure handling','Clarify missing context or show sources when an answer cannot pass checks.')]:
         deck.text(584,y,332,25,title,13.9,INK,True)
-        deck.text(584,y+29,332,41,body,12.5,MUTED)
+        deck.text(584,y+29,332,43,body,12.5,MUTED)
     deck.rect(44,448,872,29,GREEN_PALE,radius=True)
-    deck.text(56,454,848,22,'Recommendation: validate quality and employee value before an operational pilot.',14,TEAL,True)
-    deck.source('20-minute presentation → 15-minute walkthrough · approved silent recording 9:25 + live inspection/Q&A · AI assistance disclosed; candidate owns decisions')
+    deck.text(56,454,848,22,'Next: independent quality review, broader exception tests and deployment controls.',13.8,TEAL,True)
+    deck.source('Generative AI: development assistance and local runtime answering · recorded outputs and test results are checked against source procedures')
     deck.notes('''
-        Timing: 17:00–20:00, followed by the separate 15-minute technical walkthrough. Close the leadership story with a concrete demonstration and decision.
+        Timing: 17:00 to 20:00, followed by the separate 15-minute solution walkthrough. Demonstrate the implemented behavior and connect it to the engineering decisions.
 
-        We started with an employee trying to find the applicable branch rule. We preserved the rule's situation during ingestion, retrieved evidence before generation, exposed the checks and tested retrieval and response quality separately. The working prototype demonstrates the approach; independent validation determines where it is safe and useful.
+        The demonstration should show three aspects of the solution: source grounding, conversation continuity and a clear outcome when evidence is insufficient. Use the live application or identify the approved silent recording as a recording. The saved walkthrough lasts 9 minutes 25 seconds and leaves time within the 15-minute segment for live source inspection and technical questions.
 
-        The walkthrough will use the actual application or the clearly labelled approved silent recording. First, ask the overnight coin limit and follow up about monthly testing. Inspect both source passages to show that a different task uses fresh evidence. Next, ask about notarizing an emailed document and change the condition by making the requester physically present. The prohibition remains. Finally, ask the savings-bond limit for an account younger than twelve months, then the Private Bank Experience exception. The source's $1,000 daily aggregate limit has a stated exception; in the approved recording, the generated exception draft fails a check after one correction, so the tool retains the original source text for review. Do not present that fallback as a successful generated answer.
+        Begin with the coin-machine overnight limit and a follow-up about monthly testing. Open the source for each answer and show that the second turn uses the testing passage. Next, ask about notarizing an emailed document and change the condition by making the requester physically present. The supplied restriction remains applicable; the changed condition must not become unsupported permission.
 
-        During the walkthrough, also show a topic switch, missing context after reset, unsupported requests, feedback and the evidence export. Share the application and slides, never implementation source. The approved 9:25 recording fits within the 15-minute allocation and leaves time for live source inspection and questions. Keep the local model warm and the recorded backup available; a recording must be identified as such.
+        Then ask the savings-bond limit for an account open less than twelve months and follow up about The Private Bank Experience. PR1949 states a $1,000 daily aggregate limit and an exception for eligible customers regardless of account age. Other applicable conditions remain. In the approved recording, the exception draft still fails a check after one correction. The tool therefore exposes the original text for review instead of presenting that draft as an accepted answer.
 
-        The recommendation is a scoped validation phase. Procedure owners and two independent subject-matter reviewers should evaluate unseen scenarios across accuracy, relevance, completeness and conciseness. Critical unsupported instructions need explicit investigation and a release gate; coverage and unnecessary refusal must stay visible. The business and validation teams must agree acceptable thresholds rather than treating the development metrics as achieved enterprise service levels.
+        Also show a topic change, missing context after reset, an unsupported question, review feedback and the evidence export. Use the Evidence, Checks and Activity views to explain how the system reached its release or source-review decision. These are observable actions and screening results; a fluent answer and a passing screen do not establish independent correctness.
 
-        Branch operations and AI engineering should measure task success and time to correct guidance against current search, and compare stronger approved models with realistic latency and cost. Before an operational pilot, security and platform owners need employee identity, document entitlements, authoritative source versions, approved audit and retention, monitoring, escalation and rollback. These are future production requirements, not completed features of the exercise.
+        The technical conclusions follow from the evidence. Structural ingestion and source identity support traceability. Hybrid retrieval combines exact terminology and paraphrases. A bounded local model call keeps the evidence boundary inspectable, with CPU latency as a tradeoff. Context rules improve continuity while keeping prior generated answers out of the evidence. Output screening increases inspectability but can cause unnecessary withholding and still needs independent assessment.
 
-        Generative AI assisted design, implementation, evaluation drafting and these materials; local Qwen generation powers the tool. Candidate understanding, accurate disclosure and ownership remain essential. The six-slide presentation and its supporting PDFs exclude implementation source, and the approved final video remains preserved unchanged.
+        The next engineering work is independent review of all four response-quality dimensions, broader condition and exception coverage, and stronger-model, latency and concurrency comparisons. Any operational deployment also requires authoritative source versions, employee access controls, monitoring, escalation and rollback. Those capabilities are future work and are not presented as implemented.
 
-        Handoff: move into the prepared walkthrough and ask the first coin-machine question.
+        Generative AI assisted design, implementation, test-case drafting and presentation preparation, and Qwen powers runtime answering. Validation includes source checks, automated engineering tests, retained response traces and actual browser workflows. AI-authored labels remain subject to independent review.
+
+        Handoff: open the prepared tool workflow and ask the first procedure question.
     ''')
 
-    deck.prs.core_properties.title='Branch Assist | From procedure search to verifiable guidance'
-    deck.prs.core_properties.subject='Six-slide senior leadership narrative over eleven supplied procedures'
-    deck.prs.core_properties.author='Candidate preparation materials'
-    deck.prs.core_properties.comments='AI-assisted interview prototype; measured diagnostics are not independent correctness validation. No implementation source.'
-    output=root/'submission/Cayman_Procedure_Assistant.pptx'
+    deck.prs.core_properties.title='Branch Assist | Grounded conversational procedure guidance'
+    deck.prs.core_properties.subject='Solution methodology, architecture, document engineering, user experience and evaluation'
+    deck.prs.core_properties.author='Branch Assist'
+    deck.prs.core_properties.comments='Generative conversational solution over eleven procedures. Measured diagnostics and independent quality assessment are distinguished.'
+    working=root/'artifacts/video_build'/('presentation_build_'+uuid.uuid4().hex[:8])
+    working.mkdir(parents=True)
+    output=working/(DECK_BASENAME+'.pptx')
     deck.prs.save(output)
-    render_in_powerpoint(deck,output)
+    try:
+        render_in_powerpoint(deck,output)
+    except Exception as error:
+        if type(error).__module__ not in {'pywintypes','builtins'} or isinstance(error,ValueError):raise
+        render_in_libreoffice(deck,output,error)
+    for suffix in ['.pptx','.pdf']:
+        shutil.copy2(output.with_suffix(suffix),root/'submission'/(DECK_BASENAME+suffix))
     return deck

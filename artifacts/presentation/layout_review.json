@@ -2,7 +2,7 @@
   "status": "passed",
   "render_engine": "Microsoft PowerPoint",
   "slide_count": 6,
-  "native_editable_text_boxes": 194,
+  "native_editable_text_boxes": 181,
   "text_bound_overflows": [],
   "bounds": [
     {
@@ -10,31 +10,31 @@
       "shape": "text_1_000",
       "width": 690.0,
       "height": 19.0,
-      "text_width": 300.5,
+      "text_width": 303.5,
       "text_height": 11.985039710998535
     },
     {
       "slide": 1,
       "shape": "text_1_001",
-      "width": 120.0,
-      "height": 16.0,
-      "text_width": 94.25,
-      "text_height": 9.710000038146973
+      "width": 872.0,
+      "height": 72.0,
+      "text_width": 418.1250305175781,
+      "text_height": 72.48999786376953
     },
     {
       "slide": 1,
       "shape": "text_1_002",
-      "width": 123.0,
-      "height": 16.0,
-      "text_width": 39.125038146972656,
-      "text_height": 10.550000190734863
+      "width": 872.0,
+      "height": 34.0,
+      "text_width": 661.6199951171875,
+      "text_height": 16.780000686645508
     },
     {
       "slide": 1,
       "shape": "text_1_003",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 47.875038146972656,
+      "text_width": 51.875038146972656,
       "text_height": 10.550000190734863
     },
     {
@@ -42,7 +42,7 @@
       "shape": "text_1_004",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 63.875038146972656,
+      "text_width": 34.75,
       "text_height": 10.550000190734863
     },
     {
@@ -50,7 +50,7 @@
       "shape": "text_1_005",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 58.375038146972656,
+      "text_width": 63.875038146972656,
       "text_height": 10.550000190734863
     },
     {
@@ -58,7 +58,7 @@
       "shape": "text_1_006",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 51.0,
+      "text_width": 58.375038146972656,
       "text_height": 10.550000190734863
     },
     {
@@ -66,12 +66,20 @@
       "shape": "text_1_007",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 49.625038146972656,
+      "text_width": 56.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 1,
       "shape": "text_1_008",
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 40.125038146972656,
+      "text_height": 10.550000190734863
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_009",
       "width": 30.0,
       "height": 16.0,
       "text_width": 15.75,
@@ -79,178 +87,170 @@
     },
     {
       "slide": 1,
-      "shape": "text_1_009",
-      "width": 490.0,
-      "height": 20.0,
-      "text_width": 108.75,
+      "shape": "text_1_010",
+      "width": 402.0,
+      "height": 19.0,
+      "text_width": 108.62503814697266,
       "text_height": 12.585039138793945
     },
     {
       "slide": 1,
-      "shape": "text_1_010",
-      "width": 492.0,
-      "height": 101.0,
-      "text_width": 460.1250305175781,
-      "text_height": 82.48999786376953
-    },
-    {
-      "slide": 1,
       "shape": "text_1_011",
-      "width": 475.0,
-      "height": 57.0,
-      "text_width": 456.96502685546875,
+      "width": 402.0,
+      "height": 68.0,
+      "text_width": 374.46502685546875,
       "text_height": 42.4050407409668
     },
     {
       "slide": 1,
       "shape": "text_1_012",
-      "width": 475.0,
-      "height": 17.0,
-      "text_width": 85.12503814697266,
+      "width": 402.0,
+      "height": 19.0,
+      "text_width": 139.1250457763672,
       "text_height": 12.585039138793945
     },
     {
       "slide": 1,
       "shape": "text_1_013",
-      "width": 475.0,
-      "height": 43.0,
-      "text_width": 364.1250305175781,
-      "text_height": 19.18000030517578
+      "width": 420.0,
+      "height": 71.0,
+      "text_width": 406.2699890136719,
+      "text_height": 39.9150390625
     },
     {
       "slide": 1,
       "shape": "text_1_014",
-      "width": 475.0,
-      "height": 17.0,
-      "text_width": 96.75,
-      "text_height": 12.585039138793945
+      "width": 389.0,
+      "height": 19.0,
+      "text_width": 142.8750457763672,
+      "text_height": 12.215039253234863
     },
     {
       "slide": 1,
       "shape": "text_1_015",
-      "width": 485.0,
-      "height": 29.0,
-      "text_width": 338.2050476074219,
-      "text_height": 19.18000030517578
+      "width": 184.0,
+      "height": 25.0,
+      "text_width": 111.2300033569336,
+      "text_height": 17.495038986206055
     },
     {
       "slide": 1,
       "shape": "text_1_016",
-      "width": 316.0,
-      "height": 18.0,
-      "text_width": 150.75,
-      "text_height": 11.985039710998535
+      "width": 184.0,
+      "height": 55.0,
+      "text_width": 181.32504272460938,
+      "text_height": 32.92504119873047
     },
     {
       "slide": 1,
       "shape": "text_1_017",
-      "width": 290.0,
-      "height": 43.0,
-      "text_width": 269.1250305175781,
-      "text_height": 39.9150390625
+      "width": 184.0,
+      "height": 25.0,
+      "text_width": 137.6250457763672,
+      "text_height": 17.495038986206055
     },
     {
       "slide": 1,
       "shape": "text_1_018",
-      "width": 316.0,
-      "height": 17.0,
-      "text_width": 178.25,
-      "text_height": 11.385039329528809
+      "width": 184.0,
+      "height": 55.0,
+      "text_width": 142.38504028320312,
+      "text_height": 32.92504119873047
     },
     {
       "slide": 1,
       "shape": "text_1_019",
-      "width": 165.0,
-      "height": 48.0,
-      "text_width": 116.12503814697266,
-      "text_height": 40.75
+      "width": 184.0,
+      "height": 25.0,
+      "text_width": 140.66000366210938,
+      "text_height": 17.495038986206055
     },
     {
       "slide": 1,
       "shape": "text_1_020",
-      "width": 143.0,
-      "height": 43.0,
-      "text_width": 123.5199966430664,
-      "text_height": 33.68000030517578
+      "width": 184.0,
+      "height": 55.0,
+      "text_width": 165.0800018310547,
+      "text_height": 32.92504119873047
     },
     {
       "slide": 1,
       "shape": "text_1_021",
-      "width": 316.0,
-      "height": 45.0,
-      "text_width": 246.0,
-      "text_height": 39.9150390625
+      "width": 184.0,
+      "height": 25.0,
+      "text_width": 129.40504455566406,
+      "text_height": 17.495038986206055
     },
     {
       "slide": 1,
       "shape": "text_1_022",
-      "width": 217.0,
-      "height": 18.0,
-      "text_width": 178.1250457763672,
-      "text_height": 13.785038948059082
+      "width": 184.0,
+      "height": 55.0,
+      "text_width": 173.07504272460938,
+      "text_height": 32.92504119873047
     },
     {
       "slide": 1,
       "shape": "text_1_023",
       "width": 95.0,
-      "height": 37.0,
-      "text_width": 35.625038146972656,
-      "text_height": 29.959999084472656
+      "height": 34.0,
+      "text_width": 34.125038146972656,
+      "text_height": 28.765039443969727
     },
     {
       "slide": 1,
       "shape": "text_1_024",
       "width": 175.0,
-      "height": 23.0,
-      "text_width": 119.66000366210938,
-      "text_height": 15.585039138793945
+      "height": 22.0,
+      "text_width": 106.25504302978516,
+      "text_height": 15.220000267028809
     },
     {
       "slide": 1,
       "shape": "text_1_025",
       "width": 95.0,
-      "height": 37.0,
-      "text_width": 50.0,
-      "text_height": 29.959999084472656
+      "height": 34.0,
+      "text_width": 47.875038146972656,
+      "text_height": 28.765039443969727
     },
     {
       "slide": 1,
       "shape": "text_1_026",
       "width": 175.0,
-      "height": 23.0,
-      "text_width": 74.75,
-      "text_height": 15.585039138793945
+      "height": 22.0,
+      "text_width": 73.37503814697266,
+      "text_height": 15.220000267028809
     },
     {
       "slide": 1,
       "shape": "text_1_027",
       "width": 95.0,
-      "height": 37.0,
-      "text_width": 71.12503814697266,
-      "text_height": 29.959999084472656
+      "height": 34.0,
+      "text_width": 68.12503814697266,
+      "text_height": 28.765039443969727
     },
     {
       "slide": 1,
       "shape": "text_1_028",
       "width": 175.0,
-      "height": 23.0,
-      "text_width": 110.95503997802734,
-      "text_height": 15.585039138793945
+      "height": 22.0,
+      "text_width": 101.86000061035156,
+      "text_height": 15.220000267028809
     },
     {
       "slide": 1,
       "shape": "text_1_029",
       "width": 872.0,
       "height": 21.0,
-      "text_width": 588.489990234375,
-      "text_height": 16.059999465942383
+      "text_width": 572.385009765625,
+      "text_height": 15.819999694824219
     },
     {
       "slide": 1,
       "shape": "text_1_030",
       "width": 872.0,
       "height": 13.0,
-      "text_width": 483.0,
+      "text_width": 487.25,
       "text_height": 10.1899995803833
     },
     {
@@ -258,39 +258,39 @@
       "shape": "text_2_031",
       "width": 690.0,
       "height": 19.0,
-      "text_width": 304.3750305175781,
+      "text_width": 326.1250305175781,
       "text_height": 11.985039710998535
     },
     {
       "slide": 2,
       "shape": "text_2_032",
-      "width": 120.0,
-      "height": 16.0,
-      "text_width": 94.25,
-      "text_height": 9.710000038146973
+      "width": 872.0,
+      "height": 72.0,
+      "text_width": 529.8750610351562,
+      "text_height": 72.48999786376953
     },
     {
       "slide": 2,
       "shape": "text_2_033",
       "width": 872.0,
-      "height": 72.0,
-      "text_width": 412.6250305175781,
-      "text_height": 72.48999786376953
+      "height": 34.0,
+      "text_width": 586.8150634765625,
+      "text_height": 16.780000686645508
     },
     {
       "slide": 2,
       "shape": "text_2_034",
-      "width": 872.0,
-      "height": 34.0,
-      "text_width": 510.7099914550781,
-      "text_height": 16.780000686645508
+      "width": 123.0,
+      "height": 16.0,
+      "text_width": 48.75,
+      "text_height": 10.550000190734863
     },
     {
       "slide": 2,
       "shape": "text_2_035",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 37.625038146972656,
+      "text_width": 36.5,
       "text_height": 10.550000190734863
     },
     {
@@ -298,7 +298,7 @@
       "shape": "text_2_036",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 50.25,
+      "text_width": 63.875038146972656,
       "text_height": 10.550000190734863
     },
     {
@@ -306,7 +306,7 @@
       "shape": "text_2_037",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 63.875038146972656,
+      "text_width": 58.375038146972656,
       "text_height": 10.550000190734863
     },
     {
@@ -314,7 +314,7 @@
       "shape": "text_2_038",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 58.375038146972656,
+      "text_width": 56.75,
       "text_height": 10.550000190734863
     },
     {
@@ -322,20 +322,12 @@
       "shape": "text_2_039",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 51.0,
+      "text_width": 40.125038146972656,
       "text_height": 10.550000190734863
     },
     {
       "slide": 2,
       "shape": "text_2_040",
-      "width": 123.0,
-      "height": 16.0,
-      "text_width": 49.625038146972656,
-      "text_height": 10.550000190734863
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_041",
       "width": 30.0,
       "height": 16.0,
       "text_width": 15.75,
@@ -343,231 +335,127 @@
     },
     {
       "slide": 2,
+      "shape": "text_2_041",
+      "width": 178.0,
+      "height": 19.0,
+      "text_width": 64.25,
+      "text_height": 12.215039253234863
+    },
+    {
+      "slide": 2,
       "shape": "text_2_042",
-      "width": 270.0,
-      "height": 22.0,
-      "text_width": 269.32000732421875,
-      "text_height": 16.540000915527344
+      "width": 178.0,
+      "height": 46.0,
+      "text_width": 92.18000030517578,
+      "text_height": 42.4050407409668
     },
     {
       "slide": 2,
       "shape": "text_2_043",
-      "width": 155.0,
-      "height": 18.0,
-      "text_width": 52.375038146972656,
-      "text_height": 13.785038948059082
+      "width": 182.0,
+      "height": 92.0,
+      "text_width": 165.30503845214844,
+      "text_height": 67.13504028320312
     },
     {
       "slide": 2,
       "shape": "text_2_044",
-      "width": 95.0,
-      "height": 18.0,
-      "text_width": 43.625038146972656,
-      "text_height": 13.785038948059082
+      "width": 178.0,
+      "height": 19.0,
+      "text_width": 68.62503814697266,
+      "text_height": 12.215039253234863
     },
     {
       "slide": 2,
       "shape": "text_2_045",
-      "width": 153.0,
-      "height": 31.0,
-      "text_width": 92.9000015258789,
-      "text_height": 15.345039367675781
+      "width": 178.0,
+      "height": 46.0,
+      "text_width": 76.86000061035156,
+      "text_height": 42.4050407409668
     },
     {
       "slide": 2,
       "shape": "text_2_046",
-      "width": 85.0,
-      "height": 23.0,
-      "text_width": 42.875038146972656,
-      "text_height": 16.185039520263672
+      "width": 182.0,
+      "height": 92.0,
+      "text_width": 166.85504150390625,
+      "text_height": 67.13504028320312
     },
     {
       "slide": 2,
       "shape": "text_2_047",
-      "width": 153.0,
-      "height": 31.0,
-      "text_width": 102.4000015258789,
-      "text_height": 15.345039367675781
+      "width": 178.0,
+      "height": 19.0,
+      "text_width": 76.0,
+      "text_height": 12.215039253234863
     },
     {
       "slide": 2,
       "shape": "text_2_048",
-      "width": 85.0,
-      "height": 23.0,
-      "text_width": 33.0,
-      "text_height": 16.185039520263672
+      "width": 178.0,
+      "height": 46.0,
+      "text_width": 105.30999755859375,
+      "text_height": 42.4050407409668
     },
     {
       "slide": 2,
       "shape": "text_2_049",
-      "width": 153.0,
-      "height": 31.0,
-      "text_width": 129.6250457763672,
-      "text_height": 31.935039520263672
+      "width": 182.0,
+      "height": 92.0,
+      "text_width": 146.22000122070312,
+      "text_height": 67.13504028320312
     },
     {
       "slide": 2,
       "shape": "text_2_050",
-      "width": 85.0,
-      "height": 23.0,
-      "text_width": 33.0,
-      "text_height": 16.185039520263672
+      "width": 178.0,
+      "height": 19.0,
+      "text_width": 55.25,
+      "text_height": 12.215039253234863
     },
     {
       "slide": 2,
       "shape": "text_2_051",
-      "width": 176.0,
-      "height": 18.0,
-      "text_width": 54.75,
-      "text_height": 11.985039710998535
+      "width": 178.0,
+      "height": 46.0,
+      "text_width": 79.25,
+      "text_height": 42.4050407409668
     },
     {
       "slide": 2,
       "shape": "text_2_052",
-      "width": 176.0,
-      "height": 27.0,
-      "text_width": 121.44503784179688,
-      "text_height": 20.37504005432129
+      "width": 182.0,
+      "height": 92.0,
+      "text_width": 164.8699951171875,
+      "text_height": 67.13504028320312
     },
     {
       "slide": 2,
       "shape": "text_2_053",
-      "width": 176.0,
-      "height": 99.0,
-      "text_width": 167.4199981689453,
-      "text_height": 53.83000183105469
+      "width": 145.0,
+      "height": 19.0,
+      "text_width": 99.12503814697266,
+      "text_height": 12.215039253234863
     },
     {
       "slide": 2,
       "shape": "text_2_054",
-      "width": 176.0,
-      "height": 18.0,
-      "text_width": 59.625038146972656,
-      "text_height": 11.985039710998535
+      "width": 687.0,
+      "height": 45.0,
+      "text_width": 684.7999877929688,
+      "text_height": 33.68000030517578
     },
     {
       "slide": 2,
       "shape": "text_2_055",
-      "width": 176.0,
-      "height": 27.0,
-      "text_width": 109.8950424194336,
-      "text_height": 20.37504005432129
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_056",
-      "width": 176.0,
-      "height": 99.0,
-      "text_width": 161.13504028320312,
-      "text_height": 53.83000183105469
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_057",
-      "width": 176.0,
-      "height": 18.0,
-      "text_width": 55.125038146972656,
-      "text_height": 11.985039710998535
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_058",
-      "width": 176.0,
-      "height": 27.0,
-      "text_width": 111.45999908447266,
-      "text_height": 20.37504005432129
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_059",
-      "width": 176.0,
-      "height": 99.0,
-      "text_width": 173.25,
-      "text_height": 53.83000183105469
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_060",
-      "width": 872.0,
-      "height": 18.0,
-      "text_width": 260.5,
-      "text_height": 12.585039138793945
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_061",
-      "width": 184.0,
-      "height": 23.0,
-      "text_width": 84.23999786376953,
-      "text_height": 17.6200008392334
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_062",
-      "width": 184.0,
-      "height": 19.0,
-      "text_width": 107.87503814697266,
-      "text_height": 12.945039749145508
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_063",
-      "width": 184.0,
-      "height": 23.0,
-      "text_width": 106.0,
-      "text_height": 17.6200008392334
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_064",
-      "width": 184.0,
-      "height": 19.0,
-      "text_width": 122.37503814697266,
-      "text_height": 12.945039749145508
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_065",
-      "width": 184.0,
-      "height": 23.0,
-      "text_width": 128.82000732421875,
-      "text_height": 17.6200008392334
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_066",
-      "width": 184.0,
-      "height": 19.0,
-      "text_width": 139.75,
-      "text_height": 12.945039749145508
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_067",
-      "width": 184.0,
-      "height": 23.0,
-      "text_width": 110.25,
-      "text_height": 17.6200008392334
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_068",
-      "width": 184.0,
-      "height": 19.0,
-      "text_width": 129.6250457763672,
-      "text_height": 12.945039749145508
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_069",
       "width": 872.0,
       "height": 13.0,
-      "text_width": 456.8750305175781,
+      "text_width": 477.5,
       "text_height": 10.1899995803833
     },
     {
       "slide": 3,
-      "shape": "text_3_070",
+      "shape": "text_3_056",
       "width": 690.0,
       "height": 19.0,
       "text_width": 295.3750305175781,
@@ -575,15 +463,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_071",
-      "width": 120.0,
-      "height": 16.0,
-      "text_width": 94.25,
-      "text_height": 9.710000038146973
-    },
-    {
-      "slide": 3,
-      "shape": "text_3_072",
+      "shape": "text_3_057",
       "width": 872.0,
       "height": 72.0,
       "text_width": 582.1250610351562,
@@ -591,7 +471,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_073",
+      "shape": "text_3_058",
       "width": 872.0,
       "height": 34.0,
       "text_width": 558.5399780273438,
@@ -599,23 +479,23 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_074",
+      "shape": "text_3_059",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 37.625038146972656,
+      "text_width": 48.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 3,
-      "shape": "text_3_075",
+      "shape": "text_3_060",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 47.875038146972656,
+      "text_width": 34.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 3,
-      "shape": "text_3_076",
+      "shape": "text_3_061",
       "width": 123.0,
       "height": 16.0,
       "text_width": 68.25,
@@ -623,7 +503,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_077",
+      "shape": "text_3_062",
       "width": 123.0,
       "height": 16.0,
       "text_width": 58.375038146972656,
@@ -631,23 +511,23 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_078",
+      "shape": "text_3_063",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 51.0,
+      "text_width": 56.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 3,
-      "shape": "text_3_079",
+      "shape": "text_3_064",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 49.625038146972656,
+      "text_width": 40.125038146972656,
       "text_height": 10.550000190734863
     },
     {
       "slide": 3,
-      "shape": "text_3_080",
+      "shape": "text_3_065",
       "width": 30.0,
       "height": 16.0,
       "text_width": 15.75,
@@ -655,7 +535,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_081",
+      "shape": "text_3_066",
       "width": 846.0,
       "height": 18.0,
       "text_width": 416.5,
@@ -663,7 +543,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_082",
+      "shape": "text_3_067",
       "width": 132.0,
       "height": 17.0,
       "text_width": 67.37503814697266,
@@ -671,7 +551,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_083",
+      "shape": "text_3_068",
       "width": 112.0,
       "height": 59.0,
       "text_width": 112.07504272460938,
@@ -679,7 +559,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_084",
+      "shape": "text_3_069",
       "width": 132.0,
       "height": 17.0,
       "text_width": 45.125038146972656,
@@ -687,7 +567,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_085",
+      "shape": "text_3_070",
       "width": 112.0,
       "height": 59.0,
       "text_width": 106.0,
@@ -695,7 +575,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_086",
+      "shape": "text_3_071",
       "width": 132.0,
       "height": 17.0,
       "text_width": 34.375038146972656,
@@ -703,7 +583,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_087",
+      "shape": "text_3_072",
       "width": 112.0,
       "height": 59.0,
       "text_width": 80.49504089355469,
@@ -711,7 +591,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_088",
+      "shape": "text_3_073",
       "width": 132.0,
       "height": 17.0,
       "text_width": 50.375038146972656,
@@ -719,7 +599,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_089",
+      "shape": "text_3_074",
       "width": 112.0,
       "height": 59.0,
       "text_width": 90.9350357055664,
@@ -727,7 +607,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_090",
+      "shape": "text_3_075",
       "width": 132.0,
       "height": 17.0,
       "text_width": 32.75,
@@ -735,7 +615,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_091",
+      "shape": "text_3_076",
       "width": 112.0,
       "height": 59.0,
       "text_width": 61.58000183105469,
@@ -743,7 +623,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_092",
+      "shape": "text_3_077",
       "width": 132.0,
       "height": 17.0,
       "text_width": 46.875038146972656,
@@ -751,7 +631,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_093",
+      "shape": "text_3_078",
       "width": 112.0,
       "height": 59.0,
       "text_width": 107.52503967285156,
@@ -759,7 +639,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_094",
+      "shape": "text_3_079",
       "width": 407.0,
       "height": 25.0,
       "text_width": 301.8299865722656,
@@ -767,7 +647,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_095",
+      "shape": "text_3_080",
       "width": 406.0,
       "height": 25.0,
       "text_width": 297.3699951171875,
@@ -775,7 +655,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_096",
+      "shape": "text_3_081",
       "width": 278.0,
       "height": 29.0,
       "text_width": 256.85504150390625,
@@ -783,7 +663,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_097",
+      "shape": "text_3_082",
       "width": 278.0,
       "height": 42.0,
       "text_width": 238.10000610351562,
@@ -791,7 +671,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_098",
+      "shape": "text_3_083",
       "width": 278.0,
       "height": 29.0,
       "text_width": 133.6250457763672,
@@ -799,7 +679,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_099",
+      "shape": "text_3_084",
       "width": 278.0,
       "height": 42.0,
       "text_width": 240.2899932861328,
@@ -807,7 +687,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_100",
+      "shape": "text_3_085",
       "width": 278.0,
       "height": 29.0,
       "text_width": 124.9150390625,
@@ -815,7 +695,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_101",
+      "shape": "text_3_086",
       "width": 278.0,
       "height": 42.0,
       "text_width": 274.7699890136719,
@@ -823,63 +703,55 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_102",
+      "shape": "text_3_087",
       "width": 872.0,
       "height": 13.0,
-      "text_width": 511.75,
+      "text_width": 426.0,
       "text_height": 10.1899995803833
     },
     {
       "slide": 4,
-      "shape": "text_4_103",
+      "shape": "text_4_088",
       "width": 690.0,
       "height": 19.0,
-      "text_width": 319.3750305175781,
+      "text_width": 348.75,
       "text_height": 11.985039710998535
     },
     {
       "slide": 4,
-      "shape": "text_4_104",
-      "width": 120.0,
-      "height": 16.0,
-      "text_width": 94.25,
-      "text_height": 9.710000038146973
-    },
-    {
-      "slide": 4,
-      "shape": "text_4_105",
+      "shape": "text_4_089",
       "width": 872.0,
       "height": 72.0,
-      "text_width": 568.8750610351562,
+      "text_width": 487.3750305175781,
       "text_height": 72.48999786376953
     },
     {
       "slide": 4,
-      "shape": "text_4_106",
+      "shape": "text_4_090",
       "width": 872.0,
       "height": 34.0,
-      "text_width": 497.4950256347656,
+      "text_width": 503.30999755859375,
       "text_height": 16.780000686645508
     },
     {
       "slide": 4,
-      "shape": "text_4_107",
+      "shape": "text_4_091",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 37.625038146972656,
+      "text_width": 48.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 4,
-      "shape": "text_4_108",
+      "shape": "text_4_092",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 47.875038146972656,
+      "text_width": 34.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 4,
-      "shape": "text_4_109",
+      "shape": "text_4_093",
       "width": 123.0,
       "height": 16.0,
       "text_width": 63.875038146972656,
@@ -887,7 +759,7 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_110",
+      "shape": "text_4_094",
       "width": 123.0,
       "height": 16.0,
       "text_width": 62.0,
@@ -895,23 +767,23 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_111",
+      "shape": "text_4_095",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 51.0,
+      "text_width": 56.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 4,
-      "shape": "text_4_112",
+      "shape": "text_4_096",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 49.625038146972656,
+      "text_width": 40.125038146972656,
       "text_height": 10.550000190734863
     },
     {
       "slide": 4,
-      "shape": "text_4_113",
+      "shape": "text_4_097",
       "width": 30.0,
       "height": 16.0,
       "text_width": 15.75,
@@ -919,71 +791,111 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_114",
-      "width": 500.0,
+      "shape": "text_4_098",
+      "width": 300.0,
+      "height": 28.0,
+      "text_width": 133.93504333496094,
+      "text_height": 19.18000030517578
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_099",
+      "width": 300.0,
+      "height": 60.0,
+      "text_width": 285.34503173828125,
+      "text_height": 34.18000030517578
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_100",
+      "width": 300.0,
+      "height": 28.0,
+      "text_width": 160.30999755859375,
+      "text_height": 19.18000030517578
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_101",
+      "width": 300.0,
+      "height": 60.0,
+      "text_width": 294.8900146484375,
+      "text_height": 34.18000030517578
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_102",
+      "width": 300.0,
+      "height": 28.0,
+      "text_width": 144.80999755859375,
+      "text_height": 19.18000030517578
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_103",
+      "width": 300.0,
+      "height": 60.0,
+      "text_width": 251.8750457763672,
+      "text_height": 34.18000030517578
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_104",
+      "width": 508.0,
       "height": 19.0,
-      "text_width": 182.5,
+      "text_width": 172.0,
       "text_height": 12.215039253234863
     },
     {
       "slide": 4,
-      "shape": "text_4_115",
-      "width": 474.0,
-      "height": 39.0,
-      "text_width": 436.6350402832031,
-      "text_height": 18.21504020690918
+      "shape": "text_4_105",
+      "width": 508.0,
+      "height": 41.0,
+      "text_width": 419.6450500488281,
+      "text_height": 17.495038986206055
     },
     {
       "slide": 4,
-      "shape": "text_4_116",
-      "width": 474.0,
-      "height": 54.0,
-      "text_width": 471.57000732421875,
-      "text_height": 42.4050407409668
+      "shape": "text_4_106",
+      "width": 508.0,
+      "height": 49.0,
+      "text_width": 482.2099914550781,
+      "text_height": 38.66999816894531
     },
     {
       "slide": 4,
-      "shape": "text_4_117",
-      "width": 474.0,
+      "shape": "text_4_107",
+      "width": 508.0,
       "height": 38.0,
-      "text_width": 363.3050537109375,
-      "text_height": 18.21504020690918
+      "text_width": 349.1950378417969,
+      "text_height": 17.495038986206055
     },
     {
       "slide": 4,
-      "shape": "text_4_118",
-      "width": 474.0,
-      "height": 36.0,
-      "text_width": 370.1199951171875,
-      "text_height": 20.37504005432129
+      "shape": "text_4_108",
+      "width": 508.0,
+      "height": 40.0,
+      "text_width": 337.0050354003906,
+      "text_height": 18.579999923706055
     },
     {
       "slide": 4,
-      "shape": "text_4_119",
-      "width": 332.0,
-      "height": 18.0,
-      "text_width": 156.1250457763672,
-      "text_height": 12.345039367675781
+      "shape": "text_4_109",
+      "width": 508.0,
+      "height": 20.0,
+      "text_width": 229.8750457763672,
+      "text_height": 14.025039672851562
     },
     {
       "slide": 4,
-      "shape": "text_4_120",
-      "width": 500.0,
-      "height": 23.0,
-      "text_width": 301.61505126953125,
-      "text_height": 15.345039367675781
-    },
-    {
-      "slide": 4,
-      "shape": "text_4_121",
+      "shape": "text_4_110",
       "width": 872.0,
       "height": 13.0,
-      "text_width": 539.6250610351562,
+      "text_width": 551.0,
       "text_height": 10.1899995803833
     },
     {
       "slide": 5,
-      "shape": "text_5_122",
+      "shape": "text_5_111",
       "width": 690.0,
       "height": 19.0,
       "text_width": 317.8750305175781,
@@ -991,23 +903,15 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_123",
-      "width": 120.0,
-      "height": 16.0,
-      "text_width": 94.25,
-      "text_height": 9.710000038146973
-    },
-    {
-      "slide": 5,
-      "shape": "text_5_124",
+      "shape": "text_5_112",
       "width": 872.0,
       "height": 72.0,
-      "text_width": 491.6250305175781,
+      "text_width": 591.25,
       "text_height": 72.48999786376953
     },
     {
       "slide": 5,
-      "shape": "text_5_125",
+      "shape": "text_5_113",
       "width": 872.0,
       "height": 34.0,
       "text_width": 604.8300170898438,
@@ -1015,23 +919,23 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_126",
+      "shape": "text_5_114",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 37.625038146972656,
+      "text_width": 48.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 5,
-      "shape": "text_5_127",
+      "shape": "text_5_115",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 47.875038146972656,
+      "text_width": 34.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 5,
-      "shape": "text_5_128",
+      "shape": "text_5_116",
       "width": 123.0,
       "height": 16.0,
       "text_width": 63.875038146972656,
@@ -1039,7 +943,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_129",
+      "shape": "text_5_117",
       "width": 123.0,
       "height": 16.0,
       "text_width": 58.375038146972656,
@@ -1047,23 +951,23 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_130",
+      "shape": "text_5_118",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 53.625038146972656,
+      "text_width": 60.5,
       "text_height": 10.550000190734863
     },
     {
       "slide": 5,
-      "shape": "text_5_131",
+      "shape": "text_5_119",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 49.625038146972656,
+      "text_width": 40.125038146972656,
       "text_height": 10.550000190734863
     },
     {
       "slide": 5,
-      "shape": "text_5_132",
+      "shape": "text_5_120",
       "width": 30.0,
       "height": 16.0,
       "text_width": 15.75,
@@ -1071,7 +975,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_133",
+      "shape": "text_5_121",
       "width": 305.0,
       "height": 18.0,
       "text_width": 159.8750457763672,
@@ -1079,7 +983,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_134",
+      "shape": "text_5_122",
       "width": 114.0,
       "height": 23.0,
       "text_width": 50.5099983215332,
@@ -1087,7 +991,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_135",
+      "shape": "text_5_123",
       "width": 65.0,
       "height": 25.0,
       "text_width": 46.0,
@@ -1095,7 +999,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_136",
+      "shape": "text_5_124",
       "width": 114.0,
       "height": 23.0,
       "text_width": 53.375038146972656,
@@ -1103,7 +1007,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_137",
+      "shape": "text_5_125",
       "width": 65.0,
       "height": 25.0,
       "text_width": 46.0,
@@ -1111,7 +1015,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_138",
+      "shape": "text_5_126",
       "width": 114.0,
       "height": 23.0,
       "text_width": 96.25,
@@ -1119,7 +1023,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_139",
+      "shape": "text_5_127",
       "width": 65.0,
       "height": 25.0,
       "text_width": 46.0,
@@ -1127,7 +1031,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_140",
+      "shape": "text_5_128",
       "width": 310.0,
       "height": 45.0,
       "text_width": 93.75,
@@ -1135,7 +1039,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_141",
+      "shape": "text_5_129",
       "width": 228.0,
       "height": 43.0,
       "text_width": 133.8650360107422,
@@ -1143,7 +1047,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_142",
+      "shape": "text_5_130",
       "width": 323.0,
       "height": 37.0,
       "text_width": 315.3750305175781,
@@ -1151,7 +1055,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_143",
+      "shape": "text_5_131",
       "width": 526.0,
       "height": 18.0,
       "text_width": 268.25,
@@ -1159,7 +1063,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_144",
+      "shape": "text_5_132",
       "width": 112.0,
       "height": 27.0,
       "text_width": 59.625038146972656,
@@ -1167,7 +1071,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_145",
+      "shape": "text_5_133",
       "width": 408.0,
       "height": 22.0,
       "text_width": 218.39999389648438,
@@ -1175,7 +1079,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_146",
+      "shape": "text_5_134",
       "width": 408.0,
       "height": 22.0,
       "text_width": 249.88999938964844,
@@ -1183,7 +1087,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_147",
+      "shape": "text_5_135",
       "width": 112.0,
       "height": 27.0,
       "text_width": 65.97000122070312,
@@ -1191,7 +1095,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_148",
+      "shape": "text_5_136",
       "width": 408.0,
       "height": 22.0,
       "text_width": 201.5350341796875,
@@ -1199,7 +1103,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_149",
+      "shape": "text_5_137",
       "width": 408.0,
       "height": 22.0,
       "text_width": 196.19000244140625,
@@ -1207,7 +1111,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_150",
+      "shape": "text_5_138",
       "width": 112.0,
       "height": 27.0,
       "text_width": 90.69999694824219,
@@ -1215,7 +1119,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_151",
+      "shape": "text_5_139",
       "width": 408.0,
       "height": 22.0,
       "text_width": 146.33999633789062,
@@ -1223,7 +1127,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_152",
+      "shape": "text_5_140",
       "width": 408.0,
       "height": 22.0,
       "text_width": 275.8850402832031,
@@ -1231,7 +1135,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_153",
+      "shape": "text_5_141",
       "width": 112.0,
       "height": 27.0,
       "text_width": 78.25,
@@ -1239,7 +1143,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_154",
+      "shape": "text_5_142",
       "width": 408.0,
       "height": 22.0,
       "text_width": 208.14999389648438,
@@ -1247,7 +1151,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_155",
+      "shape": "text_5_143",
       "width": 408.0,
       "height": 22.0,
       "text_width": 252.25503540039062,
@@ -1255,7 +1159,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_156",
+      "shape": "text_5_144",
       "width": 526.0,
       "height": 22.0,
       "text_width": 404.0,
@@ -1263,7 +1167,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_157",
+      "shape": "text_5_145",
       "width": 292.0,
       "height": 23.0,
       "text_width": 193.6250457763672,
@@ -1271,7 +1175,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_158",
+      "shape": "text_5_146",
       "width": 281.0,
       "height": 23.0,
       "text_width": 189.75,
@@ -1279,7 +1183,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_159",
+      "shape": "text_5_147",
       "width": 248.0,
       "height": 23.0,
       "text_width": 137.3750457763672,
@@ -1287,7 +1191,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_160",
+      "shape": "text_5_148",
       "width": 872.0,
       "height": 13.0,
       "text_width": 571.5,
@@ -1295,55 +1199,47 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_161",
+      "shape": "text_6_149",
       "width": 690.0,
       "height": 19.0,
-      "text_width": 336.1250305175781,
+      "text_width": 286.75,
       "text_height": 11.985039710998535
     },
     {
       "slide": 6,
-      "shape": "text_6_162",
-      "width": 120.0,
-      "height": 16.0,
-      "text_width": 94.25,
-      "text_height": 9.710000038146973
-    },
-    {
-      "slide": 6,
-      "shape": "text_6_163",
+      "shape": "text_6_150",
       "width": 872.0,
       "height": 72.0,
-      "text_width": 416.6250305175781,
+      "text_width": 508.6250305175781,
       "text_height": 72.48999786376953
     },
     {
       "slide": 6,
-      "shape": "text_6_164",
+      "shape": "text_6_151",
       "width": 872.0,
       "height": 34.0,
-      "text_width": 553.3650512695312,
+      "text_width": 595.635009765625,
       "text_height": 16.780000686645508
     },
     {
       "slide": 6,
-      "shape": "text_6_165",
+      "shape": "text_6_152",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 37.625038146972656,
+      "text_width": 48.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 6,
-      "shape": "text_6_166",
+      "shape": "text_6_153",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 47.875038146972656,
+      "text_width": 34.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 6,
-      "shape": "text_6_167",
+      "shape": "text_6_154",
       "width": 123.0,
       "height": 16.0,
       "text_width": 63.875038146972656,
@@ -1351,7 +1247,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_168",
+      "shape": "text_6_155",
       "width": 123.0,
       "height": 16.0,
       "text_width": 58.375038146972656,
@@ -1359,23 +1255,23 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_169",
+      "shape": "text_6_156",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 51.0,
+      "text_width": 56.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 6,
-      "shape": "text_6_170",
+      "shape": "text_6_157",
       "width": 123.0,
       "height": 16.0,
-      "text_width": 52.25,
+      "text_width": 41.75,
       "text_height": 10.550000190734863
     },
     {
       "slide": 6,
-      "shape": "text_6_171",
+      "shape": "text_6_158",
       "width": 30.0,
       "height": 16.0,
       "text_width": 15.75,
@@ -1383,15 +1279,15 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_172",
+      "shape": "text_6_159",
       "width": 475.0,
       "height": 19.0,
-      "text_width": 268.8750305175781,
+      "text_width": 143.6250457763672,
       "text_height": 11.985039710998535
     },
     {
       "slide": 6,
-      "shape": "text_6_173",
+      "shape": "text_6_160",
       "width": 17.0,
       "height": 18.0,
       "text_width": 14.875039100646973,
@@ -1399,7 +1295,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_174",
+      "shape": "text_6_161",
       "width": 444.0,
       "height": 23.0,
       "text_width": 129.61000061035156,
@@ -1407,7 +1303,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_175",
+      "shape": "text_6_162",
       "width": 444.0,
       "height": 20.0,
       "text_width": 260.8750305175781,
@@ -1415,7 +1311,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_176",
+      "shape": "text_6_163",
       "width": 444.0,
       "height": 22.0,
       "text_width": 283.25,
@@ -1423,7 +1319,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_177",
+      "shape": "text_6_164",
       "width": 17.0,
       "height": 18.0,
       "text_width": 14.875039100646973,
@@ -1431,7 +1327,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_178",
+      "shape": "text_6_165",
       "width": 444.0,
       "height": 23.0,
       "text_width": 141.5,
@@ -1439,7 +1335,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_179",
+      "shape": "text_6_166",
       "width": 444.0,
       "height": 20.0,
       "text_width": 257.8750305175781,
@@ -1447,7 +1343,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_180",
+      "shape": "text_6_167",
       "width": 444.0,
       "height": 22.0,
       "text_width": 312.8750305175781,
@@ -1455,7 +1351,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_181",
+      "shape": "text_6_168",
       "width": 17.0,
       "height": 18.0,
       "text_width": 14.875039100646973,
@@ -1463,7 +1359,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_182",
+      "shape": "text_6_169",
       "width": 444.0,
       "height": 23.0,
       "text_width": 150.24000549316406,
@@ -1471,7 +1367,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_183",
+      "shape": "text_6_170",
       "width": 444.0,
       "height": 20.0,
       "text_width": 276.1250305175781,
@@ -1479,82 +1375,82 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_184",
+      "shape": "text_6_171",
       "width": 444.0,
       "height": 22.0,
-      "text_width": 321.25,
+      "text_width": 299.25,
       "text_height": 14.025039672851562
     },
     {
       "slide": 6,
-      "shape": "text_6_185",
+      "shape": "text_6_172",
       "width": 332.0,
       "height": 20.0,
-      "text_width": 161.8750457763672,
+      "text_width": 95.75,
       "text_height": 11.985039710998535
     },
     {
       "slide": 6,
-      "shape": "text_6_186",
+      "shape": "text_6_173",
       "width": 332.0,
       "height": 25.0,
-      "text_width": 232.47000122070312,
+      "text_width": 179.82000732421875,
       "text_height": 16.6650390625
     },
     {
       "slide": 6,
-      "shape": "text_6_187",
+      "shape": "text_6_174",
       "width": 332.0,
-      "height": 41.0,
-      "text_width": 260.5650329589844,
+      "height": 43.0,
+      "text_width": 292.5850524902344,
       "text_height": 31.18000030517578
     },
     {
       "slide": 6,
-      "shape": "text_6_188",
+      "shape": "text_6_175",
       "width": 332.0,
       "height": 25.0,
-      "text_width": 238.52503967285156,
+      "text_width": 160.07000732421875,
       "text_height": 16.6650390625
     },
     {
       "slide": 6,
-      "shape": "text_6_189",
+      "shape": "text_6_176",
       "width": 332.0,
-      "height": 41.0,
-      "text_width": 214.5350341796875,
+      "height": 43.0,
+      "text_width": 298.7850341796875,
       "text_height": 31.18000030517578
     },
     {
       "slide": 6,
-      "shape": "text_6_190",
+      "shape": "text_6_177",
       "width": 332.0,
       "height": 25.0,
-      "text_width": 228.9150390625,
+      "text_width": 170.57000732421875,
       "text_height": 16.6650390625
     },
     {
       "slide": 6,
-      "shape": "text_6_191",
+      "shape": "text_6_178",
       "width": 332.0,
-      "height": 41.0,
-      "text_width": 329.0400085449219,
-      "text_height": 14.979999542236328
+      "height": 43.0,
+      "text_width": 311.3750305175781,
+      "text_height": 31.18000030517578
     },
     {
       "slide": 6,
-      "shape": "text_6_192",
+      "shape": "text_6_179",
       "width": 848.0,
       "height": 22.0,
-      "text_width": 549.8599853515625,
-      "text_height": 16.780000686645508
+      "text_width": 549.3550415039062,
+      "text_height": 16.540000915527344
     },
     {
       "slide": 6,
-      "shape": "text_6_193",
+      "shape": "text_6_180",
       "width": 872.0,
       "height": 13.0,
-      "text_width": 589.3750610351562,
+      "text_width": 534.8750610351562,
       "text_height": 10.1899995803833
     }
   ],
@@ -1562,7 +1458,7 @@
     {
       "slide": 1,
       "shape": "text_1_000",
-      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  THE EMPLOYEE NEED",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  SOLUTION OVERVIEW",
       "size": 10,
       "role": "label",
       "box": [
@@ -1575,20 +1471,33 @@
     {
       "slide": 1,
       "shape": "text_1_001",
-      "text": "INTERVIEW PROTOTYPE",
-      "size": 8.1,
-      "role": "source",
+      "text": "Generative AI for grounded\nprocedure guidance.",
+      "size": 29,
+      "role": "headline",
       "box": [
-        638,
-        28,
-        120,
-        16
+        44,
+        65,
+        872,
+        72
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_002",
-      "text": "01  Need",
+      "text": "Conversational access to eleven operational procedures, with traceable answers and contextual follow-ups.",
+      "size": 14,
+      "role": "body",
+      "box": [
+        44,
+        145,
+        872,
+        34
+      ]
+    },
+    {
+      "slide": 1,
+      "shape": "text_1_003",
+      "text": "01  Solution",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -1600,8 +1509,8 @@
     },
     {
       "slide": 1,
-      "shape": "text_1_003",
-      "text": "02  Content",
+      "shape": "text_1_004",
+      "text": "02  Data",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -1613,7 +1522,7 @@
     },
     {
       "slide": 1,
-      "shape": "text_1_004",
+      "shape": "text_1_005",
       "text": "03  Architecture",
       "size": 8.8,
       "role": "navigation",
@@ -1626,7 +1535,7 @@
     },
     {
       "slide": 1,
-      "shape": "text_1_005",
+      "shape": "text_1_006",
       "text": "04  Experience",
       "size": 8.8,
       "role": "navigation",
@@ -1639,8 +1548,8 @@
     },
     {
       "slide": 1,
-      "shape": "text_1_006",
-      "text": "05  Evidence",
+      "shape": "text_1_007",
+      "text": "05  Evaluation",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -1652,8 +1561,8 @@
     },
     {
       "slide": 1,
-      "shape": "text_1_007",
-      "text": "06  Decision",
+      "shape": "text_1_008",
+      "text": "06  Demo",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -1665,7 +1574,7 @@
     },
     {
       "slide": 1,
-      "shape": "text_1_008",
+      "shape": "text_1_009",
       "text": "1/6",
       "size": 9,
       "role": "navigation",
@@ -1678,273 +1587,260 @@
     },
     {
       "slide": 1,
-      "shape": "text_1_009",
-      "text": "THE EMPLOYEE NEED",
+      "shape": "text_1_010",
+      "text": "BUSINESS OBJECTIVE",
       "size": 10.5,
       "role": "label",
       "box": [
         44,
-        71,
-        490,
-        20
-      ]
-    },
-    {
-      "slide": 1,
-      "shape": "text_1_010",
-      "text": "From procedure search\nto guidance you can verify.",
-      "size": 33,
-      "role": "headline",
-      "box": [
-        44,
-        102,
-        492,
-        101
+        194,
+        402,
+        19
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_011",
-      "text": "A working conversational assistant for the situation behind a branch employee’s question.",
+      "text": "Help branch employees find and verify applicable guidance across long, conditional procedures.",
       "size": 17,
       "role": "body",
       "box": [
         44,
-        213,
-        475,
-        57
+        222,
+        402,
+        68
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_012",
-      "text": "EMPLOYEE TASK",
+      "text": "SOLUTION METHODOLOGY",
       "size": 10.5,
       "role": "label",
       "box": [
         44,
-        286,
-        475,
-        17
+        305,
+        402,
+        19
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_013",
-      "text": "Find the applicable rule, conditions and exceptions.",
+      "text": "Retrieve supporting passages, generate a concise answer, then check each claim against its cited source.",
       "size": 16,
       "role": "body",
       "box": [
         44,
-        308,
-        475,
-        43
+        333,
+        420,
+        71
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_014",
-      "text": "DESIGN RESPONSE",
-      "size": 10.5,
+      "text": "IMPLEMENTED CAPABILITIES",
+      "size": 10.2,
       "role": "label",
       "box": [
-        44,
-        354,
-        475,
-        17
+        511,
+        207,
+        389,
+        19
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_015",
-      "text": "Ask → inspect the source → refine the situation.",
-      "size": 16,
+      "text": "Generative chat",
+      "size": 14.6,
       "role": "body",
       "box": [
-        44,
-        376,
-        485,
-        29
+        511,
+        241,
+        184,
+        25
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_016",
-      "text": "A REAL PROCEDURE QUESTION",
-      "size": 10,
-      "role": "label",
+      "text": "Answers from procedure evidence with source citations.",
+      "size": 13.2,
+      "role": "body",
       "box": [
-        580,
-        107,
-        316,
-        18
+        511,
+        272,
+        184,
+        55
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_017",
-      "text": "How much coin can stay in a machine overnight?",
-      "size": 16,
+      "text": "Follow-up handling",
+      "size": 14.6,
       "role": "body",
       "box": [
-        593,
-        149,
-        290,
-        43
+        716,
+        241,
+        184,
+        25
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_018",
-      "text": "BRANCH ASSIST / RECORDED ANSWER",
-      "size": 9.5,
-      "role": "label",
+      "text": "Retain the situation and retrieve fresh evidence.",
+      "size": 13.2,
+      "role": "body",
       "box": [
-        580,
-        216,
-        316,
-        17
+        716,
+        272,
+        184,
+        55
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_019",
-      "text": "$5,250",
-      "size": 34,
+      "text": "Evidence workspace",
+      "size": 14.6,
       "role": "body",
       "box": [
-        580,
-        245,
-        165,
-        48
+        511,
+        330,
+        184,
+        25
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_020",
-      "text": "maximum overnight\nin a single machine",
-      "size": 13.5,
+      "text": "Original text, answer checks and execution activity.",
+      "size": 13.2,
       "role": "body",
       "box": [
-        751,
-        249,
-        143,
-        43
+        511,
+        361,
+        184,
+        55
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_021",
-      "text": "Open the cited rule and inspect its conditions.",
-      "size": 16,
+      "text": "Quality evaluation",
+      "size": 14.6,
       "role": "body",
       "box": [
-        580,
-        308,
-        316,
-        45
+        716,
+        330,
+        184,
+        25
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_022",
-      "text": "PR63  ·  original source available",
-      "size": 11.5,
-      "role": "label",
+      "text": "Retrieval comparisons and response-quality diagnostics.",
+      "size": 13.2,
+      "role": "body",
       "box": [
-        589,
-        372,
-        217,
-        18
+        716,
+        361,
+        184,
+        55
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_023",
       "text": "11",
-      "size": 25,
+      "size": 24,
       "role": "body",
       "box": [
         44,
-        424,
+        436,
         95,
-        37
+        34
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_024",
-      "text": "supplied procedures",
-      "size": 13,
+      "text": "source procedures",
+      "size": 12.7,
       "role": "body",
       "box": [
         144,
-        435,
+        445,
         175,
-        23
+        22
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_025",
       "text": "139",
-      "size": 25,
+      "size": 24,
       "role": "body",
       "box": [
         341,
-        424,
+        436,
         95,
-        37
+        34
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_026",
       "text": "HTML tables",
-      "size": 13,
+      "size": 12.7,
       "role": "body",
       "box": [
         441,
-        435,
+        445,
         175,
-        23
+        22
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_027",
       "text": "1,388",
-      "size": 25,
+      "size": 24,
       "role": "body",
       "box": [
         638,
-        424,
+        436,
         95,
-        37
+        34
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_028",
-      "text": "traceable passages",
-      "size": 13,
+      "text": "indexed passages",
+      "size": 12.7,
       "role": "body",
       "box": [
         738,
-        435,
+        445,
         175,
-        23
+        22
       ]
     },
     {
       "slide": 1,
       "shape": "text_1_029",
-      "text": "Business goal to test: faster access to correct guidance, with evidence employees can inspect.",
-      "size": 13.4,
+      "text": "Value to measure: accurate, relevant, complete and concise guidance with less search effort.",
+      "size": 13.2,
       "role": "body",
       "box": [
         44,
-        469,
+        472,
         872,
         21
       ]
@@ -1952,7 +1848,7 @@
     {
       "slide": 1,
       "shape": "text_1_030",
-      "text": "Interview prototype · supplied Cayman Bank snapshot · AI-assisted development and runtime answers · no transaction execution",
+      "text": "Implementation scope: provided Cayman Bank procedures · local model inference · source citations and reviewable check records",
       "size": 8.5,
       "role": "source",
       "box": [
@@ -1965,7 +1861,7 @@
     {
       "slide": 2,
       "shape": "text_2_031",
-      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  ORGANIZE THE RULES",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  DOCUMENT ENGINEERING",
       "size": 10,
       "role": "label",
       "box": [
@@ -1978,20 +1874,7 @@
     {
       "slide": 2,
       "shape": "text_2_032",
-      "text": "INTERVIEW PROTOTYPE",
-      "size": 8.1,
-      "role": "source",
-      "box": [
-        638,
-        28,
-        120,
-        16
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_033",
-      "text": "Reliable answers start with\nwell-organized rules.",
+      "text": "From original documents\nto structured, searchable evidence.",
       "size": 29,
       "role": "headline",
       "box": [
@@ -2003,8 +1886,8 @@
     },
     {
       "slide": 2,
-      "shape": "text_2_034",
-      "text": "Preserve the situation attached to each instruction before searching for an answer.",
+      "shape": "text_2_033",
+      "text": "Preserve content, conditions and source identity throughout ingestion, chunking and indexing.",
       "size": 14,
       "role": "body",
       "box": [
@@ -2016,8 +1899,8 @@
     },
     {
       "slide": 2,
-      "shape": "text_2_035",
-      "text": "01  Need",
+      "shape": "text_2_034",
+      "text": "01  Solution",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2029,8 +1912,8 @@
     },
     {
       "slide": 2,
-      "shape": "text_2_036",
-      "text": "02  Content",
+      "shape": "text_2_035",
+      "text": "02  Data",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2042,7 +1925,7 @@
     },
     {
       "slide": 2,
-      "shape": "text_2_037",
+      "shape": "text_2_036",
       "text": "03  Architecture",
       "size": 8.8,
       "role": "navigation",
@@ -2055,7 +1938,7 @@
     },
     {
       "slide": 2,
-      "shape": "text_2_038",
+      "shape": "text_2_037",
       "text": "04  Experience",
       "size": 8.8,
       "role": "navigation",
@@ -2068,8 +1951,8 @@
     },
     {
       "slide": 2,
-      "shape": "text_2_039",
-      "text": "05  Evidence",
+      "shape": "text_2_038",
+      "text": "05  Evaluation",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2081,8 +1964,8 @@
     },
     {
       "slide": 2,
-      "shape": "text_2_040",
-      "text": "06  Decision",
+      "shape": "text_2_039",
+      "text": "06  Demo",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2094,7 +1977,7 @@
     },
     {
       "slide": 2,
-      "shape": "text_2_041",
+      "shape": "text_2_040",
       "text": "2/6",
       "size": 9,
       "role": "navigation",
@@ -2107,359 +1990,190 @@
     },
     {
       "slide": 2,
+      "shape": "text_2_041",
+      "text": "01 / PROFILE",
+      "size": 10.2,
+      "role": "label",
+      "box": [
+        58,
+        205,
+        178,
+        19
+      ]
+    },
+    {
+      "slide": 2,
       "shape": "text_2_042",
-      "text": "PR63: keep the task and control together",
-      "size": 13.8,
+      "text": "Inventory\nand profile",
+      "size": 17,
       "role": "body",
       "box": [
-        59,
-        203,
-        270,
-        22
+        58,
+        237,
+        178,
+        46
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_043",
-      "text": "Situation",
-      "size": 11.5,
-      "role": "label",
+      "text": "11 HTML files; 79,424\nextracted words; 139 tables.\nCapture titles, IDs and\npublication details.",
+      "size": 13.2,
+      "role": "body",
       "box": [
-        69,
-        240,
-        155,
-        18
+        58,
+        294,
+        182,
+        92
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_044",
-      "text": "Control",
-      "size": 11.5,
+      "text": "02 / EXTRACT",
+      "size": 10.2,
       "role": "label",
       "box": [
-        230,
-        240,
-        95,
-        18
+        280,
+        205,
+        178,
+        19
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_045",
-      "text": "Monthly testing",
-      "size": 12.8,
+      "text": "Parse\nstructure",
+      "size": 17,
       "role": "body",
       "box": [
-        69,
-        271,
-        153,
-        31
+        280,
+        237,
+        178,
+        46
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_046",
-      "text": "Single",
-      "size": 13.5,
+      "text": "UTF-8 headings, lists and\ntable rows. Preserve column\nlabels, row conditions and\nnested content.",
+      "size": 13.2,
       "role": "body",
       "box": [
-        230,
-        271,
-        85,
-        23
+        280,
+        294,
+        182,
+        92
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_047",
-      "text": "Weekly balancing",
-      "size": 12.8,
-      "role": "body",
+      "text": "03 / ORGANIZE",
+      "size": 10.2,
+      "role": "label",
       "box": [
-        69,
-        300,
-        153,
-        31
+        502,
+        205,
+        178,
+        19
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_048",
-      "text": "Dual",
-      "size": 13.5,
+      "text": "Chunk\nwith context",
+      "size": 17,
       "role": "body",
       "box": [
-        230,
-        300,
-        85,
-        23
+        502,
+        237,
+        178,
+        46
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_049",
-      "text": "Random monthly cash count",
-      "size": 12.8,
+      "text": "~110 narrative words;\n20-word overlap. Repeat\ntable conditions on\ncontinuation passages.",
+      "size": 13.2,
       "role": "body",
       "box": [
-        69,
-        329,
-        153,
-        31
+        502,
+        294,
+        182,
+        92
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_050",
-      "text": "Dual",
-      "size": 13.5,
-      "role": "body",
+      "text": "04 / INDEX",
+      "size": 10.2,
+      "role": "label",
       "box": [
-        230,
-        329,
-        85,
-        23
+        724,
+        205,
+        178,
+        19
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_051",
-      "text": "01 / PARSE",
-      "size": 10,
-      "role": "label",
+      "text": "Index\nand trace",
+      "size": 17,
+      "role": "body",
       "box": [
-        366,
-        197,
-        176,
-        18
+        724,
+        237,
+        178,
+        46
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_052",
-      "text": "Keep structure",
-      "size": 17,
+      "text": "1,388 passages; BM25 +\n384D dense vectors. Record\nsource, section and\noriginal-file hash.",
+      "size": 13.2,
       "role": "body",
       "box": [
-        366,
-        227,
-        176,
-        27
+        724,
+        294,
+        182,
+        92
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_053",
-      "text": "HTML headings, lists and table rows. Linked content is not fetched.",
-      "size": 14.2,
-      "role": "body",
+      "text": "DESIGN RATIONALE",
+      "size": 10.2,
+      "role": "label",
       "box": [
-        366,
-        266,
-        176,
-        99
+        57,
+        426,
+        145,
+        19
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_054",
-      "text": "02 / CHUNK",
-      "size": 10,
-      "role": "label",
+      "text": "Focused passages improve retrieval; repeated conditions protect applicability. Source fingerprints and index checks detect changed inputs.",
+      "size": 13.5,
+      "role": "body",
       "box": [
-        553,
-        197,
-        176,
-        18
+        213,
+        422,
+        687,
+        45
       ]
     },
     {
       "slide": 2,
       "shape": "text_2_055",
-      "text": "Keep context",
-      "size": 17,
-      "role": "body",
-      "box": [
-        553,
-        227,
-        176,
-        27
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_056",
-      "text": "~110 narrative words; 20-word overlap. Carry table labels and conditions.",
-      "size": 14.2,
-      "role": "body",
-      "box": [
-        553,
-        266,
-        176,
-        99
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_057",
-      "text": "03 / TRACE",
-      "size": 10,
-      "role": "label",
-      "box": [
-        740,
-        197,
-        176,
-        18
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_058",
-      "text": "Keep identity",
-      "size": 17,
-      "role": "body",
-      "box": [
-        740,
-        227,
-        176,
-        27
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_059",
-      "text": "Procedure, section, date and original-file fingerprint on each passage.",
-      "size": 14.2,
-      "role": "body",
-      "box": [
-        740,
-        266,
-        176,
-        99
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_060",
-      "text": "SEARCH THE SAME VERIFIED PASSAGE COLLECTION",
-      "size": 10.5,
-      "role": "label",
-      "box": [
-        44,
-        385,
-        872,
-        18
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_061",
-      "text": "Exact terms",
-      "size": 14.7,
-      "role": "body",
-      "box": [
-        55,
-        421,
-        184,
-        23
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_062",
-      "text": "BM25 keyword search",
-      "size": 10.8,
-      "role": "label",
-      "box": [
-        55,
-        447,
-        184,
-        19
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_063",
-      "text": "Same meaning",
-      "size": 14.7,
-      "role": "body",
-      "box": [
-        277,
-        421,
-        184,
-        23
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_064",
-      "text": "MiniLM · 384 dimensions",
-      "size": 10.8,
-      "role": "label",
-      "box": [
-        277,
-        447,
-        184,
-        19
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_065",
-      "text": "Combine + rerank",
-      "size": 14.7,
-      "role": "body",
-      "box": [
-        499,
-        421,
-        184,
-        23
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_066",
-      "text": "Rank fusion + cross-encoder",
-      "size": 10.8,
-      "role": "label",
-      "box": [
-        499,
-        447,
-        184,
-        19
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_067",
-      "text": "Select evidence",
-      "size": 14.7,
-      "role": "body",
-      "box": [
-        721,
-        421,
-        184,
-        23
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_068",
-      "text": "≤3 passages / ~520 words",
-      "size": 10.8,
-      "role": "label",
-      "box": [
-        721,
-        447,
-        184,
-        19
-      ]
-    },
-    {
-      "slide": 2,
-      "shape": "text_2_069",
-      "text": "Supplied PR63 facts · 110 words is a narrative target, not an exact token count · table continuations repeat their condition",
+      "text": "Narrative chunk size is a word target · table rows preserve their labels and conditions · original source bytes remain unchanged",
       "size": 8.5,
       "role": "source",
       "box": [
@@ -2471,7 +2185,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_070",
+      "shape": "text_3_056",
       "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  BUILD THE ANSWER",
       "size": 10,
       "role": "label",
@@ -2484,20 +2198,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_071",
-      "text": "INTERVIEW PROTOTYPE",
-      "size": 8.1,
-      "role": "source",
-      "box": [
-        638,
-        28,
-        120,
-        16
-      ]
-    },
-    {
-      "slide": 3,
-      "shape": "text_3_072",
+      "shape": "text_3_057",
       "text": "Retrieve the rule. Generate an answer.\nCheck the claims before release.",
       "size": 29,
       "role": "headline",
@@ -2510,7 +2211,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_073",
+      "shape": "text_3_058",
       "text": "A small local pipeline makes evidence, control decisions and failure outcomes inspectable.",
       "size": 14,
       "role": "body",
@@ -2523,8 +2224,8 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_074",
-      "text": "01  Need",
+      "shape": "text_3_059",
+      "text": "01  Solution",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2536,8 +2237,8 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_075",
-      "text": "02  Content",
+      "shape": "text_3_060",
+      "text": "02  Data",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2549,7 +2250,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_076",
+      "shape": "text_3_061",
       "text": "03  Architecture",
       "size": 8.8,
       "role": "navigation",
@@ -2562,7 +2263,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_077",
+      "shape": "text_3_062",
       "text": "04  Experience",
       "size": 8.8,
       "role": "navigation",
@@ -2575,8 +2276,8 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_078",
-      "text": "05  Evidence",
+      "shape": "text_3_063",
+      "text": "05  Evaluation",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2588,8 +2289,8 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_079",
-      "text": "06  Decision",
+      "shape": "text_3_064",
+      "text": "06  Demo",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2601,7 +2302,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_080",
+      "shape": "text_3_065",
       "text": "3/6",
       "size": 9,
       "role": "navigation",
@@ -2614,7 +2315,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_081",
+      "shape": "text_3_066",
       "text": "PREPARED OFFLINE   Verified passages + keyword statistics + normalized vectors",
       "size": 11.6,
       "role": "label",
@@ -2627,7 +2328,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_082",
+      "shape": "text_3_067",
       "text": "UNDERSTAND",
       "size": 9.5,
       "role": "label",
@@ -2640,7 +2341,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_083",
+      "shape": "text_3_068",
       "text": "Question context\n+ search scope",
       "size": 13.4,
       "role": "body",
@@ -2653,7 +2354,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_084",
+      "shape": "text_3_069",
       "text": "RETRIEVE",
       "size": 9.5,
       "role": "label",
@@ -2666,7 +2367,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_085",
+      "shape": "text_3_070",
       "text": "BM25 + MiniLM\nfusion + rerank",
       "size": 13.4,
       "role": "body",
@@ -2679,7 +2380,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_086",
+      "shape": "text_3_071",
       "text": "SELECT",
       "size": 9.5,
       "role": "label",
@@ -2692,7 +2393,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_087",
+      "shape": "text_3_072",
       "text": "≤3 passages\n~520 words",
       "size": 13.4,
       "role": "body",
@@ -2705,7 +2406,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_088",
+      "shape": "text_3_073",
       "text": "GENERATE",
       "size": 9.5,
       "role": "label",
@@ -2718,7 +2419,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_089",
+      "shape": "text_3_074",
       "text": "Qwen3-4B Q4\nlocal CPU",
       "size": 13.4,
       "role": "body",
@@ -2731,7 +2432,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_090",
+      "shape": "text_3_075",
       "text": "CHECK",
       "size": 9.5,
       "role": "label",
@@ -2744,7 +2445,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_091",
+      "shape": "text_3_076",
       "text": "Citations\nNumbers\nSupport",
       "size": 13.4,
       "role": "body",
@@ -2757,7 +2458,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_092",
+      "shape": "text_3_077",
       "text": "RESPOND",
       "size": 9.5,
       "role": "label",
@@ -2770,7 +2471,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_093",
+      "shape": "text_3_078",
       "text": "Cited answer\nor source review",
       "size": 13.4,
       "role": "body",
@@ -2783,7 +2484,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_094",
+      "shape": "text_3_079",
       "text": "Weak evidence → clarify or report insufficient support.",
       "size": 12.5,
       "role": "body",
@@ -2796,7 +2497,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_095",
+      "shape": "text_3_080",
       "text": "Failed checks → one revision → withhold if still failing.",
       "size": 12.5,
       "role": "body",
@@ -2809,7 +2510,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_096",
+      "shape": "text_3_081",
       "text": "Why retrieval-augmented generation?",
       "size": 14.1,
       "role": "body",
@@ -2822,7 +2523,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_097",
+      "shape": "text_3_082",
       "text": "Replaceable source material and explicit citations.",
       "size": 13.3,
       "role": "body",
@@ -2835,7 +2536,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_098",
+      "shape": "text_3_083",
       "text": "Why hybrid search?",
       "size": 14.1,
       "role": "body",
@@ -2848,7 +2549,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_099",
+      "shape": "text_3_084",
       "text": "Exact identifiers plus paraphrases; jointly rerank.",
       "size": 13.3,
       "role": "body",
@@ -2861,7 +2562,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_100",
+      "shape": "text_3_085",
       "text": "Why this runtime?",
       "size": 14.1,
       "role": "body",
@@ -2874,7 +2575,7 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_101",
+      "shape": "text_3_086",
       "text": "Local CPU, no API key; small in-memory index.",
       "size": 13.3,
       "role": "body",
@@ -2887,8 +2588,8 @@
     },
     {
       "slide": 3,
-      "shape": "text_3_102",
-      "text": "MiniLM-L6 embeddings/reranker · DeBERTa NLI support screen · bounded orchestration · no transaction tools or confidence percentage",
+      "shape": "text_3_087",
+      "text": "MiniLM-L6 embeddings and reranking · DeBERTa NLI support screening · source identity and claim-local citations",
       "size": 8.5,
       "role": "source",
       "box": [
@@ -2900,8 +2601,8 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_103",
-      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  USE THE CONVERSATION",
+      "shape": "text_4_088",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  EXPERIENCE AND FOLLOW-UPS",
       "size": 10,
       "role": "label",
       "box": [
@@ -2913,21 +2614,8 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_104",
-      "text": "INTERVIEW PROTOTYPE",
-      "size": 8.1,
-      "role": "source",
-      "box": [
-        638,
-        28,
-        120,
-        16
-      ]
-    },
-    {
-      "slide": 4,
-      "shape": "text_4_105",
-      "text": "One question becomes a conversation\nyou can inspect.",
+      "shape": "text_4_089",
+      "text": "Context, citations and review\nin one conversational workflow.",
       "size": 29,
       "role": "headline",
       "box": [
@@ -2939,8 +2627,8 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_106",
-      "text": "Use the source to check the answer, then change the task or refine the situation.",
+      "shape": "text_4_090",
+      "text": "A follow-up retains the user’s situation while retrieving new supporting evidence.",
       "size": 14,
       "role": "body",
       "box": [
@@ -2952,8 +2640,8 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_107",
-      "text": "01  Need",
+      "shape": "text_4_091",
+      "text": "01  Solution",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2965,8 +2653,8 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_108",
-      "text": "02  Content",
+      "shape": "text_4_092",
+      "text": "02  Data",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -2978,7 +2666,7 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_109",
+      "shape": "text_4_093",
       "text": "03  Architecture",
       "size": 8.8,
       "role": "navigation",
@@ -2991,7 +2679,7 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_110",
+      "shape": "text_4_094",
       "text": "04  Experience",
       "size": 8.8,
       "role": "navigation",
@@ -3004,8 +2692,8 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_111",
-      "text": "05  Evidence",
+      "shape": "text_4_095",
+      "text": "05  Evaluation",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3017,8 +2705,8 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_112",
-      "text": "06  Decision",
+      "shape": "text_4_096",
+      "text": "06  Demo",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3030,7 +2718,7 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_113",
+      "shape": "text_4_097",
       "text": "4/6",
       "size": 9,
       "role": "navigation",
@@ -3043,99 +2731,164 @@
     },
     {
       "slide": 4,
-      "shape": "text_4_114",
-      "text": "RECORDED TOOL WORKFLOW / PR63",
+      "shape": "text_4_098",
+      "text": "Search and scope",
+      "size": 16,
+      "role": "body",
+      "box": [
+        44,
+        196,
+        300,
+        28
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_099",
+      "text": "Procedure library and guided starters; selected documents restrict retrieval.",
+      "size": 13.7,
+      "role": "body",
+      "box": [
+        44,
+        231,
+        300,
+        60
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_100",
+      "text": "Follow-up resolution",
+      "size": 16,
+      "role": "body",
+      "box": [
+        44,
+        287,
+        300,
+        28
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_101",
+      "text": "Retain the situation. A new topic changes scope; every turn retrieves evidence.",
+      "size": 13.7,
+      "role": "body",
+      "box": [
+        44,
+        322,
+        300,
+        60
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_102",
+      "text": "Inspect and review",
+      "size": 16,
+      "role": "body",
+      "box": [
+        44,
+        390,
+        300,
+        28
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_103",
+      "text": "Open citations, checks and activity; flag a response and export the investigation.",
+      "size": 13.7,
+      "role": "body",
+      "box": [
+        44,
+        425,
+        300,
+        60
+      ]
+    },
+    {
+      "slide": 4,
+      "shape": "text_4_104",
+      "text": "RECORDED CONVERSATION / PR63",
       "size": 10.2,
       "role": "label",
       "box": [
-        44,
-        189,
-        500,
+        391,
+        207,
+        508,
         19
       ]
     },
     {
       "slide": 4,
-      "shape": "text_4_115",
+      "shape": "text_4_105",
       "text": "What is the overnight storage limit for a coin-counting machine?",
-      "size": 15.2,
+      "size": 14.6,
       "role": "body",
       "box": [
-        57,
-        227,
-        474,
-        39
+        391,
+        239,
+        508,
+        41
       ]
     },
     {
       "slide": 4,
-      "shape": "text_4_116",
+      "shape": "text_4_106",
       "text": "The overnight storage limit for a coin-counting machine is $5,250 [S1].",
-      "size": 17,
+      "size": 15.5,
       "role": "body",
       "box": [
-        57,
-        282,
-        474,
-        54
+        391,
+        286,
+        508,
+        49
       ]
     },
     {
       "slide": 4,
-      "shape": "text_4_117",
+      "shape": "text_4_107",
       "text": "And is monthly testing done in single or dual control?",
-      "size": 15.2,
+      "size": 14.6,
       "role": "body",
       "box": [
-        57,
-        351,
-        474,
+        391,
+        356,
+        508,
         38
       ]
     },
     {
       "slide": 4,
-      "shape": "text_4_118",
+      "shape": "text_4_108",
       "text": "Monthly testing is done in single control. [S2]",
-      "size": 17,
+      "size": 15.5,
       "role": "body",
       "box": [
-        57,
-        405,
-        474,
-        36
+        391,
+        400,
+        508,
+        40
       ]
     },
     {
       "slide": 4,
-      "shape": "text_4_119",
-      "text": "[S2] PR63 / MONTHLY TESTING",
-      "size": 10.3,
-      "role": "label",
-      "box": [
-        584,
-        187,
-        332,
-        18
-      ]
-    },
-    {
-      "slide": 4,
-      "shape": "text_4_120",
-      "text": "Same procedure. Fresh evidence for the new task.",
-      "size": 12.8,
+      "shape": "text_4_109",
+      "text": "S1: overnight storage → S2: monthly testing",
+      "size": 11.7,
       "role": "body",
       "box": [
-        44,
-        459,
-        500,
-        23
+        391,
+        447,
+        508,
+        20
       ]
     },
     {
       "slide": 4,
-      "shape": "text_4_121",
-      "text": "Actual recorded answers and source-pane capture · inspect Evidence / Checks / Activity · topic switch, reset, feedback and export are supported",
+      "shape": "text_4_110",
+      "text": "Every turn retrieves evidence · prior generated answers are not source material · scope, reset, session isolation, feedback and export are supported",
       "size": 8.5,
       "role": "source",
       "box": [
@@ -3147,7 +2900,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_122",
+      "shape": "text_5_111",
       "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  MEASURE THE EVIDENCE",
       "size": 10,
       "role": "label",
@@ -3160,21 +2913,8 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_123",
-      "text": "INTERVIEW PROTOTYPE",
-      "size": 8.1,
-      "role": "source",
-      "box": [
-        638,
-        28,
-        120,
-        16
-      ]
-    },
-    {
-      "slide": 5,
-      "shape": "text_5_124",
-      "text": "Finding evidence is the first test.\nAnswer quality is the next.",
+      "shape": "text_5_112",
+      "text": "Evaluate retrieval and response quality\nas separate measures.",
       "size": 29,
       "role": "headline",
       "box": [
@@ -3186,7 +2926,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_125",
+      "shape": "text_5_113",
       "text": "Measured local regression results; independent review is still required for an operational decision.",
       "size": 14,
       "role": "body",
@@ -3199,8 +2939,8 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_126",
-      "text": "01  Need",
+      "shape": "text_5_114",
+      "text": "01  Solution",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3212,8 +2952,8 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_127",
-      "text": "02  Content",
+      "shape": "text_5_115",
+      "text": "02  Data",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3225,7 +2965,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_128",
+      "shape": "text_5_116",
       "text": "03  Architecture",
       "size": 8.8,
       "role": "navigation",
@@ -3238,7 +2978,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_129",
+      "shape": "text_5_117",
       "text": "04  Experience",
       "size": 8.8,
       "role": "navigation",
@@ -3251,8 +2991,8 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_130",
-      "text": "05  Evidence",
+      "shape": "text_5_118",
+      "text": "05  Evaluation",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3264,8 +3004,8 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_131",
-      "text": "06  Decision",
+      "shape": "text_5_119",
+      "text": "06  Demo",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3277,7 +3017,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_132",
+      "shape": "text_5_120",
       "text": "5/6",
       "size": 9,
       "role": "navigation",
@@ -3290,7 +3030,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_133",
+      "shape": "text_5_121",
       "text": "RELEVANT PASSAGE IN TOP FIVE",
       "size": 10.1,
       "role": "label",
@@ -3303,7 +3043,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_134",
+      "shape": "text_5_122",
       "text": "Keyword",
       "size": 12.4,
       "role": "body",
@@ -3316,7 +3056,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_135",
+      "shape": "text_5_123",
       "text": "27/30",
       "size": 15.3,
       "role": "body",
@@ -3329,7 +3069,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_136",
+      "shape": "text_5_124",
       "text": "Semantic",
       "size": 12.4,
       "role": "body",
@@ -3342,7 +3082,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_137",
+      "shape": "text_5_125",
       "text": "28/30",
       "size": 15.3,
       "role": "body",
@@ -3355,7 +3095,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_138",
+      "shape": "text_5_126",
       "text": "Hybrid + rerank",
       "size": 12.4,
       "role": "body",
@@ -3368,7 +3108,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_139",
+      "shape": "text_5_127",
       "text": "30/30",
       "size": 15.3,
       "role": "body",
@@ -3381,7 +3121,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_140",
+      "shape": "text_5_128",
       "text": "23/30",
       "size": 31,
       "role": "body",
@@ -3394,7 +3134,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_141",
+      "shape": "text_5_129",
       "text": "answers pass the\nexpected-fact proxy",
       "size": 13.8,
       "role": "body",
@@ -3407,7 +3147,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_142",
+      "shape": "text_5_130",
       "text": "Phrase matching can miss valid wording or pass an incorrect answer.",
       "size": 11.7,
       "role": "body",
@@ -3420,7 +3160,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_143",
+      "shape": "text_5_131",
       "text": "WHAT TO MEASURE / WHAT A REVIEWER MUST JUDGE",
       "size": 10.1,
       "role": "label",
@@ -3433,7 +3173,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_144",
+      "shape": "text_5_132",
       "text": "Accuracy",
       "size": 13.3,
       "role": "body",
@@ -3446,7 +3186,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_145",
+      "shape": "text_5_133",
       "text": "Citations, numbers and support screens.",
       "size": 12.2,
       "role": "body",
@@ -3459,7 +3199,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_146",
+      "shape": "text_5_134",
       "text": "Is every instruction correct for this situation?",
       "size": 12.6,
       "role": "body",
@@ -3472,7 +3212,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_147",
+      "shape": "text_5_135",
       "text": "Relevance",
       "size": 13.3,
       "role": "body",
@@ -3485,7 +3225,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_148",
+      "shape": "text_5_136",
       "text": "Passage ranking and direct response.",
       "size": 12.2,
       "role": "body",
@@ -3498,7 +3238,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_149",
+      "shape": "text_5_137",
       "text": "Does it answer the exact question?",
       "size": 12.6,
       "role": "body",
@@ -3511,7 +3251,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_150",
+      "shape": "text_5_138",
       "text": "Completeness",
       "size": 13.3,
       "role": "body",
@@ -3524,7 +3264,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_151",
+      "shape": "text_5_139",
       "text": "23/30 expected-fact proxy.",
       "size": 12.2,
       "role": "body",
@@ -3537,7 +3277,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_152",
+      "shape": "text_5_140",
       "text": "Are material conditions and exceptions included?",
       "size": 12.6,
       "role": "body",
@@ -3550,7 +3290,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_153",
+      "shape": "text_5_141",
       "text": "Conciseness",
       "size": 13.3,
       "role": "body",
@@ -3563,7 +3303,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_154",
+      "shape": "text_5_142",
       "text": "28-word mean draft; bounded output.",
       "size": 12.2,
       "role": "body",
@@ -3576,7 +3316,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_155",
+      "shape": "text_5_143",
       "text": "Is it brief without losing necessary guidance?",
       "size": 12.6,
       "role": "body",
@@ -3589,7 +3329,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_156",
+      "shape": "text_5_144",
       "text": "Next: two independent reviewers, unseen scenarios, critical-error checks.",
       "size": 11.7,
       "role": "body",
@@ -3602,7 +3342,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_157",
+      "shape": "text_5_145",
       "text": "6/35 generated evaluations: source only",
       "size": 10.8,
       "role": "label",
@@ -3615,7 +3355,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_158",
+      "shape": "text_5_146",
       "text": "2/4 original follow-ups: fact-proxy pass",
       "size": 10.8,
       "role": "label",
@@ -3628,7 +3368,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_159",
+      "shape": "text_5_147",
       "text": "CPU p50 / p95: 13.8s / 23.9s",
       "size": 10.8,
       "role": "label",
@@ -3641,7 +3381,7 @@
     },
     {
       "slide": 5,
-      "shape": "text_5_160",
+      "shape": "text_5_148",
       "text": "30 procedure questions + 4 two-turn conversations + 6 selected guardrails · AI-authored/source-checked labels · cold load excluded · draft length n=32",
       "size": 8.5,
       "role": "source",
@@ -3654,8 +3394,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_161",
-      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  DEMONSTRATE AND DECIDE",
+      "shape": "text_6_149",
+      "text": "BRANCH ASSIST  /  LEADERSHIP BRIEF  /  DEMONSTRATION",
       "size": 10,
       "role": "label",
       "box": [
@@ -3667,21 +3407,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_162",
-      "text": "INTERVIEW PROTOTYPE",
-      "size": 8.1,
-      "role": "source",
-      "box": [
-        638,
-        28,
-        120,
-        16
-      ]
-    },
-    {
-      "slide": 6,
-      "shape": "text_6_163",
-      "text": "Demonstrate the workflow.\nValidate before a pilot.",
+      "shape": "text_6_150",
+      "text": "Demonstrate answers, follow-ups\nand evidence review.",
       "size": 29,
       "role": "headline",
       "box": [
@@ -3693,8 +3420,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_164",
-      "text": "The working prototype is ready to inspect; the next decision is a scoped validation phase.",
+      "shape": "text_6_151",
+      "text": "Show the functional chat with procedure questions, changed conditions and a clear review path.",
       "size": 14,
       "role": "body",
       "box": [
@@ -3706,8 +3433,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_165",
-      "text": "01  Need",
+      "shape": "text_6_152",
+      "text": "01  Solution",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3719,8 +3446,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_166",
-      "text": "02  Content",
+      "shape": "text_6_153",
+      "text": "02  Data",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3732,7 +3459,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_167",
+      "shape": "text_6_154",
       "text": "03  Architecture",
       "size": 8.8,
       "role": "navigation",
@@ -3745,7 +3472,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_168",
+      "shape": "text_6_155",
       "text": "04  Experience",
       "size": 8.8,
       "role": "navigation",
@@ -3758,8 +3485,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_169",
-      "text": "05  Evidence",
+      "shape": "text_6_156",
+      "text": "05  Evaluation",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3771,8 +3498,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_170",
-      "text": "06  Decision",
+      "shape": "text_6_157",
+      "text": "06  Demo",
       "size": 8.8,
       "role": "navigation",
       "box": [
@@ -3784,7 +3511,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_171",
+      "shape": "text_6_158",
       "text": "6/6",
       "size": 9,
       "role": "navigation",
@@ -3797,8 +3524,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_172",
-      "text": "DEMONSTRATE / LIVE TOOL OR APPROVED RECORDING",
+      "shape": "text_6_159",
+      "text": "DEMONSTRATION SEQUENCE",
       "size": 10,
       "role": "label",
       "box": [
@@ -3810,7 +3537,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_173",
+      "shape": "text_6_160",
       "text": "01",
       "size": 10.4,
       "role": "label",
@@ -3823,7 +3550,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_174",
+      "shape": "text_6_161",
       "text": "Ask a routine rule",
       "size": 15.1,
       "role": "body",
@@ -3836,7 +3563,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_175",
+      "shape": "text_6_162",
       "text": "Coin overnight limit → monthly-testing follow-up.",
       "size": 11.7,
       "role": "body",
@@ -3849,7 +3576,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_176",
+      "shape": "text_6_163",
       "text": "$5,250 overnight; single control for testing. [PR63]",
       "size": 11.7,
       "role": "body",
@@ -3862,7 +3589,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_177",
+      "shape": "text_6_164",
       "text": "02",
       "size": 10.4,
       "role": "label",
@@ -3875,7 +3602,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_178",
+      "shape": "text_6_165",
       "text": "Change a condition",
       "size": 15.1,
       "role": "body",
@@ -3888,7 +3615,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_179",
+      "shape": "text_6_166",
       "text": "Emailed notary document → requester is present.",
       "size": 11.7,
       "role": "body",
@@ -3901,7 +3628,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_180",
+      "shape": "text_6_167",
       "text": "The emailed-document restriction still applies. [PR1000]",
       "size": 11.7,
       "role": "body",
@@ -3914,7 +3641,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_181",
+      "shape": "text_6_168",
       "text": "03",
       "size": 10.4,
       "role": "label",
@@ -3927,7 +3654,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_182",
+      "shape": "text_6_169",
       "text": "Inspect an exception",
       "size": 15.1,
       "role": "body",
@@ -3940,7 +3667,7 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_183",
+      "shape": "text_6_170",
       "text": "Newer account → Private Bank Experience exception.",
       "size": 11.7,
       "role": "body",
@@ -3953,8 +3680,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_184",
-      "text": "$1,000/day rule; review the source if checks fail. [PR1949]",
+      "shape": "text_6_171",
+      "text": "$1,000/day base rule; inspect the exception. [PR1949]",
       "size": 11.7,
       "role": "body",
       "box": [
@@ -3966,8 +3693,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_185",
-      "text": "VALIDATE / OWNERS AND GATES",
+      "shape": "text_6_172",
+      "text": "WHAT TO OBSERVE",
       "size": 10,
       "role": "label",
       "box": [
@@ -3979,8 +3706,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_186",
-      "text": "Quality · procedure owners + SMEs",
+      "shape": "text_6_173",
+      "text": "Grounding and traceability",
       "size": 13.9,
       "role": "body",
       "box": [
@@ -3992,21 +3719,21 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_187",
-      "text": "Unseen scenarios; four quality scores.\nCritical errors and coverage are separate gates.",
+      "shape": "text_6_174",
+      "text": "Inspect the exact passage and the checks behind the released response.",
       "size": 12.5,
       "role": "body",
       "box": [
         584,
         249,
         332,
-        41
+        43
       ]
     },
     {
       "slide": 6,
-      "shape": "text_6_188",
-      "text": "Value · branch operations + AI team",
+      "shape": "text_6_175",
+      "text": "Conversation continuity",
       "size": 13.9,
       "role": "body",
       "box": [
@@ -4018,21 +3745,21 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_189",
-      "text": "Task success; time to correct guidance.\nCompare with current search.",
+      "shape": "text_6_176",
+      "text": "Preserve applicable conditions; change topics without carrying old evidence.",
       "size": 12.5,
       "role": "body",
       "box": [
         584,
         320,
         332,
-        41
+        43
       ]
     },
     {
       "slide": 6,
-      "shape": "text_6_190",
-      "text": "Pilot controls · security + platform",
+      "shape": "text_6_177",
+      "text": "Bounded failure handling",
       "size": 13.9,
       "role": "body",
       "box": [
@@ -4044,22 +3771,22 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_191",
-      "text": "Identity, source access/versioning, monitoring and rollback.",
+      "shape": "text_6_178",
+      "text": "Clarify missing context or show sources when an answer cannot pass checks.",
       "size": 12.5,
       "role": "body",
       "box": [
         584,
         391,
         332,
-        41
+        43
       ]
     },
     {
       "slide": 6,
-      "shape": "text_6_192",
-      "text": "Recommendation: validate quality and employee value before an operational pilot.",
-      "size": 14,
+      "shape": "text_6_179",
+      "text": "Next: independent quality review, broader exception tests and deployment controls.",
+      "size": 13.8,
       "role": "body",
       "box": [
         56,
@@ -4070,8 +3797,8 @@
     },
     {
       "slide": 6,
-      "shape": "text_6_193",
-      "text": "20-minute presentation → 15-minute walkthrough · approved silent recording 9:25 + live inspection/Q&A · AI assistance disclosed; candidate owns decisions",
+      "shape": "text_6_180",
+      "text": "Generative AI: development assistance and local runtime answering · recorded outputs and test results are checked against source procedures",
       "size": 8.5,
       "role": "source",
       "box": [

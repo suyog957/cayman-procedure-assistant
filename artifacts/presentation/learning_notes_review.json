@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "embedded_notes_equal_canonical_guide": true,
+  "all_guide_lines_present_in_readable_pdf": true,
+  "learning_notes_pdf_pages": 15,
+  "pdf_slide_bookmarks": 6,
+  "short_speaking_version_and_questions_per_slide": true,
+  "all_non_note_pptx_parts_byte_identical": true,
+  "preserved_non_note_parts": 58,
+  "visible_slide_pdf_and_previews_byte_identical": true,
+  "explained_measurements_match_accepted_results": true,
+  "pptx_sha256": "5122bfa5b7ebc5836af25e3cfa74bced08f5a6bc0898cd4fc4750458d66b6957",
+  "learning_notes_pdf_sha256": "0f5133bff47db256694603e0aa7147f77a775efb2bd75330cdc0c8a120b84d61"
+}

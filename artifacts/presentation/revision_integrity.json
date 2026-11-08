@@ -8,5 +8,8 @@
   "application_source_unchanged": true,
   "local_renderer_cache_excluded": true,
   "credential_signature_scan_passed": true,
-  "all_repository_files_below_100_MB": true
+  "all_repository_files_below_100_MB": true,
+  "notes_only_pptx_parts_verified": true,
+  "visible_slide_builder_unchanged": true,
+  "learning_guide_pdf_matches_embedded_notes": true
 }

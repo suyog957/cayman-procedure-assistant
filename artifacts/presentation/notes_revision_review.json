@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "notes_format": "learning explanations, short speaking version and Q&A",
+  "slide_count": 6,
+  "speaker_note_words_per_slide": [
+    767,
+    977,
+    1147,
+    945,
+    1199,
+    916
+  ],
+  "all_non_note_pptx_parts_byte_identical": true,
+  "preserved_non_note_parts": 58,
+  "modified_parts": [
+    "ppt/notesSlides/notesSlide1.xml",
+    "ppt/notesSlides/notesSlide2.xml",
+    "ppt/notesSlides/notesSlide3.xml",
+    "ppt/notesSlides/notesSlide4.xml",
+    "ppt/notesSlides/notesSlide5.xml",
+    "ppt/notesSlides/notesSlide6.xml"
+  ],
+  "modified_parts_this_run": [],
+  "visible_slide_pdf_and_previews_byte_identical": true,
+  "source_free_bundle_refreshed": true,
+  "original_pptx_sha256": "3148f556895aac81bd9f15e90ef1c6724a3e7ceb73df151fb974912cb45ca829",
+  "updated_pptx_sha256": "5122bfa5b7ebc5836af25e3cfa74bced08f5a6bc0898cd4fc4750458d66b6957",
+  "learning_notes_pdf_sha256": "0f5133bff47db256694603e0aa7147f77a775efb2bd75330cdc0c8a120b84d61"
+}

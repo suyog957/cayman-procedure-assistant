@@ -1,6 +1,6 @@
 # Solution presentation: content and requirement coverage
 
-The presentation explains the solution to senior leadership in six slides. The opening establishes the objective, implemented scope and methodology. Examples support the user-experience and demonstration sections. Speaker notes provide the technical detail and transitions for a 20-minute presentation, followed by a separate 15-minute walkthrough.
+The presentation explains the solution to senior leadership in six slides. The opening establishes the objective, implemented scope and methodology. Examples support the user-experience and demonstration sections. Speaker notes now provide a learning guide: a short speaking version, plain-language explanations of the claims and implementation choices, limitations, likely questions and transitions. The full notes are preparation material, rather than a script to read verbatim. The planned presentation remains 20 minutes, followed by a separate 15-minute walkthrough.
 
 ## Slide structure
 
@@ -37,6 +37,8 @@ Warm white backgrounds, restrained red/gold accents, serif takeaway headings and
 The completed file is `submission/Branch_Assist_Solution_Presentation_Final.pptx`, with a matching PDF. Earlier PowerPoints were open during revision and are left untouched at their previous filenames. The application download path also receives the current PDF; the shared ZIP includes the newly named presentation.
 
 ## Validation and rendering
+
+The notes-only revision uses `update_presenter_notes.py` and the canonical [presenter learning notes](PRESENTER_LEARNING_NOTES.md). Only six speaker-note XML parts are replaced in the existing PPTX. All 58 other package parts, including slide text, geometry, imagery, themes and metadata, remain byte-identical. The matching slide PDF and previews are also unchanged. The companion `Presenter_Notes.pdf` has slide bookmarks and the same explanations. `verify_learning_notes.py` checks that the embedded notes and PDF match the guide and that the protected slide artifacts remain intact.
 
 `presentation_deck.py` builds the editable file. PowerPoint is used when background opening is available; local LibreOffice Impress provides an independent rendering path when it is not. A separate local tool/profile keeps existing open presentations intact. Rendered text is checked against intended boxes and the PPT text; all six slides are inspected visually.
 

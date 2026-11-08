@@ -43,6 +43,8 @@ The **[six-slide solution PowerPoint](submission/Branch_Assist_Solution_Presenta
 
 The same folder contains presenter notes, the timed demo runbook and recorded demonstration responses. `submission/Presentation_Materials.zip` contains the current allowlisted presentation artifacts and excludes implementation source, model files and raw evaluation internals. The approved final video remains separate and unchanged.
 
+For presentation preparation, read the **[presenter learning notes](submission/Presenter_Notes.pdf)** or their [Markdown version](docs/PRESENTER_LEARNING_NOTES.md). The same material is embedded in the PPT's speaker notes. Each slide has a short speaking version, plain-language explanations of its claims and implementation choices, evidence limits, likely questions and a transition. Study the explanations first, then rehearse the short version in your own words; the full learning guide is longer than the spoken presentation. The notes revision preserves every visible slide part and the slide PDF unchanged. Use `python scripts/update_presenter_notes.py` for future notes-only updates.
+
 The shared presentation package excludes implementation source and model files. Use the solution walkthrough for the presentation flow, procedure questions and source facts to inspect.
 
 ## Reproduce on another Windows machine

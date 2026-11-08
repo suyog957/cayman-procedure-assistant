@@ -25,9 +25,10 @@
     "contextual_labels_absent": true
   },
   "submission/Presenter_Notes.pdf": {
-    "pages": 5,
+    "pages": 15,
     "all_pages_have_text": true,
-    "contextual_labels_absent": true
+    "contextual_labels_absent": true,
+    "slide_bookmarks": 6
   },
   "submission/Recorded_Demo.pdf": {
     "pages": 7,

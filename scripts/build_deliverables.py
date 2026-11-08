@@ -15,6 +15,7 @@ import xml.etree.ElementTree as ET
 
 import pymupdf as fitz
 from presentation_deck import build_leadership_deck, DECK_BASENAME
+from learning_notes import write_learning_pdf
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "submission"
@@ -371,8 +372,7 @@ for case_id in ["M01", "F01.2", "N01", "F02.2", "S01", "F03.2", "F04.2", "N03", 
 transcript_text="\n\n".join(transcript)
 (ROOT / "artifacts/recorded_demo.md").write_text(transcript_text, encoding="utf-8")
 report_pdf(transcript_text, OUT / "Recorded_Demo.pdf")
-notes="\n\n".join(f"## Slide {i+1}\n\n{s.notes_slide.notes_text_frame.text}" for i,s in enumerate(deck.prs.slides))
-report_pdf("# Presenter notes\n\n"+notes, OUT / "Presenter_Notes.pdf")
+write_learning_pdf(ROOT, OUT / "Presenter_Notes.pdf")
 
 (OUT / "README.txt").write_text(
     "CAYMAN PROCEDURE ASSISTANT — PRESENTATION MATERIALS\n\n"

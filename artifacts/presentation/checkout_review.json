@@ -2,8 +2,10 @@
   "status": "passed",
   "fresh_staged_checkout": true,
   "presentation_and_submission_checks_passed": true,
+  "learning_notes_checks_passed": true,
+  "visible_slides_byte_identical_to_prior_final": true,
   "preserved_video_hashes_passed": true,
   "powerpoint_not_required_to_verify_prebuilt_artifacts": true,
-  "pptx_sha256": "3148f556895aac81bd9f15e90ef1c6724a3e7ceb73df151fb974912cb45ca829",
+  "pptx_sha256": "5122bfa5b7ebc5836af25e3cfa74bced08f5a6bc0898cd4fc4750458d66b6957",
   "pdf_sha256": "5ef6ce042c790775c9a032b2ba9afe57ae5190f5aae30f21a5d1b6c8cbcc9e38"
 }

@@ -1,8 +1,10 @@
 """CLI smoke test and serializable answer trace."""
+
 from pathlib import Path
 import argparse
 import json
 import sys
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from cayman_assistant.assistant import Assistant, Turn
 

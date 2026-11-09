@@ -12,7 +12,7 @@ The completed post-approval review is recorded in [FINAL_REVIEW.md](FINAL_REVIEW
 |---|---|---|---|
 | R01 | Use all eleven supplied procedural documents | `artifacts/index/corpus_manifest.json`; hashes, dates, sections, and counts for each source | Exactly eleven documents; source verification at startup; corpus tests |
 | R02 | Build a functional generative chat solution grounded in those procedures | `app.py`; local retrieval, Qwen generation, citation/number checks and claim-support screening | Run the interactive assistant; inspect saved answer traces |
-| R03 | Approximately five to six PPT slides | `submission/Cayman_Procedure_Assistant.pptx` | Exactly six slides; presenter notes; PDF companion |
+| R03 | Approximately five to six PPT slides | `submission/Branch_Assist_Solution_Presentation_Final.pptx` | Exactly six slides; presenter notes; PDF companion |
 | R04 | Explain methodology and architecture | Slides 2–4; `docs/ARCHITECTURE.md` | Trace a question through retrieval, context, generation and checks |
 | R05 | Explain technology choices and key decisions | Slides 2–4; architecture decision table | Defend RAG, local models, hybrid search, reranking and in-memory indexing |
 | R06 | Explain document processing and organization | Slide 2; manifests; normalized source extracts | Show section and table condition preservation; source provenance |

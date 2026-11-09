@@ -3,6 +3,7 @@
 Deck content and measured figures come from the final corpus/evaluation files.
 No source code, model files or evaluation internals enter the submission ZIP.
 """
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -26,34 +27,70 @@ ANSWERS = json.loads((ROOT / "artifacts/evaluation/answer_details.json").read_te
 if "answers" not in METRICS:
     raise SystemExit("Complete the generative evaluation before building final deliverables")
 A = METRICS["answers"]
-generated_rows = [row for row in ANSWERS if row['result']['generator_used']]
+generated_rows = [row for row in ANSWERS if row["result"]["generator_used"]]
 # Aggregate from raw diagnostics so later-added guards are represented in the
 # summary even when an earlier evaluator binary produced the same raw run.
-mechanical_passes = [row for row in generated_rows if (
-    row['result']['checks'].get('valid_citations') and row['result']['checks'].get('all_paragraphs_cited')
-    and row['result']['checks'].get('all_claims_attributed',True) and not row['result']['checks'].get('numeric_citation_conflicts')
-    and not row['result']['checks'].get('novel_numbers') and not row['result']['checks'].get('comparison_conflicts')
-    and 0 < row['result']['checks'].get('word_count',999) <= 190)]
-draft_lengths = [row['result']['checks']['word_count'] for row in generated_rows if 'word_count' in row['result']['checks']]
-derived = {'mechanical_validation_pass_rate':round(len(mechanical_passes) / len(generated_rows),4),
-           'mean_word_count':round(sum(draft_lengths)/len(draft_lengths),1),
-           'draft_word_count_n':len(draft_lengths)}
-for name,value in derived.items():
+mechanical_passes = [
+    row
+    for row in generated_rows
+    if (
+        row["result"]["checks"].get("valid_citations")
+        and row["result"]["checks"].get("all_paragraphs_cited")
+        and row["result"]["checks"].get("all_claims_attributed", True)
+        and not row["result"]["checks"].get("numeric_citation_conflicts")
+        and not row["result"]["checks"].get("novel_numbers")
+        and not row["result"]["checks"].get("comparison_conflicts")
+        and 0 < row["result"]["checks"].get("word_count", 999) <= 190
+    )
+]
+draft_lengths = [
+    row["result"]["checks"]["word_count"]
+    for row in generated_rows
+    if "word_count" in row["result"]["checks"]
+]
+derived = {
+    "mechanical_validation_pass_rate": round(len(mechanical_passes) / len(generated_rows), 4),
+    "mean_word_count": round(sum(draft_lengths) / len(draft_lengths), 1),
+    "draft_word_count_n": len(draft_lengths),
+}
+for name, value in derived.items():
     if name in A and A[name] != value:
-        raise ValueError('Saved evaluation summary disagrees with raw answers: '+name)
+        raise ValueError("Saved evaluation summary disagrees with raw answers: " + name)
 A.update(derived)
 # Presentation builds consume accepted evidence; they never rewrite it.
 BY_ID = {r["id"]: r for r in ANSWERS}
 R = {r["mode"]: r for r in METRICS["retrieval"] if r["split"] == "all"}
-browser_file=ROOT / "artifacts/browser_check.json"
-browser_result=json.loads(browser_file.read_text()) if browser_file.exists() else {}
-browser_ok=browser_result.get('pipeline_version')=='2.0' and all(browser_result.get(k) for k in ['welcome_loaded','followup_pass','export_includes_latest_turn','second_session_isolated','reset_pass','claim_map_pass','activity_record_pass','library_search_and_scope_pass'])
-browser_summary=("The live browser integration check passed actual generation, an explicit single-versus-dual-control follow-up, source inspection, complete transcript export, independent browser sessions and reset. The browser reported no client errors. Results and screenshots are retained under `artifacts/`." if browser_ok else "Browser integration results are retained under `artifacts/` when the optional live browser check has completed.")
-test_file=ROOT / 'artifacts/test_results.xml'
-test_suites=list(ET.parse(test_file).getroot().iter('testsuite')) if test_file.exists() else []
-test_total=sum(int(s.attrib.get('tests',0)) for s in test_suites)
-test_failures=sum(int(s.attrib.get('failures',0))+int(s.attrib.get('errors',0)) for s in test_suites)
-test_summary=f"The recorded automated test run contains {test_total} tests with {test_failures} failures/errors." if test_suites else "Run the automated tests using the README instructions."
+browser_file = ROOT / "artifacts/browser_check.json"
+browser_result = json.loads(browser_file.read_text()) if browser_file.exists() else {}
+browser_ok = browser_result.get("pipeline_version") == "2.0" and all(
+    browser_result.get(k)
+    for k in [
+        "welcome_loaded",
+        "followup_pass",
+        "export_includes_latest_turn",
+        "second_session_isolated",
+        "reset_pass",
+        "claim_map_pass",
+        "activity_record_pass",
+        "library_search_and_scope_pass",
+    ]
+)
+browser_summary = (
+    "The live browser integration check passed actual generation, an explicit single-versus-dual-control follow-up, source inspection, complete transcript export, independent browser sessions and reset. The browser reported no client errors. Results and screenshots are retained under `artifacts/`."
+    if browser_ok
+    else "Browser integration results are retained under `artifacts/` when the optional live browser check has completed."
+)
+test_file = ROOT / "artifacts/test_results.xml"
+test_suites = list(ET.parse(test_file).getroot().iter("testsuite")) if test_file.exists() else []
+test_total = sum(int(s.attrib.get("tests", 0)) for s in test_suites)
+test_failures = sum(
+    int(s.attrib.get("failures", 0)) + int(s.attrib.get("errors", 0)) for s in test_suites
+)
+test_summary = (
+    f"The recorded automated test run contains {test_total} tests with {test_failures} failures/errors."
+    if test_suites
+    else "Run the automated tests using the README instructions."
+)
 
 NAVY = "3B3331"
 TEAL = "D71E28"
@@ -66,32 +103,35 @@ GOLD = "FFCD41"
 
 
 def pct(v):
-    return f"{100*v:.1f}%"
+    return f"{100 * v:.1f}%"
 
 
 def rgb(value):
-    return tuple(int(value[i:i+2], 16) / 255 for i in (0, 2, 4))
+    return tuple(int(value[i : i + 2], 16) / 255 for i in (0, 2, 4))
 
 
 deck = build_leadership_deck(ROOT, CORPUS, METRICS)
 # Keep the existing application download path current without changing its UI.
-shutil.copy2(OUT / (DECK_BASENAME+".pdf"), OUT / "Cayman_Procedure_Assistant.pdf")
+shutil.copy2(OUT / (DECK_BASENAME + ".pdf"), OUT / "Cayman_Procedure_Assistant.pdf")
 
 
 def markdown_html(markdown: str) -> str:
     """Small report formatter; no fenced source or active content is emitted."""
     lines, output, paragraph, table, list_open = markdown.splitlines(), [], [], [], False
+
     def inline(s):
         s = escape(s)
         s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
         s = re.sub(r"`([^`]+)`", r"<span>\1</span>", s)
         s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1", s)
         return s
+
     def flush():
         nonlocal paragraph
         if paragraph:
             output.append("<p>" + inline(" ".join(paragraph)) + "</p>")
             paragraph = []
+
     def flush_table():
         nonlocal table
         if table:
@@ -101,9 +141,12 @@ def markdown_html(markdown: str) -> str:
                     continue
                 cells = row.strip().strip("|").split("|")
                 tag = "th" if i == 0 else "td"
-                output.append("<tr>" + "".join(f"<{tag}>{inline(c.strip())}</{tag}>" for c in cells) + "</tr>")
+                output.append(
+                    "<tr>" + "".join(f"<{tag}>{inline(c.strip())}</{tag}>" for c in cells) + "</tr>"
+                )
             output.append("</table>")
-            table=[]
+            table = []
+
     in_fence = False
     for line in lines + [""]:
         if line.startswith("```"):
@@ -119,18 +162,21 @@ def markdown_html(markdown: str) -> str:
         if line.startswith("#"):
             flush()
             if list_open:
-                output.append("</ul>"); list_open=False
+                output.append("</ul>")
+                list_open = False
             level = min(4, len(line) - len(line.lstrip("#")))
             output.append(f"<h{level}>" + inline(line[level:].strip()) + f"</h{level}>")
         elif re.match(r"^(?:- |\d+\. )", line):
             flush()
             if not list_open:
-                output.append("<ul>"); list_open=True
+                output.append("<ul>")
+                list_open = True
             output.append("<li>" + inline(re.sub(r"^(?:- |\d+\. )", "", line)) + "</li>")
         elif not line.strip():
             flush()
             if list_open:
-                output.append("</ul>"); list_open=False
+                output.append("</ul>")
+                list_open = False
         else:
             paragraph.append(line)
     return "<html><body>" + "\n".join(output) + "</body></html>"
@@ -145,29 +191,47 @@ def report_pdf(markdown: str, output: Path):
     story = fitz.Story(html=markdown_html(markdown), user_css=css)
     writer = fitz.DocumentWriter(str(output))
     media = fitz.paper_rect("a4")
-    where = fitz.Rect(40,40,media.width-40,media.height-45)
-    more=1
+    where = fitz.Rect(40, 40, media.width - 40, media.height - 45)
+    more = 1
     while more:
-        device=writer.begin_page(media)
+        device = writer.begin_page(media)
         more, _ = story.place(where)
         story.draw(device)
         writer.end_page()
     writer.close()
     del writer
-    doc=fitz.open(output)
-    for i,page in enumerate(doc):
-        page.insert_text((40,media.height-22), f"Branch Assist | Solution materials | {i+1}/{len(doc)}", fontsize=8, color=rgb(MUTED))
-    doc.save(str(output)+".tmp", deflate=True)
+    doc = fitz.open(output)
+    for i, page in enumerate(doc):
+        page.insert_text(
+            (40, media.height - 22),
+            f"Branch Assist | Solution materials | {i + 1}/{len(doc)}",
+            fontsize=8,
+            color=rgb(MUTED),
+        )
+    doc.save(str(output) + ".tmp", deflate=True)
     doc.close()
-    Path(str(output)+".tmp").replace(output)
+    Path(str(output) + ".tmp").replace(output)
 
 
 # Detailed solution overview: engineering evidence and limitations.
-inventory = "\n".join(f"| {d['doc_id']} | {d['title'].split(' - PR')[0]} | {d['words']:,} | {d['chunks']} | {d['published'].replace('Published ','')} |" for d in CORPUS["documents"])
+inventory = "\n".join(
+    f"| {d['doc_id']} | {d['title'].split(' - PR')[0]} | {d['words']:,} | {d['chunks']} | {d['published'].replace('Published ', '')} |"
+    for d in CORPUS["documents"]
+)
 failed = [r["id"] for r in ANSWERS if r.get("all_required_facts_proxy") is False]
-ordinary = [r for r in ANSWERS if r["id"] in {c["id"] for c in json.loads((ROOT/'evaluation/cases.json').read_text())["cases"]}]
-status_counts = {status: sum(r['result']['status']==status for r in ordinary) for status in sorted({r['result']['status'] for r in ordinary})}
-follow = ", ".join(k + ": " + ("pass" if v else "miss") for k,v in A["followup_fact_passes"].items())
+ordinary = [
+    r
+    for r in ANSWERS
+    if r["id"]
+    in {c["id"] for c in json.loads((ROOT / "evaluation/cases.json").read_text())["cases"]}
+]
+status_counts = {
+    status: sum(r["result"]["status"] == status for r in ordinary)
+    for status in sorted({r["result"]["status"] for r in ordinary})
+}
+follow = ", ".join(
+    k + ": " + ("pass" if v else "miss") for k, v in A["followup_fact_passes"].items()
+)
 overview = f"""# Detailed solution overview
 
 Branch Assist is a locally runnable generative conversational solution over eleven operational procedures. It combines structured document processing, hybrid retrieval, evidence-based generation and inspectable output checks. The supporting materials include a six-slide solution presentation, measured evaluation, response traces and a timed demonstration guide.
@@ -176,7 +240,7 @@ Branch Assist is a locally runnable generative conversational solution over elev
 
 The system helps employees ask a procedure question, inspect the supporting passages and refine the situation conversationally. Retrieval-augmented generation was chosen to keep the evidence explicit and replaceable. Fine-tuning would not itself provide reliable citations or source version control. A local model removes the API-key dependency and makes the demonstration reproducible on this computer.
 
-The final generator is {A['model']}. The Qwen3 model uses four-bit GGUF inference through llama.cpp on CPU. An earlier Qwen2.5 1.5B float32 baseline produced too many distracting details and withheld drafts; its complete results are retained separately. Model choice was evaluated empirically rather than inferred from published benchmarks.
+The final generator is {A["model"]}. The Qwen3 model uses four-bit GGUF inference through llama.cpp on CPU. An earlier Qwen2.5 1.5B float32 baseline produced too many distracting details and withheld drafts; its complete results are retained separately. Model choice was evaluated empirically rather than inferred from published benchmarks.
 
 The solution uses structure-aware HTML parsing, a JSONL passage store, BM25 lexical search, 384-dimensional MiniLM embeddings, reciprocal rank fusion, MiniLM cross-encoder reranking, bounded evidence, actual local generation, citation-local numeric checks and a DeBERTa NLI screening signal. The Wells Fargo–inspired version 2 workspace exposes a searchable procedure library and an Evidence desk with Evidence, Checks and Activity views. The workspace uses the supplied Cayman Bank documents as its knowledge collection.
 
@@ -188,7 +252,7 @@ The six-slide presentation covers the business objective and solution scope, doc
 
 ## Input review and content preservation
 
-The supplied corpus contains {sum(d['words'] for d in CORPUS['documents']):,} extracted words and 139 HTML tables including nested tables. It is indexed into {CORPUS['chunk_count']:,} passages. PR1779 is much larger than the other procedures and contains several account-type workflows.
+The supplied corpus contains {sum(d["words"] for d in CORPUS["documents"]):,} extracted words and 139 HTML tables including nested tables. It is indexed into {CORPUS["chunk_count"]:,} passages. PR1779 is much larger than the other procedures and contains several account-type workflows.
 
 | Procedure | Subject | Extracted words | Passages | Publication in supplied source |
 |---|---|---:|---:|---|
@@ -223,29 +287,29 @@ The suite includes 30 ordinary procedure questions, four two-turn conversations 
 
 | Retrieval method | Evidence hit@5 | MRR@5 | Local median retrieval seconds |
 |---|---:|---:|---:|
-| BM25 | {pct(R['bm25']['hit_at_5'])} | {R['bm25']['mrr_at_5']:.3f} | {R['bm25']['p50_seconds']:.3f} |
-| Dense | {pct(R['dense']['hit_at_5'])} | {R['dense']['mrr_at_5']:.3f} | {R['dense']['p50_seconds']:.3f} |
-| Hybrid + reranker | {pct(R['hybrid']['hit_at_5'])} | {R['hybrid']['mrr_at_5']:.3f} | {R['hybrid']['p50_seconds']:.3f} |
+| BM25 | {pct(R["bm25"]["hit_at_5"])} | {R["bm25"]["mrr_at_5"]:.3f} | {R["bm25"]["p50_seconds"]:.3f} |
+| Dense | {pct(R["dense"]["hit_at_5"])} | {R["dense"]["mrr_at_5"]:.3f} | {R["dense"]["p50_seconds"]:.3f} |
+| Hybrid + reranker | {pct(R["hybrid"]["hit_at_5"])} | {R["hybrid"]["mrr_at_5"]:.3f} | {R["hybrid"]["p50_seconds"]:.3f} |
 
 Retrieval hit@5 measures whether at least one labelled relevant passage was in the first five, not whether all applicable evidence was retrieved or an answer was correct. Repeated equivalent passages are allowed by the label locators.
 
 | Answer diagnostic | Observed result |
 |---|---|
-| Ordinary questions with all required fact groups, automatic proxy | {pct(A['all_required_facts_proxy'])} of {A['ordinary_n']} |
-| Mean required-fact group coverage, automatic proxy | {pct(A['fact_coverage_proxy'])} |
-| Withheld drafts shown as source excerpts | {A['evidence_only_fallbacks']} of {A['generated_n']} generated evaluations |
-| Expected guardrail response status | {pct(A['guardrail_expected_status_rate'])} of {A['guardrails_n']} |
-| Serial local end-to-end p50 / p95, generated evaluations | {A['p50_seconds']:.2f}s / {A['p95_seconds']:.2f}s |
-| Mean generated-draft word count | {A['mean_word_count']:.1f} |
-| Bounded correction attempts / revised answers released | {A.get('repair_attempts',0)} / {A.get('repairs_released',0)} |
+| Ordinary questions with all required fact groups, automatic proxy | {pct(A["all_required_facts_proxy"])} of {A["ordinary_n"]} |
+| Mean required-fact group coverage, automatic proxy | {pct(A["fact_coverage_proxy"])} |
+| Withheld drafts shown as source excerpts | {A["evidence_only_fallbacks"]} of {A["generated_n"]} generated evaluations |
+| Expected guardrail response status | {pct(A["guardrail_expected_status_rate"])} of {A["guardrails_n"]} |
+| Serial local end-to-end p50 / p95, generated evaluations | {A["p50_seconds"]:.2f}s / {A["p95_seconds"]:.2f}s |
+| Mean generated-draft word count | {A["mean_word_count"]:.1f} |
+| Bounded correction attempts / revised answers released | {A.get("repair_attempts", 0)} / {A.get("repairs_released", 0)} |
 | Ordinary-question response outcome counts | {status_counts} |
 | Follow-up final-turn fact proxies | {follow} |
 
 The latency measurements exclude initial model loading and are from serial requests on the local CPU; they are not a throughput benchmark. Word count is a conciseness diagnostic, not proof of sufficient context. Term matching can pass wrong statements or miss correct paraphrases. NLI is fallible. These results must not be described as independently established accuracy.
 
-Version 2 permits one correction after a failed draft, using the same evidence and check feedback. This increases the worst-case generation work. {A.get('repairs_released',0)} of {A.get('repair_attempts',0)} revised evaluated drafts passed release checks in this run. This is a screened-release count, not independent confirmation of the revisions' correctness.
+Version 2 permits one correction after a failed draft, using the same evidence and check feedback. This increases the worst-case generation work. {A.get("repairs_released", 0)} of {A.get("repair_attempts", 0)} revised evaluated drafts passed release checks in this run. This is a screened-release count, not independent confirmation of the revisions' correctness.
 
-Regression cases missing at least one required fact group, including source-only outcomes: {', '.join(failed) or 'none'}. Review their raw responses and evidence in `artifacts/evaluation/answer_details.json`. The report does not hide fallback as generated-answer success.
+Regression cases missing at least one required fact group, including source-only outcomes: {", ".join(failed) or "none"}. Review their raw responses and evidence in `artifacts/evaluation/answer_details.json`. The report does not hide fallback as generated-answer success.
 
 ## Testing and observed engineering lessons
 
@@ -286,37 +350,56 @@ suite = json.loads((ROOT / "evaluation/cases.json").read_text())
 case_map = {c["id"]: c for c in suite["cases"]}
 case_table = []
 for row in ordinary:
-    result=row["result"]
-    reason=("model abstention" if result["status"]=="unsupported" else
-            "numeric/comparator check" if result["checks"].get("novel_numbers") or result["checks"].get("comparison_conflicts") else
-            "claim support screen" if not result["checks"].get("claim_support",{}).get("passed",True) else
-            "missing fact group" if not row.get("all_required_facts_proxy") else "fact proxy passed")
-    case_table.append(f"| {row['id']} | {case_map[row['id']]['doc_id']} | {result['status']} | {'pass' if row.get('all_required_facts_proxy') else 'miss'} | {reason} |")
-per_doc=[]
+    result = row["result"]
+    reason = (
+        "model abstention"
+        if result["status"] == "unsupported"
+        else "numeric/comparator check"
+        if result["checks"].get("novel_numbers") or result["checks"].get("comparison_conflicts")
+        else "claim support screen"
+        if not result["checks"].get("claim_support", {}).get("passed", True)
+        else "missing fact group"
+        if not row.get("all_required_facts_proxy")
+        else "fact proxy passed"
+    )
+    case_table.append(
+        f"| {row['id']} | {case_map[row['id']]['doc_id']} | {result['status']} | {'pass' if row.get('all_required_facts_proxy') else 'miss'} | {reason} |"
+    )
+per_doc = []
 for doc in CORPUS["documents"]:
-    relevant=[row for row in ordinary if case_map[row['id']]['doc_id']==doc['doc_id']]
-    per_doc.append(f"| {doc['doc_id']} | {len(relevant)} | {sum(bool(row.get('all_required_facts_proxy')) for row in relevant)} | {sum(row['result']['status']=='evidence_only' for row in relevant)} |")
-baseline_path=ROOT / "artifacts/experiments/qwen2_5_complete/metrics.json"
-baseline=json.loads(baseline_path.read_text())["answers"] if baseline_path.exists() else None
-comparison=(f"The retained initial 1.5B pipeline had {pct(baseline['all_required_facts_proxy'])} all-fact proxy coverage and p50 {baseline['p50_seconds']:.2f}s; the final pipeline has {pct(A['all_required_facts_proxy'])} and p50 {A['p50_seconds']:.2f}s. Model, prompts, evidence packing and screening changed between these runs, so this is an end-to-end iteration comparison, not an isolated causal model ablation." if baseline else "No initial comparison artifact is present.")
-v1_path=ROOT / "artifacts/experiments/v1_complete_before_workspace_v2/metrics.json"
-v1=json.loads(v1_path.read_text())["answers"] if v1_path.exists() else None
-v2_comparison=(f"On the same 30-question regression set, the previous version had {pct(v1['all_required_facts_proxy'])} all-fact proxy coverage and {v1['evidence_only_fallbacks']} source-only outcomes; the current version has {pct(A['all_required_facts_proxy'])} and {A['evidence_only_fallbacks']}. The strict sales-boundary and savings-bond exception cases were recovered through bounded correction, while some other cases remain withheld or unnecessarily refused. Local timing and pipeline changes prevent treating this as an isolated model-performance experiment." if v1 else "")
-evaluation_report=f"""# Evaluation report
+    relevant = [row for row in ordinary if case_map[row["id"]]["doc_id"] == doc["doc_id"]]
+    per_doc.append(
+        f"| {doc['doc_id']} | {len(relevant)} | {sum(bool(row.get('all_required_facts_proxy')) for row in relevant)} | {sum(row['result']['status'] == 'evidence_only' for row in relevant)} |"
+    )
+baseline_path = ROOT / "artifacts/experiments/qwen2_5_complete/metrics.json"
+baseline = json.loads(baseline_path.read_text())["answers"] if baseline_path.exists() else None
+comparison = (
+    f"The retained initial 1.5B pipeline had {pct(baseline['all_required_facts_proxy'])} all-fact proxy coverage and p50 {baseline['p50_seconds']:.2f}s; the final pipeline has {pct(A['all_required_facts_proxy'])} and p50 {A['p50_seconds']:.2f}s. Model, prompts, evidence packing and screening changed between these runs, so this is an end-to-end iteration comparison, not an isolated causal model ablation."
+    if baseline
+    else "No initial comparison artifact is present."
+)
+v1_path = ROOT / "artifacts/experiments/v1_complete_before_workspace_v2/metrics.json"
+v1 = json.loads(v1_path.read_text())["answers"] if v1_path.exists() else None
+v2_comparison = (
+    f"On the same 30-question regression set, the previous version had {pct(v1['all_required_facts_proxy'])} all-fact proxy coverage and {v1['evidence_only_fallbacks']} source-only outcomes; the current version has {pct(A['all_required_facts_proxy'])} and {A['evidence_only_fallbacks']}. The strict sales-boundary and savings-bond exception cases were recovered through bounded correction, while some other cases remain withheld or unnecessarily refused. Local timing and pipeline changes prevent treating this as an isolated model-performance experiment."
+    if v1
+    else ""
+)
+evaluation_report = f"""# Evaluation report
 
-Final model: {A['model']}. All figures below are calculated from the saved final local run. The test suite uses AI-authored, source-checked labels and is not an independently adjudicated benchmark. Review the original sources and [the scoring rubric](../evaluation/REVIEW_RUBRIC.md) before interpreting these figures.
+Final model: {A["model"]}. All figures below are calculated from the saved final local run. The test suite uses AI-authored, source-checked labels and is not an independently adjudicated benchmark. Review the original sources and [the scoring rubric](../evaluation/REVIEW_RUBRIC.md) before interpreting these figures.
 
 ## Retrieval versus response quality
 
-BM25 evidence hit@5: {pct(R['bm25']['hit_at_5'])}; dense: {pct(R['dense']['hit_at_5'])}; hybrid plus reranking: {pct(R['hybrid']['hit_at_5'])}. Hybrid MRR@5 is {R['hybrid']['mrr_at_5']:.3f}. These use specific evidence locators and allow repeated equivalent relevant passages. They do not establish complete evidence retrieval or correct responses.
+BM25 evidence hit@5: {pct(R["bm25"]["hit_at_5"])}; dense: {pct(R["dense"]["hit_at_5"])}; hybrid plus reranking: {pct(R["hybrid"]["hit_at_5"])}. Hybrid MRR@5 is {R["hybrid"]["mrr_at_5"]:.3f}. These use specific evidence locators and allow repeated equivalent relevant passages. They do not establish complete evidence retrieval or correct responses.
 
-All required fact groups occur in {pct(A['all_required_facts_proxy'])} of the 30 ordinary generated-answer evaluations. Mean fact-group coverage is {pct(A['fact_coverage_proxy'])}. A source-only fallback fails the generated-answer proxy even when its excerpts contain the answer. Keyword proxies can miss valid paraphrases and pass incorrect statements containing expected words.
+All required fact groups occur in {pct(A["all_required_facts_proxy"])} of the 30 ordinary generated-answer evaluations. Mean fact-group coverage is {pct(A["fact_coverage_proxy"])}. A source-only fallback fails the generated-answer proxy even when its excerpts contain the answer. Keyword proxies can miss valid paraphrases and pass incorrect statements containing expected words.
 
-The output-screen pass rate is {pct(A.get('output_screen_pass_rate',A['mechanical_validation_pass_rate']))}. This is a combination of mechanical and support screening, not a correctness estimate. There are {A['evidence_only_fallbacks']} source-only outcomes among {A['generated_n']} evaluated generated calls. Guardrail expected-status agreement is {pct(A['guardrail_expected_status_rate'])} on six deliberately selected cases; six cases do not establish general security effectiveness.
+The output-screen pass rate is {pct(A.get("output_screen_pass_rate", A["mechanical_validation_pass_rate"]))}. This is a combination of mechanical and support screening, not a correctness estimate. There are {A["evidence_only_fallbacks"]} source-only outcomes among {A["generated_n"]} evaluated generated calls. Guardrail expected-status agreement is {pct(A["guardrail_expected_status_rate"])} on six deliberately selected cases; six cases do not establish general security effectiveness.
 
-The version 2 engine attempted {A.get('repair_attempts',0)} bounded corrections and released {A.get('repairs_released',0)} revised answers after the same checks. Each correction keeps the same evidence pack. The record retains rejected draft details, and the activity view reports a correction only when it occurred. Additional attempts can increase CPU response time; safety and coverage must be assessed together with that latency cost.
+The version 2 engine attempted {A.get("repair_attempts", 0)} bounded corrections and released {A.get("repairs_released", 0)} revised answers after the same checks. Each correction keeps the same evidence pack. The record retains rejected draft details, and the activity view reports a correction only when it occurred. Additional attempts can increase CPU response time; safety and coverage must be assessed together with that latency cost.
 
-Serial local generated-call latency is p50 {A['p50_seconds']:.2f}s and p95 {A['p95_seconds']:.2f}s. First model load is excluded. Mean draft length is {A['mean_word_count']:.1f} words. Neither length nor speed establishes usefulness or completeness. Concurrent users, network deployments and cold starts were not benchmarked.
+Serial local generated-call latency is p50 {A["p50_seconds"]:.2f}s and p95 {A["p95_seconds"]:.2f}s. First model load is excluded. Mean draft length is {A["mean_word_count"]:.1f} words. Neither length nor speed establishes usefulness or completeness. Concurrent users, network deployments and cold starts were not benchmarked.
 
 ## Every ordinary case
 
@@ -359,17 +442,43 @@ Proposed pilot gates are in the rubric and are not achieved enterprise service l
 
 Raw metrics: `artifacts/evaluation/metrics.json`. Retrieval rankings: `artifacts/evaluation/retrieval_details.json`. Answers, withheld drafts, sources, checks and timings: `artifacts/evaluation/answer_details.json`. Earlier experiments are retained separately under `artifacts/experiments/`.
 """
-(ROOT / "docs/EVALUATION_REPORT.md").write_text(evaluation_report,encoding="utf-8")
-report_pdf(evaluation_report,ROOT / "docs/EVALUATION_REPORT.pdf")
-report_pdf((ROOT / "docs/SOLUTION_WALKTHROUGH.md").read_text(encoding="utf-8"), OUT / "Demo_Runbook.pdf")
+(ROOT / "docs/EVALUATION_REPORT.md").write_text(evaluation_report, encoding="utf-8")
+report_pdf(evaluation_report, ROOT / "docs/EVALUATION_REPORT.pdf")
+report_pdf(
+    (ROOT / "docs/SOLUTION_WALKTHROUGH.md").read_text(encoding="utf-8"), OUT / "Demo_Runbook.pdf"
+)
 
-transcript = ["# Recorded demonstration responses", "These are saved outputs from the final local evaluation, not a live session. Sources, status and elapsed time are preserved. Automatic screening does not guarantee correctness; inspect the applicable procedure."]
-for case_id in ["M01", "F01.2", "N01", "F02.2", "S01", "F03.2", "F04.2", "N03", "G01", "G04", "G06"]:
-    row=BY_ID[case_id]; result=row["result"]
-    transcript += [f"## {case_id}: {result['question']}", f"Status: {result['status']} | Model: {result.get('model') or 'generation not used'} | Elapsed: {result['metrics'].get('total_seconds','not applicable')} seconds", result["answer"]]
+transcript = [
+    "# Recorded demonstration responses",
+    "These are saved outputs from the final local evaluation, not a live session. Sources, status and elapsed time are preserved. Automatic screening does not guarantee correctness; inspect the applicable procedure.",
+]
+for case_id in [
+    "M01",
+    "F01.2",
+    "N01",
+    "F02.2",
+    "S01",
+    "F03.2",
+    "F04.2",
+    "N03",
+    "G01",
+    "G04",
+    "G06",
+]:
+    row = BY_ID[case_id]
+    result = row["result"]
+    transcript += [
+        f"## {case_id}: {result['question']}",
+        f"Status: {result['status']} | Model: {result.get('model') or 'generation not used'} | Elapsed: {result['metrics'].get('total_seconds', 'not applicable')} seconds",
+        result["answer"],
+    ]
     for source in result["sources"]:
-        transcript += [f"### [{source['label']}] {source['doc_id']} — {source['section']}", source["published"], source["text"]]
-transcript_text="\n\n".join(transcript)
+        transcript += [
+            f"### [{source['label']}] {source['doc_id']} — {source['section']}",
+            source["published"],
+            source["text"],
+        ]
+transcript_text = "\n\n".join(transcript)
 (ROOT / "artifacts/recorded_demo.md").write_text(transcript_text, encoding="utf-8")
 report_pdf(transcript_text, OUT / "Recorded_Demo.pdf")
 write_learning_pdf(ROOT, OUT / "Presenter_Notes.pdf")
@@ -380,13 +489,31 @@ write_learning_pdf(ROOT, OUT / "Presenter_Notes.pdf")
     "No implementation source or model files are included.\n"
     "Recorded responses are saved outputs, not a live demonstration.\n"
     "AI assisted development and runtime answering. Regression labels are AI-authored/source-checked, not independently adjudicated.\n"
-    "See the solution walkthrough for the presentation flow and demonstration sequence.\n", encoding="utf-8")
-allowlist=[DECK_BASENAME+".pptx",DECK_BASENAME+".pdf","Demo_Runbook.pdf","Recorded_Demo.pdf","Presenter_Notes.pdf","README.txt"]
+    "See the solution walkthrough for the presentation flow and demonstration sequence.\n",
+    encoding="utf-8",
+)
+allowlist = [
+    DECK_BASENAME + ".pptx",
+    DECK_BASENAME + ".pdf",
+    "Demo_Runbook.pdf",
+    "Recorded_Demo.pdf",
+    "Presenter_Notes.pdf",
+    "README.txt",
+]
 with zipfile.ZipFile(OUT / "Presentation_Materials.zip", "w", zipfile.ZIP_DEFLATED) as archive:
     for name in allowlist:
         archive.write(OUT / name, name)
 with zipfile.ZipFile(OUT / "Presentation_Materials.zip") as archive:
     if sorted(archive.namelist()) != sorted(allowlist):
         raise ValueError("Unexpected submission archive contents")
-print(json.dumps({"slides":len(deck.prs.slides),"files":[str(OUT/name) for name in allowlist],
-                  "overview":str(ROOT / "SOLUTION_OVERVIEW.md"),"archive":"Presentation_Materials.zip"},indent=2))
+print(
+    json.dumps(
+        {
+            "slides": len(deck.prs.slides),
+            "files": [str(OUT / name) for name in allowlist],
+            "overview": str(ROOT / "SOLUTION_OVERVIEW.md"),
+            "archive": "Presentation_Materials.zip",
+        },
+        indent=2,
+    )
+)

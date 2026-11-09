@@ -1,4 +1,5 @@
 """Local hybrid retrieval: BM25 + normalized dense vectors + RRF + reranking."""
+
 from __future__ import annotations
 
 from collections import Counter
@@ -16,8 +17,14 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 from .ingest import Chunk, load_chunks
 
 STOP = set(ENGLISH_STOP_WORDS) - {"no", "not", "without"}
-ALIASES = {"id": "identification", "ids": "identification", "tin": "taxpayer identification number",
-           "ssn": "social security number", "noncustomer": "non customer", "noncustomers": "non customers"}
+ALIASES = {
+    "id": "identification",
+    "ids": "identification",
+    "tin": "taxpayer identification number",
+    "ssn": "social security number",
+    "noncustomer": "non customer",
+    "noncustomers": "non customers",
+}
 
 
 def tokens(text: str) -> list[str]:
@@ -31,13 +38,13 @@ def tokens(text: str) -> list[str]:
 
 
 class BM25:
-    def __init__(self, texts: list[str], k1: float = 1.5, b: float = .75):
+    def __init__(self, texts: list[str], k1: float = 1.5, b: float = 0.75):
         self.k1, self.b = k1, b
         self.counts = [Counter(tokens(t)) for t in texts]
         self.lengths = np.array([sum(c.values()) for c in self.counts], dtype=np.float32)
         self.avg = float(self.lengths.mean()) or 1.0
         df = Counter(t for c in self.counts for t in c)
-        self.idf = {t: np.log(1 + (len(texts) - n + .5) / (n + .5)) for t, n in df.items()}
+        self.idf = {t: np.log(1 + (len(texts) - n + 0.5) / (n + 0.5)) for t, n in df.items()}
 
     def score(self, query: str) -> np.ndarray:
         scores = np.zeros(len(self.counts), dtype=np.float32)
@@ -76,9 +83,13 @@ def load_embedding_index(index_dir: Path, chunk_count: int) -> np.ndarray:
     if sha256((index_dir / "chunks.jsonl").read_bytes()).hexdigest() != meta["chunks_sha256"]:
         raise ValueError("Chunks do not match embeddings; rebuild the index")
     vectors = np.load(BytesIO(matrix_bytes), allow_pickle=False)
-    if (meta.get("chunks") != chunk_count or meta.get("dimensions") != 384
-            or vectors.shape != (chunk_count, 384) or not np.isfinite(vectors).all()
-            or not np.allclose(np.linalg.norm(vectors, axis=1), 1, atol=1e-5)):
+    if (
+        meta.get("chunks") != chunk_count
+        or meta.get("dimensions") != 384
+        or vectors.shape != (chunk_count, 384)
+        or not np.isfinite(vectors).all()
+        or not np.allclose(np.linalg.norm(vectors, axis=1), 1, atol=1e-5)
+    ):
         raise ValueError("Invalid embedding index; rebuild it")
     return vectors
 
@@ -87,20 +98,40 @@ class Retriever:
     def __init__(self, root: Path, mode: str = "hybrid", verify: bool = True):
         from sentence_transformers import SentenceTransformer, CrossEncoder
         import torch
+
         torch.set_num_threads(6)
         self.root = root
         self.index_dir = root / "artifacts" / "index"
         if verify:
             verify_sources(root, self.index_dir)
         self.chunks = load_chunks(self.index_dir)
-        self._integrity_files = ["corpus_manifest.json", "chunks.jsonl", "embedding_manifest.json", "embeddings.npy"]
-        self._snapshot_hashes = {name: sha256((self.index_dir / name).read_bytes()).hexdigest() for name in self._integrity_files}
+        self._integrity_files = [
+            "corpus_manifest.json",
+            "chunks.jsonl",
+            "embedding_manifest.json",
+            "embeddings.npy",
+        ]
+        self._snapshot_hashes = {
+            name: sha256((self.index_dir / name).read_bytes()).hexdigest()
+            for name in self._integrity_files
+        }
         self.by_position = {(c.doc_id, c.ordinal): c for c in self.chunks}
         self.bm25 = BM25([c.search_text for c in self.chunks])
-        self.encoder = SentenceTransformer(str(root / "models" / "embedder"), local_files_only=True, device="cpu", trust_remote_code=False)
+        self.encoder = SentenceTransformer(
+            str(root / "models" / "embedder"),
+            local_files_only=True,
+            device="cpu",
+            trust_remote_code=False,
+        )
         self.encoder.max_seq_length = 384
         self.vectors = load_embedding_index(self.index_dir, len(self.chunks))
-        self.reranker = CrossEncoder(str(root / "models" / "reranker_v2"), device="cpu", max_length=512, local_files_only=True, trust_remote_code=False)
+        self.reranker = CrossEncoder(
+            str(root / "models" / "reranker_v2"),
+            device="cpu",
+            max_length=512,
+            local_files_only=True,
+            trust_remote_code=False,
+        )
         self.mode = mode
 
     def validate_snapshot(self) -> int:
@@ -112,10 +143,14 @@ class Retriever:
         verify_sources(self.root, self.index_dir)
         return len({c.doc_id for c in self.chunks})
 
-    def search(self, query: str, k: int = 5, mode: str | None = None, doc_id: str | None = None) -> list[Hit]:
+    def search(
+        self, query: str, k: int = 5, mode: str | None = None, doc_id: str | None = None
+    ) -> list[Hit]:
         mode = mode or self.mode
         lex = self.bm25.score(query)
-        query_vector = self.encoder.encode([query], normalize_embeddings=True, show_progress_bar=False)[0]
+        query_vector = self.encoder.encode(
+            [query], normalize_embeddings=True, show_progress_bar=False
+        )[0]
         dense = self.vectors @ query_vector
         allowed = np.array([not doc_id or c.doc_id == doc_id for c in self.chunks])
         lex = np.where(allowed, lex, -1e9)
@@ -133,9 +168,13 @@ class Retriever:
             candidates = list(dense_ids)
         else:
             candidates = [i for i, _ in rrf.most_common(30)]
-        hits = [Hit(self.chunks[i], float(lex[i]), float(dense[i]), float(rrf[i])) for i in candidates]
+        hits = [
+            Hit(self.chunks[i], float(lex[i]), float(dense[i]), float(rrf[i])) for i in candidates
+        ]
         if mode == "hybrid":
-            predictions = self.reranker.predict([(query, h.chunk.search_text) for h in hits], show_progress_bar=False)
+            predictions = self.reranker.predict(
+                [(query, h.chunk.search_text) for h in hits], show_progress_bar=False
+            )
             for h, score in zip(hits, predictions):
                 h.rerank = float(score)
             hits.sort(key=lambda h: h.rerank, reverse=True)
@@ -150,17 +189,26 @@ class Retriever:
         result, seen = [], set()
         for rank, hit in enumerate(hits):
             if hit.chunk.chunk_id not in seen:
-                result.append(hit); seen.add(hit.chunk.chunk_id)
+                result.append(hit)
+                seen.add(hit.chunk.chunk_id)
             if rank > 1:
                 continue
             c = hit.chunk
             next_chunk = self.by_position.get((c.doc_id, c.ordinal + 1))
             if not next_chunk or next_chunk.section != c.section or next_chunk.chunk_id in seen:
                 continue
-            same_row = c.table_id and c.table_id == next_chunk.table_id and c.row_id == next_chunk.row_id
-            qualification = not c.table_id and re.match(r"^(?:Exception|Note|Warning|Important|Caution|Unless|However)\b", next_chunk.text, re.I)
+            same_row = (
+                c.table_id and c.table_id == next_chunk.table_id and c.row_id == next_chunk.row_id
+            )
+            qualification = not c.table_id and re.match(
+                r"^(?:Exception|Note|Warning|Important|Caution|Unless|However)\b",
+                next_chunk.text,
+                re.I,
+            )
             if same_row or qualification:
-                result.append(Hit(next_chunk, hit.bm25, hit.cosine, hit.rrf, hit.rerank, c.chunk_id))
+                result.append(
+                    Hit(next_chunk, hit.bm25, hit.cosine, hit.rrf, hit.rerank, c.chunk_id)
+                )
                 seen.add(next_chunk.chunk_id)
         return result
 
@@ -168,20 +216,33 @@ class Retriever:
 def build_embeddings(root: Path):
     import torch
     from sentence_transformers import SentenceTransformer
+
     torch.set_num_threads(6)
     index_dir = root / "artifacts" / "index"
     chunks = load_chunks(index_dir)
-    encoder = SentenceTransformer(str(root / "models" / "embedder"), local_files_only=True, device="cpu", trust_remote_code=False)
+    encoder = SentenceTransformer(
+        str(root / "models" / "embedder"),
+        local_files_only=True,
+        device="cpu",
+        trust_remote_code=False,
+    )
     encoder.max_seq_length = 384
     start = time.perf_counter()
-    vectors = encoder.encode([c.search_text for c in chunks], normalize_embeddings=True,
-                             batch_size=32, show_progress_bar=True).astype(np.float32)
+    vectors = encoder.encode(
+        [c.search_text for c in chunks],
+        normalize_embeddings=True,
+        batch_size=32,
+        show_progress_bar=True,
+    ).astype(np.float32)
     np.save(index_dir / "embeddings.npy", vectors, allow_pickle=False)
-    meta = {"model": "sentence-transformers/all-MiniLM-L6-v2", "dimensions": int(vectors.shape[1]),
-            "chunks": len(chunks), "max_seq_length": 384,
-            "chunks_sha256": sha256((index_dir / "chunks.jsonl").read_bytes()).hexdigest(),
-            "embeddings_sha256": sha256((index_dir / "embeddings.npy").read_bytes()).hexdigest(),
-            "elapsed_seconds": round(time.perf_counter() - start, 2)}
+    meta = {
+        "model": "sentence-transformers/all-MiniLM-L6-v2",
+        "dimensions": int(vectors.shape[1]),
+        "chunks": len(chunks),
+        "max_seq_length": 384,
+        "chunks_sha256": sha256((index_dir / "chunks.jsonl").read_bytes()).hexdigest(),
+        "embeddings_sha256": sha256((index_dir / "embeddings.npy").read_bytes()).hexdigest(),
+        "elapsed_seconds": round(time.perf_counter() - start, 2),
+    }
     (index_dir / "embedding_manifest.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
     return meta
-

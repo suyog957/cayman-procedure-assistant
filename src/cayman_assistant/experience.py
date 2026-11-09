@@ -1,14 +1,24 @@
 """Presentation helpers; no generated markup or untrusted HTML is executed."""
+
 from html import escape
 from hashlib import sha256
 from pathlib import Path
 import base64
 import re
 
-SHORT_NAMES = {"PR1000": "Notary services", "PR1263": "Records & destruction", "PR1277": "Identity requirements",
-               "PR1779": "Business deposit accounts", "PR1949": "Savings bonds", "PR2306": "Copies & statements",
-               "PR2321": "Teller approvals", "PR472": "Payment maintenance", "PR607": "TIN & foreign status",
-               "PR63": "Coin-counting machines", "PR7554": "Incoming cash shipments"}
+SHORT_NAMES = {
+    "PR1000": "Notary services",
+    "PR1263": "Records & destruction",
+    "PR1277": "Identity requirements",
+    "PR1779": "Business deposit accounts",
+    "PR1949": "Savings bonds",
+    "PR2306": "Copies & statements",
+    "PR2321": "Teller approvals",
+    "PR472": "Payment maintenance",
+    "PR607": "TIN & foreign status",
+    "PR63": "Coin-counting machines",
+    "PR7554": "Incoming cash shipments",
+}
 
 ICONS = {
     "spark": '<path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4Z"/><path d="m20 2 .7 1.3L22 4l-1.3.7L20 6l-.7-1.3L18 4l1.3-.7Z"/>',
@@ -43,13 +53,18 @@ def source_integrity(root: Path, source: dict) -> bool:
 
 
 def source_html(source: dict) -> str:
-    return '<div class="source-text">' + escape(source["text"]) + '</div>'
+    return '<div class="source-text">' + escape(source["text"]) + "</div>"
 
 
 def response_badge(status: str) -> tuple[str, str]:
-    return {"answered": ("Checks passed", ""), "partial": ("Partial support", "review"),
-            "evidence_only": ("Source review needed", "review"), "unsupported": ("Insufficient evidence", "blocked"),
-            "clarify": ("More context needed", "blocked"), "refused": ("Outside scope", "blocked")}.get(status, (status, "blocked"))
+    return {
+        "answered": ("Checks passed", ""),
+        "partial": ("Partial support", "review"),
+        "evidence_only": ("Source review needed", "review"),
+        "unsupported": ("Insufficient evidence", "blocked"),
+        "clarify": ("More context needed", "blocked"),
+        "refused": ("Outside scope", "blocked"),
+    }.get(status, (status, "blocked"))
 
 
 def active_response(messages: list[dict], selected: str | None) -> dict | None:

@@ -65,7 +65,7 @@ Tests cover table extraction, source/index integrity, conversation handling, cit
 ## Presentation and demo
 
 - [Presenter learning notes](docs/PRESENTER_LEARNING_NOTES.md) and [walkthrough](docs/SOLUTION_WALKTHROUGH.md)
-- PowerPoint, PDF and ZIP exports are kept locally in `submission/` and excluded from Git. See [presentation outputs](submission/README.md) for filenames and build instructions.
+- [Selected PowerPoint](submission/Copy%20of%20Branch_Assist_Solution_Presentation_Final.pptx) and [selected slide PDF](submission/Copy%20of%20Branch_Assist_Solution_Presentation_Final.pdf). Other presentation exports stay local and are excluded from Git; see [presentation materials](submission/README.md).
 - [Approved silent demo](demo/final/Branch_Assist_Final_Approved.mp4): 9:25, 1440p, with on-screen descriptions
 
 For chapter navigation, run `python scripts/serve_demo_video.py` and open **http://127.0.0.1:8502/final/Watch_Final_Demo.html**. The server serves the demo directory on localhost and supports video seeking. The approved recording and sidecars are hash-locked; subsequent recordings must use a separate path.
@@ -82,7 +82,7 @@ For chapter navigation, run `python scripts/serve_demo_video.py` and open **http
 | `artifacts/evaluation/` | Accepted results and response traces |
 | `artifacts/experiments/` | Earlier development runs, separate from accepted results |
 | `docs/` | Architecture, operating instructions and design explanations |
-| `submission/` | Output instructions; generated presentation files stay local |
+| `submission/` | The selected PPT/PDF pair and output instructions; other exports stay local |
 | `demo/final/` | Preserved approved recording and its verification manifest |
 
 Original inputs are retained without modification. Model weights, environments, credentials and local rendering caches are excluded from Git. Pinned model revisions and local hashes are recorded in the runtime manifest.

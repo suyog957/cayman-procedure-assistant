@@ -15,10 +15,12 @@ dist/
 .ruff_cache/
 artifacts/video_build/
 ~$*
-# Presentation exports and review copies stay local, including nested folders.
+# Presentation exports stay local except the two selected submission files.
 submission/**/*.[pP][dD][fF]
 submission/**/*.[pP][pP][tT]*
 submission/**/*.[pP][pP][sS]*
 submission/**/*.[pP][oO][tT]*
 submission/**/*.[zZ][iI][pP]
 submission/README.txt
+!submission/Copy of Branch_Assist_Solution_Presentation_Final.pdf
+!submission/Copy of Branch_Assist_Solution_Presentation_Final.pptx

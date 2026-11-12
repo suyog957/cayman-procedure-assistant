@@ -49,6 +49,8 @@ Start Streamlit on port 8501, then run `python scripts/check_browser.py --chat`.
 
 ## Presentations
 
+PowerPoint, PDF, ZIP and generated README exports in `submission/` are local outputs and are excluded from Git. A fresh clone contains the output instructions, not those files. Build or restore the local presentation before running presentation-specific checks. The app omits downloads for generated reports that are not present.
+
 `python scripts/build_deliverables.py` rebuilds the deck, reports and source-free package from the accepted results. Rendering prefers desktop PowerPoint; local LibreOffice Impress is an alternative. Set `BRANCH_ASSIST_SOFFICE` to the executable path if it is not on PATH or in the local rendering cache. Runtime inference does not require either application.
 
 For a notes-only edit, change [the presenter guide](PRESENTER_LEARNING_NOTES.md), then run:

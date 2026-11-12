@@ -7,7 +7,6 @@ __pycache__/
 models/
 *.log
 *.zip
-!submission/Presentation_Materials.zip
 .streamlit/secrets.toml
 *.egg-info/
 build/
@@ -16,11 +15,10 @@ dist/
 .ruff_cache/
 artifacts/video_build/
 ~$*
-# Intermediate review copies can remain open while the revised deck is built.
-submission/Branch_Assist_Solution_Presentation.pptx
-submission/Branch_Assist_Solution_Presentation.pdf
-submission/Branch_Assist_Solution_Presentation_Revised.pptx
-submission/Branch_Assist_Solution_Presentation_Revised.pdf
-# Personal Office review copies stay local.
-submission/Copy of *.pptx
-submission/Copy of *.pdf
+# Presentation exports and review copies stay local, including nested folders.
+submission/**/*.[pP][dD][fF]
+submission/**/*.[pP][pP][tT]*
+submission/**/*.[pP][pP][sS]*
+submission/**/*.[pP][oO][tT]*
+submission/**/*.[zZ][iI][pP]
+submission/README.txt

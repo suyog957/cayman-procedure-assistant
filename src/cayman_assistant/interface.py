@@ -586,10 +586,13 @@ def evaluation(root: Path):
         ],
         ["Evaluation report", "Solution overview", "Presentation"],
     ):
+        path = root / filename
+        if not path.is_file():
+            continue
         with column:
             st.download_button(
                 label,
-                (root / filename).read_bytes(),
+                path.read_bytes(),
                 file_name=Path(filename).name,
                 mime="application/pdf",
                 use_container_width=True,
